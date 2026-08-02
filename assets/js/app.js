@@ -101,7 +101,6 @@
 
   function renderHeroRole() {
     document.getElementById("heroRole").textContent = t("hero_role_line");
-    document.getElementById("heroCardRole").textContent = L(SITE.meta.role) + " — " + L(SITE.meta.location);
   }
 
   function renderHeroMeta() {

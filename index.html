@@ -25,7 +25,7 @@
 <header class="navbar" id="navbar">
   <div class="container navbar-inner">
     <a href="#home" class="brand">
-      <span class="brand-mark">MM</span>
+      <img class="brand-mark" src="assets/img/profile-manuel.jpg" alt="">
       <span>
         <span class="brand-text-full">Manuel David Maya Rosero</span>
         <span class="brand-text-sub" id="brandSub"></span>
@@ -34,9 +34,9 @@
 
     <nav class="nav-links" id="navLinks">
       <a href="#about" data-i18n="nav_about"></a>
-      <a href="#education" data-i18n="nav_education"></a>
       <a href="#experience" data-i18n="nav_experience"></a>
       <a href="#projects" data-i18n="nav_projects"></a>
+      <a href="#education" data-i18n="nav_education"></a>
       <a href="#skills" data-i18n="nav_skills"></a>
       <a href="#certifications" data-i18n="nav_certifications"></a>
       <a href="#contact" data-i18n="nav_contact"></a>
@@ -71,31 +71,33 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <div class="hero-kicker reveal"><span class="dot"></span><span data-i18n="hero_kicker"></span></div>
-        <h1 class="reveal">Manuel David Maya Rosero</h1>
-        <div class="hero-role reveal" id="heroRole"></div>
-        <p class="hero-lede reveal" data-i18n="hero_lede"></p>
-        <div class="hero-cta reveal">
-          <a class="btn btn-primary" id="heroCvBtn" href="assets/files/Manuel_David_MAYA_ROSERO_CV.pdf" download>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19.5h16"/></svg>
-            <span data-i18n="cta_cv"></span>
-          </a>
-          <a class="btn btn-ghost" href="#contact"><span data-i18n="cta_contact"></span></a>
-          <a class="btn btn-ghost" href="#projects">
-            <span data-i18n="cta_projects"></span>
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
-          </a>
-        </div>
-        <div class="hero-meta reveal" id="heroMeta"></div>
-      </div>
-
+    <div class="container">
       <div class="hero-card reveal">
-        <div class="hero-avatar">MM</div>
-        <h3>Manuel David Maya Rosero</h3>
-        <div class="muted-line" id="heroCardRole"></div>
-        <div class="hero-stats" id="heroStats"></div>
+        <div class="hero-card-top">
+          <img class="hero-photo" src="assets/img/profile-manuel.jpg" alt="Manuel David Maya Rosero">
+          <div class="hero-id">
+            <div class="hero-kicker"><span class="dot"></span><span data-i18n="hero_kicker"></span></div>
+            <h1>Manuel David Maya Rosero</h1>
+            <div class="hero-role" id="heroRole"></div>
+            <p class="hero-lede" data-i18n="hero_lede"></p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" id="heroCvBtn" href="assets/files/Manuel_David_MAYA_ROSERO_CV.pdf" download>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19.5h16"/></svg>
+                <span data-i18n="cta_cv"></span>
+              </a>
+              <a class="btn btn-ghost" href="#contact"><span data-i18n="cta_contact"></span></a>
+              <a class="btn btn-ghost" href="#projects">
+                <span data-i18n="cta_projects"></span>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-bottom">
+          <div class="hero-meta" id="heroMeta"></div>
+          <div class="hero-stats" id="heroStats"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -115,18 +117,6 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education" class="alt-bg">
-    <div class="container">
-      <div class="section-head reveal">
-        <div class="section-eyebrow" data-i18n="edu_eyebrow"></div>
-        <h2 data-i18n="edu_title"></h2>
-        <p data-i18n="edu_lede"></p>
-      </div>
-      <div class="timeline reveal" id="educationList"></div>
-    </div>
-  </section>
-
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
@@ -140,7 +130,7 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" class="alt-bg">
+  <section id="projects">
     <div class="container">
       <div class="section-head reveal">
         <div class="section-eyebrow" data-i18n="proj_eyebrow"></div>
@@ -154,6 +144,18 @@
         <p data-i18n="coursework_lede"></p>
       </div>
       <div class="coursework-grid reveal" id="courseworkList"></div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow" data-i18n="edu_eyebrow"></div>
+        <h2 data-i18n="edu_title"></h2>
+        <p data-i18n="edu_lede"></p>
+      </div>
+      <div class="timeline reveal" id="educationList"></div>
     </div>
   </section>
 
@@ -173,7 +175,7 @@
   </section>
 
   <!-- CERTIFICATIONS -->
-  <section id="certifications" class="alt-bg">
+  <section id="certifications">
     <div class="container">
       <div class="section-head reveal">
         <div class="section-eyebrow" data-i18n="certs_eyebrow"></div>
