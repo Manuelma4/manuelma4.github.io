@@ -320,7 +320,8 @@ window.SITE = {
           "Construí herramientas de automatización en Python y VBA para optimizar flujos de trabajo de ingeniería.",
           "Diseñé un pipeline de datos BIM que integra extracción Revit/IFC, precios de proveedores y análisis de ciclo de vida para automatizar el análisis de costos e impacto ambiental.",
           "Desarrollé asistentes basados en RAG para documentación BIM, mejorando la recuperación de conocimiento y la toma de decisiones.",
-          "Construí sistemas backend con Django y PostgreSQL para aplicaciones internas.",
+          "Organicé las bases de datos internas en capas bronze, silver y gold: datos ingestados sin procesar, datos limpios y modelados, y datos listos para visualización y reporting.",
+          "Desarrollé y mantengo ModuoCopil, el portal web interno de gestión de proyectos (Django, PostgreSQL, Tailwind CSS), con módulos de dashboards, administración y seguimiento de horas.",
           "Diseñé y desplegué Moduo Connect, un servicio central de identidad (OIDC sobre Authentik) que unifica el inicio de sesión de seis aplicaciones internas, con una migración segura que conserva los hashes de contraseña existentes y aislamiento estricto de sesión por aplicación."
         ],
         en: [
@@ -328,7 +329,8 @@ window.SITE = {
           "Built automation tools in Python and VBA to streamline engineering workflows.",
           "Designed a BIM data pipeline integrating Revit/IFC extraction, supplier pricing and lifecycle assessment to automate cost and environmental-impact analysis.",
           "Developed RAG-based assistants for BIM documentation, improving knowledge retrieval and decision-making.",
-          "Built backend systems with Django and PostgreSQL to support internal applications.",
+          "Organized internal databases into bronze, silver, and gold layers: raw ingested data, cleaned and modeled data, and visualization/reporting-ready data.",
+          "Built and maintain ModuoCopil, the company's internal project-management web portal (Django, PostgreSQL, Tailwind CSS), including dashboard, admin, and timelog modules.",
           "Designed and deployed Moduo Connect, a centralized OIDC identity service (built on Authentik) unifying single sign-on across six internal applications, including a safe user-migration path that preserves existing password hashes and strict per-app session isolation."
         ],
         fr: [
@@ -336,11 +338,12 @@ window.SITE = {
           "Développement d'outils d'automatisation en Python et VBA pour fluidifier les workflows d'ingénierie.",
           "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC, les prix fournisseurs et l'analyse de cycle de vie pour automatiser l'analyse des coûts et de l'impact environnemental.",
           "Développement d'assistants RAG pour la documentation BIM, améliorant la recherche de connaissances et l'aide à la décision.",
-          "Développement de systèmes backend avec Django et PostgreSQL pour des applications internes.",
+          "Organisation des bases de données internes en couches bronze, silver et gold : données brutes ingérées, données nettoyées et modélisées, et données prêtes pour la visualisation et le reporting.",
+          "Développement et maintenance de ModuoCopil, le portail web interne de gestion de projets (Django, PostgreSQL, Tailwind CSS), avec des modules de tableaux de bord, d'administration et de suivi du temps.",
           "Conception et déploiement de Moduo Connect, un service d'identité centralisé (OIDC via Authentik) unifiant l'authentification de six applications internes, avec une migration sécurisée des utilisateurs préservant les hachages de mots de passe existants et un isolement strict des sessions par application."
         ]
       },
-      tags: ["Python", "VBA", "PostgreSQL", "Django", "Revit", "IFC", "BIM", "RAG", "Ollama", "Qdrant", "Apache Tika", "Vizcab API", "CI/CD", "IFCOpenShell", "OIDC", "Authentik", "SSO"]
+      tags: ["Python", "VBA", "PostgreSQL", "Django", "Tailwind CSS", "Revit", "IFC", "BIM", "RAG", "Ollama", "Qdrant", "Apache Tika", "Vizcab API", "CI/CD", "IFCOpenShell", "Medallion Architecture", "Data Modeling", "OIDC", "Authentik", "SSO"]
     },
     {
       id: "dninfoa",
