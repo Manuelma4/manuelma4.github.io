@@ -37,8 +37,8 @@ window.SITE = {
       exp_eyebrow: "Trayectoria profesional", exp_title: "Experiencia",
       exp_lede: "Roles en ingeniería de datos, IA aplicada y desarrollo de software, en Colombia y Francia.",
       proj_eyebrow: "Trabajo destacado", proj_title: "Proyectos",
-      proj_lede: "Estudios de caso de proyectos académicos y profesionales, con resultados, cifras y gráficos reales.",
-      coursework_title: "Otros proyectos académicos", coursework_lede: "Trabajos de curso adicionales que completan el perfil técnico.",
+      proj_lede: "Una selección auditada de proyectos académicos con resultados verificables y documentos adjuntos cuando su publicación es segura. El trabajo realizado para empresas aparece únicamente en Experiencia.",
+      coursework_title: "Formación aplicada", coursework_lede: "Propuestas y laboratorios guiados, separados de los proyectos principales y de la experiencia profesional.",
       found_eyebrow: "Impacto social", found_title: "Fundación Kawsay",
       found_lede: "Cofundé esta fundación colombiana en 2022 y sigo a cargo de su gestión de datos. Es, sin duda, el proyecto del que más orgulloso estoy.",
       found_pillars_title: "Líneas de trabajo",
@@ -60,7 +60,6 @@ window.SITE = {
       contact_cta_email: "Escribir un correo", contact_cta_cv: "Descargar CV completo",
       footer_rights: "Todos los derechos reservados.",
       footer_source: "Código fuente",
-      gallery_close: "Cerrar",
       scroll_top: "Volver arriba",
       view_project: "Ver detalle",
       current_role: "Rol actual",
@@ -84,8 +83,8 @@ window.SITE = {
       exp_eyebrow: "Career path", exp_title: "Experience",
       exp_lede: "Roles in data engineering, applied AI and software development, across Colombia and France.",
       proj_eyebrow: "Featured work", proj_title: "Projects",
-      proj_lede: "Case studies from academic and professional projects, with real results, figures and charts.",
-      coursework_title: "Other academic projects", coursework_lede: "Additional coursework that rounds out the technical profile.",
+      proj_lede: "An audited selection of academic projects with verifiable results and attached documents when publication is safe. Work completed for employers appears only under Experience.",
+      coursework_title: "Applied coursework", coursework_lede: "Research proposals and guided labs, kept separate from featured projects and professional experience.",
       found_eyebrow: "Social impact", found_title: "Fundación Kawsay",
       found_lede: "I co-founded this Colombian foundation in 2022 and still lead its data management. It's, without a doubt, the project I'm proudest of.",
       found_pillars_title: "Programme areas",
@@ -107,7 +106,6 @@ window.SITE = {
       contact_cta_email: "Send an email", contact_cta_cv: "Download full CV",
       footer_rights: "All rights reserved.",
       footer_source: "Source code",
-      gallery_close: "Close",
       scroll_top: "Back to top",
       view_project: "View details",
       current_role: "Current role",
@@ -131,8 +129,8 @@ window.SITE = {
       exp_eyebrow: "Parcours professionnel", exp_title: "Expérience",
       exp_lede: "Des missions en ingénierie des données, IA appliquée et développement logiciel, entre la Colombie et la France.",
       proj_eyebrow: "Travaux marquants", proj_title: "Projets",
-      proj_lede: "Études de cas de projets académiques et professionnels, avec résultats, chiffres et graphiques réels.",
-      coursework_title: "Autres projets académiques", coursework_lede: "Travaux complémentaires qui complètent le profil technique.",
+      proj_lede: "Une sélection auditée de projets académiques aux résultats vérifiables, avec documents joints lorsque leur publication est sûre. Les travaux réalisés en entreprise figurent uniquement dans Expérience.",
+      coursework_title: "Travaux pratiques", coursework_lede: "Propositions de recherche et TP encadrés, séparés des projets principaux et de l'expérience professionnelle.",
       found_eyebrow: "Impact social", found_title: "Fundación Kawsay",
       found_lede: "J'ai cofondé cette fondation colombienne en 2022 et j'assure toujours la gestion de ses données. C'est, sans conteste, le projet dont je suis le plus fier.",
       found_pillars_title: "Domaines d'action",
@@ -154,7 +152,6 @@ window.SITE = {
       contact_cta_email: "Envoyer un e-mail", contact_cta_cv: "Télécharger le CV complet",
       footer_rights: "Tous droits réservés.",
       footer_source: "Code source",
-      gallery_close: "Fermer",
       scroll_top: "Retour en haut",
       view_project: "Voir le détail",
       current_role: "Poste actuel",
@@ -221,17 +218,17 @@ window.SITE = {
         es: [
           "Beca de excelencia académica completa (top 1% nacional, examen ICFES).",
           "Base en algoritmos, ingeniería de software, bases de datos y matemáticas aplicadas.",
-          "Cursada en paralelo con los roles de investigación y desarrollo en DNINFOA, OPE-PRIG y TiendaUN."
+          "Cursada en paralelo con los roles de investigación y desarrollo en DNINFOA y OPE-PRIG."
         ],
         en: [
           "Full academic-excellence scholarship (top 1% nationwide, ICFES exam).",
           "Foundations in algorithms, software engineering, databases and applied mathematics.",
-          "Completed alongside research and development roles at DNINFOA, OPE-PRIG and TiendaUN."
+          "Completed alongside research and development roles at DNINFOA and OPE-PRIG."
         ],
         fr: [
           "Bourse d'excellence académique complète (top 1 % national, examen ICFES).",
           "Bases solides en algorithmique, génie logiciel, bases de données et mathématiques appliquées.",
-          "Cursus mené en parallèle de missions de recherche et développement chez DNINFOA, OPE-PRIG et TiendaUN."
+          "Cursus mené en parallèle de missions de recherche et développement chez DNINFOA et OPE-PRIG."
         ]
       },
       tags: []
@@ -247,18 +244,18 @@ window.SITE = {
       bullets: {
         es: [
           "Especialización en Data Science (DS) y Markets, Organizations, Data, Strategies (MODS) — la vertiente de economía del programa.",
-          "Laboratorios de Deep Learning en PyTorch: clasificación de imágenes con CNN y generación de texto con RNN.",
-          "Teoría de colas aplicada al network slicing 5G (módulo MDI230) y curso de aprendizaje sobre grafos."
+          "Aprendizaje automático aplicado: clasificación de texto, SVM/PCA y clasificadores y autoencoders para MNIST.",
+          "Formación práctica en aprendizaje sobre grafos (PageRank y Louvain) y economía digital."
         ],
         en: [
           "Specialization in Data Science (DS) and Markets, Organizations, Data, Strategies (MODS) — the economics track of the programme.",
-          "Deep-learning labs in PyTorch: CNN image classification and RNN text generation.",
-          "Queueing theory applied to 5G network slicing (module MDI230), plus a graph-learning course."
+          "Applied machine learning: text classification, SVM/PCA, and classifiers and autoencoders for MNIST.",
+          "Hands-on coursework in graph learning (PageRank and Louvain) and digital economics."
         ],
         fr: [
           "Spécialisation Data Science (DS) et Markets, Organizations, Data, Strategies (MODS) — le volet économie du cursus.",
-          "Travaux pratiques de deep learning en PyTorch : classification d'images par CNN et génération de texte par RNN.",
-          "Théorie des files d'attente appliquée au network slicing 5G (module MDI230), et cours d'apprentissage sur graphes."
+          "Machine learning appliqué : classification de texte, SVM/ACP, classifieurs et autoencodeurs pour MNIST.",
+          "Formation pratique en apprentissage sur graphes (PageRank et Louvain) et en économie numérique."
         ]
       },
       tags: []
@@ -356,32 +353,32 @@ window.SITE = {
     {
       id: "siigo",
       icon: "briefcase",
-      title: { es: "Practicante de Ingeniería de Datos", en: "Data Engineer Intern", fr: "Stagiaire Data Engineer" },
-      org: "Siigo S.A.S.",
+      title: { es: "Practicante de Análisis de Datos", en: "Data Analyst Intern", fr: "Stagiaire Data Analyst" },
+      org: "Siigo S.A.S. · Data Engineering Team",
       place: { es: "Bogotá, Colombia", en: "Bogotá, Colombia", fr: "Bogotá, Colombie" },
       dateLabel: { es: "Feb. – Jul. 2024", en: "Feb – Jul 2024", fr: "Févr. – Juil. 2024" },
       ongoing: false,
       bullets: {
         es: [
-          "Construí un chatbot RAG interno para la plataforma DataSmart, con backend en FastAPI y UI en React, integrando Azure OpenAI con Azure Cognitive Search.",
-          "Diseñé un pipeline de base de conocimiento en Databricks con PySpark: extracción de metadatos y documentos, chunking por documento con solapamiento, indexación y automatización hacia Blob Storage.",
-          "Creé un 'RAG Commander' para probar respuestas por lotes antes de cada despliegue.",
-          "Añadí observabilidad y persistencia, colaborando con Azure FastTrack y el equipo de Data Science bajo Scrum."
+          "Desarrollé un chatbot RAG interno para DataSmart con backend FastAPI e interfaz React, integrando Azure OpenAI y Azure AI Search.",
+          "Automaticé en Databricks una base de conocimiento a partir de XML y PDF: transformación a JSON, enriquecimiento de metadatos, chunking con solapamiento, indexación y carga en Blob Storage.",
+          "Construí un evaluador RAG por lotes para medir F1, groundedness, relevancia, citación y coherencia de las respuestas.",
+          "Añadí persistencia y trazabilidad de interacciones en MongoDB e integré el prototipo en el entorno QA de DataSmart."
         ],
         en: [
-          "Built an internal RAG chatbot for the DataSmart platform with a FastAPI backend and React UI, integrating Azure OpenAI with Azure Cognitive Search.",
-          "Engineered a knowledge-base pipeline in Databricks with PySpark: metadata/document extraction, per-document chunking with overlap, indexing, and automated ingestion into Blob Storage.",
-          "Created a 'RAG Commander' to batch-test responses ahead of every release.",
-          "Added observability and persistence, collaborating with Azure FastTrack and the Data Science team under Scrum."
+          "Developed an internal RAG chatbot for DataSmart with a FastAPI backend and React interface, integrating Azure OpenAI and Azure AI Search.",
+          "Automated a Databricks knowledge base from XML and PDF sources: JSON transformation, metadata enrichment, overlapping chunking, indexing, and Blob Storage ingestion.",
+          "Built a batch RAG evaluator covering F1, groundedness, relevance, citation quality, and answer coherence.",
+          "Added MongoDB interaction persistence and traceability, then integrated the prototype into DataSmart's QA environment."
         ],
         fr: [
-          "Développement d'un chatbot RAG interne pour la plateforme DataSmart, backend FastAPI et interface React, intégrant Azure OpenAI et Azure Cognitive Search.",
-          "Conception d'un pipeline de base de connaissances sous Databricks avec PySpark : extraction des métadonnées et documents, découpage par document avec chevauchement, indexation et ingestion automatisée vers Blob Storage.",
-          "Création d'un « RAG Commander » pour tester les réponses par lots avant chaque mise en production.",
-          "Ajout d'observabilité et de persistance, en collaboration avec Azure FastTrack et l'équipe Data Science en méthodologie Scrum."
+          "Développement d'un chatbot RAG interne pour DataSmart avec un backend FastAPI et une interface React, intégrant Azure OpenAI et Azure AI Search.",
+          "Automatisation sous Databricks d'une base de connaissances issue de fichiers XML et PDF : transformation JSON, enrichissement des métadonnées, découpage avec chevauchement, indexation et chargement dans Blob Storage.",
+          "Création d'un évaluateur RAG par lots couvrant le F1, la groundedness, la pertinence, la qualité des citations et la cohérence des réponses.",
+          "Ajout de la persistance et de la traçabilité des interactions dans MongoDB, puis intégration du prototype dans l'environnement QA de DataSmart."
         ]
       },
-      tags: ["Azure OpenAI", "Cognitive Search", "Databricks", "PySpark", "FastAPI", "React", "Python", "TypeScript", "Node.js", "MongoDB", "Scrum", "Selenium"]
+      tags: ["Azure OpenAI", "Azure AI Search", "Databricks", "FastAPI", "React", "Python", "MongoDB", "Blob Storage", "RAG", "Scrum"]
     },
     {
       id: "prig",
@@ -435,168 +432,116 @@ window.SITE = {
 
   projects: [
     {
-      id: "credit-risk",
-      featured: true,
-      kicker: { es: "Proyecto académico · Ciencia de datos", en: "Academic project · Data science", fr: "Projet académique · Data science" },
-      title: { es: "Modelado de riesgo crediticio: pricing y predicción de impago", en: "Credit Risk Modeling: Pricing & Default Prediction", fr: "Modélisation du risque de crédit : tarification et prédiction de défaut" },
-      org: "Institut Polytechnique de Paris",
-      dateLabel: { es: "Sept. – Dic. 2025", en: "Sept – Dec 2025", fr: "Sept. – Déc. 2025" },
+      id: "text-classification-pytorch",
+      featured: false,
+      kicker: { es: "Proyecto académico · NLP", en: "Academic project · NLP", fr: "Projet académique · NLP" },
+      title: { es: "Clasificación de texto: de TF-IDF a PyTorch", en: "Text Classification: From TF-IDF to PyTorch", fr: "Classification de texte : de TF-IDF à PyTorch" },
+      org: {
+        es: "Télécom Paris · Institut Polytechnique de Paris · 4AI12",
+        en: "Télécom Paris · Institut Polytechnique de Paris · 4AI12",
+        fr: "Télécom Paris · Institut Polytechnique de Paris · 4AI12"
+      },
+      dateLabel: { es: "Abr. 2025", en: "Apr 2025", fr: "Avr. 2025" },
       intro: {
-        es: "Proyecto de ciencia de datos avanzada sobre un dataset real de préstamos (67 463 registros de entrenamiento), combinando un problema de regresión (pricing de la tasa de interés) con uno de clasificación (predicción de impago) bajo control riguroso de fuga de información.",
-        en: "Advanced data-science project on a real loan dataset (67,463 training rows), combining a regression problem (interest-rate pricing) with a classification problem (default prediction) under rigorous leakage control.",
-        fr: "Projet de data science avancée sur un jeu de données de prêts réel (67 463 lignes d'entraînement), combinant un problème de régression (tarification du taux d'intérêt) et un problème de classification (prédiction de défaut) avec un contrôle rigoureux des fuites de données."
+        es: "Proyecto individual sobre 20 Newsgroups que compara representaciones simbólicas, densas y neuronales bajo una misma tarea de clasificación en seis categorías.",
+        en: "An individual project on 20 Newsgroups comparing symbolic, dense, and neural representations on the same six-category classification task.",
+        fr: "Projet individuel sur 20 Newsgroups comparant des représentations symboliques, denses et neuronales pour une même tâche de classification en six catégories."
       },
       stats: [
-        { num: "67,463", label: { es: "Préstamos analizados", en: "Loans analyzed", fr: "Prêts analysés" } },
-        { num: "10+", label: { es: "Modelos y variantes comparados", en: "Models & variants benchmarked", fr: "Modèles et variantes comparés" } },
-        { num: "8", label: { es: "Técnicas de diagnóstico estadístico", en: "Statistical diagnostic techniques", fr: "Techniques de diagnostic statistique" } }
+        { num: "80.12%", label: { es: "Mejor accuracy de prueba", en: "Best test accuracy", fr: "Meilleure accuracy test" } },
+        { num: "7,309", label: { es: "Documentos de prueba", en: "Test documents", fr: "Documents de test" } },
+        { num: "6", label: { es: "Categorías", en: "Categories", fr: "Catégories" } }
       ],
       bullets: {
         es: [
-          "Construí pipelines de preprocesamiento reproducibles en scikit-learn y comparé más de 10 modelos y configuraciones: desde baselines interpretables (Ridge, Lasso, regresión logística) hasta benchmarks no lineales (HistGradientBoosting, CatBoost).",
-          "Diseñé dos esquemas de variables (FULL vs. SAFE) para blindar el pipeline contra fuga de información, excluyendo de forma explícita las variables adyacentes al desenlace en el escenario de originación.",
-          "Apliqué una batería de 8 técnicas de diagnóstico —residuos estandarizados, QQ-plot, test de heterocedasticidad de Breusch-Pagan, VIF, curvas ROC/PR, matrices de confusión, calibración (Brier score) e importancia por permutación— para auditar cada modelo, no solo reportar una métrica.",
-          "Convertí un resultado de señal predictiva débil en una conclusión de negocio accionable: en vez de forzar la precisión, entregué políticas operativas (revisión del top-k, umbrales sensibles al costo) y un diagnóstico honesto de los límites del dataset — el tipo de rigor que un equipo de riesgo agradece."
+          "Eliminé encabezados, pies y citas antes del modelado para reducir fuga de información ligada a autores e hilos; trabajé con vocabulario común de 8.000 tokens y particiones separadas.",
+          "Comparé Bag of Words, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec y GloVe con regresión logística y análisis por clase.",
+          "Implementé Dataset/DataLoader y clasificadores de promediado en PyTorch; el ajuste fino de GloVe alcanzó 80,12 % de accuracy en el conjunto de prueba con early stopping."
         ],
         en: [
-          "Built reproducible scikit-learn preprocessing pipelines and benchmarked 10+ models and configurations: interpretable baselines (Ridge, Lasso, logistic regression) through non-linear benchmarks (HistGradientBoosting, CatBoost).",
-          "Designed two feature schemas (FULL vs. SAFE) to harden the pipeline against leakage, explicitly excluding outcome-adjacent variables under an origination-time scenario.",
-          "Applied a battery of 8 diagnostic techniques — standardized residuals, QQ-plot, Breusch-Pagan heteroskedasticity test, VIF, ROC/PR curves, confusion matrices, calibration (Brier score) and permutation importance — to audit every model, not just report one metric.",
-          "Turned a weak-signal result into an actionable business conclusion: instead of forcing accuracy, delivered operational policies (top-k review, cost-sensitive thresholds) and an honest read of the dataset's limits — the kind of rigor a risk team actually wants."
+          "Removed headers, footers, and quoted replies before modelling to reduce author- and thread-specific leakage; used a shared 8,000-token vocabulary and separate data partitions.",
+          "Compared Bag of Words, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec, and GloVe with logistic regression and class-level diagnostics.",
+          "Implemented Dataset/DataLoader components and averaging classifiers in PyTorch; fine-tuned GloVe reached 80.12% held-out test accuracy with early stopping."
         ],
         fr: [
-          "Mise en place de pipelines de prétraitement reproductibles avec scikit-learn et comparaison de plus de 10 modèles et configurations : baselines interprétables (Ridge, Lasso, régression logistique) jusqu'à des benchmarks non linéaires (HistGradientBoosting, CatBoost).",
-          "Conception de deux schémas de variables (FULL vs. SAFE) pour blinder le pipeline contre les fuites de données, en excluant explicitement les variables adjacentes au résultat dans un scénario au moment de l'origination.",
-          "Application d'une batterie de 8 techniques de diagnostic — résidus standardisés, QQ-plot, test d'hétéroscédasticité de Breusch-Pagan, VIF, courbes ROC/PR, matrices de confusion, calibration (score de Brier) et importance par permutation — pour auditer chaque modèle, pas seulement publier une métrique.",
-          "Transformation d'un signal prédictif faible en conclusion business exploitable : plutôt que de forcer la précision, livraison de politiques opérationnelles (revue top-k, seuils sensibles au coût) et d'un diagnostic honnête des limites du jeu de données — la rigueur qu'une équipe risque attend vraiment."
+          "Suppression des en-têtes, pieds et citations avant la modélisation afin de réduire les fuites liées aux auteurs et aux fils ; vocabulaire commun de 8 000 tokens et partitions séparées.",
+          "Comparaison de Bag of Words, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec et GloVe avec régression logistique et diagnostics par classe.",
+          "Implémentation de Dataset/DataLoader et de classifieurs par moyenne sous PyTorch ; le fine-tuning de GloVe atteint 80,12 % d'accuracy sur le test avec early stopping."
         ]
       },
-      images: [
-        { src: "assets/img/projects/credit-risk-default-by-grade.png", cap: { es: "Tasa de impago por grado de crédito (IC 95%)", en: "Default rate by credit grade (95% CI)", fr: "Taux de défaut par note de crédit (IC 95 %)" } },
-        { src: "assets/img/projects/credit-risk-roc-curve.png", cap: { es: "Curva ROC del mejor clasificador (CatBoost)", en: "ROC curve of the best classifier (CatBoost)", fr: "Courbe ROC du meilleur classifieur (CatBoost)" } }
+      documents: [
+        {
+          href: "assets/files/projects/text-classification-pytorch-brief.pdf",
+          label: { es: "Ver brief técnico (PDF)", en: "View technical brief (PDF)", fr: "Voir la synthèse technique (PDF)" }
+        }
       ],
-      tags: ["Python", "Scikit-learn", "CatBoost", "Pandas", "NumPy", "Statsmodels", "Matplotlib", "RStudio"]
+      tags: ["Python", "PyTorch", "Scikit-learn", "NLTK", "Gensim", "TF-IDF", "Word2Vec", "GloVe"]
     },
     {
-      id: "dma-simulation",
-      featured: true,
-      kicker: { es: "Investigación · IA multiagente", en: "Research · Multi-agent AI", fr: "Recherche · IA multi-agents" },
-      title: { es: "Simulación multiagente con LLM de la Digital Markets Act", en: "Multi-Agent LLM Simulation of the EU Digital Markets Act", fr: "Simulation multi-agents par LLM du Digital Markets Act" },
-      org: "IP Paris – Université Paris Dauphine-PSL (IREN)",
-      dateLabel: { es: "2026 · Tutorat, prof. F. Le Guel", en: "2026 · Tutorat with Prof. F. Le Guel", fr: "2026 · Tutorat, prof. F. Le Guel" },
+      id: "us-protectionism",
+      featured: false,
+      kicker: { es: "Proyecto académico · Economía digital", en: "Academic project · Digital economics", fr: "Projet académique · Économie numérique" },
+      title: { es: "Proteccionismo estadounidense: impactos y respuestas globales", en: "U.S. Protectionism: Economic Impacts and Global Responses", fr: "Protectionnisme américain : impacts économiques et réponses mondiales" },
+      org: {
+        es: "Télécom Paris · Applied Projects MODS · con Iba Demesy",
+        en: "Télécom Paris · Applied Projects MODS · with Iba Demesy",
+        fr: "Télécom Paris · Applied Projects MODS · avec Iba Demesy"
+      },
+      dateLabel: { es: "May. – Jun. 2025", en: "May – Jun 2025", fr: "Mai – Juin 2025" },
       intro: {
-        es: "Investigación en tres etapas sobre plataformas de simulación social basadas en LLM, aplicada a un caso concreto: la negociación regulatoria de la Digital Markets Act de la UE (autopreferencia, interoperabilidad y disputabilidad de mercado).",
-        en: "A three-stage research project on LLM-based social-simulation platforms, applied to a concrete case: the regulatory negotiation behind the EU Digital Markets Act (self-preferencing, interoperability and market contestability).",
-        fr: "Recherche en trois étapes sur les plateformes de simulation sociale par LLM, appliquée à un cas concret : la négociation réglementaire du Digital Markets Act de l'UE (autopréférence, interopérabilité et contestabilité du marché)."
+        es: "Informe coautor de análisis documental e histórico sobre la evolución del proteccionismo de Estados Unidos, sus efectos sobre empresas tecnológicas y cadenas de valor, y las respuestas internacionales.",
+        en: "A co-authored documentary and historical analysis of the evolution of U.S. protectionism, its effects on technology firms and value chains, and international responses.",
+        fr: "Rapport coécrit proposant une analyse documentaire et historique de l'évolution du protectionnisme américain, de ses effets sur les entreprises technologiques et les chaînes de valeur, ainsi que des réponses internationales."
       },
       stats: [
-        { num: "12", label: { es: "Artículos revisados", en: "Papers reviewed", fr: "Articles analysés" } },
-        { num: "5", label: { es: "Agentes (stakeholders)", en: "Agent personas", fr: "Agents (parties prenantes)" } },
-        { num: "4", label: { es: "Rondas de negociación", en: "Negotiation rounds", fr: "Cycles de négociation" } }
+        { num: "21", label: { es: "Páginas del informe", en: "Report pages", fr: "Pages du rapport" } },
+        { num: "6", label: { es: "Respuestas internacionales", en: "International responses", fr: "Réponses internationales" } },
+        { num: "2", label: { es: "Autores", en: "Authors", fr: "Auteurs" } }
       ],
       bullets: {
         es: [
-          "Realicé una revisión sistemática de 12 artículos sobre simulación social con LLM (Generative Agents, GenSim, AgentSociety, S3, entre otros) para fundamentar el diseño de la simulación.",
-          "Construí un simulador de negociación multiagente con AG2/AutoGen, modelando 5 actores estructurados —regulador de la UE, gatekeeper, startup, desarrollador indie y asociación de consumidores— con prioridades económicas y líneas rojas explícitas.",
-          "Representé cada ronda de política como un vector de características en lugar de un prompt informal único, separando el discurso de la medición.",
-          "Ejecuté un análisis de sensibilidad Monte Carlo y exporté figuras reproducibles: trayectorias de apoyo, formación de coaliciones y descomposición de contribuciones."
+          "Sinteticé los fundamentos teóricos y la evolución histórica del proteccionismo estadounidense mediante revisión de literatura y fuentes institucionales.",
+          "Analicé cómo aranceles y restricciones comerciales afectan a firmas tecnológicas, cadenas globales de suministro, innovación y decisiones de localización.",
+          "Comparé respuestas de China, la Unión Europea, Francia, Canadá, India y Japón. El alcance es documental y comparativo: no se presenta como estimación causal ni econométrica."
         ],
         en: [
-          "Conducted a systematic review of 12 papers on LLM-based social simulation (Generative Agents, GenSim, AgentSociety, S3, among others) to ground the simulation's design.",
-          "Built a multi-agent negotiation simulator with AG2/AutoGen, modeling 5 structured stakeholders — EU regulator, gatekeeper strategist, startup founder, indie developer and consumer association — with explicit economic priorities and red lines.",
-          "Represented each policy round as an explicit feature vector rather than a single informal prompt, cleanly separating discourse from measurement.",
-          "Ran Monte Carlo sensitivity analysis and exported reproducible figures: support trajectories, coalition formation and contribution decomposition."
+          "Synthesized the theoretical foundations and historical development of U.S. protectionism through a review of literature and institutional sources.",
+          "Analyzed how tariffs and trade restrictions affect technology firms, global supply chains, innovation, and location decisions.",
+          "Compared responses from China, the European Union, France, Canada, India, and Japan. The scope is documentary and comparative, not a causal or econometric estimate."
         ],
         fr: [
-          "Réalisation d'une revue systématique de 12 articles sur la simulation sociale par LLM (Generative Agents, GenSim, AgentSociety, S3, entre autres) pour fonder la conception de la simulation.",
-          "Développement d'un simulateur de négociation multi-agents avec AG2/AutoGen, modélisant 5 parties prenantes structurées — régulateur européen, gatekeeper, fondateur de startup, développeur indépendant et association de consommateurs — avec priorités économiques et lignes rouges explicites.",
-          "Représentation de chaque cycle de négociation sous forme de vecteur de caractéristiques plutôt que d'un simple prompt informel, séparant clairement discours et mesure.",
-          "Exécution d'une analyse de sensibilité Monte Carlo et export de figures reproductibles : trajectoires de soutien, formation de coalitions et décomposition des contributions."
+          "Synthèse des fondements théoriques et de l'évolution historique du protectionnisme américain à partir de la littérature et de sources institutionnelles.",
+          "Analyse des effets des droits de douane et restrictions commerciales sur les entreprises technologiques, les chaînes de valeur mondiales, l'innovation et les choix de localisation.",
+          "Comparaison des réponses de la Chine, de l'Union européenne, de la France, du Canada, de l'Inde et du Japon. La portée est documentaire et comparative, sans estimation causale ni économétrique."
         ]
       },
-      images: [
-        { src: "assets/img/projects/dma-trajectories.png", cap: { es: "Evolución del apoyo por actor a lo largo de las rondas", en: "Support-score trajectories by stakeholder across rounds", fr: "Évolution du score de soutien par acteur selon les cycles" } },
-        { src: "assets/img/projects/dma-coalitions.png", cap: { es: "Coaliciones simuladas: oposición, apoyo condicional y apoyo", en: "Simulated coalitions: oppose, conditional, support", fr: "Coalitions simulées : opposition, soutien conditionnel, soutien" } }
+      documents: [
+        {
+          href: "assets/files/projects/us-protectionism-global-responses.pdf",
+          label: { es: "Leer informe (PDF)", en: "Read report (PDF)", fr: "Lire le rapport (PDF)" }
+        }
       ],
-      tags: ["AG2 / AutoGen", "Python", "OpenAI API", "Pandas", "Matplotlib", "Multi-agent systems"]
-    },
-    {
-      id: "rag-platforms",
-      featured: false,
-      kicker: { es: "Competencia transversal", en: "Cross-cutting capability", fr: "Compétence transversale" },
-      title: { es: "Sistemas RAG en producción, tres stacks distintos", en: "RAG Knowledge Systems, Three Different Stacks", fr: "Systèmes RAG en production, trois stacks différentes" },
-      org: "Siigo · DNINFOA · MODUO Ingénierie",
-      dateLabel: { es: "2024 – 2026", en: "2024 – 2026", fr: "2024 – 2026" },
-      intro: {
-        es: "Un mismo patrón de ingeniería —chunking por documento, indexado vectorial y pruebas por lotes antes de cada despliegue— aplicado tres veces, en tres pilas tecnológicas distintas y para tres audiencias diferentes.",
-        en: "The same engineering pattern — per-document chunking, vector indexing and batch testing before every release — applied three times, on three different tech stacks, for three different audiences.",
-        fr: "Un même schéma d'ingénierie — découpage par document, indexation vectorielle et tests par lots avant chaque mise en production — appliqué trois fois, sur trois stacks technologiques différentes, pour trois publics différents."
-      },
-      bullets: {
-        es: [
-          "Siigo DataSmart: Azure OpenAI + Azure Cognitive Search + Databricks/PySpark, para un copiloto interno alineado con la identidad de marca de Siigo.",
-          "DNINFOA (Universidad Nacional): Ollama + Node.js/TypeScript, para un chatbot de normativa universitaria dirigido a personal administrativo.",
-          "MODUO Ingénierie: Ollama + Qdrant, para un asistente sobre documentación BIM dirigido a equipos de ingeniería.",
-          "En los tres casos construí un 'RAG Commander' interno para probar las respuestas por lotes antes de cada despliegue."
-        ],
-        en: [
-          "Siigo DataSmart: Azure OpenAI + Azure Cognitive Search + Databricks/PySpark, for an internal copilot aligned with Siigo's brand guidelines.",
-          "DNINFOA (Universidad Nacional): Ollama + Node.js/TypeScript, for a university-policy chatbot aimed at administrative staff.",
-          "MODUO Ingénierie: Ollama + Qdrant, for a BIM-documentation assistant aimed at engineering teams.",
-          "In all three, I built an internal 'RAG Commander' to batch-test responses before every release."
-        ],
-        fr: [
-          "Siigo DataSmart : Azure OpenAI + Azure Cognitive Search + Databricks/PySpark, pour un copilote interne aligné sur la charte Siigo.",
-          "DNINFOA (Universidad Nacional) : Ollama + Node.js/TypeScript, pour un chatbot de réglementation universitaire destiné au personnel administratif.",
-          "MODUO Ingénierie : Ollama + Qdrant, pour un assistant de documentation BIM destiné aux équipes d'ingénierie.",
-          "Dans les trois cas, développement d'un « RAG Commander » interne pour tester les réponses par lots avant chaque mise en production."
-        ]
-      },
-      images: [],
-      tags: ["RAG", "Ollama", "Qdrant", "Azure OpenAI", "Azure Cognitive Search", "Databricks", "PySpark", "Node.js", "FastAPI"]
-    },
-    {
-      id: "tiendaun",
-      featured: false,
-      kicker: { es: "Proyecto académico · Plataforma cloud", en: "Academic project · Cloud platform", fr: "Projet académique · Plateforme cloud" },
-      title: { es: "TiendaUN — plataforma de microservicios en la nube", en: "TiendaUN — Cloud Microservices Platform", fr: "TiendaUN — plateforme de microservices cloud" },
-      org: "Universidad Nacional de Colombia",
-      dateLabel: { es: "Feb. – Jul. 2024", en: "Feb – Jul 2024", fr: "Févr. – Juil. 2024" },
-      intro: {
-        es: "Plataforma de comercio electrónico basada en microservicios, con interoperabilidad SOAP y validación de escalado horizontal mediante pruebas de carga.",
-        en: "A microservices-based e-commerce platform with SOAP interoperability and horizontal-scaling validation through load testing.",
-        fr: "Plateforme e-commerce basée sur des microservices, avec interopérabilité SOAP et validation de la montée en charge horizontale par des tests de charge."
-      },
-      bullets: {
-        es: [
-          "Backend en Node.js/TypeScript con MongoDB Atlas y frontend en React; API Gateway que consume un servicio SOAP externo y expone una API SOAP para socios.",
-          "Seguridad con LDAP/JWT y proxy inverso Nginx (HTTPS); despliegue en GCP con Docker/Kubernetes —balanceo de carga, réplicas y replicación de base de datos— validado con JMeter."
-        ],
-        en: [
-          "Node.js/TypeScript backend with MongoDB Atlas and a React frontend; API Gateway consuming an external SOAP service and exposing a partner-facing SOAP API.",
-          "LDAP/JWT security with an Nginx reverse proxy (HTTPS); deployed on GCP with Docker/Kubernetes — load balancing, replicas and DB replication — validated with JMeter."
-        ],
-        fr: [
-          "Backend Node.js/TypeScript avec MongoDB Atlas et frontend React ; API Gateway consommant un service SOAP externe et exposant une API SOAP pour les partenaires.",
-          "Sécurité LDAP/JWT avec reverse proxy Nginx (HTTPS) ; déploiement sur GCP avec Docker/Kubernetes — répartition de charge, réplicas et réplication de base de données — validé avec JMeter."
-        ]
-      },
-      images: [],
-      tags: ["Node.js", "TypeScript", "C#", ".NET", "React", "MongoDB", "Docker", "Kubernetes", "GCP", "SOAP", "JMeter"]
+      tags: ["Digital Economics", "International Trade", "Literature Review", "Policy Analysis", "Global Value Chains"]
     }
   ],
 
   coursework: [
     {
       icon: "bike",
-      title: { es: "Impacto causal del programa Vélib'/Véligo", en: "Causal Impact of the Vélib'/Veligo Programme", fr: "Impact causal du programme Vélib'/Véligo" },
+      title: { es: "Propuesta de evaluación causal del programa Véligo", en: "Causal Evaluation Proposal for the Véligo Programme", fr: "Proposition d'évaluation causale du programme Véligo" },
       org: { es: "Dauphine-PSL · IREN — Econometría", en: "Dauphine-PSL · IREN — Econometrics", fr: "Dauphine-PSL · IREN — Économétrie" },
       dateLabel: { es: "Ene. 2026", en: "Jan 2026", fr: "Janv. 2026" },
       text: {
-        es: "Diseño diferencias-en-diferencias para estimar el efecto causal del programa subvencionado de bicicletas eléctricas de Île-de-France sobre la intensidad del uso de la bicicleta, con efectos fijos, event-study y pruebas placebo.",
-        en: "A difference-in-differences design estimating the causal effect of Île-de-France's subsidized e-bike programme on cycling intensity, with fixed effects, an event-study check and placebo tests.",
-        fr: "Modèle en différences de différences estimant l'effet causal du programme francilien de vélos électriques subventionnés sur l'intensité d'usage du vélo, avec effets fixes, event-study et tests placebo."
-      }
+        es: "Propuesta individual de investigación que especifica datos, diferencias-en-diferencias, efectos fijos, event-study y placebos para evaluar el programa. El entregable define el diseño; no contiene estimaciones ni resultados ejecutados.",
+        en: "An individual research proposal specifying data, difference-in-differences, fixed effects, an event study, and placebos to evaluate the programme. The deliverable defines the design; it contains no executed estimates or results.",
+        fr: "Proposition de recherche individuelle précisant les données, les différences de différences, les effets fixes, l'event study et les placebos. Le livrable définit le protocole ; il ne contient ni estimation ni résultat exécuté."
+      },
+      documents: [
+        {
+          href: "assets/files/projects/veligo-causal-research-proposal.pdf",
+          label: { es: "Ver propuesta (PDF)", en: "View proposal (PDF)", fr: "Voir la proposition (PDF)" }
+        }
+      ]
     },
     {
       icon: "flask",
@@ -610,36 +555,36 @@ window.SITE = {
       }
     },
     {
-      icon: "wifi",
-      title: { es: "Modelado del network slicing en redes 5G", en: "Modeling Network Slicing in 5G Networks", fr: "Modélisation du network slicing en 5G" },
-      org: { es: "Télécom Paris · Teoría de colas (MDI230)", en: "Télécom Paris · Queueing Theory (MDI230)", fr: "Télécom Paris · Files d'attente (MDI230)" },
-      dateLabel: { es: "2025", en: "2025", fr: "2025" },
+      icon: "code",
+      title: { es: "SVM: kernels, sobreajuste y PCA", en: "SVMs: Kernels, Overfitting, and PCA", fr: "SVM : noyaux, surapprentissage et ACP" },
+      org: { es: "Télécom Paris · Laboratorio individual de Machine Learning", en: "Télécom Paris · Individual Machine Learning lab", fr: "Télécom Paris · TP individuel de Machine Learning" },
+      dateLabel: { es: "Mar. 2025", en: "Mar 2025", fr: "Mars 2025" },
       text: {
-        es: "Modelé la coexistencia de tráfico URLLC y best-effort sobre una misma infraestructura 5G usando la probabilidad de bloqueo de Erlang-B y modelos M/M/S/S.",
-        en: "Modeled the coexistence of URLLC and best-effort traffic over shared 5G infrastructure using Erlang-B blocking probability and M/M/S/S queueing models.",
-        fr: "Modélisation de la coexistence du trafic URLLC et best-effort sur une même infrastructure 5G via la probabilité de blocage d'Erlang-B et des modèles M/M/S/S."
-      }
-    },
-    {
-      icon: "share",
-      title: { es: "Aprendizaje sobre grafos: de PageRank a las GNN", en: "Graph Learning: From PageRank to GNNs", fr: "Apprentissage sur graphes : de PageRank aux GNN" },
-      org: { es: "Télécom Paris / IP Paris", en: "Télécom Paris / IP Paris", fr: "Télécom Paris / IP Paris" },
-      dateLabel: { es: "2025", en: "2025", fr: "2025" },
-      text: {
-        es: "Curso práctico sobre estructura de grafos, PageRank, clustering espectral, difusión, embeddings y redes neuronales de grafos (GNN).",
-        en: "Hands-on coursework spanning graph structure, PageRank, spectral clustering, diffusion, embeddings and Graph Neural Networks.",
-        fr: "Travaux pratiques couvrant la structure des graphes, PageRank, le clustering spectral, la diffusion, les embeddings et les réseaux de neurones sur graphes."
+        es: "Comparación de SVM lineal y RBF, regularización y curvas de aprendizaje; en LFW, PCA mantuvo 93,4 % de accuracy y redujo el ajuste de 307,7 s a 2,48 s (≈124×).",
+        en: "Compared linear and RBF SVMs, regularization, and learning curves; on LFW, PCA retained 93.4% accuracy while reducing fitting time from 307.7 s to 2.48 s (≈124×).",
+        fr: "Comparaison de SVM linéaires et RBF, régularisation et courbes d'apprentissage ; sur LFW, l'ACP conserve 93,4 % d'accuracy tout en réduisant l'ajustement de 307,7 s à 2,48 s (≈124×)."
       }
     },
     {
       icon: "brain",
-      title: { es: "Laboratorios de Deep Learning: CNN y RNN", en: "Deep Learning Labs: CNNs & RNNs", fr: "TP de deep learning : CNN et RNN" },
-      org: { es: "Télécom Paris · PyTorch", en: "Télécom Paris · PyTorch", fr: "Télécom Paris · PyTorch" },
-      dateLabel: { es: "2024 – 2025", en: "2024 – 2025", fr: "2024 – 2025" },
+      title: { es: "MNIST: clasificador lineal y autoencoders", en: "MNIST: Linear Classifier and Autoencoders", fr: "MNIST : classifieur linéaire et autoencodeurs" },
+      org: { es: "Télécom Paris · Laboratorio individual de Machine Learning", en: "Télécom Paris · Individual Machine Learning lab", fr: "Télécom Paris · TP individuel de Machine Learning" },
+      dateLabel: { es: "Abr. 2025", en: "Apr 2025", fr: "Avr. 2025" },
       text: {
-        es: "Clasificación de imágenes con redes convolucionales (CNN) y modelado de secuencias / generación de texto con redes recurrentes (RNN) en PyTorch.",
-        en: "Image classification with convolutional networks (CNNs) and sequence modeling / text generation with recurrent networks (RNNs) in PyTorch.",
-        fr: "Classification d'images par réseaux convolutifs (CNN) et modélisation de séquences / génération de texte par réseaux récurrents (RNN) en PyTorch."
+        es: "Implementación en NumPy de un clasificador softmax que alcanzó 88,42 % de accuracy de prueba, seguida de experimentos con PCA, autoencoders y denoising autoencoders en Keras.",
+        en: "Implemented a NumPy softmax classifier that reached 88.42% test accuracy, followed by PCA, autoencoder, and denoising-autoencoder experiments in Keras.",
+        fr: "Implémentation en NumPy d'un classifieur softmax atteignant 88,42 % d'accuracy sur le test, puis expériences avec ACP, autoencodeurs et autoencodeurs débruiteurs sous Keras."
+      }
+    },
+    {
+      icon: "share",
+      title: { es: "Laboratorios de PageRank y detección de comunidades", en: "PageRank and Community Detection Labs", fr: "TP PageRank et détection de communautés" },
+      org: { es: "Télécom Paris · Graph Learning", en: "Télécom Paris · Graph Learning", fr: "Télécom Paris · Graph Learning" },
+      dateLabel: { es: "Jun. 2025", en: "Jun 2025", fr: "Juin 2025" },
+      text: {
+        es: "Laboratorios guiados sobre PageRank y PageRank personalizado, grafos dirigidos y bipartitos, Louvain, modularidad, Adjusted Rand Index e índice de Simpson.",
+        en: "Guided labs covering PageRank and personalized PageRank, directed and bipartite graphs, Louvain, modularity, Adjusted Rand Index, and the Simpson index.",
+        fr: "TP encadrés sur PageRank et PageRank personnalisé, graphes orientés et bipartis, Louvain, modularité, Adjusted Rand Index et indice de Simpson."
       }
     }
   ],

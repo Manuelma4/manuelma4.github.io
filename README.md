@@ -11,13 +11,13 @@ Static site, no build step, no framework, no dependencies at runtime:
 - `index.html` — page skeleton (nav, hero, section containers)
 - `assets/css/styles.css` — design system (light/dark themes via CSS custom properties)
 - `assets/js/content.js` — all copy, in Spanish / English / French (`window.SITE`)
-- `assets/js/app.js` — renders `content.js` into the DOM, handles language switching, theme toggle, scroll reveal, mobile nav, lightbox
-- `assets/img/` — project charts and icons
-- `assets/files/` — downloadable CV (PDF)
+- `assets/js/app.js` — renders `content.js` into the DOM and handles language switching, theme toggle, scroll reveal and mobile navigation
+- `assets/img/` — interface and credential artwork
+- `assets/files/` — downloadable CV and reviewed project documents (PDF)
 
 ## Editing content
 
-All text lives in `assets/js/content.js`, keyed by section and language (`{ es, en, fr }`). Edit copy there — `index.html`/`app.js` shouldn't need to change for content updates. Timeline entries (education/experience), projects, coursework, skills and certifications are each arrays of records rendered by `app.js`.
+All text lives in `assets/js/content.js`, keyed by section and language (`{ es, en, fr }`). Edit copy there — `index.html`/`app.js` shouldn't need to change for content updates. Timeline entries (education/experience), projects, coursework, skills and certifications are each arrays of records rendered by `app.js`. Project and coursework records can expose reviewed PDF files through their optional `documents` arrays.
 
 ## Running locally
 

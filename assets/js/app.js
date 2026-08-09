@@ -192,15 +192,6 @@
     wrap.innerHTML = "";
     SITE.projects.forEach(function (p) {
       var card = el("div", "project-card" + (p.featured ? " is-featured" : ""));
-      var bodyOpen = p.featured ? '<div class="project-body">' : "";
-      var bodyClose = p.featured ? "</div>" : "";
-
-      var media = "";
-      if (p.images && p.images.length) {
-        media = '<div class="project-media">' + p.images.map(function (im, idx) {
-          return '<img src="' + im.src + '" alt="' + L(im.cap) + '" loading="lazy" data-lightbox="1" data-cap="' + L(im.cap).replace(/"/g, "&quot;") + '">';
-        }).join("") + "</div>";
-      }
 
       var stats = "";
       if (p.stats && p.stats.length) {
@@ -211,39 +202,39 @@
 
       var bullets = p.bullets[state.lang].map(function (b) { return "<li>" + b + "</li>"; }).join("");
       var tags = (p.tags || []).map(function (tg) { return '<span class="tag">' + tg + "</span>"; }).join("");
+      var documents = (p.documents || []).map(function (doc) {
+        return '<a href="' + doc.href + '" target="_blank" rel="noopener noreferrer">' + icon("doc", 14) + L(doc.label) + "</a>";
+      }).join("");
 
       var content =
         '<div class="project-content">' +
           '<div class="project-kicker">' + L(p.kicker) + "</div>" +
           "<h3>" + L(p.title) + "</h3>" +
-          '<div class="project-meta">' + p.org + " · " + L(p.dateLabel) + "</div>" +
+          '<div class="project-meta">' + L(p.org) + " · " + L(p.dateLabel) + "</div>" +
           "<p>" + L(p.intro) + "</p>" +
           stats +
           '<ul class="project-bullets">' + bullets + "</ul>" +
-          '<div class="tl-tags">' + tags + "</div>" +
+          (tags ? '<div class="tl-tags">' + tags + "</div>" : "") +
+          (documents ? '<div class="project-links">' + documents + "</div>" : "") +
         "</div>";
 
-      card.innerHTML = bodyOpen + media + content + bodyClose;
+      card.innerHTML = content;
       wrap.appendChild(card);
-    });
-
-    // lightbox wiring
-    wrap.querySelectorAll("img[data-lightbox]").forEach(function (img) {
-      img.style.cursor = "zoom-in";
-      img.addEventListener("click", function () {
-        openLightbox(img.src, img.getAttribute("data-cap"));
-      });
     });
   }
 
   function renderCoursework() {
     var wrap = document.getElementById("courseworkList");
     wrap.innerHTML = SITE.coursework.map(function (c) {
+      var documents = (c.documents || []).map(function (doc) {
+        return '<a href="' + doc.href + '" target="_blank" rel="noopener noreferrer">' + icon("doc", 14) + L(doc.label) + "</a>";
+      }).join("");
       return (
         '<div class="course-row">' +
           '<div class="course-row-top"><h4>' + L(c.title) + '</h4><span class="tl-date">' + L(c.dateLabel) + "</span></div>" +
           '<div class="course-row-org">' + L(c.org) + "</div>" +
           "<p>" + L(c.text) + "</p>" +
+          (documents ? '<div class="course-links">' + documents + "</div>" : "") +
         "</div>"
       );
     }).join("");
@@ -414,20 +405,6 @@
     scanReveal();
   }
 
-  /* ---------------- Lightbox ---------------- */
-  function openLightbox(src, cap) {
-    var lb = document.getElementById("lightbox");
-    document.getElementById("lightboxImg").src = src;
-    document.getElementById("lightboxCap").textContent = cap || "";
-    lb.classList.add("is-open");
-    document.body.style.overflow = "hidden";
-  }
-  function closeLightbox() {
-    document.getElementById("lightbox").classList.remove("is-open");
-    document.body.style.overflow = "";
-  }
-
-
   /* ---------------- Language ---------------- */
   function setLang(lang) {
     if (LANGS.indexOf(lang) === -1) return;
@@ -504,14 +481,6 @@
     document.getElementById("backTop").addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-    document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
-    document.getElementById("lightbox").addEventListener("click", function (e) {
-      if (e.target.id === "lightbox") closeLightbox();
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeLightbox();
-    });
-
     initMobileNav();
     initScrollEffects();
     renderAll();
