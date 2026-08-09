@@ -47,10 +47,12 @@ window.SITE = {
       skills_lede: "Tecnologías usadas en producción, en investigación o en ambas, agrupadas tal como aparecen en mi CV.",
       lang_title: "Idiomas",
       certs_eyebrow: "Aprendizaje continuo", certs_title: "Certificaciones",
-      certs_lede: "20 certificaciones activas en Databricks, AWS, Google Cloud y Microsoft, obtenidas en paralelo al uso de estas plataformas en producción.",
+      certs_lede: "20 certificaciones activas en Databricks, AWS, Google Cloud y Microsoft: 6 microcredenciales validadas con labs prácticos y 14 knowledge badges de cursos superados por examen.",
       certs_issued: "Emitido", certs_expires: "Expira", certs_credential: "ID de credencial", certs_more_skills: "más",
       certs_view_all: "Ver todas en LinkedIn",
-      certs_stat_total: "Certificaciones activas", certs_stat_platforms: "Plataformas cloud y de datos", certs_stat_databricks: "Solo en Databricks",
+      certs_stat_total: "Certificaciones activas", certs_stat_micro: "Microcredenciales (práctica)", certs_stat_knowledge: "Knowledge badges (curso)",
+      certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
+      certs_type_micro: "Microcredenciales", certs_type_micro_1: "Microcredencial",
       contact_eyebrow: "Contacto", contact_title: "Hablemos",
       contact_lede: "Disponible para nuevas oportunidades como Data/AI Engineer en Francia, Colombia o en remoto. Escríbeme o descarga mi CV completo.",
       contact_cta_email: "Escribir un correo", contact_cta_cv: "Descargar CV completo",
@@ -90,10 +92,12 @@ window.SITE = {
       skills_lede: "Technologies used in production, in research, or both — grouped just as they appear on my CV.",
       lang_title: "Languages",
       certs_eyebrow: "Continuous learning", certs_title: "Certifications",
-      certs_lede: "20 active certifications across Databricks, AWS, Google Cloud and Microsoft, earned alongside using these platforms in production.",
+      certs_lede: "20 active certifications across Databricks, AWS, Google Cloud and Microsoft: 6 microcredentials validated through hands-on labs, and 14 knowledge badges from exam-graded courses.",
       certs_issued: "Issued", certs_expires: "Expires", certs_credential: "Credential ID", certs_more_skills: "more",
       certs_view_all: "View all on LinkedIn",
-      certs_stat_total: "Active certifications", certs_stat_platforms: "Cloud & data platforms", certs_stat_databricks: "On Databricks alone",
+      certs_stat_total: "Active certifications", certs_stat_micro: "Microcredentials (hands-on)", certs_stat_knowledge: "Knowledge badges (course)",
+      certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
+      certs_type_micro: "Microcredentials", certs_type_micro_1: "Microcredential",
       contact_eyebrow: "Contact", contact_title: "Let's talk",
       contact_lede: "Open to new opportunities as a Data/AI Engineer in France, Colombia or remote. Reach out, or download my full CV.",
       contact_cta_email: "Send an email", contact_cta_cv: "Download full CV",
@@ -133,10 +137,12 @@ window.SITE = {
       skills_lede: "Technologies utilisées en production, en recherche, ou les deux — regroupées comme sur mon CV.",
       lang_title: "Langues",
       certs_eyebrow: "Formation continue", certs_title: "Certifications",
-      certs_lede: "20 certifications actives chez Databricks, AWS, Google Cloud et Microsoft, obtenues en parallèle d'un usage en production de ces plateformes.",
+      certs_lede: "20 certifications actives chez Databricks, AWS, Google Cloud et Microsoft : 6 microcertifications validées par des labs pratiques et 14 knowledge badges de cours validés par examen.",
       certs_issued: "Délivré", certs_expires: "Expire", certs_credential: "N° de certification", certs_more_skills: "de plus",
       certs_view_all: "Voir tout sur LinkedIn",
-      certs_stat_total: "Certifications actives", certs_stat_platforms: "Plateformes cloud et data", certs_stat_databricks: "Rien que chez Databricks",
+      certs_stat_total: "Certifications actives", certs_stat_micro: "Microcertifications (pratique)", certs_stat_knowledge: "Knowledge badges (cours)",
+      certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
+      certs_type_micro: "Microcertifications", certs_type_micro_1: "Microcertification",
       contact_eyebrow: "Contact", contact_title: "Discutons",
       contact_lede: "Ouvert à de nouvelles opportunités en tant que Data/AI Engineer en France, en Colombie ou à distance. Écrivez-moi, ou téléchargez mon CV complet.",
       contact_cta_email: "Envoyer un e-mail", contact_cta_cv: "Télécharger le CV complet",
@@ -667,50 +673,50 @@ window.SITE = {
         issuer: "Databricks",
         icon: "database",
         items: [
-          { title: "SQL Programming and Procedural Logic", date: { y: 2026, m: 7 }, id: "187177227", skills: ["SQL", "Procedural Logic"], more: 3 },
-          { title: "Data Modeling Strategies", date: { y: 2026, m: 7 }, id: "187181237", skills: ["Data Modeling", "Databricks Lakehouse"], more: 3 },
-          { title: "SQL Analytics on Databricks", date: { y: 2026, m: 6 }, id: "186840861", skills: ["Data Analytics", "SQL"], more: 2 },
-          { title: "AI/BI for Data Analysts", date: { y: 2026, m: 6 }, id: "186021187", skills: ["Data Analysis", "Dashboards"], more: 3 },
-          { title: "Advanced Techniques with Spark Declarative Pipelines", date: { y: 2026, m: 5 }, id: "183734696", skills: ["Data Ingestion", "Change Data Capture"], more: 3 },
-          { title: "DevOps Essentials for Data Engineering", date: { y: 2026, m: 5 }, id: "183442877", skills: ["Code Quality", "Version Control"], more: 3 },
-          { title: "Build Data Pipelines with Lakeflow Spark Declarative Pipelines", date: { y: 2026, m: 5 }, id: "182974786", skills: ["Data Pipeline Development", "Incremental Processing"], more: 3 },
-          { title: "Deploy Workloads with Lakeflow Jobs", date: { y: 2026, m: 5 }, id: "182221648", skills: ["Data Workflow Orchestration", "Directed Acyclic Graphs (DAGs)"], more: 3 },
-          { title: "Data Ingestion with Lakeflow Connect", date: { y: 2026, m: 4 }, id: "180580599", skills: ["Data Ingestion", "Batch Processing"], more: 3 },
-          { title: "Databricks Fundamentals", date: { y: 2026, m: 4 }, id: "180440330", skills: ["Databricks Products", "Data Intelligence Platform"], more: 1 }
+          { title: "SQL Programming and Procedural Logic", date: { y: 2026, m: 7 }, id: "187177227", skills: ["SQL", "Procedural Logic"], more: 3, type: "knowledge" },
+          { title: "Data Modeling Strategies", date: { y: 2026, m: 7 }, id: "187181237", skills: ["Data Modeling", "Databricks Lakehouse"], more: 3, type: "knowledge" },
+          { title: "SQL Analytics on Databricks", date: { y: 2026, m: 6 }, id: "186840861", skills: ["Data Analytics", "SQL"], more: 2, type: "knowledge" },
+          { title: "AI/BI for Data Analysts", date: { y: 2026, m: 6 }, id: "186021187", skills: ["Data Analysis", "Dashboards"], more: 3, type: "knowledge" },
+          { title: "Advanced Techniques with Spark Declarative Pipelines", date: { y: 2026, m: 5 }, id: "183734696", skills: ["Data Ingestion", "Change Data Capture"], more: 3, type: "knowledge" },
+          { title: "DevOps Essentials for Data Engineering", date: { y: 2026, m: 5 }, id: "183442877", skills: ["Code Quality", "Version Control"], more: 3, type: "knowledge" },
+          { title: "Build Data Pipelines with Lakeflow Spark Declarative Pipelines", date: { y: 2026, m: 5 }, id: "182974786", skills: ["Data Pipeline Development", "Incremental Processing"], more: 3, type: "knowledge" },
+          { title: "Deploy Workloads with Lakeflow Jobs", date: { y: 2026, m: 5 }, id: "182221648", skills: ["Data Workflow Orchestration", "Directed Acyclic Graphs (DAGs)"], more: 3, type: "knowledge" },
+          { title: "Data Ingestion with Lakeflow Connect", date: { y: 2026, m: 4 }, id: "180580599", skills: ["Data Ingestion", "Batch Processing"], more: 3, type: "knowledge" },
+          { title: "Databricks Fundamentals", date: { y: 2026, m: 4 }, id: "180440330", skills: ["Databricks Products", "Data Intelligence Platform"], more: 1, type: "knowledge" }
         ]
       },
       {
         issuer: "Google Cloud Skills Boost",
         icon: "cloud",
         items: [
-          { title: "Deploy Multi-Agent Architectures", date: { y: 2026, m: 6 }, id: "daef43b2-a398-4cbb-a286-42c7536c7e5a", skills: ["AI Agents", "Authentication Protocols"], more: 2 },
-          { title: "Build a Data Mesh with Dataplex", date: { y: 2026, m: 6 }, id: "2be5d2be-1584-49ba-a831-72ddb22ef5c8", skills: ["Data Governance", "Data Security"], more: 2 },
-          { title: "Build Infrastructure with Terraform on Google Cloud", date: { y: 2026, m: 5 }, id: "2f7449ce-a5a4-481f-9b68-b1b69b432314", skills: ["Google Cloud Platform (GCP)", "Infrastructure as Code (IaC)"], more: 1 },
-          { title: "Build a Data Warehouse with BigQuery", date: { y: 2026, m: 5 }, id: "23c64912-0e53-4e1c-a10e-0acacf2b245b", skills: ["Data Ingestion", "Google BigQuery"], more: 2 }
+          { title: "Deploy Multi-Agent Architectures", date: { y: 2026, m: 6 }, id: "daef43b2-a398-4cbb-a286-42c7536c7e5a", skills: ["AI Agents", "Authentication Protocols"], more: 2, type: "micro" },
+          { title: "Build a Data Mesh with Dataplex", date: { y: 2026, m: 6 }, id: "2be5d2be-1584-49ba-a831-72ddb22ef5c8", skills: ["Data Governance", "Data Security"], more: 2, type: "micro" },
+          { title: "Build Infrastructure with Terraform on Google Cloud", date: { y: 2026, m: 5 }, id: "2f7449ce-a5a4-481f-9b68-b1b69b432314", skills: ["Google Cloud Platform (GCP)", "Infrastructure as Code (IaC)"], more: 1, type: "micro" },
+          { title: "Build a Data Warehouse with BigQuery", date: { y: 2026, m: 5 }, id: "23c64912-0e53-4e1c-a10e-0acacf2b245b", skills: ["Data Ingestion", "Google BigQuery"], more: 2, type: "micro" }
         ]
       },
       {
         issuer: "Amazon Web Services",
         icon: "layers",
         items: [
-          { title: "AWS Knowledge: Events and Workflows", date: { y: 2026, m: 6 }, id: "2164b5fb-3039-4144-b774-44e15b46616d", skills: ["Amazon Web Services (AWS)", "Amazon Simple Notification Service (SNS)"], more: 5 },
-          { title: "AWS Serverless Demonstrated", date: { y: 2026, m: 6 }, expires: { y: 2027, m: 6 }, id: "0ff238fc-3873-49c0-8f63-84d0fc849289", skills: ["Serverless Architecture", "Amazon Web Services (AWS)"], more: 10 }
+          { title: "AWS Knowledge: Events and Workflows", date: { y: 2026, m: 6 }, id: "2164b5fb-3039-4144-b774-44e15b46616d", skills: ["Amazon Web Services (AWS)", "Amazon Simple Notification Service (SNS)"], more: 5, type: "knowledge" },
+          { title: "AWS Serverless Demonstrated", date: { y: 2026, m: 6 }, expires: { y: 2027, m: 6 }, id: "0ff238fc-3873-49c0-8f63-84d0fc849289", skills: ["Serverless Architecture", "Amazon Web Services (AWS)"], more: 10, type: "micro" }
         ]
       },
       {
         issuer: "Microsoft",
         icon: "wrench",
         items: [
-          { title: "Implement a Real-Time Intelligence solution with Microsoft Fabric", date: { y: 2026, m: 6 }, id: "2BA2378B50BBFAD6", skills: ["Microsoft Fabric", "Data Streaming"], more: 3 }
+          { title: "Implement a Real-Time Intelligence solution with Microsoft Fabric", date: { y: 2026, m: 6 }, id: "2BA2378B50BBFAD6", skills: ["Microsoft Fabric", "Data Streaming"], more: 3, type: "micro" }
         ]
       },
       {
         issuer: "Cognitive Class",
         icon: "code",
         items: [
-          { title: "Data Visualization with Python", date: { y: 2022, m: 9 }, id: "53f53dae04674ad4ac3e741edc44d0d7", skills: [], more: 0 },
-          { title: "Data Analysis with Python", date: { y: 2022, m: 9 }, id: "35f212d48511469e956f4140b937e380", skills: [], more: 0 },
-          { title: "Python for Data Science", date: { y: 2022, m: 9 }, id: "ee33a8cf64f54cae8db02705747e0b0b", skills: [], more: 0 }
+          { title: "Data Visualization with Python", date: { y: 2022, m: 9 }, id: "53f53dae04674ad4ac3e741edc44d0d7", skills: [], more: 0, type: "knowledge" },
+          { title: "Data Analysis with Python", date: { y: 2022, m: 9 }, id: "35f212d48511469e956f4140b937e380", skills: [], more: 0, type: "knowledge" },
+          { title: "Python for Data Science", date: { y: 2022, m: 9 }, id: "ee33a8cf64f54cae8db02705747e0b0b", skills: [], more: 0, type: "knowledge" }
         ]
       }
     ]

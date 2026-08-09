@@ -232,17 +232,15 @@
 
   function renderCoursework() {
     var wrap = document.getElementById("courseworkList");
-    wrap.innerHTML = "";
-    SITE.coursework.forEach(function (c) {
-      var card = el("div", "course-card");
-      card.innerHTML =
-        '<div class="ic">' + icon(c.icon, 16) + "</div>" +
-        "<h4>" + L(c.title) + "</h4>" +
-        '<div class="tl-date" style="display:inline-block; margin-bottom:8px;">' + L(c.dateLabel) + "</div>" +
-        "<p>" + L(c.text) + "</p>" +
-        '<div class="project-meta">' + L(c.org) + "</div>";
-      wrap.appendChild(card);
-    });
+    wrap.innerHTML = SITE.coursework.map(function (c) {
+      return (
+        '<div class="course-row">' +
+          '<div class="course-row-top"><h4>' + L(c.title) + '</h4><span class="tl-date">' + L(c.dateLabel) + "</span></div>" +
+          '<div class="course-row-org">' + L(c.org) + "</div>" +
+          "<p>" + L(c.text) + "</p>" +
+        "</div>"
+      );
+    }).join("");
   }
 
   function renderSkills() {
@@ -274,53 +272,77 @@
     });
   }
 
+  function dateRangeLabel(items) {
+    var sorted = items.map(function (it) { return it.date; }).sort(function (a, b) { return (a.y * 12 + a.m) - (b.y * 12 + b.m); });
+    var first = sorted[0], last = sorted[sorted.length - 1];
+    if (first.y === last.y && first.m === last.m) return fmtDate(first);
+    if (first.y === last.y) return MONTHS[state.lang][first.m - 1] + "–" + fmtDate(last);
+    return fmtDate(first) + " – " + fmtDate(last);
+  }
+
+  function typeLabel(type, count) {
+    var key = type === "micro" ? "certs_type_micro" : "certs_type_knowledge";
+    return count === 1 ? t(key + "_1") : t(key);
+  }
+
+  function certTag(item) {
+    var tip = t("certs_issued") + " " + fmtDate(item.date);
+    if (item.expires) tip += " · " + t("certs_expires") + " " + fmtDate(item.expires);
+    return '<span class="tag" title="' + tip.replace(/"/g, "&quot;") + '">' + item.title + "</span>";
+  }
+
   function renderCertifications() {
     var c = SITE.certifications;
-    var total = 0;
-    c.groups.forEach(function (g) { total += g.items.length; });
-    var databricksCount = 0;
-    c.groups.forEach(function (g) { if (g.issuer === "Databricks") databricksCount = g.items.length; });
+    var total = 0, microCount = 0, knowledgeCount = 0;
+    c.groups.forEach(function (g) {
+      g.items.forEach(function (it) {
+        total++;
+        if (it.type === "micro") microCount++; else knowledgeCount++;
+      });
+    });
 
     var statsWrap = document.getElementById("certsStats");
     statsWrap.innerHTML = [
       { num: String(total), label: t("certs_stat_total") },
-      { num: String(c.groups.length), label: t("certs_stat_platforms") },
-      { num: String(databricksCount), label: t("certs_stat_databricks") }
+      { num: String(microCount), label: t("certs_stat_micro") },
+      { num: String(knowledgeCount), label: t("certs_stat_knowledge") }
     ].map(function (s) { return '<div class="stat-tile"><b>' + s.num + "</b><span>" + s.label + "</span></div>"; }).join("");
 
     var wrap = document.getElementById("certsGroups");
     wrap.innerHTML = "";
-    c.groups.forEach(function (g) {
-      var card = el("div", "skill-card", "");
-      card.style.marginBottom = "18px";
-      var rows = g.items.map(function (item) {
-        var dateStr = t("certs_issued") + " " + fmtDate(item.date);
-        if (item.expires) dateStr += " · " + t("certs_expires") + " " + fmtDate(item.expires);
-        var skillsLine = "";
-        if (item.skills && item.skills.length) {
-          skillsLine = item.skills.join(", ");
-          if (item.more) skillsLine += " +" + item.more + " " + t("certs_more_skills");
-        }
-        return (
-          '<li style="position:relative; padding:14px 0; border-top:1px solid var(--border);">' +
-            '<div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">' +
-              '<strong style="font-size:14px; color:var(--ink);">' + item.title + "</strong>" +
-              '<span class="tl-date" style="flex-shrink:0;">' + dateStr + "</span>" +
-            "</div>" +
-            (skillsLine ? '<div style="font-size:12.5px; color:var(--muted); margin-top:5px;">' + skillsLine + "</div>" : "") +
-            '<div style="font-size:11px; color:var(--muted); margin-top:4px; font-variant-numeric:tabular-nums;">' + t("certs_credential") + ": " + item.id + "</div>" +
-          "</li>"
-        );
-      }).join("");
+    c.groups.forEach(function (g, idx) {
+      var card = el("div", "cert-group");
+      card.setAttribute("data-c", idx % 5);
+
+      var micro = g.items.filter(function (it) { return it.type === "micro"; });
+      var knowledge = g.items.filter(function (it) { return it.type !== "micro"; });
+      var isMixed = micro.length > 0 && knowledge.length > 0;
+
+      var body;
+      if (isMixed) {
+        // e.g. AWS: show each credential type as its own labeled cluster
+        body =
+          '<div class="cert-subgroup"><div class="cert-subgroup-label">' + micro.length + " " + typeLabel("micro", micro.length) + '</div><div class="cert-tags">' + micro.map(certTag).join("") + "</div></div>" +
+          '<div class="cert-subgroup"><div class="cert-subgroup-label">' + knowledge.length + " " + typeLabel("knowledge", knowledge.length) + '</div><div class="cert-tags">' + knowledge.map(certTag).join("") + "</div></div>";
+      } else {
+        body = '<div class="cert-tags">' + g.items.map(certTag).join("") + "</div>";
+      }
+
+      var soleType = micro.length > 0 ? "micro" : "knowledge";
+      var metaLine = isMixed
+        ? (g.items.length + " · " + dateRangeLabel(g.items))
+        : (g.items.length + " " + typeLabel(soleType, g.items.length) + " · " + dateRangeLabel(g.items));
 
       card.innerHTML =
-        '<div class="skill-card-head"><div class="ic">' + icon(g.icon, 18) + '</div><h4>' + g.issuer + '<span style="color:var(--muted); font-weight:500;"> · ' + g.items.length + "</span></h4></div>" +
-        '<ul style="list-style:none;">' + rows + "</ul>";
+        '<div class="cert-group-head">' +
+          '<div class="ic">' + icon(g.icon, 17) + "</div>" +
+          "<div>" +
+            "<h4>" + g.issuer + "</h4>" +
+            '<span class="cert-group-meta">' + metaLine + "</span>" +
+          "</div>" +
+        "</div>" +
+        body;
       wrap.appendChild(card);
-    });
-    // colorize issuer icons using the same rotation as skills
-    wrap.querySelectorAll(".skill-card").forEach(function (card, idx) {
-      card.setAttribute("data-c", idx % 5);
     });
   }
 
