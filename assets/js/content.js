@@ -8,7 +8,7 @@ window.SITE = {
   meta: {
     name: "Manuel David Maya Rosero",
     initials: "MM",
-    role: { es: "Ingeniero de Software, Datos e IA", en: "AI Data Software Engineer", fr: "Ingénieur Logiciel, Data & IA" },
+    role: { es: "Ingeniero de Software de Datos e IA", en: "Data & AI Software Engineer", fr: "Ingénieur logiciel Data & IA" },
     email: "manueldmaya@gmail.com",
     phoneDisplay: "+33 7 67 30 41 69",
     phoneHref: "+33767304169",
@@ -17,28 +17,34 @@ window.SITE = {
     linkedinUrl: "https://www.linkedin.com/in/manueldmaya",
     githubUser: "Manuelma4",
     githubUrl: "https://github.com/Manuelma4",
-    cvFile: "assets/files/Manuel_David_MAYA_ROSERO_CV.pdf"
+    cvFiles: {
+      es: "assets/files/Manuel_David_MAYA_ROSERO_CV.pdf",
+      en: "assets/files/Manuel_David_MAYA_ROSERO_CV.pdf",
+      fr: "assets/files/CV_Manuel_David_MAYAROSERO_FR.pdf"
+    }
   },
 
   ui: {
     es: {
       nav_home: "Inicio", nav_about: "Perfil", nav_education: "Formación", nav_experience: "Experiencia",
       nav_projects: "Proyectos", nav_skills: "Habilidades", nav_certifications: "Certificaciones", nav_contact: "Contacto",
+      language_selector: "Seleccionar idioma",
       hero_kicker: "Disponible para nuevas oportunidades",
-      hero_role_line: "Ingeniero de Software · Datos · IA",
-      hero_lede: "Diseño y construyo plataformas de datos, sistemas RAG y aplicaciones cloud — de prototipo académico a producción — entre Colombia y Francia, con un pie siempre puesto en el impacto social.",
+      hero_role_line: "Ingeniero de Software de Datos e IA",
+      hero_lede: "Me interesa todo el ciclo de los datos: desde la infraestructura y el software que los hacen posibles hasta los productos de IA y las decisiones que ayudan a construir.",
       cta_cv: "Descargar CV", cta_contact: "Contactarme", cta_projects: "Ver proyectos",
       hero_card_kicker: "Perfil resumido",
       label_present: "Actualidad", label_since: "Desde",
       about_eyebrow: "Perfil", about_title: "Sobre mí",
-      about_lede: "Ingeniero colombiano formándose en Francia, entre la ingeniería de datos, la IA aplicada y la economía digital.",
+      about_lede: "Ingeniero colombiano entre el software, los datos, la IA aplicada y la economía digital.",
       edu_eyebrow: "Formación académica", edu_title: "Educación",
-      edu_lede: "Un recorrido entre Bogotá y París: ingeniería de sistemas, un máster en ingeniería y un doble título en economía digital.",
+      edu_lede: "Un recorrido entre Bogotá y París: Ingeniería de Sistemas y Computación, un programa de ingeniería en Télécom Paris y el doble diploma M2 IREN.",
       exp_eyebrow: "Trayectoria profesional", exp_title: "Experiencia",
       exp_lede: "Roles en ingeniería de datos, IA aplicada y desarrollo de software, en Colombia y Francia.",
       proj_eyebrow: "Trabajo destacado", proj_title: "Proyectos",
-      proj_lede: "Una selección auditada de proyectos académicos con resultados verificables y documentos adjuntos cuando su publicación es segura. El trabajo realizado para empresas aparece únicamente en Experiencia.",
-      coursework_title: "Formación aplicada", coursework_lede: "Propuestas y laboratorios guiados, separados de los proyectos principales y de la experiencia profesional.",
+      proj_lede: "Proyectos académicos agrupados por institución y curso, con autoría, alcance y documentos claramente identificados. El trabajo realizado para empresas aparece únicamente en Experiencia.",
+      projects_count: "trabajos seleccionados", projects_count_1: "trabajo seleccionado",
+      projects_documents: "Documentos", projects_team_link: "Repositorios del equipo", projects_open_pdf: "Abrir PDF",
       found_eyebrow: "Impacto social", found_title: "Fundación Kawsay",
       found_lede: "Cofundé esta fundación colombiana en 2022 y sigo a cargo de su gestión de datos. Es, sin duda, el proyecto del que más orgulloso estoy.",
       found_pillars_title: "Líneas de trabajo",
@@ -47,16 +53,20 @@ window.SITE = {
       skills_lede: "Tecnologías usadas en producción, en investigación o en ambas, agrupadas tal como aparecen en mi CV.",
       lang_title: "Idiomas",
       certs_eyebrow: "Aprendizaje continuo", certs_title: "Certificaciones",
-      certs_lede: "21 credenciales activas en Databricks, AWS, Google Cloud y Microsoft: 1 certificación profesional, 1 Microsoft Applied Skill, 5 microcredenciales y 14 knowledge badges.",
+      certs_lede: "21 credenciales organizadas por nivel y proveedor: 2 en Certificaciones, 5 microcertificaciones y 14 knowledge badges.",
       certs_issued: "Emitido", certs_expires: "Expira", certs_credential: "ID de credencial", certs_number: "Número de certificación", certs_verify: "Verificar credencial", certs_more_skills: "más",
       certs_view_all: "Ver todas en LinkedIn",
-      certs_stat_total: "Credenciales activas", certs_stat_certification: "Certificación profesional", certs_stat_applied: "Microsoft Applied Skill", certs_stat_micro: "Microcredenciales (práctica)", certs_stat_knowledge: "Knowledge badges (curso)",
+      certs_stat_total: "Credenciales", certs_stat_certification: "Certificaciones", certs_stat_micro: "Microcertificaciones", certs_stat_knowledge: "Knowledge badges",
+      certs_category_certification: "Certificaciones", certs_category_certification_desc: "Certificaciones profesionales y Microsoft Applied Skills.",
+      certs_category_micro: "Microcertificaciones", certs_category_micro_desc: "Credenciales prácticas basadas en habilidades demostradas.",
+      certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Credenciales de formación y conocimiento por tecnología.",
+      certs_credentials: "credenciales", certs_credentials_1: "credencial", certs_badge_alt: "Badge de",
       certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
       certs_type_micro: "Microcredenciales", certs_type_micro_1: "Microcredencial",
       certs_type_certification: "Certificaciones profesionales", certs_type_certification_1: "Certificación profesional",
       certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
       contact_eyebrow: "Contacto", contact_title: "Hablemos",
-      contact_lede: "Disponible para nuevas oportunidades como Data/AI Engineer en Francia, Colombia o en remoto. Escríbeme o descarga mi CV completo.",
+      contact_lede: "Disponible para nuevas oportunidades en software, datos e IA en Francia, Colombia o en remoto. Escríbeme o descarga mi CV completo.",
       contact_cta_email: "Escribir un correo", contact_cta_cv: "Descargar CV completo",
       footer_rights: "Todos los derechos reservados.",
       footer_source: "Código fuente",
@@ -70,21 +80,23 @@ window.SITE = {
     en: {
       nav_home: "Home", nav_about: "Profile", nav_education: "Education", nav_experience: "Experience",
       nav_projects: "Projects", nav_skills: "Skills", nav_certifications: "Certifications", nav_contact: "Contact",
+      language_selector: "Select language",
       hero_kicker: "Open to new opportunities",
-      hero_role_line: "Software · Data · AI Engineer",
-      hero_lede: "I design and build data platforms, RAG systems and cloud applications — from academic prototype to production — across Colombia and France, always with an eye on social impact.",
+      hero_role_line: "Data & AI Software Engineer",
+      hero_lede: "I am interested in the full data lifecycle: from the infrastructure and software that make data possible to the AI products and decisions it helps shape.",
       cta_cv: "Download CV", cta_contact: "Get in touch", cta_projects: "View projects",
       hero_card_kicker: "Quick profile",
       label_present: "Present", label_since: "Since",
       about_eyebrow: "Profile", about_title: "About me",
-      about_lede: "A Colombian engineer training in France, at the crossroads of data engineering, applied AI and the digital economy.",
+      about_lede: "A Colombian engineer working across software, data, applied AI, and the digital economy.",
       edu_eyebrow: "Academic background", edu_title: "Education",
-      edu_lede: "A journey between Bogotá and Paris: computer engineering, a master's in engineering, and a double degree in digital economics.",
+      edu_lede: "A journey between Bogotá and Paris: Systems and Computer Engineering, Télécom Paris's engineering programme, and the M2 IREN double degree.",
       exp_eyebrow: "Career path", exp_title: "Experience",
       exp_lede: "Roles in data engineering, applied AI and software development, across Colombia and France.",
       proj_eyebrow: "Featured work", proj_title: "Projects",
-      proj_lede: "An audited selection of academic projects with verifiable results and attached documents when publication is safe. Work completed for employers appears only under Experience.",
-      coursework_title: "Applied coursework", coursework_lede: "Research proposals and guided labs, kept separate from featured projects and professional experience.",
+      proj_lede: "Academic work grouped by institution and course, with authorship, scope, and supporting documents clearly identified. Work completed for employers appears only under Experience.",
+      projects_count: "selected works", projects_count_1: "selected work",
+      projects_documents: "Documents", projects_team_link: "Team repositories", projects_open_pdf: "Open PDF",
       found_eyebrow: "Social impact", found_title: "Fundación Kawsay",
       found_lede: "I co-founded this Colombian foundation in 2022 and still lead its data management. It's, without a doubt, the project I'm proudest of.",
       found_pillars_title: "Programme areas",
@@ -93,16 +105,20 @@ window.SITE = {
       skills_lede: "Technologies used in production, in research, or both — grouped just as they appear on my CV.",
       lang_title: "Languages",
       certs_eyebrow: "Continuous learning", certs_title: "Certifications",
-      certs_lede: "21 active credentials across Databricks, AWS, Google Cloud and Microsoft: 1 professional certification, 1 Microsoft Applied Skill, 5 microcredentials, and 14 knowledge badges.",
+      certs_lede: "21 credentials organized by level and provider: 2 under Certifications, 5 microcredentials, and 14 knowledge badges.",
       certs_issued: "Issued", certs_expires: "Expires", certs_credential: "Credential ID", certs_number: "Certification number", certs_verify: "Verify credential", certs_more_skills: "more",
       certs_view_all: "View all on LinkedIn",
-      certs_stat_total: "Active credentials", certs_stat_certification: "Professional certification", certs_stat_applied: "Microsoft Applied Skill", certs_stat_micro: "Microcredentials (hands-on)", certs_stat_knowledge: "Knowledge badges (course)",
+      certs_stat_total: "Credentials", certs_stat_certification: "Certifications", certs_stat_micro: "Microcredentials", certs_stat_knowledge: "Knowledge badges",
+      certs_category_certification: "Certifications", certs_category_certification_desc: "Professional certifications and Microsoft Applied Skills.",
+      certs_category_micro: "Microcredentials", certs_category_micro_desc: "Hands-on credentials based on demonstrated skills.",
+      certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Training and technology knowledge credentials.",
+      certs_credentials: "credentials", certs_credentials_1: "credential", certs_badge_alt: "Badge for",
       certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
       certs_type_micro: "Microcredentials", certs_type_micro_1: "Microcredential",
       certs_type_certification: "Professional certifications", certs_type_certification_1: "Professional certification",
       certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
       contact_eyebrow: "Contact", contact_title: "Let's talk",
-      contact_lede: "Open to new opportunities as a Data/AI Engineer in France, Colombia or remote. Reach out, or download my full CV.",
+      contact_lede: "Open to software, data, and AI opportunities in France, Colombia, or remotely. Reach out, or download my full CV.",
       contact_cta_email: "Send an email", contact_cta_cv: "Download full CV",
       footer_rights: "All rights reserved.",
       footer_source: "Source code",
@@ -116,21 +132,23 @@ window.SITE = {
     fr: {
       nav_home: "Accueil", nav_about: "Profil", nav_education: "Formation", nav_experience: "Expérience",
       nav_projects: "Projets", nav_skills: "Compétences", nav_certifications: "Certifications", nav_contact: "Contact",
+      language_selector: "Choisir la langue",
       hero_kicker: "Ouvert à de nouvelles opportunités",
-      hero_role_line: "Ingénieur Logiciel · Data · IA",
-      hero_lede: "Je conçois et développe des plateformes de données, des systèmes RAG et des applications cloud — du prototype académique à la production — entre la Colombie et la France, toujours avec un œil sur l'impact social.",
+      hero_role_line: "Ingénieur logiciel Data & IA",
+      hero_lede: "Je m'intéresse à tout le cycle de vie des données : de l'infrastructure et du logiciel qui les rendent possibles jusqu'aux produits d'IA et aux décisions qu'elles contribuent à éclairer.",
       cta_cv: "Télécharger le CV", cta_contact: "Me contacter", cta_projects: "Voir les projets",
       hero_card_kicker: "Profil rapide",
       label_present: "Aujourd'hui", label_since: "Depuis",
       about_eyebrow: "Profil", about_title: "À propos",
-      about_lede: "Un ingénieur colombien formé en France, à la croisée de l'ingénierie des données, de l'IA appliquée et de l'économie numérique.",
+      about_lede: "Un ingénieur colombien à la croisée du logiciel, de la data, de l'IA appliquée et de l'économie numérique.",
       edu_eyebrow: "Parcours académique", edu_title: "Formation",
       edu_lede: "Un parcours entre Bogotá et Paris : génie informatique, diplôme d'ingénieur, puis double diplôme en économie numérique.",
       exp_eyebrow: "Parcours professionnel", exp_title: "Expérience",
       exp_lede: "Des missions en ingénierie des données, IA appliquée et développement logiciel, entre la Colombie et la France.",
       proj_eyebrow: "Travaux marquants", proj_title: "Projets",
-      proj_lede: "Une sélection auditée de projets académiques aux résultats vérifiables, avec documents joints lorsque leur publication est sûre. Les travaux réalisés en entreprise figurent uniquement dans Expérience.",
-      coursework_title: "Travaux pratiques", coursework_lede: "Propositions de recherche et TP encadrés, séparés des projets principaux et de l'expérience professionnelle.",
+      proj_lede: "Travaux académiques regroupés par établissement et par cours, avec une attribution, une portée et des documents clairement identifiés. Les travaux réalisés en entreprise figurent uniquement dans Expérience.",
+      projects_count: "travaux sélectionnés", projects_count_1: "travail sélectionné",
+      projects_documents: "Documents", projects_team_link: "Dépôts de l'équipe", projects_open_pdf: "Ouvrir le PDF",
       found_eyebrow: "Impact social", found_title: "Fundación Kawsay",
       found_lede: "J'ai cofondé cette fondation colombienne en 2022 et j'assure toujours la gestion de ses données. C'est, sans conteste, le projet dont je suis le plus fier.",
       found_pillars_title: "Domaines d'action",
@@ -139,16 +157,20 @@ window.SITE = {
       skills_lede: "Technologies utilisées en production, en recherche, ou les deux — regroupées comme sur mon CV.",
       lang_title: "Langues",
       certs_eyebrow: "Formation continue", certs_title: "Certifications",
-      certs_lede: "21 certifications actives chez Databricks, AWS, Google Cloud et Microsoft : 1 certification professionnelle, 1 Microsoft Applied Skill, 5 microcertifications et 14 knowledge badges.",
+      certs_lede: "21 certifications organisées par niveau et fournisseur : 2 dans Certifications, 5 microcertifications et 14 knowledge badges.",
       certs_issued: "Délivré", certs_expires: "Expire", certs_credential: "ID de certification", certs_number: "Numéro de certification", certs_verify: "Vérifier la certification", certs_more_skills: "de plus",
       certs_view_all: "Voir tout sur LinkedIn",
-      certs_stat_total: "Certifications actives", certs_stat_certification: "Certification professionnelle", certs_stat_applied: "Microsoft Applied Skill", certs_stat_micro: "Microcertifications (pratique)", certs_stat_knowledge: "Knowledge badges (cours)",
+      certs_stat_total: "Certifications", certs_stat_certification: "Certifications avancées", certs_stat_micro: "Microcertifications", certs_stat_knowledge: "Knowledge badges",
+      certs_category_certification: "Certifications", certs_category_certification_desc: "Certifications professionnelles et Microsoft Applied Skills.",
+      certs_category_micro: "Microcertifications", certs_category_micro_desc: "Certifications pratiques fondées sur des compétences démontrées.",
+      certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Certifications de formation et de connaissance technologique.",
+      certs_credentials: "certifications", certs_credentials_1: "certification", certs_badge_alt: "Badge de",
       certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
       certs_type_micro: "Microcertifications", certs_type_micro_1: "Microcertification",
       certs_type_certification: "Certifications professionnelles", certs_type_certification_1: "Certification professionnelle",
       certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
       contact_eyebrow: "Contact", contact_title: "Discutons",
-      contact_lede: "Ouvert à de nouvelles opportunités en tant que Data/AI Engineer en France, en Colombie ou à distance. Écrivez-moi, ou téléchargez mon CV complet.",
+      contact_lede: "Ouvert à de nouvelles opportunités en logiciel, data et IA en France, en Colombie ou à distance. Écrivez-moi ou téléchargez mon CV complet.",
       contact_cta_email: "Envoyer un e-mail", contact_cta_cv: "Télécharger le CV complet",
       footer_rights: "Tous droits réservés.",
       footer_source: "Code source",
@@ -162,7 +184,7 @@ window.SITE = {
   },
 
   heroStats: [
-    { num: "7+", label: { es: "Roles profesionales", en: "Professional roles", fr: "Expériences professionnelles" } },
+    { num: "5", label: { es: "Roles profesionales", en: "Professional roles", fr: "Expériences professionnelles" } },
     { num: "21", label: { es: "Credenciales activas", en: "Active credentials", fr: "Certifications actives" } },
     { num: "3", label: { es: "Instituciones: UNAL · Télécom · Dauphine", en: "Institutions: UNAL · Télécom · Dauphine", fr: "Établissements : UNAL · Télécom · Dauphine" } },
     { num: "3", label: { es: "Idiomas: ES · EN · FR", en: "Languages: ES · EN · FR", fr: "Langues : ES · EN · FR" } }
@@ -171,19 +193,19 @@ window.SITE = {
   about: {
     paragraphs: {
       es: [
-        "Soy ingeniero de software colombiano, formado en ingeniería de sistemas en la Universidad Nacional de Colombia (beca de excelencia, top 1% nacional). Me especialicé en ciencia de datos y economía digital en Télécom Paris, y complementé esa formación con un doble título M2 IREN en IP Paris–Université Dauphine-PSL, enfocado en industrias de red y economía digital.",
-        "Ese recorrido —ingeniería primero, datos e IA después, economía digital al final— define cómo trabajo: construyo plataformas de datos, sistemas de IA generativa (RAG) y aplicaciones cloud-native de extremo a extremo, desde el prototipo hasta la producción, y entiendo el contexto de negocio y regulatorio en el que esos sistemas operan.",
-        "Mantengo esa formación al día con certificaciones activas en Databricks, AWS, Google Cloud y Microsoft, en paralelo a los roles en los que ya aplico esas plataformas."
+        "Me interesa todo el ciclo de los datos: cómo se capturan, organizan, transforman y convierten en productos y decisiones útiles. Estudié Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia para construir una base sólida en infraestructura, desarrollo web, bases de datos y trabajo en equipos ágiles; allí también tuve mis primeros acercamientos a la ciencia de datos y al procesamiento del lenguaje natural.",
+        "En Télécom Paris profundicé en Data Science y MODS. Después elegí el doble diploma M2 IREN con Université Paris Dauphine–PSL para complementar la ingeniería con economía digital, industrias de red, competencia y regulación. Actualmente trabajo como AI Data Engineer Intern, conectando software, datos e IA en soluciones aplicadas.",
+        "Mi objetivo a largo plazo es evolucionar hacia el liderazgo de datos y, con el tiempo, asumir un rol de Head of Data que combine arquitectura, producto, gobernanza y estrategia."
       ],
       en: [
-        "I'm a Colombian software engineer, trained in computer engineering at Universidad Nacional de Colombia (full merit scholarship, top 1% nationwide). I specialized in data science and the digital economy at Télécom Paris, and rounded that out with an M2 IREN double degree at IP Paris–Université Dauphine-PSL, focused on network industries and the digital economy.",
-        "That path — engineering first, data and AI next, digital economics last — shapes how I work: I build data platforms, generative-AI (RAG) systems and cloud-native applications end to end, from prototype to production, while understanding the business and regulatory context those systems operate in.",
-        "I keep that training current with active certifications across Databricks, AWS, Google Cloud and Microsoft, alongside the roles where I already put those platforms to work."
+        "I am interested in the full data lifecycle: how data is captured, organized, transformed, and turned into useful products and decisions. I studied Systems and Computer Engineering at Universidad Nacional de Colombia to build solid foundations in infrastructure, web development, databases, and agile teamwork; it was also where I first explored data science and natural language processing.",
+        "At Télécom Paris, I deepened my training in Data Science and MODS. I then chose the M2 IREN double-degree track with Université Paris Dauphine–PSL to complement engineering with digital economics, network industries, competition, and regulation. I currently work as an AI Data Engineer Intern, connecting software, data, and AI in applied solutions.",
+        "My long-term goal is to grow into data leadership and, over time, take on a Head of Data role that brings together architecture, product, governance, and strategy."
       ],
       fr: [
-        "Je suis ingénieur logiciel colombien, formé en génie informatique à l'Universidad Nacional de Colombia (bourse d'excellence, top 1 % national). Je me suis spécialisé en data science et économie numérique à Télécom Paris, avant de compléter ce parcours par un double diplôme M2 IREN à IP Paris–Université Dauphine-PSL, orienté industries de réseau et économie numérique.",
-        "Ce parcours — l'ingénierie d'abord, la data et l'IA ensuite, l'économie numérique enfin — définit ma façon de travailler : je construis des plateformes de données, des systèmes d'IA générative (RAG) et des applications cloud-native de bout en bout, du prototype à la production, en comprenant le contexte business et réglementaire dans lequel ces systèmes s'inscrivent.",
-        "Je maintiens cette formation à jour grâce à des certifications actives chez Databricks, AWS, Google Cloud et Microsoft, en parallèle des missions où je mets déjà ces plateformes en pratique."
+        "Je m'intéresse à tout le cycle de vie des données : leur collecte, leur organisation, leur transformation et leur conversion en produits et décisions utiles. J'ai étudié l'ingénierie des systèmes et de l'informatique à l'Universidad Nacional de Colombia afin d'acquérir des bases solides en infrastructure, développement web, bases de données et travail agile ; j'y ai également découvert la data science et le traitement automatique du langage.",
+        "À Télécom Paris, j'ai approfondi la Data Science et le parcours MODS. J'ai ensuite choisi le double diplôme M2 IREN avec l'Université Paris Dauphine–PSL afin de compléter l'ingénierie par l'économie numérique, les industries de réseau, la concurrence et la régulation. Je travaille aujourd'hui comme stagiaire ingénieur Data & IA, au croisement du logiciel, de la data et de l'IA.",
+        "À long terme, je souhaite évoluer vers le leadership data puis assumer un rôle de Head of Data réunissant architecture, produit, gouvernance et stratégie."
       ]
     },
     highlights: [
@@ -194,12 +216,12 @@ window.SITE = {
       },
       {
         icon: "rocket",
-        title: { es: "De prototipo a producción", en: "From prototype to production", fr: "Du prototype à la production" },
-        text: { es: "Sistemas RAG y plataformas cloud entregados en tres organizaciones distintas, en dos países.", en: "RAG systems and cloud platforms shipped across three different organizations, in two countries.", fr: "Systèmes RAG et plateformes cloud livrés au sein de trois organisations différentes, dans deux pays." }
+        title: { es: "Ciclo completo de datos", en: "Full data lifecycle", fr: "Cycle de vie complet des données" },
+        text: { es: "Infraestructura, backends, pipelines, analítica e IA entendidos como partes de un mismo producto.", en: "Infrastructure, backends, pipelines, analytics, and AI understood as parts of one product.", fr: "Infrastructure, backends, pipelines, analytique et IA pensés comme les composantes d'un même produit." }
       },
       {
         icon: "award",
-        title: { es: "Certificado multi-nube", en: "Certified across clouds", fr: "Certifié multi-cloud" },
+        title: { es: "Credenciales multi-nube", en: "Multi-cloud credentials", fr: "Certifications multi-cloud" },
         text: { es: "21 credenciales activas en Databricks, AWS, Google Cloud y Microsoft.", en: "21 active credentials across Databricks, AWS, Google Cloud and Microsoft.", fr: "21 certifications actives chez Databricks, AWS, Google Cloud et Microsoft." }
       }
     ]
@@ -211,24 +233,24 @@ window.SITE = {
       icon: "cap",
       org: "Universidad Nacional de Colombia",
       place: { es: "Bogotá, D.C., Colombia", en: "Bogotá, D.C., Colombia", fr: "Bogotá, D.C., Colombie" },
-      degree: { es: "Ingeniería de Sistemas (pregrado)", en: "BSc in Computer / Systems Engineering", fr: "Licence en génie informatique" },
+      degree: { es: "Ingeniería de Sistemas y Computación", en: "Systems and Computer Engineering", fr: "Ingénierie des systèmes et de l'informatique" },
       dateLabel: { es: "Mar. 2020 – Sept. 2026", en: "Mar 2020 – Sept 2026", fr: "Mars 2020 – Sept. 2026" },
-      ongoing: false,
+      ongoing: true,
       bullets: {
         es: [
-          "Beca de excelencia académica completa (top 1% nacional, examen ICFES).",
-          "Base en algoritmos, ingeniería de software, bases de datos y matemáticas aplicadas.",
-          "Cursada en paralelo con los roles de investigación y desarrollo en DNINFOA y OPE-PRIG."
+          "Beca de excelencia académica completa.",
+          "Base en algoritmos, infraestructura, desarrollo web, ingeniería de software, bases de datos y trabajo en equipos ágiles.",
+          "Primeros proyectos de ciencia de datos y procesamiento del lenguaje natural, en paralelo con roles de investigación y desarrollo en DNINFOA y OPE-PRIG."
         ],
         en: [
-          "Full academic-excellence scholarship (top 1% nationwide, ICFES exam).",
-          "Foundations in algorithms, software engineering, databases and applied mathematics.",
-          "Completed alongside research and development roles at DNINFOA and OPE-PRIG."
+          "Full academic-excellence scholarship.",
+          "Foundations in algorithms, infrastructure, web development, software engineering, databases, and agile teamwork.",
+          "First data-science and natural-language-processing projects, alongside research and development roles at DNINFOA and OPE-PRIG."
         ],
         fr: [
-          "Bourse d'excellence académique complète (top 1 % national, examen ICFES).",
-          "Bases solides en algorithmique, génie logiciel, bases de données et mathématiques appliquées.",
-          "Cursus mené en parallèle de missions de recherche et développement chez DNINFOA et OPE-PRIG."
+          "Bourse d'excellence académique complète.",
+          "Bases en algorithmique, infrastructure, développement web, génie logiciel, bases de données et travail agile.",
+          "Premiers projets en data science et traitement automatique du langage, parallèlement à des missions de recherche et développement chez DNINFOA et OPE-PRIG."
         ]
       },
       tags: []
@@ -238,7 +260,7 @@ window.SITE = {
       icon: "cap",
       org: "Télécom Paris",
       place: { es: "París, Francia", en: "Paris, France", fr: "Paris, France" },
-      degree: { es: "Ingeniería (MSc) — Data Science & MODS", en: "MSc Engineering — Data Science & MODS", fr: "Diplôme d'ingénieur (MSc) — Data Science & MODS" },
+      degree: { es: "Programa de Ingeniería — Data Science & MODS", en: "Engineering programme — Data Science & MODS", fr: "Diplôme d'ingénieur — Data Science & MODS" },
       dateLabel: { es: "Sept. 2024 – Sept. 2026", en: "Sept 2024 – Sept 2026", fr: "Sept. 2024 – Sept. 2026" },
       ongoing: true,
       bullets: {
@@ -263,7 +285,7 @@ window.SITE = {
     {
       id: "iren",
       icon: "cap",
-      org: "IP Paris – Université Paris Dauphine-PSL",
+      org: "Université Paris Dauphine–PSL · Télécom Paris",
       place: { es: "París, Francia", en: "Paris, France", fr: "Paris, France" },
       degree: { es: "Doble título M2 IREN", en: "M2 IREN Double Degree", fr: "Double diplôme M2 IREN" },
       dateLabel: { es: "Sept. 2025 – Sept. 2026", en: "Sept 2025 – Sept 2026", fr: "Sept. 2025 – Sept. 2026" },
@@ -272,17 +294,17 @@ window.SITE = {
         es: [
           "Doble título M2 IREN especializado en industrias de red y economía digital (competencia, regulación, plataformas digitales).",
           "Investigación (tutorat) sobre simulación social multiagente con LLM, aplicada a la Digital Markets Act de la UE.",
-          "Econometría aplicada, con un proyecto de inferencia causal sobre el programa de bicicletas eléctricas Vélib'/Véligo."
+          "Econometría aplicada, con una propuesta de inferencia causal sobre el programa de bicicletas eléctricas Véligo."
         ],
         en: [
           "M2 IREN double degree specializing in network industries and the digital economy (competition, regulation, digital platforms).",
           "Independent research (tutorat) on LLM-based multi-agent social simulation, applied to the EU Digital Markets Act.",
-          "Applied econometrics, including a causal-inference project on the Vélib'/Veligo e-bike programme."
+          "Applied econometrics, including a causal-inference proposal for the Véligo e-bike programme."
         ],
         fr: [
           "Double diplôme M2 IREN, spécialisation industries de réseau et économie numérique (concurrence, régulation, plateformes numériques).",
           "Travail de recherche (tutorat) sur la simulation sociale multi-agents par LLM, appliquée au Digital Markets Act de l'UE.",
-          "Économétrie appliquée, avec un projet d'inférence causale sur le programme de vélos électriques Vélib'/Véligo."
+          "Économétrie appliquée, avec une proposition d'inférence causale sur le programme de vélos électriques Véligo."
         ]
       },
       tags: []
@@ -293,7 +315,7 @@ window.SITE = {
     {
       id: "moduo",
       icon: "briefcase",
-      title: { es: "AI Data Engineer Intern (antes IT Developer)", en: "AI Data Engineer Intern (previously IT Developer)", fr: "Stage AI Data Engineer (auparavant IT Developer)" },
+      title: { es: "AI Data Engineer Intern (antes IT Developer)", en: "AI Data Engineer Intern (previously IT Developer)", fr: "Stagiaire ingénieur Data & IA (auparavant développeur IT)" },
       org: "MODUO Ingénierie",
       place: { es: "Francia", en: "France", fr: "France" },
       dateLabel: { es: "Feb. 2026 – Sept. 2026", en: "Feb 2026 – Sept 2026", fr: "Févr. 2026 – Sept. 2026" },
@@ -314,7 +336,7 @@ window.SITE = {
           "Built backend systems with Django and PostgreSQL to support internal applications."
         ],
         fr: [
-          "Évolution du poste d'IT Developer à celui d'AI Data Engineer Intern au sein de la même équipe d'ingénierie.",
+          "Évolution d'un poste de développeur IT vers un stage d'ingénieur Data & IA au sein de la même équipe d'ingénierie.",
           "Développement d'outils d'automatisation en Python et VBA pour fluidifier les workflows d'ingénierie.",
           "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC, les prix fournisseurs et l'analyse de cycle de vie pour automatiser l'analyse des coûts et de l'impact environnemental.",
           "Développement d'assistants RAG pour la documentation BIM, améliorant la recherche de connaissances et l'aide à la décision.",
@@ -430,162 +452,434 @@ window.SITE = {
     }
   ],
 
-  projects: [
+  projectCatalog: [
     {
-      id: "text-classification-pytorch",
-      featured: false,
-      kicker: { es: "Proyecto académico · NLP", en: "Academic project · NLP", fr: "Projet académique · NLP" },
-      title: { es: "Clasificación de texto: de TF-IDF a PyTorch", en: "Text Classification: From TF-IDF to PyTorch", fr: "Classification de texte : de TF-IDF à PyTorch" },
-      org: {
-        es: "Télécom Paris · Institut Polytechnique de Paris · 4AI12",
-        en: "Télécom Paris · Institut Polytechnique de Paris · 4AI12",
-        fr: "Télécom Paris · Institut Polytechnique de Paris · 4AI12"
+      id: "telecom-paris",
+      institution: "Télécom Paris · Institut Polytechnique de Paris",
+      description: {
+        es: "Proyectos y laboratorios de los itinerarios Data Science y MODS. Se presentan como trabajo académico y se mantienen separados de la experiencia profesional.",
+        en: "Projects and labs from the Data Science and MODS tracks. They are presented as academic work and kept separate from professional experience.",
+        fr: "Projets et TP des parcours Data Science et MODS. Ils sont présentés comme travaux académiques, séparément de l'expérience professionnelle."
       },
-      dateLabel: { es: "Abr. 2025", en: "Apr 2025", fr: "Avr. 2025" },
-      intro: {
-        es: "Proyecto individual sobre 20 Newsgroups que compara representaciones simbólicas, densas y neuronales bajo una misma tarea de clasificación en seis categorías.",
-        en: "An individual project on 20 Newsgroups comparing symbolic, dense, and neural representations on the same six-category classification task.",
-        fr: "Projet individuel sur 20 Newsgroups comparant des représentations symboliques, denses et neuronales pour une même tâche de classification en six catégories."
-      },
-      stats: [
-        { num: "80.12%", label: { es: "Mejor accuracy de prueba", en: "Best test accuracy", fr: "Meilleure accuracy test" } },
-        { num: "7,309", label: { es: "Documentos de prueba", en: "Test documents", fr: "Documents de test" } },
-        { num: "6", label: { es: "Categorías", en: "Categories", fr: "Catégories" } }
-      ],
-      bullets: {
-        es: [
-          "Eliminé encabezados, pies y citas antes del modelado para reducir fuga de información ligada a autores e hilos; trabajé con vocabulario común de 8.000 tokens y particiones separadas.",
-          "Comparé Bag of Words, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec y GloVe con regresión logística y análisis por clase.",
-          "Implementé Dataset/DataLoader y clasificadores de promediado en PyTorch; el ajuste fino de GloVe alcanzó 80,12 % de accuracy en el conjunto de prueba con early stopping."
-        ],
-        en: [
-          "Removed headers, footers, and quoted replies before modelling to reduce author- and thread-specific leakage; used a shared 8,000-token vocabulary and separate data partitions.",
-          "Compared Bag of Words, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec, and GloVe with logistic regression and class-level diagnostics.",
-          "Implemented Dataset/DataLoader components and averaging classifiers in PyTorch; fine-tuned GloVe reached 80.12% held-out test accuracy with early stopping."
-        ],
-        fr: [
-          "Suppression des en-têtes, pieds et citations avant la modélisation afin de réduire les fuites liées aux auteurs et aux fils ; vocabulaire commun de 8 000 tokens et partitions séparées.",
-          "Comparaison de Bag of Words, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec et GloVe avec régression logistique et diagnostics par classe.",
-          "Implémentation de Dataset/DataLoader et de classifieurs par moyenne sous PyTorch ; le fine-tuning de GloVe atteint 80,12 % d'accuracy sur le test avec early stopping."
-        ]
-      },
-      documents: [
+      courses: [
         {
-          href: "assets/files/projects/text-classification-pytorch-brief.pdf",
-          label: { es: "Ver brief técnico (PDF)", en: "View technical brief (PDF)", fr: "Voir la synthèse technique (PDF)" }
-        }
-      ],
-      tags: ["Python", "PyTorch", "Scikit-learn", "NLTK", "Gensim", "TF-IDF", "Word2Vec", "GloVe"]
-    },
-    {
-      id: "us-protectionism",
-      featured: false,
-      kicker: { es: "Proyecto académico · Economía digital", en: "Academic project · Digital economics", fr: "Projet académique · Économie numérique" },
-      title: { es: "Proteccionismo estadounidense: impactos y respuestas globales", en: "U.S. Protectionism: Economic Impacts and Global Responses", fr: "Protectionnisme américain : impacts économiques et réponses mondiales" },
-      org: {
-        es: "Télécom Paris · Applied Projects MODS · con Iba Demesy",
-        en: "Télécom Paris · Applied Projects MODS · with Iba Demesy",
-        fr: "Télécom Paris · Applied Projects MODS · avec Iba Demesy"
-      },
-      dateLabel: { es: "May. – Jun. 2025", en: "May – Jun 2025", fr: "Mai – Juin 2025" },
-      intro: {
-        es: "Informe coautor de análisis documental e histórico sobre la evolución del proteccionismo de Estados Unidos, sus efectos sobre empresas tecnológicas y cadenas de valor, y las respuestas internacionales.",
-        en: "A co-authored documentary and historical analysis of the evolution of U.S. protectionism, its effects on technology firms and value chains, and international responses.",
-        fr: "Rapport coécrit proposant une analyse documentaire et historique de l'évolution du protectionnisme américain, de ses effets sur les entreprises technologiques et les chaînes de valeur, ainsi que des réponses internationales."
-      },
-      stats: [
-        { num: "21", label: { es: "Páginas del informe", en: "Report pages", fr: "Pages du rapport" } },
-        { num: "6", label: { es: "Respuestas internacionales", en: "International responses", fr: "Réponses internationales" } },
-        { num: "2", label: { es: "Autores", en: "Authors", fr: "Auteurs" } }
-      ],
-      bullets: {
-        es: [
-          "Sinteticé los fundamentos teóricos y la evolución histórica del proteccionismo estadounidense mediante revisión de literatura y fuentes institucionales.",
-          "Analicé cómo aranceles y restricciones comerciales afectan a firmas tecnológicas, cadenas globales de suministro, innovación y decisiones de localización.",
-          "Comparé respuestas de China, la Unión Europea, Francia, Canadá, India y Japón. El alcance es documental y comparativo: no se presenta como estimación causal ni econométrica."
-        ],
-        en: [
-          "Synthesized the theoretical foundations and historical development of U.S. protectionism through a review of literature and institutional sources.",
-          "Analyzed how tariffs and trade restrictions affect technology firms, global supply chains, innovation, and location decisions.",
-          "Compared responses from China, the European Union, France, Canada, India, and Japan. The scope is documentary and comparative, not a causal or econometric estimate."
-        ],
-        fr: [
-          "Synthèse des fondements théoriques et de l'évolution historique du protectionnisme américain à partir de la littérature et de sources institutionnelles.",
-          "Analyse des effets des droits de douane et restrictions commerciales sur les entreprises technologiques, les chaînes de valeur mondiales, l'innovation et les choix de localisation.",
-          "Comparaison des réponses de la Chine, de l'Union européenne, de la France, du Canada, de l'Inde et du Japon. La portée est documentaire et comparative, sans estimation causale ni économétrique."
-        ]
-      },
-      documents: [
+          name: "Machine Learning for Text Mining · 4AI12",
+          items: [
+            {
+              id: "text-classification-pytorch",
+              level: "featured",
+              kind: { es: "Proyecto individual", en: "Individual project", fr: "Projet individuel" },
+              title: { es: "Clasificación de texto: de TF-IDF a PyTorch", en: "Text Classification: From TF-IDF to PyTorch", fr: "Classification de texte : de TF-IDF à PyTorch" },
+              dateLabel: { es: "Abr. 2025", en: "Apr 2025", fr: "Avr. 2025" },
+              intro: {
+                es: "Comparación reproducible de representaciones simbólicas, densas y neuronales sobre seis categorías de 20 Newsgroups.",
+                en: "A reproducible comparison of symbolic, dense, and neural representations across six 20 Newsgroups categories.",
+                fr: "Comparaison reproductible de représentations symboliques, denses et neuronales sur six catégories de 20 Newsgroups."
+              },
+              stats: [
+                { num: "80.12%", label: { es: "Accuracy test", en: "Test accuracy", fr: "Accuracy test" } },
+                { num: "8,000", label: { es: "Tokens", en: "Tokens", fr: "Tokens" } },
+                { num: "6", label: { es: "Categorías", en: "Categories", fr: "Catégories" } }
+              ],
+              bullets: {
+                es: [
+                  "Comparé BoW, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec y GloVe con regresión logística y diagnóstico por clase.",
+                  "Implementé Dataset/DataLoader y clasificadores de promediado en PyTorch; el fine-tuning de GloVe logró el mejor resultado de prueba."
+                ],
+                en: [
+                  "Compared BoW, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec, and GloVe with logistic regression and class-level diagnostics.",
+                  "Implemented Dataset/DataLoader components and averaging classifiers in PyTorch; fine-tuned GloVe delivered the best held-out result."
+                ],
+                fr: [
+                  "Comparaison de BoW, TF-IDF, SVD/LSA, LDA, PPMI, Word2Vec et GloVe avec régression logistique et diagnostic par classe.",
+                  "Implémentation de Dataset/DataLoader et de classifieurs par moyenne sous PyTorch ; le fine-tuning de GloVe obtient le meilleur résultat de test."
+                ]
+              },
+              documents: [
+                { href: "assets/files/projects/text-classification-pytorch-brief.pdf", label: { es: "Brief técnico", en: "Technical brief", fr: "Synthèse technique" } }
+              ],
+              tags: ["Python", "PyTorch", "Scikit-learn", "TF-IDF", "Word2Vec", "GloVe"]
+            }
+          ]
+        },
         {
-          href: "assets/files/projects/us-protectionism-global-responses.pdf",
-          label: { es: "Leer informe (PDF)", en: "Read report (PDF)", fr: "Lire le rapport (PDF)" }
-        }
-      ],
-      tags: ["Digital Economics", "International Trade", "Literature Review", "Policy Analysis", "Global Value Chains"]
-    }
-  ],
-
-  coursework: [
-    {
-      icon: "bike",
-      title: { es: "Propuesta de evaluación causal del programa Véligo", en: "Causal Evaluation Proposal for the Véligo Programme", fr: "Proposition d'évaluation causale du programme Véligo" },
-      org: { es: "Dauphine-PSL · IREN — Econometría", en: "Dauphine-PSL · IREN — Econometrics", fr: "Dauphine-PSL · IREN — Économétrie" },
-      dateLabel: { es: "Ene. 2026", en: "Jan 2026", fr: "Janv. 2026" },
-      text: {
-        es: "Propuesta individual de investigación que especifica datos, diferencias-en-diferencias, efectos fijos, event-study y placebos para evaluar el programa. El entregable define el diseño; no contiene estimaciones ni resultados ejecutados.",
-        en: "An individual research proposal specifying data, difference-in-differences, fixed effects, an event study, and placebos to evaluate the programme. The deliverable defines the design; it contains no executed estimates or results.",
-        fr: "Proposition de recherche individuelle précisant les données, les différences de différences, les effets fixes, l'event study et les placebos. Le livrable définit le protocole ; il ne contient ni estimation ni résultat exécuté."
-      },
-      documents: [
+          name: { es: "Economía aplicada · MODS", en: "Applied Economics · MODS", fr: "Économie appliquée · MODS" },
+          items: [
+            {
+              id: "switch-2-competition",
+              level: "featured",
+              kind: { es: "Proyecto individual · Modelo estilizado", en: "Individual project · Stylized model", fr: "Projet individuel · Modèle stylisé" },
+              title: { es: "Switch 2 y competencia en el mercado de consolas", en: "Switch 2 and Competition in the Console Market", fr: "Switch 2 et concurrence sur le marché des consoles" },
+              dateLabel: { es: "Sept. 2025", en: "Sept 2025", fr: "Sept. 2025" },
+              intro: {
+                es: "Modelo de Hotelling, demanda nested-logit y dinámica de adopción para explorar cómo la entrada de Switch 2 puede reconfigurar un oligopolio de plataformas.",
+                en: "A Hotelling model, nested-logit demand, and adoption dynamics used to explore how the Switch 2 launch may reshape a platform oligopoly.",
+                fr: "Modèle de Hotelling, demande nested logit et dynamique d'adoption pour explorer la manière dont l'arrivée de la Switch 2 peut reconfigurer un oligopole de plateformes."
+              },
+              stats: [
+                { num: "200k", label: { es: "Simulaciones", en: "Simulations", fr: "Simulations" } },
+                { num: "40.2→47.5%", label: { es: "Nintendo · escenario", en: "Nintendo · scenario", fr: "Nintendo · scénario" } },
+                { num: "52", label: { es: "Páginas", en: "Pages", fr: "Pages" } }
+              ],
+              bullets: {
+                es: [
+                  "Integra diferenciación horizontal, efectos de red, precios de Bertrand y sensibilidad Monte Carlo.",
+                  "Los resultados son escenarios sintéticos calibrados con órdenes de magnitud públicos; no son cuotas observadas, pronósticos ni estimaciones causales."
+                ],
+                en: [
+                  "Combines horizontal differentiation, network effects, Bertrand pricing, and Monte Carlo sensitivity analysis.",
+                  "Results are synthetic scenarios calibrated to public orders of magnitude; they are not observed shares, forecasts, or causal estimates."
+                ],
+                fr: [
+                  "Combine différenciation horizontale, effets de réseau, tarification de Bertrand et analyse de sensibilité Monte Carlo.",
+                  "Les résultats sont des scénarios synthétiques calibrés sur des ordres de grandeur publics, et non des parts observées, des prévisions ou des estimations causales."
+                ]
+              },
+              documents: [
+                { href: "assets/files/projects/telecom/applied-economics/switch-2-console-competition.pdf", label: { es: "Informe final", en: "Final report", fr: "Rapport final" } }
+              ],
+              tags: ["Hotelling", "Nested Logit", "Monte Carlo", "Platform Economics", "Python"]
+            }
+          ]
+        },
         {
-          href: "assets/files/projects/veligo-causal-research-proposal.pdf",
-          label: { es: "Ver propuesta (PDF)", en: "View proposal (PDF)", fr: "Voir la proposition (PDF)" }
+          name: "Applied Projects · MODS",
+          items: [
+            {
+              id: "us-protectionism",
+              level: "standard",
+              kind: { es: "Proyecto en equipo · con Iba Demesy", en: "Team project · with Iba Demesy", fr: "Projet en équipe · avec Iba Demesy" },
+              title: { es: "Proteccionismo estadounidense: impactos y respuestas globales", en: "U.S. Protectionism: Impacts and Global Responses", fr: "Protectionnisme américain : impacts et réponses mondiales" },
+              dateLabel: { es: "Jun. 2025", en: "Jun 2025", fr: "Juin 2025" },
+              intro: {
+                es: "Revisión histórico-teórica de los efectos sobre empresas y cadenas globales, junto con las respuestas de China, UE, Francia, Canadá, India y Japón.",
+                en: "A historical and theoretical review of effects on firms and global value chains, alongside responses from China, the EU, France, Canada, India, and Japan.",
+                fr: "Revue historique et théorique des effets sur les entreprises et les chaînes de valeur mondiales, ainsi que des réponses de la Chine, de l'UE, de la France, du Canada, de l'Inde et du Japon."
+              },
+              note: {
+                es: "Análisis documental y comparativo; no es una estimación econométrica o causal.",
+                en: "Documentary and comparative analysis; not an econometric or causal estimate.",
+                fr: "Analyse documentaire et comparative ; il ne s'agit pas d'une estimation économétrique ou causale."
+              },
+              documents: [
+                { href: "assets/files/projects/us-protectionism-global-responses.pdf", label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" } }
+              ],
+              tags: ["Digital Economics", "Policy Analysis", "Global Value Chains"]
+            }
+          ]
+        },
+        {
+          name: "Graph Learning",
+          items: [
+            {
+              id: "graph-learning-labs",
+              level: "standard",
+              kind: { es: "Serie de laboratorios guiados", en: "Guided lab series", fr: "Série de TP encadrés" },
+              title: { es: "Ranking, difusión, embeddings y redes neuronales sobre grafos", en: "Ranking, Diffusion, Embeddings, and Graph Neural Networks", fr: "Ranking, diffusion, embeddings et réseaux de neurones sur graphes" },
+              dateLabel: { es: "Jun. 2025", en: "Jun 2025", fr: "Juin 2025" },
+              intro: {
+                es: "Recorrido práctico desde PageRank y Louvain hasta difusión de etiquetas, embeddings espectrales y GNN sobre grafos reales y sintéticos.",
+                en: "A practical progression from PageRank and Louvain to label diffusion, spectral embeddings, and GNNs on real and synthetic graphs.",
+                fr: "Parcours pratique de PageRank et Louvain jusqu'à la diffusion d'étiquettes, aux embeddings spectraux et aux GNN sur des graphes réels et synthétiques."
+              },
+              stats: [
+                { num: "89.88%", label: { es: "Difusión · texto", en: "Diffusion · text", fr: "Diffusion · texte" } },
+                { num: "82.95%", label: { es: "GNN · WikiVitals", en: "GNN · WikiVitals", fr: "GNN · WikiVitals" } }
+              ],
+              note: {
+                es: "Se incluyen únicamente los notebooks ejecutados y sin errores; no se publican como proyectos independientes.",
+                en: "Only executed, error-free notebooks inform this summary; the guided labs are not presented as independent projects.",
+                fr: "Seuls les notebooks exécutés sans erreur alimentent cette synthèse ; les TP encadrés ne sont pas présentés comme projets indépendants."
+              },
+              documents: [
+                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
+              ],
+              tags: ["PageRank", "Louvain", "Diffusion", "Spectral Embedding", "GNN", "Python"]
+            }
+          ]
+        },
+        {
+          name: "Optimization for Machine Learning",
+          items: [
+            {
+              id: "mnist-sgd-optimization",
+              level: "compact",
+              kind: { es: "Laboratorio individual", en: "Individual lab", fr: "TP individuel" },
+              title: { es: "Descenso de gradiente estocástico sobre MNIST", en: "Stochastic Gradient Descent on MNIST", fr: "Descente de gradient stochastique sur MNIST" },
+              dateLabel: { es: "2025", en: "2025", fr: "2025" },
+              intro: {
+                es: "Implementación y comparación de SGD propio y Keras; la mejor configuración registrada alcanzó 95,39 % de accuracy de prueba.",
+                en: "Implementation and comparison of a custom SGD routine and Keras; the best recorded configuration reached 95.39% test accuracy.",
+                fr: "Implémentation et comparaison d'un SGD personnalisé et de Keras ; la meilleure configuration enregistrée atteint 95,39 % d'accuracy test."
+              },
+              documents: [
+                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
+              ],
+              tags: ["Python", "SGD", "Keras", "MNIST"]
+            }
+          ]
+        },
+        {
+          name: "Machine Learning",
+          items: [
+            {
+              id: "svm-pca",
+              level: "compact",
+              kind: { es: "Laboratorio individual", en: "Individual lab", fr: "TP individuel" },
+              title: { es: "SVM: kernels, sobreajuste y PCA", en: "SVMs: Kernels, Overfitting, and PCA", fr: "SVM : noyaux, surapprentissage et ACP" },
+              dateLabel: { es: "Mar. 2025", en: "Mar 2025", fr: "Mars 2025" },
+              intro: {
+                es: "Comparación de SVM lineal/RBF, regularización y curvas de aprendizaje; en LFW, PCA mantuvo 93,4 % de accuracy y redujo el ajuste de 307,7 s a 2,48 s.",
+                en: "Comparison of linear/RBF SVMs, regularization, and learning curves; on LFW, PCA retained 93.4% accuracy while reducing fit time from 307.7 s to 2.48 s.",
+                fr: "Comparaison de SVM linéaires/RBF, régularisation et courbes d'apprentissage ; sur LFW, l'ACP conserve 93,4 % d'accuracy en réduisant l'ajustement de 307,7 s à 2,48 s."
+              },
+              documents: [
+                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
+              ],
+              tags: ["Scikit-learn", "SVM", "PCA"]
+            },
+            {
+              id: "mnist-autoencoders",
+              level: "compact",
+              kind: { es: "Laboratorio individual", en: "Individual lab", fr: "TP individuel" },
+              title: { es: "MNIST: clasificador lineal y autoencoders", en: "MNIST: Linear Classifier and Autoencoders", fr: "MNIST : classifieur linéaire et autoencodeurs" },
+              dateLabel: { es: "Abr. 2025", en: "Apr 2025", fr: "Avr. 2025" },
+              intro: {
+                es: "Clasificador softmax en NumPy con 88,42 % de accuracy de prueba, seguido de PCA, autoencoders y denoising autoencoders en Keras.",
+                en: "A NumPy softmax classifier with 88.42% test accuracy, followed by PCA, autoencoders, and denoising autoencoders in Keras.",
+                fr: "Classifieur softmax en NumPy avec 88,42 % d'accuracy test, suivi d'expériences avec ACP, autoencodeurs et autoencodeurs débruiteurs sous Keras."
+              },
+              documents: [
+                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
+              ],
+              tags: ["NumPy", "Keras", "Autoencoders", "MNIST"]
+            }
+          ]
         }
       ]
     },
     {
-      icon: "flask",
-      title: { es: "Sistemas de innovación: Dinamarca vs. Suiza en biotecnología", en: "Innovation Systems: Denmark vs. Switzerland in Biotech", fr: "Systèmes d'innovation : Danemark vs. Suisse en biotechnologie" },
-      org: { es: "Dauphine-PSL · IREN (con P. Aouad)", en: "Dauphine-PSL · IREN (with P. Aouad)", fr: "Dauphine-PSL · IREN (avec P. Aouad)" },
-      dateLabel: { es: "Dic. 2025", en: "Dec 2025", fr: "Déc. 2025" },
-      text: {
-        es: "Análisis comparativo de los sistemas de innovación danés y suizo en biotecnología (Novo Nordisk vs. Novartis), aplicando el marco de Lundvall y Nelson.",
-        en: "A comparative analysis of the Danish and Swiss innovation systems in biotech (Novo Nordisk vs. Novartis), applying the Lundvall–Nelson framework.",
-        fr: "Analyse comparative des systèmes d'innovation danois et suisse en biotechnologie (Novo Nordisk vs. Novartis), mobilisant le cadre de Lundvall et Nelson."
-      }
+      id: "dauphine-iren",
+      institution: "Université Paris Dauphine–PSL · M2 IREN",
+      description: {
+        es: "Proyectos de economía digital, regulación, plataformas y ciencia de datos realizados en el doble diploma M2 IREN.",
+        en: "Digital economics, regulation, platform, and data-science projects completed in the M2 IREN double-degree track.",
+        fr: "Projets d'économie numérique, de régulation, de plateformes et de data science réalisés dans le double diplôme M2 IREN."
+      },
+      courses: [
+        {
+          name: "Tutorat FL_02 · LLM Social Simulation",
+          items: [
+            {
+              id: "dma-multi-agent-simulation",
+              level: "featured",
+              kind: { es: "Proyecto individual · Simulación heurística", en: "Individual project · Heuristic simulation", fr: "Projet individuel · Simulation heuristique" },
+              title: { es: "Simulación multiagente del Digital Markets Act", en: "Multi-Agent Simulation of the Digital Markets Act", fr: "Simulation multi-agents du Digital Markets Act" },
+              dateLabel: { es: "Mar. 2026", en: "Mar 2026", fr: "Mars 2026" },
+              intro: {
+                es: "Arquitectura compatible con AG2/AutoGen para explorar deliberación regulatoria con cinco stakeholders, un moderador, cuatro rondas y análisis de sensibilidad Monte Carlo.",
+                en: "An AG2/AutoGen-compatible architecture for exploring regulatory deliberation with five stakeholders, one moderator, four rounds, and Monte Carlo sensitivity analysis.",
+                fr: "Architecture compatible AG2/AutoGen pour explorer la délibération réglementaire avec cinq parties prenantes, un modérateur, quatre tours et une analyse de sensibilité Monte Carlo."
+              },
+              stats: [
+                { num: "3.62→4.07", label: { es: "Soporte medio", en: "Mean support", fr: "Soutien moyen" } },
+                { num: "1.05→0.82", label: { es: "Dispersión", en: "Dispersion", fr: "Dispersion" } },
+                { num: "12", label: { es: "Papers revisados", en: "Papers reviewed", fr: "Articles étudiés" } }
+              ],
+              bullets: {
+                es: [
+                  "El informe define roles, turnos, scoring y descomposición; la revisión adjunta cubre arquitectura, escala, validación, interpretabilidad y gobernanza.",
+                  "Los cambios de actitud son resultados sintéticos del piloto: sirven para estudiar el método, no para inferir efectos reales del DMA."
+                ],
+                en: [
+                  "The report defines roles, turns, scoring, and decomposition; the attached review covers architecture, scale, validation, interpretability, and governance.",
+                  "Attitude shifts are synthetic pilot outputs: they inform the method, not real-world DMA effects."
+                ],
+                fr: [
+                  "Le rapport définit rôles, tours, scoring et décomposition ; la revue jointe couvre architecture, passage à l'échelle, validation, interprétabilité et gouvernance.",
+                  "Les évolutions d'attitude sont des résultats synthétiques du pilote : elles éclairent la méthode, pas les effets réels du DMA."
+                ]
+              },
+              documents: [
+                { href: "assets/files/projects/dauphine/llm-social-simulation/dma-multi-agent-simulation-report.pdf", label: { es: "Informe de simulación", en: "Simulation report", fr: "Rapport de simulation" } },
+                { href: "assets/files/projects/dauphine/llm-social-simulation/llm-social-simulation-literature-review.pdf", label: { es: "Revisión de literatura", en: "Literature review", fr: "Revue de littérature" } }
+              ],
+              tags: ["Python", "AG2 / AutoGen", "LLM", "Multi-Agent Systems", "Monte Carlo", "DMA"]
+            }
+          ]
+        },
+        {
+          name: "Advanced Data Science",
+          items: [
+            {
+              id: "loan-default-risk",
+              level: "featured",
+              kind: { es: "Proyecto individual · Diagnóstico reproducible", en: "Individual project · Reproducible diagnosis", fr: "Projet individuel · Diagnostic reproductible" },
+              title: { es: "Riesgo de impago: señal, leakage y calibración", en: "Loan Default Risk: Signal, Leakage, and Calibration", fr: "Risque de défaut : signal, fuite de données et calibration" },
+              dateLabel: { es: "Ene. 2026", en: "Jan 2026", fr: "Janv. 2026" },
+              intro: {
+                es: "Evaluación honesta de un problema con señal predictiva débil, centrada en evitar leakage, calibrar probabilidades y comparar contra la prevalencia base.",
+                en: "An honest assessment of a weak-signal prediction problem, focused on leakage prevention, probability calibration, and comparison against base prevalence.",
+                fr: "Évaluation transparente d'un problème à faible signal prédictif, centrée sur la prévention des fuites, la calibration des probabilités et la comparaison à la prévalence de base."
+              },
+              stats: [
+                { num: "96,376", label: { es: "Filas · train + test", en: "Rows · train + test", fr: "Lignes · train + test" } },
+                { num: "0.520", label: { es: "ROC-AUC SAFE", en: "SAFE ROC-AUC", fr: "ROC-AUC SAFE" } },
+                { num: "0.099", label: { es: "PR-AUC", en: "PR-AUC", fr: "PR-AUC" } }
+              ],
+              note: {
+                es: "El valor del estudio es diagnosticar las limitaciones de señal; no se presenta como un modelo productivo de alto rendimiento.",
+                en: "The study's value is diagnosing signal limitations; it is not presented as a high-performing production model.",
+                fr: "L'intérêt de l'étude est le diagnostic des limites du signal ; elle n'est pas présentée comme un modèle de production performant."
+              },
+              documents: [
+                { href: "assets/files/projects/dauphine/advanced-data-science/loan-default-risk-report.pdf", label: { es: "Informe final", en: "Final report", fr: "Rapport final" } }
+              ],
+              tags: ["Scikit-learn", "CatBoost", "Calibration", "Leakage Control", "ROC / PR"]
+            }
+          ]
+        },
+        {
+          name: "Information Systems & Organization",
+          items: [
+            {
+              id: "vinted-agentic-ai",
+              level: "standard",
+              kind: { es: "Proyecto en equipo · con Perla Aouad", en: "Team project · with Perla Aouad", fr: "Projet en équipe · avec Perla Aouad" },
+              title: { es: "Vinted 2030: IA agéntica, confianza y gobernanza", en: "Vinted 2030: Agentic AI, Trust, and Governance", fr: "Vinted 2030 : IA agentique, confiance et gouvernance" },
+              dateLabel: { es: "Ene. 2026", en: "Jan 2026", fr: "Janv. 2026" },
+              intro: {
+                es: "Diagnóstico de plataforma, matriz 2×2 de escenarios y análisis regulatorio europeo para proponer una apertura controlada a agentes certificados.",
+                en: "Platform diagnosis, a 2×2 scenario matrix, and EU regulatory analysis supporting controlled access for certified agents.",
+                fr: "Diagnostic de plateforme, matrice de scénarios 2×2 et analyse de la réglementation européenne en faveur d'une ouverture contrôlée aux agents certifiés."
+              },
+              note: {
+                es: "Análisis estratégico cualitativo; no contiene métricas originales de impacto.",
+                en: "Qualitative strategy analysis; it contains no original impact metrics.",
+                fr: "Analyse stratégique qualitative ; elle ne contient pas de métriques d'impact originales."
+              },
+              documents: [
+                { href: "assets/files/projects/dauphine/information-systems/vinted-agentic-ai-platform-strategy.pdf", label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" } }
+              ],
+              tags: ["Platform Strategy", "Agentic AI", "EU Regulation", "Governance"]
+            }
+          ]
+        },
+        {
+          name: { es: "Economía política de las instituciones y la regulación", en: "Political Economy of Institutions and Regulation", fr: "Économie politique des institutions et de la régulation" },
+          items: [
+            {
+              id: "telecom-regulation-europe",
+              level: "standard",
+              kind: { es: "Proyecto en equipo · con Perla Aouad", en: "Team project · with Perla Aouad", fr: "Projet en équipe · avec Perla Aouad" },
+              title: { es: "Regulación de comunicaciones electrónicas en Europa", en: "Electronic Communications Regulation in Europe", fr: "Régulation des communications électroniques en Europe" },
+              dateLabel: { es: "Mar. 2026", en: "Mar 2026", fr: "Mars 2026" },
+              intro: {
+                es: "Comparación institucional de Alemania, Italia y España basada en reguladores, Comisión Europea y OCDE: organización, inversión, despliegue y competencia.",
+                en: "An institutional comparison of Germany, Italy, and Spain using regulators, the European Commission, and OECD sources: organization, investment, deployment, and competition.",
+                fr: "Comparaison institutionnelle de l'Allemagne, de l'Italie et de l'Espagne à partir des régulateurs, de la Commission européenne et de l'OCDE : organisation, investissement, déploiement et concurrence."
+              },
+              note: {
+                es: "Los indicadores son descriptivos y provienen de fuentes externas; no son estimaciones propias.",
+                en: "Indicators are descriptive and sourced externally; they are not original estimates.",
+                fr: "Les indicateurs sont descriptifs et issus de sources externes ; ce ne sont pas des estimations originales."
+              },
+              documents: [
+                { href: "assets/files/projects/dauphine/institutions-regulation/electronic-communications-regulation-europe.pdf", label: { es: "Estudio comparativo", en: "Comparative study", fr: "Étude comparative" } }
+              ],
+              tags: ["Telecom Regulation", "OECD", "Comparative Analysis", "EU"]
+            }
+          ]
+        },
+        {
+          name: { es: "Sistemas nacionales de innovación · IPE", en: "National Innovation Systems · IPE", fr: "Systèmes nationaux d'innovation · IPE" },
+          items: [
+            {
+              id: "biotech-innovation-systems",
+              level: "compact",
+              kind: { es: "Proyecto en equipo · con Perla Aouad", en: "Team project · with Perla Aouad", fr: "Projet en équipe · avec Perla Aouad" },
+              title: { es: "Biotecnología: sistemas de innovación de Dinamarca y Suiza", en: "Biotech Innovation Systems: Denmark and Switzerland", fr: "Biotechnologie : systèmes d'innovation du Danemark et de la Suisse" },
+              dateLabel: { es: "Dic. 2025", en: "Dec 2025", fr: "Déc. 2025" },
+              intro: {
+                es: "Comparación documental con el marco Lundvall–Nelson: modelo danés concentrado y especializado frente a un sistema suizo más diversificado.",
+                en: "A documentary comparison using the Lundvall–Nelson framework: a concentrated, specialized Danish model versus a more diversified Swiss system.",
+                fr: "Comparaison documentaire selon le cadre Lundvall–Nelson : modèle danois concentré et spécialisé face à un système suisse plus diversifié."
+              },
+              documents: [
+                { href: "assets/files/projects/dauphine/innovation-systems/biotech-innovation-denmark-switzerland.pdf", label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" } }
+              ],
+              tags: ["Innovation Systems", "Biotechnology", "Comparative Analysis"]
+            }
+          ]
+        },
+        {
+          name: { es: "Econometría", en: "Econometrics", fr: "Économétrie" },
+          items: [
+            {
+              id: "veligo-research-proposal",
+              level: "compact",
+              kind: { es: "Propuesta de investigación · No ejecutada", en: "Research proposal · Not executed", fr: "Proposition de recherche · Non exécutée" },
+              title: { es: "Evaluación causal propuesta para el programa Véligo", en: "Proposed Causal Evaluation of the Véligo Programme", fr: "Proposition d'évaluation causale du programme Véligo" },
+              dateLabel: { es: "Ene. 2026", en: "Jan 2026", fr: "Janv. 2026" },
+              intro: {
+                es: "Diseño individual con diferencias-en-diferencias, efectos fijos, event study y placebos. Define datos y estrategia, pero todavía no contiene estimaciones ni resultados.",
+                en: "An individual design using difference-in-differences, fixed effects, an event study, and placebos. It defines data and strategy but contains no estimates or results yet.",
+                fr: "Protocole individuel avec différences de différences, effets fixes, event study et placebos. Il définit les données et la stratégie, mais ne contient pas encore d'estimations ni de résultats."
+              },
+              documents: [
+                { href: "assets/files/projects/veligo-causal-research-proposal.pdf", label: { es: "Propuesta", en: "Proposal", fr: "Proposition" } }
+              ],
+              tags: ["Difference-in-Differences", "Event Study", "Causal Inference"]
+            }
+          ]
+        }
+      ]
     },
     {
-      icon: "code",
-      title: { es: "SVM: kernels, sobreajuste y PCA", en: "SVMs: Kernels, Overfitting, and PCA", fr: "SVM : noyaux, surapprentissage et ACP" },
-      org: { es: "Télécom Paris · Laboratorio individual de Machine Learning", en: "Télécom Paris · Individual Machine Learning lab", fr: "Télécom Paris · TP individuel de Machine Learning" },
-      dateLabel: { es: "Mar. 2025", en: "Mar 2025", fr: "Mars 2025" },
-      text: {
-        es: "Comparación de SVM lineal y RBF, regularización y curvas de aprendizaje; en LFW, PCA mantuvo 93,4 % de accuracy y redujo el ajuste de 307,7 s a 2,48 s (≈124×).",
-        en: "Compared linear and RBF SVMs, regularization, and learning curves; on LFW, PCA retained 93.4% accuracy while reducing fitting time from 307.7 s to 2.48 s (≈124×).",
-        fr: "Comparaison de SVM linéaires et RBF, régularisation et courbes d'apprentissage ; sur LFW, l'ACP conserve 93,4 % d'accuracy tout en réduisant l'ajustement de 307,7 s à 2,48 s (≈124×)."
-      }
-    },
-    {
-      icon: "brain",
-      title: { es: "MNIST: clasificador lineal y autoencoders", en: "MNIST: Linear Classifier and Autoencoders", fr: "MNIST : classifieur linéaire et autoencodeurs" },
-      org: { es: "Télécom Paris · Laboratorio individual de Machine Learning", en: "Télécom Paris · Individual Machine Learning lab", fr: "Télécom Paris · TP individuel de Machine Learning" },
-      dateLabel: { es: "Abr. 2025", en: "Apr 2025", fr: "Avr. 2025" },
-      text: {
-        es: "Implementación en NumPy de un clasificador softmax que alcanzó 88,42 % de accuracy de prueba, seguida de experimentos con PCA, autoencoders y denoising autoencoders en Keras.",
-        en: "Implemented a NumPy softmax classifier that reached 88.42% test accuracy, followed by PCA, autoencoder, and denoising-autoencoder experiments in Keras.",
-        fr: "Implémentation en NumPy d'un classifieur softmax atteignant 88,42 % d'accuracy sur le test, puis expériences avec ACP, autoencodeurs et autoencodeurs débruiteurs sous Keras."
-      }
-    },
-    {
-      icon: "share",
-      title: { es: "Laboratorios de PageRank y detección de comunidades", en: "PageRank and Community Detection Labs", fr: "TP PageRank et détection de communautés" },
-      org: { es: "Télécom Paris · Graph Learning", en: "Télécom Paris · Graph Learning", fr: "Télécom Paris · Graph Learning" },
-      dateLabel: { es: "Jun. 2025", en: "Jun 2025", fr: "Juin 2025" },
-      text: {
-        es: "Laboratorios guiados sobre PageRank y PageRank personalizado, grafos dirigidos y bipartitos, Louvain, modularidad, Adjusted Rand Index e índice de Simpson.",
-        en: "Guided labs covering PageRank and personalized PageRank, directed and bipartite graphs, Louvain, modularity, Adjusted Rand Index, and the Simpson index.",
-        fr: "TP encadrés sur PageRank et PageRank personnalisé, graphes orientés et bipartis, Louvain, modularité, Adjusted Rand Index et indice de Simpson."
-      }
+      id: "unal",
+      institution: "Universidad Nacional de Colombia",
+      description: {
+        es: "Proyecto de pregrado en arquitectura de software y desarrollo colaborativo.",
+        en: "Undergraduate work in software architecture and collaborative development.",
+        fr: "Projet de premier cycle en architecture logicielle et développement collaboratif."
+      },
+      courses: [
+        {
+          name: { es: "Arquitectura de Software", en: "Software Architecture", fr: "Architecture logicielle" },
+          items: [
+            {
+              id: "tiendaun-microservices",
+              level: "featured",
+              kind: { es: "Proyecto académico en equipo", en: "Academic team project", fr: "Projet académique en équipe" },
+              title: { es: "TiendaUN: comercio electrónico basado en microservicios", en: "TiendaUN: Microservices-Based E-commerce", fr: "TiendaUN : e-commerce fondé sur des microservices" },
+              dateLabel: { es: "2023", en: "2023", fr: "2023" },
+              intro: {
+                es: "Prototipo colaborativo con servicios separados por dominio. Mi contribución verificable fue el microservicio de autenticación y gestión de usuarios/roles.",
+                en: "A collaborative prototype with domain-oriented services. My verifiable contribution was the authentication and user/role management microservice.",
+                fr: "Prototype collaboratif composé de services par domaine. Ma contribution vérifiable porte sur le microservice d'authentification et de gestion des utilisateurs/rôles."
+              },
+              bullets: {
+                es: [
+                  "Desarrollé API REST de registro, inicio/cierre de sesión y CRUD de usuarios y roles con TypeScript, Express, MongoDB/Mongoose, bcrypt y JWT.",
+                  "El ecosistema del equipo integró una aplicación Ionic/Angular mediante GraphQL y servicios de catálogo, carrito y ayuda; esas partes se acreditan al equipo, no como trabajo individual."
+                ],
+                en: [
+                  "Built REST APIs for registration, sign-in/sign-out, and user/role CRUD with TypeScript, Express, MongoDB/Mongoose, bcrypt, and JWT.",
+                  "The team ecosystem connected an Ionic/Angular app through GraphQL with catalog, cart, and support services; those components are credited to the team, not claimed as individual work."
+                ],
+                fr: [
+                  "Développement d'API REST pour l'inscription, la connexion/déconnexion et le CRUD des utilisateurs/rôles avec TypeScript, Express, MongoDB/Mongoose, bcrypt et JWT.",
+                  "L'écosystème de l'équipe reliait une application Ionic/Angular via GraphQL à des services de catalogue, panier et assistance ; ces composants sont attribués à l'équipe, pas revendiqués comme travail individuel."
+                ]
+              },
+              links: [
+                { href: "https://github.com/orgs/Arquitectura-de-Software-2023i/repositories", label: { es: "Repositorios del equipo", en: "Team repositories", fr: "Dépôts de l'équipe" } }
+              ],
+              tags: ["TypeScript", "Express", "MongoDB", "JWT", "bcrypt", "Microservices"]
+            }
+          ]
+        }
+      ]
     }
   ],
 
@@ -624,51 +918,51 @@ window.SITE = {
         issuer: "Databricks",
         icon: "database",
         items: [
-          { title: "SQL Programming and Procedural Logic", date: { y: 2026, m: 7, d: 3 }, id: "114655b7-9efe-4409-af7e-087469b34727", url: "https://credentials.databricks.com/114655b7-9efe-4409-af7e-087469b34727#acc.6xX8T4uG", skills: ["SQL", "Procedural Logic"], more: 3, type: "knowledge" },
-          { title: "Data Modeling Strategies", date: { y: 2026, m: 7, d: 3 }, id: "9b2ce181-f0c0-4cf0-ac5f-451a8e49c4a3", url: "https://credentials.databricks.com/9b2ce181-f0c0-4cf0-ac5f-451a8e49c4a3#acc.1bSHqWf7", skills: ["Data Modeling", "Databricks Lakehouse"], more: 3, type: "knowledge" },
-          { title: "SQL Analytics on Databricks", date: { y: 2026, m: 6, d: 30 }, id: "354cc497-d8d8-4b93-969a-9d5844f6d3d6", url: "https://credentials.databricks.com/354cc497-d8d8-4b93-969a-9d5844f6d3d6#acc.3ZDBMp4i", skills: ["Data Analytics", "SQL"], more: 2, type: "knowledge" },
-          { title: "AI/BI for Data Analysts", date: { y: 2026, m: 6, d: 22 }, id: "0bc96eac-b205-4fc9-9708-a46feb37d0e8", url: "https://credentials.databricks.com/0bc96eac-b205-4fc9-9708-a46feb37d0e8#acc.1BaIqtSN", skills: ["Data Analysis", "Dashboards"], more: 3, type: "knowledge" },
-          { title: "Advanced Techniques with Spark Declarative Pipeline", date: { y: 2026, m: 5, d: 28 }, id: "2dc6c100-66ba-4c32-8336-ef714a39aeee", url: "https://credentials.databricks.com/2dc6c100-66ba-4c32-8336-ef714a39aeee#acc.UZDW0eLS", skills: ["Data Ingestion", "Change Data Capture"], more: 3, type: "knowledge" },
-          { title: "DevOps Essentials for Data Engineering", date: { y: 2026, m: 5, d: 25 }, id: "85084cc6-3680-41d9-ae9b-8816537b438e", url: "https://credentials.databricks.com/85084cc6-3680-41d9-ae9b-8816537b438e#acc.hN2ygt6I", skills: ["Code Quality", "Version Control"], more: 3, type: "knowledge" },
-          { title: "Build Data Pipelines with Lakeflow Spark Declarative Pipelines", date: { y: 2026, m: 5, d: 20 }, id: "073feb06-c9a6-47a6-80b1-4d0a9e091225", url: "https://credentials.databricks.com/073feb06-c9a6-47a6-80b1-4d0a9e091225#acc.8YsUEZh3", skills: ["Data Pipeline Development", "Incremental Processing"], more: 3, type: "knowledge" },
-          { title: "Deploy Workloads with Lakeflow Jobs", date: { y: 2026, m: 5, d: 12 }, id: "1725cc92-c4d4-4979-8cf5-18db72f3d579", url: "https://credentials.databricks.com/1725cc92-c4d4-4979-8cf5-18db72f3d579#acc.Sn1JxDBZ", skills: ["Data Workflow Orchestration", "Directed Acyclic Graphs (DAGs)"], more: 3, type: "knowledge" },
-          { title: "Data Ingestion with Lakeflow Connect", date: { y: 2026, m: 4, d: 23 }, id: "15f63aa7-68df-4357-a75b-7f5f3110522a", url: "https://credentials.databricks.com/15f63aa7-68df-4357-a75b-7f5f3110522a#acc.HnzS7hyi", skills: ["Data Ingestion", "Batch Processing"], more: 3, type: "knowledge" },
-          { title: "Databricks Fundamentals", date: { y: 2026, m: 4, d: 22 }, id: "a771c437-6f8c-4f1e-aaba-0e619149f339", url: "https://credentials.databricks.com/a771c437-6f8c-4f1e-aaba-0e619149f339#acc.P3Q1bIMv", skills: ["Databricks Products", "Data Intelligence Platform"], more: 1, type: "knowledge" }
+          { title: "SQL Programming and Procedural Logic", image: "assets/img/certifications/114655b7-9efe-4409-af7e-087469b34727.png", date: { y: 2026, m: 7, d: 3 }, id: "114655b7-9efe-4409-af7e-087469b34727", url: "https://credentials.databricks.com/114655b7-9efe-4409-af7e-087469b34727#acc.6xX8T4uG", skills: ["SQL", "Procedural Logic"], more: 3, type: "knowledge" },
+          { title: "Data Modeling Strategies", image: "assets/img/certifications/9b2ce181-f0c0-4cf0-ac5f-451a8e49c4a3.png", date: { y: 2026, m: 7, d: 3 }, id: "9b2ce181-f0c0-4cf0-ac5f-451a8e49c4a3", url: "https://credentials.databricks.com/9b2ce181-f0c0-4cf0-ac5f-451a8e49c4a3#acc.1bSHqWf7", skills: ["Data Modeling", "Databricks Lakehouse"], more: 3, type: "knowledge" },
+          { title: "SQL Analytics on Databricks", image: "assets/img/certifications/354cc497-d8d8-4b93-969a-9d5844f6d3d6.png", date: { y: 2026, m: 6, d: 30 }, id: "354cc497-d8d8-4b93-969a-9d5844f6d3d6", url: "https://credentials.databricks.com/354cc497-d8d8-4b93-969a-9d5844f6d3d6#acc.3ZDBMp4i", skills: ["Data Analytics", "SQL"], more: 2, type: "knowledge" },
+          { title: "AI/BI for Data Analysts", image: "assets/img/certifications/0bc96eac-b205-4fc9-9708-a46feb37d0e8.png", date: { y: 2026, m: 6, d: 22 }, id: "0bc96eac-b205-4fc9-9708-a46feb37d0e8", url: "https://credentials.databricks.com/0bc96eac-b205-4fc9-9708-a46feb37d0e8#acc.1BaIqtSN", skills: ["Data Analysis", "Dashboards"], more: 3, type: "knowledge" },
+          { title: "Advanced Techniques with Spark Declarative Pipeline", image: "assets/img/certifications/2dc6c100-66ba-4c32-8336-ef714a39aeee.png", date: { y: 2026, m: 5, d: 28 }, id: "2dc6c100-66ba-4c32-8336-ef714a39aeee", url: "https://credentials.databricks.com/2dc6c100-66ba-4c32-8336-ef714a39aeee#acc.UZDW0eLS", skills: ["Data Ingestion", "Change Data Capture"], more: 3, type: "knowledge" },
+          { title: "DevOps Essentials for Data Engineering", image: "assets/img/certifications/85084cc6-3680-41d9-ae9b-8816537b438e.png", date: { y: 2026, m: 5, d: 25 }, id: "85084cc6-3680-41d9-ae9b-8816537b438e", url: "https://credentials.databricks.com/85084cc6-3680-41d9-ae9b-8816537b438e#acc.hN2ygt6I", skills: ["Code Quality", "Version Control"], more: 3, type: "knowledge" },
+          { title: "Build Data Pipelines with Lakeflow Spark Declarative Pipelines", image: "assets/img/certifications/073feb06-c9a6-47a6-80b1-4d0a9e091225.png", date: { y: 2026, m: 5, d: 20 }, id: "073feb06-c9a6-47a6-80b1-4d0a9e091225", url: "https://credentials.databricks.com/073feb06-c9a6-47a6-80b1-4d0a9e091225#acc.8YsUEZh3", skills: ["Data Pipeline Development", "Incremental Processing"], more: 3, type: "knowledge" },
+          { title: "Deploy Workloads with Lakeflow Jobs", image: "assets/img/certifications/1725cc92-c4d4-4979-8cf5-18db72f3d579.png", date: { y: 2026, m: 5, d: 12 }, id: "1725cc92-c4d4-4979-8cf5-18db72f3d579", url: "https://credentials.databricks.com/1725cc92-c4d4-4979-8cf5-18db72f3d579#acc.Sn1JxDBZ", skills: ["Data Workflow Orchestration", "Directed Acyclic Graphs (DAGs)"], more: 3, type: "knowledge" },
+          { title: "Data Ingestion with Lakeflow Connect", image: "assets/img/certifications/15f63aa7-68df-4357-a75b-7f5f3110522a.png", date: { y: 2026, m: 4, d: 23 }, id: "15f63aa7-68df-4357-a75b-7f5f3110522a", url: "https://credentials.databricks.com/15f63aa7-68df-4357-a75b-7f5f3110522a#acc.HnzS7hyi", skills: ["Data Ingestion", "Batch Processing"], more: 3, type: "knowledge" },
+          { title: "Databricks Fundamentals", image: "assets/img/certifications/a771c437-6f8c-4f1e-aaba-0e619149f339.png", date: { y: 2026, m: 4, d: 22 }, id: "a771c437-6f8c-4f1e-aaba-0e619149f339", url: "https://credentials.databricks.com/a771c437-6f8c-4f1e-aaba-0e619149f339#acc.P3Q1bIMv", skills: ["Databricks Products", "Data Intelligence Platform"], more: 1, type: "knowledge" }
         ]
       },
       {
         issuer: "Google Cloud Skills Boost",
         icon: "cloud",
         items: [
-          { title: "Deploy Multi-Agent Architectures", date: { y: 2026, m: 6, d: 1 }, id: "daef43b2-a398-4cbb-a286-42c7536c7e5a", url: "https://www.credly.com/badges/daef43b2-a398-4cbb-a286-42c7536c7e5a/public_url", skills: ["AI Agents", "Authentication Protocols"], more: 2, type: "micro" },
-          { title: "Build a Data Mesh with Dataplex", date: { y: 2026, m: 6, d: 1 }, id: "2be5d2be-1584-49ba-a831-72ddb22ef5c8", url: "https://www.credly.com/badges/2be5d2be-1584-49ba-a831-72ddb22ef5c8/public_url", skills: ["Data Governance", "Data Security"], more: 2, type: "micro" },
-          { title: "Build Infrastructure with Terraform on Google Cloud", date: { y: 2026, m: 5, d: 29 }, id: "2f7449ce-a5a4-481f-9b68-b1b69b432314", url: "https://www.credly.com/badges/2f7449ce-a5a4-481f-9b68-b1b69b432314/public_url", skills: ["Google Cloud Platform (GCP)", "Infrastructure as Code (IaC)"], more: 1, type: "micro" },
-          { title: "Build a Data Warehouse with BigQuery", date: { y: 2026, m: 5, d: 29 }, id: "23c64912-0e53-4e1c-a10e-0acacf2b245b", url: "https://www.credly.com/badges/23c64912-0e53-4e1c-a10e-0acacf2b245b/public_url", skills: ["Data Ingestion", "Google BigQuery"], more: 2, type: "micro" }
+          { title: "Deploy Multi-Agent Architectures", image: "assets/img/certifications/daef43b2-a398-4cbb-a286-42c7536c7e5a.png", date: { y: 2026, m: 6, d: 1 }, id: "daef43b2-a398-4cbb-a286-42c7536c7e5a", url: "https://www.credly.com/badges/daef43b2-a398-4cbb-a286-42c7536c7e5a/public_url", skills: ["AI Agents", "Authentication Protocols"], more: 2, type: "micro" },
+          { title: "Build a Data Mesh with Dataplex", image: "assets/img/certifications/2be5d2be-1584-49ba-a831-72ddb22ef5c8.png", date: { y: 2026, m: 6, d: 1 }, id: "2be5d2be-1584-49ba-a831-72ddb22ef5c8", url: "https://www.credly.com/badges/2be5d2be-1584-49ba-a831-72ddb22ef5c8/public_url", skills: ["Data Governance", "Data Security"], more: 2, type: "micro" },
+          { title: "Build Infrastructure with Terraform on Google Cloud", image: "assets/img/certifications/2f7449ce-a5a4-481f-9b68-b1b69b432314.png", date: { y: 2026, m: 5, d: 29 }, id: "2f7449ce-a5a4-481f-9b68-b1b69b432314", url: "https://www.credly.com/badges/2f7449ce-a5a4-481f-9b68-b1b69b432314/public_url", skills: ["Google Cloud Platform (GCP)", "Infrastructure as Code (IaC)"], more: 1, type: "micro" },
+          { title: "Build a Data Warehouse with BigQuery", image: "assets/img/certifications/23c64912-0e53-4e1c-a10e-0acacf2b245b.png", date: { y: 2026, m: 5, d: 29 }, id: "23c64912-0e53-4e1c-a10e-0acacf2b245b", url: "https://www.credly.com/badges/23c64912-0e53-4e1c-a10e-0acacf2b245b/public_url", skills: ["Data Ingestion", "Google BigQuery"], more: 2, type: "micro" }
         ]
       },
       {
         issuer: "Amazon Web Services",
         icon: "layers",
         items: [
-          { title: "AWS Knowledge: Events and Workflows", date: { y: 2026, m: 6, d: 2 }, id: "2164b5fb-3039-4144-b774-44e15b46616d", url: "https://www.credly.com/badges/2164b5fb-3039-4144-b774-44e15b46616d/public_url", skills: ["Amazon Web Services (AWS)", "Amazon Simple Notification Service (SNS)"], more: 5, type: "knowledge" },
-          { title: "AWS Serverless Demonstrated", date: { y: 2026, m: 6, d: 2 }, expires: { y: 2027, m: 6, d: 2 }, id: "0ff238fc-3873-49c0-8f63-84d0fc849289", url: "https://www.credly.com/badges/0ff238fc-3873-49c0-8f63-84d0fc849289/public_url", skills: ["Serverless Architecture", "Amazon Web Services (AWS)"], more: 10, type: "micro" }
+          { title: "AWS Knowledge: Events and Workflows", image: "assets/img/certifications/2164b5fb-3039-4144-b774-44e15b46616d.png", date: { y: 2026, m: 6, d: 2 }, id: "2164b5fb-3039-4144-b774-44e15b46616d", url: "https://www.credly.com/badges/2164b5fb-3039-4144-b774-44e15b46616d/public_url", skills: ["Amazon Web Services (AWS)", "Amazon Simple Notification Service (SNS)"], more: 5, type: "knowledge" },
+          { title: "AWS Serverless Demonstrated", image: "assets/img/certifications/0ff238fc-3873-49c0-8f63-84d0fc849289.png", date: { y: 2026, m: 6, d: 2 }, expires: { y: 2027, m: 6, d: 2 }, id: "0ff238fc-3873-49c0-8f63-84d0fc849289", url: "https://www.credly.com/badges/0ff238fc-3873-49c0-8f63-84d0fc849289/public_url", skills: ["Serverless Architecture", "Amazon Web Services (AWS)"], more: 10, type: "micro" }
         ]
       },
       {
         issuer: "Microsoft",
         icon: "wrench",
         items: [
-          { title: "Microsoft Certified: Azure Databricks Data Engineer Associate", date: { y: 2026, m: 8, d: 8 }, expires: { y: 2027, m: 8, d: 9 }, id: "7876D68B7A1A1662", number: "V999C6-2F54E2", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/7876D68B7A1A1662?sharingId=FCD4C3BA1908034B", skills: ["Azure Databricks", "Data Engineering"], more: 0, type: "certification" },
-          { title: "Implement a Real-Time Intelligence solution with Microsoft Fabric", date: { y: 2026, m: 6 }, id: "2BA2378B50BBFAD6", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/2BA2378B50BBFAD6?sharingId=FCD4C3BA1908034B", skills: ["Microsoft Fabric", "Data Streaming"], more: 3, type: "applied" }
+          { title: "Microsoft Certified: Azure Databricks Data Engineer Associate", image: "assets/img/certifications/7876D68B7A1A1662.png", date: { y: 2026, m: 8, d: 8 }, expires: { y: 2027, m: 8, d: 9 }, id: "7876D68B7A1A1662", number: "V999C6-2F54E2", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/7876D68B7A1A1662?sharingId=FCD4C3BA1908034B", skills: ["Azure Databricks", "Data Engineering"], more: 0, type: "certification" },
+          { title: "Implement a Real-Time Intelligence solution with Microsoft Fabric", image: "assets/img/certifications/2BA2378B50BBFAD6.png", date: { y: 2026, m: 6 }, id: "2BA2378B50BBFAD6", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/2BA2378B50BBFAD6?sharingId=FCD4C3BA1908034B", skills: ["Microsoft Fabric", "Data Streaming"], more: 3, type: "applied" }
         ]
       },
       {
         issuer: "Cognitive Class",
         icon: "code",
         items: [
-          { title: "Data Visualization with Python", date: { y: 2022, m: 9 }, id: "53f53dae04674ad4ac3e741edc44d0d7", skills: [], more: 0, type: "knowledge" },
-          { title: "Data Analysis with Python", date: { y: 2022, m: 9 }, id: "35f212d48511469e956f4140b937e380", skills: [], more: 0, type: "knowledge" },
-          { title: "Python for Data Science", date: { y: 2022, m: 9 }, id: "ee33a8cf64f54cae8db02705747e0b0b", skills: [], more: 0, type: "knowledge" }
+          { title: "Data Visualization with Python", image: "assets/img/certifications/53f53dae04674ad4ac3e741edc44d0d7.png", date: { y: 2022, m: 9, d: 4 }, id: "53f53dae04674ad4ac3e741edc44d0d7", url: "https://courses.cognitiveclass.ai/certificates/53f53dae04674ad4ac3e741edc44d0d7", skills: ["Python", "Data Visualization"], more: 0, type: "knowledge" },
+          { title: "Data Analysis with Python", image: "assets/img/certifications/35f212d48511469e956f4140b937e380.png", date: { y: 2022, m: 9 }, id: "35f212d48511469e956f4140b937e380", url: "https://courses.cognitiveclass.ai/certificates/35f212d48511469e956f4140b937e380", skills: ["Python", "Data Analysis"], more: 0, type: "knowledge" },
+          { title: "Python for Data Science", image: "assets/img/certifications/ee33a8cf64f54cae8db02705747e0b0b.png", date: { y: 2022, m: 9 }, id: "ee33a8cf64f54cae8db02705747e0b0b", url: "https://courses.cognitiveclass.ai/certificates/ee33a8cf64f54cae8db02705747e0b0b", skills: ["Python", "Data Science"], more: 0, type: "knowledge" }
         ]
       }
     ]

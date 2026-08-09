@@ -22,6 +22,7 @@
     download: '<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19.5h16"/>',
     arrowRight: '<path d="M4 12h15"/><path d="m13 6 6 6-6 6"/>',
     external: '<path d="M9 5H5.5A1.5 1.5 0 0 0 4 6.5v12A1.5 1.5 0 0 0 5.5 20h12a1.5 1.5 0 0 0 1.5-1.5V15"/><path d="M14 4h6v6"/><path d="M20 4 11 13"/>',
+    info: '<circle cx="12" cy="12" r="9"/><path d="M12 10.5V17"/><circle cx="12" cy="7.5" r=".7" fill="currentColor" stroke="none"/>',
     cap: '<path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/><path d="M22 8v6.5"/>',
     briefcase: '<rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/>',
     rocket: '<path d="M12 2.5c2.8 1.3 5 4.6 5 8.8 0 2-1 4-2 5l-.6 3.2-2.4-1.6-2.4 1.6L9 16.3c-1-1-2-3-2-5 0-4.2 2.2-7.5 5-8.8Z"/><circle cx="12" cy="10.5" r="1.6"/><path d="M8.3 15.5 5.8 17a3 3 0 0 0-1.3 2.5V21l1.5-.5a3 3 0 0 0 2-1.6l1-2.4M15.7 15.5l2.5 1.5a3 3 0 0 1 1.3 2.5V21l-1.5-.5a3 3 0 0 1-2-1.6l-1-2.4"/>',
@@ -100,6 +101,14 @@
     }
     document.title = "Manuel David Maya Rosero — " + L(SITE.meta.role);
     document.getElementById("brandSub").textContent = L(SITE.meta.role);
+    var cvPath = SITE.meta.cvFiles[state.lang] || SITE.meta.cvFiles.en;
+    var cvName = state.lang === "fr" ? "CV_Manuel_David_MAYAROSERO_FR.pdf" : "Manuel_David_MAYA_ROSERO_CV.pdf";
+    ["heroCvBtn", "contactCvBtn"].forEach(function (id) {
+      var link = document.getElementById(id);
+      if (!link) return;
+      link.href = cvPath;
+      link.setAttribute("download", cvName);
+    });
   }
 
   /* ---------------- Renderers ---------------- */
@@ -187,55 +196,80 @@
     });
   }
 
-  function renderProjects() {
-    var wrap = document.getElementById("projectsList");
-    wrap.innerHTML = "";
-    SITE.projects.forEach(function (p) {
-      var card = el("div", "project-card" + (p.featured ? " is-featured" : ""));
-
-      var stats = "";
-      if (p.stats && p.stats.length) {
-        stats = '<div class="stat-row">' + p.stats.map(function (s) {
-          return '<div class="stat-tile"><b>' + s.num + "</b><span>" + L(s.label) + "</span></div>";
-        }).join("") + "</div>";
-      }
-
-      var bullets = p.bullets[state.lang].map(function (b) { return "<li>" + b + "</li>"; }).join("");
-      var tags = (p.tags || []).map(function (tg) { return '<span class="tag">' + tg + "</span>"; }).join("");
-      var documents = (p.documents || []).map(function (doc) {
-        return '<a href="' + doc.href + '" target="_blank" rel="noopener noreferrer">' + icon("doc", 14) + L(doc.label) + "</a>";
-      }).join("");
-
-      var content =
-        '<div class="project-content">' +
-          '<div class="project-kicker">' + L(p.kicker) + "</div>" +
-          "<h3>" + L(p.title) + "</h3>" +
-          '<div class="project-meta">' + L(p.org) + " · " + L(p.dateLabel) + "</div>" +
-          "<p>" + L(p.intro) + "</p>" +
-          stats +
-          '<ul class="project-bullets">' + bullets + "</ul>" +
-          (tags ? '<div class="tl-tags">' + tags + "</div>" : "") +
-          (documents ? '<div class="project-links">' + documents + "</div>" : "") +
-        "</div>";
-
-      card.innerHTML = content;
-      wrap.appendChild(card);
-    });
+  function projectCount(group) {
+    return group.courses.reduce(function (total, course) {
+      return total + course.items.length;
+    }, 0);
   }
 
-  function renderCoursework() {
-    var wrap = document.getElementById("courseworkList");
-    wrap.innerHTML = SITE.coursework.map(function (c) {
-      var documents = (c.documents || []).map(function (doc) {
-        return '<a href="' + doc.href + '" target="_blank" rel="noopener noreferrer">' + icon("doc", 14) + L(doc.label) + "</a>";
+  function projectCard(item) {
+    var level = item.level || "standard";
+    var stats = (item.stats || []).map(function (s) {
+      return '<div class="stat-tile"><b>' + s.num + "</b><span>" + L(s.label) + "</span></div>";
+    }).join("");
+    var bullets = item.bullets && item.bullets[state.lang]
+      ? item.bullets[state.lang].map(function (b) { return "<li>" + b + "</li>"; }).join("")
+      : "";
+    var tags = (item.tags || []).map(function (tag) {
+      return '<span class="tag">' + tag + "</span>";
+    }).join("");
+    var documents = (item.documents || []).map(function (doc) {
+      return '<a href="' + attrText(doc.href) + '" target="_blank" rel="noopener noreferrer" aria-label="' + attrText(L(doc.label) + " · " + t("projects_open_pdf")) + '">' + icon("doc", 15) + "<span>" + L(doc.label) + "</span></a>";
+    }).join("");
+    var links = (item.links || []).map(function (link) {
+      return '<a href="' + attrText(link.href) + '" target="_blank" rel="noopener noreferrer">' + icon("external", 15) + "<span>" + L(link.label) + "</span></a>";
+    }).join("");
+    var actions = documents + links;
+
+    return (
+      '<article class="project-card project-card-' + level + '">' +
+        '<div class="project-content">' +
+          '<div class="project-card-top">' +
+            '<span class="project-kicker">' + L(item.kind) + "</span>" +
+            '<span class="tl-date">' + L(item.dateLabel) + "</span>" +
+          "</div>" +
+          "<h5>" + L(item.title) + "</h5>" +
+          '<p class="project-intro">' + L(item.intro) + "</p>" +
+          (stats ? '<div class="stat-row">' + stats + "</div>" : "") +
+          (bullets ? '<ul class="project-bullets">' + bullets + "</ul>" : "") +
+          (item.note ? '<p class="project-note">' + icon("info", 15) + "<span>" + L(item.note) + "</span></p>" : "") +
+          (tags ? '<div class="tl-tags project-tags">' + tags + "</div>" : "") +
+          (actions ? '<div class="project-links">' + actions + "</div>" : "") +
+        "</div>" +
+      "</article>"
+    );
+  }
+
+  function renderProjectCatalog() {
+    var wrap = document.getElementById("projectCatalog");
+    wrap.innerHTML = SITE.projectCatalog.map(function (group, groupIndex) {
+      var count = projectCount(group);
+      var countLabel = count + " " + t(count === 1 ? "projects_count_1" : "projects_count");
+      var courses = group.courses.map(function (course) {
+        var courseCount = course.items.length;
+        var courseCountLabel = courseCount + " " + t(courseCount === 1 ? "projects_count_1" : "projects_count");
+        return (
+          '<section class="project-course">' +
+            '<div class="project-course-head">' +
+              "<h4>" + L(course.name) + "</h4>" +
+              '<span aria-label="' + attrText(courseCountLabel) + '">' + courseCount + "</span>" +
+            "</div>" +
+            '<div class="project-course-grid">' + course.items.map(projectCard).join("") + "</div>" +
+          "</section>"
+        );
       }).join("");
+
       return (
-        '<div class="course-row">' +
-          '<div class="course-row-top"><h4>' + L(c.title) + '</h4><span class="tl-date">' + L(c.dateLabel) + "</span></div>" +
-          '<div class="course-row-org">' + L(c.org) + "</div>" +
-          "<p>" + L(c.text) + "</p>" +
-          (documents ? '<div class="course-links">' + documents + "</div>" : "") +
-        "</div>"
+        '<section class="project-institution" data-c="' + (groupIndex % 3) + '">' +
+          '<header class="project-institution-head">' +
+            '<div class="project-institution-icon">' + icon("cap", 22) + "</div>" +
+            '<div class="project-institution-copy"><div class="project-institution-title">' +
+              "<h3>" + group.institution + "</h3>" +
+              '<span class="project-count">' + countLabel + "</span>" +
+            "</div><p>" + L(group.description) + "</p></div>" +
+          "</header>" +
+          '<div class="project-courses">' + courses + "</div>" +
+        "</section>"
       );
     }).join("");
   }
@@ -269,14 +303,6 @@
     });
   }
 
-  function dateRangeLabel(items) {
-    var sorted = items.map(function (it) { return it.date; }).sort(function (a, b) { return (a.y * 12 + a.m) - (b.y * 12 + b.m); });
-    var first = sorted[0], last = sorted[sorted.length - 1];
-    if (first.y === last.y && first.m === last.m) return fmtMonthYear(first);
-    if (first.y === last.y) return MONTHS[state.lang][first.m - 1] + "–" + fmtMonthYear(last);
-    return fmtMonthYear(first) + " – " + fmtMonthYear(last);
-  }
-
   function typeLabel(type, count) {
     var key = "certs_type_" + type;
     var requestedKey = count === 1 ? key + "_1" : key;
@@ -284,26 +310,76 @@
     return label === requestedKey ? type : label;
   }
 
-  function certTag(item) {
+  function certCategory(type) {
+    if (type === "micro") return "micro";
+    if (type === "knowledge") return "knowledge";
+    return "certification";
+  }
+
+  function certCategoryIcon(category) {
+    if (category === "micro") return "layers";
+    if (category === "knowledge") return "cap";
+    return "award";
+  }
+
+  function attrText(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function credentialCountLabel(count) {
+    return count + " " + t(count === 1 ? "certs_credentials_1" : "certs_credentials");
+  }
+
+  function certCard(item, issuer) {
+    var itemType = item.type || "knowledge";
     var tip = t("certs_issued") + " " + fmtDate(item.date);
     if (item.expires) tip += " · " + t("certs_expires") + " " + fmtDate(item.expires);
     if (item.id) tip += " · " + t("certs_credential") + ": " + item.id;
     if (item.number) tip += " · " + t("certs_number") + ": " + item.number;
-    if (!item.url) return '<span class="tag" title="' + tip.replace(/"/g, "&quot;") + '">' + item.title + "</span>";
-    var href = item.url.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-    var aria = (t("certs_verify") + ": " + item.title).replace(/"/g, "&quot;");
-    return '<a class="tag cert-link" href="' + href + '" target="_blank" rel="noopener noreferrer" title="' + tip.replace(/"/g, "&quot;") + '" aria-label="' + aria + '">' + item.title + "</a>";
+
+    var media = item.image
+      ? '<div class="cert-item-media"><img src="' + attrText(item.image) + '" alt="' + attrText(t("certs_badge_alt") + " " + item.title) + '" loading="lazy"></div>'
+      : '<div class="cert-item-media cert-item-media-fallback">' + icon("award", 44) + "</div>";
+
+    var skills = (item.skills || []).map(function (skill) {
+      return '<span class="cert-skill">' + skill + "</span>";
+    }).join("");
+    if (item.more) skills += '<span class="cert-skill cert-skill-more">+' + item.more + " " + t("certs_more_skills") + "</span>";
+
+    var dates = '<span><b>' + t("certs_issued") + ":</b> " + fmtDate(item.date) + "</span>";
+    if (item.expires) dates += '<span><b>' + t("certs_expires") + ":</b> " + fmtDate(item.expires) + "</span>";
+
+    var action = item.url
+      ? '<a class="cert-verify" href="' + attrText(item.url) + '" target="_blank" rel="noopener noreferrer" title="' + attrText(tip) + '" aria-label="' + attrText(t("certs_verify") + ": " + item.title) + '"><span>' + t("certs_verify") + "</span>" + icon("external", 14) + "</a>"
+      : '<span class="cert-verify is-disabled" title="' + attrText(tip) + '">' + t("certs_verify") + "</span>";
+
+    return (
+      '<article class="cert-item">' +
+        media +
+        '<div class="cert-item-content">' +
+          '<div class="cert-item-top"><span class="cert-item-issuer">' + issuer + '</span><span class="cert-kind">' + typeLabel(itemType, 1) + "</span></div>" +
+          '<h4 class="cert-item-title">' + item.title + "</h4>" +
+          '<div class="cert-item-dates">' + dates + "</div>" +
+          (skills ? '<div class="cert-skills">' + skills + "</div>" : "") +
+          action +
+        "</div>" +
+      "</article>"
+    );
   }
 
   function renderCertifications() {
     var c = SITE.certifications;
-    var counts = { knowledge: 0, micro: 0, certification: 0, applied: 0 };
+    var counts = { knowledge: 0, micro: 0, certification: 0 };
     var total = 0;
     c.groups.forEach(function (g) {
       g.items.forEach(function (it) {
         total++;
-        var type = it.type || "knowledge";
-        counts[type] = (counts[type] || 0) + 1;
+        var category = certCategory(it.type || "knowledge");
+        counts[category] = (counts[category] || 0) + 1;
       });
     });
 
@@ -311,55 +387,46 @@
     statsWrap.innerHTML = [
       { num: String(total), label: t("certs_stat_total") },
       { num: String(counts.certification), label: t("certs_stat_certification") },
-      { num: String(counts.applied), label: t("certs_stat_applied") },
       { num: String(counts.micro), label: t("certs_stat_micro") },
       { num: String(counts.knowledge), label: t("certs_stat_knowledge") }
     ].map(function (s) { return '<div class="stat-tile"><b>' + s.num + "</b><span>" + s.label + "</span></div>"; }).join("");
 
     var wrap = document.getElementById("certsGroups");
     wrap.innerHTML = "";
-    c.groups.forEach(function (g, idx) {
-      var card = el("div", "cert-group");
-      card.setAttribute("data-c", idx % 5);
+    ["certification", "micro", "knowledge"].forEach(function (category) {
+      var providers = c.groups.map(function (g, idx) {
+        return {
+          issuer: g.issuer,
+          icon: g.icon,
+          colorIndex: idx,
+          items: g.items.filter(function (item) { return certCategory(item.type || "knowledge") === category; })
+        };
+      }).filter(function (provider) { return provider.items.length; });
 
-      var typeOrder = ["certification", "applied", "micro", "knowledge"];
-      var groupsByType = {};
-      g.items.forEach(function (it) {
-        var type = it.type || "knowledge";
-        if (!groupsByType[type]) groupsByType[type] = [];
-        groupsByType[type].push(it);
-      });
-      var presentTypes = typeOrder.filter(function (type) { return groupsByType[type] && groupsByType[type].length; });
-      Object.keys(groupsByType).forEach(function (type) {
-        if (presentTypes.indexOf(type) === -1) presentTypes.push(type);
-      });
-      var isMixed = presentTypes.length > 1;
+      if (!providers.length) return;
 
-      var body;
-      if (isMixed) {
-        body = presentTypes.map(function (type) {
-          var items = groupsByType[type];
-          return '<div class="cert-subgroup"><div class="cert-subgroup-label">' + items.length + " " + typeLabel(type, items.length) + '</div><div class="cert-tags">' + items.map(certTag).join("") + "</div></div>";
-        }).join("");
-      } else {
-        body = '<div class="cert-tags">' + g.items.map(certTag).join("") + "</div>";
-      }
+      var categoryCount = providers.reduce(function (sum, provider) { return sum + provider.items.length; }, 0);
+      var section = el("section", "cert-type-section cert-type-" + category);
+      var providersHtml = providers.map(function (provider) {
+        return (
+          '<section class="cert-provider" data-c="' + (provider.colorIndex % 5) + '">' +
+            '<div class="cert-provider-head">' +
+              '<div class="ic">' + icon(provider.icon, 18) + "</div>" +
+              '<div><h4>' + provider.issuer + '</h4><span>' + credentialCountLabel(provider.items.length) + "</span></div>" +
+            "</div>" +
+            '<div class="cert-items-grid">' + provider.items.map(function (item) { return certCard(item, provider.issuer); }).join("") + "</div>" +
+          "</section>"
+        );
+      }).join("");
 
-      var soleType = presentTypes[0] || "knowledge";
-      var metaLine = isMixed
-        ? (g.items.length + " · " + dateRangeLabel(g.items))
-        : (g.items.length + " " + typeLabel(soleType, g.items.length) + " · " + dateRangeLabel(g.items));
-
-      card.innerHTML =
-        '<div class="cert-group-head">' +
-          '<div class="ic">' + icon(g.icon, 17) + "</div>" +
-          "<div>" +
-            "<h4>" + g.issuer + "</h4>" +
-            '<span class="cert-group-meta">' + metaLine + "</span>" +
-          "</div>" +
+      section.innerHTML =
+        '<div class="cert-type-head">' +
+          '<div class="cert-type-icon">' + icon(certCategoryIcon(category), 22) + "</div>" +
+          '<div class="cert-type-copy"><div class="cert-type-title-line"><h3>' + t("certs_category_" + category) + '</h3><span class="cert-type-count">' + categoryCount + "</span></div>" +
+          '<p>' + t("certs_category_" + category + "_desc") + "</p></div>" +
         "</div>" +
-        body;
-      wrap.appendChild(card);
+        '<div class="cert-providers">' + providersHtml + "</div>";
+      wrap.appendChild(section);
     });
   }
 
@@ -396,8 +463,7 @@
     safe("about", renderAbout);
     safe("education", function () { renderTimeline("educationList", SITE.education); });
     safe("experience", function () { renderTimeline("experienceList", SITE.experience); });
-    safe("projects", renderProjects);
-    safe("coursework", renderCoursework);
+    safe("projects", renderProjectCatalog);
     safe("skills", renderSkills);
     safe("certifications", renderCertifications);
     safe("contact", renderContact);
@@ -411,7 +477,9 @@
     state.lang = lang;
     localStorage.setItem("site-lang", lang);
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
-      b.classList.toggle("is-active", b.getAttribute("data-lang") === lang);
+      var active = b.getAttribute("data-lang") === lang;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-pressed", active ? "true" : "false");
     });
     renderAll();
   }
@@ -474,7 +542,9 @@
   /* ---------------- Init ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
-      b.classList.toggle("is-active", b.getAttribute("data-lang") === state.lang);
+      var active = b.getAttribute("data-lang") === state.lang;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-pressed", active ? "true" : "false");
       b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
     });
 
