@@ -29,7 +29,6 @@ window.SITE = {
       nav_home: "Inicio", nav_about: "Perfil", nav_education: "Formación", nav_experience: "Experiencia",
       nav_projects: "Proyectos", nav_skills: "Habilidades", nav_certifications: "Certificaciones", nav_contact: "Contacto",
       language_selector: "Seleccionar idioma",
-      hero_kicker: "Disponible para nuevas oportunidades",
       hero_role_line: "Ingeniero de Software de Datos e IA",
       hero_lede: "Me interesa todo el ciclo de los datos: desde la infraestructura y el software que los hacen posibles hasta los productos de IA y las decisiones que ayudan a construir.",
       cta_cv: "Descargar CV", cta_contact: "Contactarme", cta_projects: "Ver proyectos",
@@ -37,7 +36,7 @@ window.SITE = {
       label_present: "Actualidad", label_since: "Desde",
       about_eyebrow: "Perfil", about_title: "Sobre mí",
       about_lede: "Ingeniero colombiano entre el software, los datos, la IA aplicada y la economía digital.",
-      edu_eyebrow: "Formación académica", edu_title: "Educación",
+      edu_eyebrow: "Formación académica", edu_title: "Formación",
       edu_lede: "Un recorrido entre Bogotá y París: Ingeniería de Sistemas y Computación, un programa de ingeniería en Télécom Paris y el doble diploma M2 IREN.",
       exp_eyebrow: "Trayectoria profesional", exp_title: "Experiencia",
       exp_lede: "Roles en ingeniería de datos, IA aplicada y desarrollo de software, en Colombia y Francia.",
@@ -65,7 +64,7 @@ window.SITE = {
       certs_type_certification: "Certificaciones profesionales", certs_type_certification_1: "Certificación profesional",
       certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
       contact_eyebrow: "Contacto", contact_title: "Hablemos",
-      contact_lede: "Disponible para nuevas oportunidades en software, datos e IA en Francia, Colombia o en remoto. Escríbeme o descarga mi CV completo.",
+      contact_lede: "¿Hablamos de software, datos o IA? Escríbeme o descarga mi CV completo.",
       contact_cta_email: "Escribir un correo", contact_cta_cv: "Descargar CV completo",
       footer_rights: "Todos los derechos reservados.",
       footer_source: "Código fuente",
@@ -80,7 +79,6 @@ window.SITE = {
       nav_home: "Home", nav_about: "Profile", nav_education: "Education", nav_experience: "Experience",
       nav_projects: "Projects", nav_skills: "Skills", nav_certifications: "Certifications", nav_contact: "Contact",
       language_selector: "Select language",
-      hero_kicker: "Open to new opportunities",
       hero_role_line: "Data & AI Software Engineer",
       hero_lede: "I am interested in the full data lifecycle: from the infrastructure and software that make data possible to the AI products and decisions it helps shape.",
       cta_cv: "Download CV", cta_contact: "Get in touch", cta_projects: "View projects",
@@ -116,7 +114,7 @@ window.SITE = {
       certs_type_certification: "Professional certifications", certs_type_certification_1: "Professional certification",
       certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
       contact_eyebrow: "Contact", contact_title: "Let's talk",
-      contact_lede: "Open to software, data, and AI opportunities in France, Colombia, or remotely. Reach out, or download my full CV.",
+      contact_lede: "Let's talk software, data, or AI. Reach out, or download my full CV.",
       contact_cta_email: "Send an email", contact_cta_cv: "Download full CV",
       footer_rights: "All rights reserved.",
       footer_source: "Source code",
@@ -131,7 +129,6 @@ window.SITE = {
       nav_home: "Accueil", nav_about: "Profil", nav_education: "Formation", nav_experience: "Expérience",
       nav_projects: "Projets", nav_skills: "Compétences", nav_certifications: "Certifications", nav_contact: "Contact",
       language_selector: "Choisir la langue",
-      hero_kicker: "Ouvert à de nouvelles opportunités",
       hero_role_line: "Ingénieur logiciel Data & IA",
       hero_lede: "Je m'intéresse à tout le cycle de vie des données : de l'infrastructure et du logiciel qui les rendent possibles jusqu'aux produits d'IA et aux décisions qu'elles contribuent à éclairer.",
       cta_cv: "Télécharger le CV", cta_contact: "Me contacter", cta_projects: "Voir les projets",
@@ -157,7 +154,7 @@ window.SITE = {
       certs_lede: "21 certifications organisées par niveau et fournisseur : 1 certification, 6 microcertifications et 14 knowledge badges.",
       certs_issued: "Délivré", certs_expires: "Expire", certs_credential: "ID de certification", certs_number: "Numéro de certification", certs_verify: "Vérifier la certification", certs_more_skills: "de plus",
       certs_view_all: "Voir tout sur LinkedIn",
-      certs_stat_total: "Certifications", certs_stat_certification: "Certifications avancées", certs_stat_micro: "Microcertifications", certs_stat_knowledge: "Knowledge badges",
+      certs_stat_total: "Certifications", certs_stat_certification: "Certifications professionnelles", certs_stat_micro: "Microcertifications", certs_stat_knowledge: "Knowledge badges",
       certs_category_certification: "Certifications", certs_category_certification_desc: "Certifications professionnelles vérifiables.",
       certs_category_micro: "Microcertifications", certs_category_micro_desc: "Certifications pratiques fondées sur des compétences démontrées, dont Microsoft Applied Skills.",
       certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Certifications de formation et de connaissance technologique.",
@@ -167,7 +164,7 @@ window.SITE = {
       certs_type_certification: "Certifications professionnelles", certs_type_certification_1: "Certification professionnelle",
       certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
       contact_eyebrow: "Contact", contact_title: "Discutons",
-      contact_lede: "Ouvert à de nouvelles opportunités en logiciel, data et IA en France, en Colombie ou à distance. Écrivez-moi ou téléchargez mon CV complet.",
+      contact_lede: "Parlons logiciel, data ou IA. Écrivez-moi ou téléchargez mon CV complet.",
       contact_cta_email: "Envoyer un e-mail", contact_cta_cv: "Télécharger le CV complet",
       footer_rights: "Tous droits réservés.",
       footer_source: "Code source",
@@ -183,7 +180,7 @@ window.SITE = {
   heroStats: [
     { num: "5", label: { es: "Roles profesionales", en: "Professional roles", fr: "Expériences professionnelles" } },
     { num: "21", label: { es: "Credenciales activas", en: "Active credentials", fr: "Certifications actives" } },
-    { num: "3", label: { es: "Instituciones: UNAL · Télécom · Dauphine", en: "Institutions: UNAL · Télécom · Dauphine", fr: "Établissements : UNAL · Télécom · Dauphine" } },
+    { num: "3", label: { es: "Universidad Nacional · Télécom Paris · Paris-Dauphine", en: "Universidad Nacional · Télécom Paris · Paris-Dauphine", fr: "Universidad Nacional · Télécom Paris · Paris-Dauphine" } },
     { num: "3", label: { es: "Idiomas: ES · EN · FR", en: "Languages: ES · EN · FR", fr: "Langues : ES · EN · FR" } }
   ],
 
@@ -323,24 +320,27 @@ window.SITE = {
           "Construí herramientas de automatización en Python y VBA para optimizar flujos de trabajo de ingeniería.",
           "Diseñé un pipeline de datos BIM que integra extracción Revit/IFC, precios de proveedores y análisis de ciclo de vida para automatizar el análisis de costos e impacto ambiental.",
           "Desarrollé asistentes basados en RAG para documentación BIM, mejorando la recuperación de conocimiento y la toma de decisiones.",
-          "Construí sistemas backend con Django y PostgreSQL para aplicaciones internas."
+          "Construí sistemas backend con Django y PostgreSQL para aplicaciones internas.",
+          "Diseñé y desplegué Moduo Connect, un servicio central de identidad (OIDC sobre Authentik) que unifica el inicio de sesión de seis aplicaciones internas, con una migración segura que conserva los hashes de contraseña existentes y aislamiento estricto de sesión por aplicación."
         ],
         en: [
           "Progressed from IT Developer to AI Data Engineer Intern within the same engineering team.",
           "Built automation tools in Python and VBA to streamline engineering workflows.",
           "Designed a BIM data pipeline integrating Revit/IFC extraction, supplier pricing and lifecycle assessment to automate cost and environmental-impact analysis.",
           "Developed RAG-based assistants for BIM documentation, improving knowledge retrieval and decision-making.",
-          "Built backend systems with Django and PostgreSQL to support internal applications."
+          "Built backend systems with Django and PostgreSQL to support internal applications.",
+          "Designed and deployed Moduo Connect, a centralized OIDC identity service (built on Authentik) unifying single sign-on across six internal applications, including a safe user-migration path that preserves existing password hashes and strict per-app session isolation."
         ],
         fr: [
           "Évolution d'un poste de développeur IT vers un stage d'ingénieur Data & IA au sein de la même équipe d'ingénierie.",
           "Développement d'outils d'automatisation en Python et VBA pour fluidifier les workflows d'ingénierie.",
           "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC, les prix fournisseurs et l'analyse de cycle de vie pour automatiser l'analyse des coûts et de l'impact environnemental.",
           "Développement d'assistants RAG pour la documentation BIM, améliorant la recherche de connaissances et l'aide à la décision.",
-          "Développement de systèmes backend avec Django et PostgreSQL pour des applications internes."
+          "Développement de systèmes backend avec Django et PostgreSQL pour des applications internes.",
+          "Conception et déploiement de Moduo Connect, un service d'identité centralisé (OIDC via Authentik) unifiant l'authentification de six applications internes, avec une migration sécurisée des utilisateurs préservant les hachages de mots de passe existants et un isolement strict des sessions par application."
         ]
       },
-      tags: ["Python", "VBA", "PostgreSQL", "Django", "Revit", "IFC", "BIM", "RAG", "Ollama", "Qdrant", "Apache Tika", "Vizcab API", "CI/CD", "IFCOpenShell"]
+      tags: ["Python", "VBA", "PostgreSQL", "Django", "Revit", "IFC", "BIM", "RAG", "Ollama", "Qdrant", "Apache Tika", "Vizcab API", "CI/CD", "IFCOpenShell", "OIDC", "Authentik", "SSO"]
     },
     {
       id: "dninfoa",
@@ -670,10 +670,6 @@ window.SITE = {
                 { num: "1.05→0.82", label: { es: "Dispersión", en: "Dispersion", fr: "Dispersion" } },
                 { num: "12", label: { es: "Papers revisados", en: "Papers reviewed", fr: "Articles étudiés" } }
               ],
-              images: [
-                { src: "assets/img/projects/dma-trajectories.png", cap: { es: "Evolución del apoyo por actor a lo largo de las rondas", en: "Support-score trajectories by stakeholder across rounds", fr: "Évolution du score de soutien par acteur selon les cycles" } },
-                { src: "assets/img/projects/dma-coalitions.png", cap: { es: "Coaliciones simuladas: oposición, apoyo condicional y apoyo", en: "Simulated coalitions: oppose, conditional, support", fr: "Coalitions simulées : opposition, soutien conditionnel, soutien" } }
-              ],
               bullets: {
                 es: [
                   "El informe define roles, turnos, scoring y descomposición; la revisión adjunta cubre arquitectura, escala, validación, interpretabilidad y gobernanza.",
@@ -714,10 +710,6 @@ window.SITE = {
                 { num: "96,376", label: { es: "Filas · train + test", en: "Rows · train + test", fr: "Lignes · train + test" } },
                 { num: "0.520", label: { es: "ROC-AUC SAFE", en: "SAFE ROC-AUC", fr: "ROC-AUC SAFE" } },
                 { num: "0.099", label: { es: "PR-AUC", en: "PR-AUC", fr: "PR-AUC" } }
-              ],
-              images: [
-                { src: "assets/img/projects/credit-risk-default-by-grade.png", cap: { es: "Tasa de impago por grado de crédito (IC 95%)", en: "Default rate by credit grade (95% CI)", fr: "Taux de défaut par note de crédit (IC 95 %)" } },
-                { src: "assets/img/projects/credit-risk-roc-curve.png", cap: { es: "Curva ROC del mejor clasificador (CatBoost)", en: "ROC curve of the best classifier (CatBoost)", fr: "Courbe ROC du meilleur classifieur (CatBoost)" } }
               ],
               note: {
                 es: "El valor del estudio es diagnosticar las limitaciones de señal; no se presenta como un modelo productivo de alto rendimiento.",
@@ -1012,7 +1004,7 @@ window.SITE = {
     {
       icon: "cloud",
       name: { es: "Nube y plataformas", en: "Cloud & Platforms", fr: "Cloud et plateformes" },
-      items: ["Microsoft Azure", "Google Cloud", "AWS", "Databricks", "Azure AI", "Azure Cognitive Search", "Azure OpenAI Service", "AWS S3", "Cloud Run", "Cloud Storage", "Google Kubernetes Engine", "Azure AI Search", "Blob Storage"]
+      items: ["Microsoft Azure", "Google Cloud", "AWS", "Databricks", "Azure AI", "Azure OpenAI Service", "AWS S3", "Cloud Run", "Cloud Storage", "Google Kubernetes Engine", "Azure AI Search", "Blob Storage"]
     },
     {
       icon: "code",
