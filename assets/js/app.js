@@ -396,6 +396,11 @@
     ].map(function (s) { return '<div class="stat-tile"><b>' + s.num + "</b><span>" + s.label + "</span></div>"; }).join("");
 
     var wrap = document.getElementById("certsGroups");
+    var hasRendered = wrap.dataset.rendered === "true";
+    var openCategories = Array.prototype.map.call(
+      wrap.querySelectorAll(".cert-type-section[open]"),
+      function (details) { return details.dataset.certCategory; }
+    );
     wrap.innerHTML = "";
     ["certification", "micro", "knowledge"].forEach(function (category) {
       var providers = c.groups.map(function (g, idx) {
@@ -410,7 +415,11 @@
       if (!providers.length) return;
 
       var categoryCount = providers.reduce(function (sum, provider) { return sum + provider.items.length; }, 0);
-      var section = el("section", "cert-type-section cert-type-" + category);
+      var section = el("details", "cert-type-section cert-type-" + category);
+      section.dataset.certCategory = category;
+      section.open = hasRendered
+        ? openCategories.indexOf(category) !== -1
+        : category === "certification";
       var providersHtml = providers.map(function (provider) {
         return (
           '<section class="cert-provider" data-c="' + (provider.colorIndex % 5) + '">' +
@@ -424,14 +433,16 @@
       }).join("");
 
       section.innerHTML =
-        '<div class="cert-type-head">' +
+        '<summary class="cert-type-head">' +
           '<div class="cert-type-icon">' + icon(certCategoryIcon(category), 22) + "</div>" +
           '<div class="cert-type-copy"><div class="cert-type-title-line"><h3>' + t("certs_category_" + category) + '</h3><span class="cert-type-count">' + categoryCount + "</span></div>" +
           '<p>' + t("certs_category_" + category + "_desc") + "</p></div>" +
-        "</div>" +
+          '<span class="cert-type-toggle" aria-hidden="true"></span>' +
+        "</summary>" +
         '<div class="cert-providers">' + providersHtml + "</div>";
       wrap.appendChild(section);
     });
+    wrap.dataset.rendered = "true";
   }
 
   function renderContact() {
