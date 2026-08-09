@@ -196,12 +196,6 @@
     });
   }
 
-  function projectCount(group) {
-    return group.courses.reduce(function (total, course) {
-      return total + course.items.length;
-    }, 0);
-  }
-
   function projectCard(item) {
     var level = item.level || "standard";
     var stats = (item.stats || []).map(function (s) {
@@ -242,36 +236,46 @@
 
   function renderProjectCatalog() {
     var wrap = document.getElementById("projectCatalog");
-    wrap.innerHTML = SITE.projectCatalog.map(function (group, groupIndex) {
-      var count = projectCount(group);
-      var countLabel = count + " " + t(count === 1 ? "projects_count_1" : "projects_count");
+    var hasRendered = wrap.dataset.rendered === "true";
+    var openGroups = Array.prototype.map.call(
+      wrap.querySelectorAll(".project-institution[open]"),
+      function (details) { return details.dataset.projectId; }
+    );
+    var institutionOrder = ["dauphine-iren", "telecom-paris", "unal"];
+    var groups = SITE.projectCatalog.slice().sort(function (a, b) {
+      return institutionOrder.indexOf(a.id) - institutionOrder.indexOf(b.id);
+    });
+
+    wrap.innerHTML = groups.map(function (group, groupIndex) {
       var courses = group.courses.map(function (course) {
-        var courseCount = course.items.length;
-        var courseCountLabel = courseCount + " " + t(courseCount === 1 ? "projects_count_1" : "projects_count");
         return (
           '<section class="project-course">' +
             '<div class="project-course-head">' +
               "<h4>" + L(course.name) + "</h4>" +
-              '<span aria-label="' + attrText(courseCountLabel) + '">' + courseCount + "</span>" +
             "</div>" +
             '<div class="project-course-grid">' + course.items.map(projectCard).join("") + "</div>" +
           "</section>"
         );
       }).join("");
 
+      var isOpen = hasRendered
+        ? openGroups.indexOf(group.id) !== -1
+        : groupIndex === 0;
+
       return (
-        '<section class="project-institution" data-c="' + (groupIndex % 3) + '">' +
-          '<header class="project-institution-head">' +
+        '<details class="project-institution" data-project-id="' + attrText(group.id) + '" data-c="' + (groupIndex % 3) + '"' + (isOpen ? " open" : "") + '>' +
+          '<summary class="project-institution-head">' +
             '<div class="project-institution-icon">' + icon("cap", 22) + "</div>" +
             '<div class="project-institution-copy"><div class="project-institution-title">' +
               "<h3>" + group.institution + "</h3>" +
-              '<span class="project-count">' + countLabel + "</span>" +
             "</div><p>" + L(group.description) + "</p></div>" +
-          "</header>" +
+            '<span class="project-institution-toggle" aria-hidden="true"></span>' +
+          "</summary>" +
           '<div class="project-courses">' + courses + "</div>" +
-        "</section>"
+        "</details>"
       );
     }).join("");
+    wrap.dataset.rendered = "true";
   }
 
   function renderSkills() {
@@ -311,7 +315,7 @@
   }
 
   function certCategory(type) {
-    if (type === "micro") return "micro";
+    if (type === "micro" || type === "applied") return "micro";
     if (type === "knowledge") return "knowledge";
     return "certification";
   }

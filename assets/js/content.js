@@ -43,7 +43,6 @@ window.SITE = {
       exp_lede: "Roles en ingeniería de datos, IA aplicada y desarrollo de software, en Colombia y Francia.",
       proj_eyebrow: "Trabajo destacado", proj_title: "Proyectos",
       proj_lede: "Proyectos académicos agrupados por institución y curso, con autoría, alcance y documentos claramente identificados. El trabajo realizado para empresas aparece únicamente en Experiencia.",
-      projects_count: "trabajos seleccionados", projects_count_1: "trabajo seleccionado",
       projects_documents: "Documentos", projects_team_link: "Repositorios del equipo", projects_open_pdf: "Abrir PDF",
       found_eyebrow: "Impacto social", found_title: "Fundación Kawsay",
       found_lede: "Cofundé esta fundación colombiana en 2022 y sigo a cargo de su gestión de datos. Es, sin duda, el proyecto del que más orgulloso estoy.",
@@ -53,12 +52,12 @@ window.SITE = {
       skills_lede: "Tecnologías usadas en producción, en investigación o en ambas, agrupadas tal como aparecen en mi CV.",
       lang_title: "Idiomas",
       certs_eyebrow: "Aprendizaje continuo", certs_title: "Certificaciones",
-      certs_lede: "21 credenciales organizadas por nivel y proveedor: 2 en Certificaciones, 5 microcertificaciones y 14 knowledge badges.",
+      certs_lede: "21 credenciales organizadas por nivel y proveedor: 1 certificación, 6 microcertificaciones y 14 knowledge badges.",
       certs_issued: "Emitido", certs_expires: "Expira", certs_credential: "ID de credencial", certs_number: "Número de certificación", certs_verify: "Verificar credencial", certs_more_skills: "más",
       certs_view_all: "Ver todas en LinkedIn",
       certs_stat_total: "Credenciales", certs_stat_certification: "Certificaciones", certs_stat_micro: "Microcertificaciones", certs_stat_knowledge: "Knowledge badges",
-      certs_category_certification: "Certificaciones", certs_category_certification_desc: "Certificaciones profesionales y Microsoft Applied Skills.",
-      certs_category_micro: "Microcertificaciones", certs_category_micro_desc: "Credenciales prácticas basadas en habilidades demostradas.",
+      certs_category_certification: "Certificaciones", certs_category_certification_desc: "Certificaciones profesionales verificables.",
+      certs_category_micro: "Microcertificaciones", certs_category_micro_desc: "Credenciales prácticas basadas en habilidades demostradas, incluidas Microsoft Applied Skills.",
       certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Credenciales de formación y conocimiento por tecnología.",
       certs_credentials: "credenciales", certs_credentials_1: "credencial", certs_badge_alt: "Badge de",
       certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
@@ -95,7 +94,6 @@ window.SITE = {
       exp_lede: "Roles in data engineering, applied AI and software development, across Colombia and France.",
       proj_eyebrow: "Featured work", proj_title: "Projects",
       proj_lede: "Academic work grouped by institution and course, with authorship, scope, and supporting documents clearly identified. Work completed for employers appears only under Experience.",
-      projects_count: "selected works", projects_count_1: "selected work",
       projects_documents: "Documents", projects_team_link: "Team repositories", projects_open_pdf: "Open PDF",
       found_eyebrow: "Social impact", found_title: "Fundación Kawsay",
       found_lede: "I co-founded this Colombian foundation in 2022 and still lead its data management. It's, without a doubt, the project I'm proudest of.",
@@ -105,12 +103,12 @@ window.SITE = {
       skills_lede: "Technologies used in production, in research, or both — grouped just as they appear on my CV.",
       lang_title: "Languages",
       certs_eyebrow: "Continuous learning", certs_title: "Certifications",
-      certs_lede: "21 credentials organized by level and provider: 2 under Certifications, 5 microcredentials, and 14 knowledge badges.",
+      certs_lede: "21 credentials organized by level and provider: 1 certification, 6 microcredentials, and 14 knowledge badges.",
       certs_issued: "Issued", certs_expires: "Expires", certs_credential: "Credential ID", certs_number: "Certification number", certs_verify: "Verify credential", certs_more_skills: "more",
       certs_view_all: "View all on LinkedIn",
       certs_stat_total: "Credentials", certs_stat_certification: "Certifications", certs_stat_micro: "Microcredentials", certs_stat_knowledge: "Knowledge badges",
-      certs_category_certification: "Certifications", certs_category_certification_desc: "Professional certifications and Microsoft Applied Skills.",
-      certs_category_micro: "Microcredentials", certs_category_micro_desc: "Hands-on credentials based on demonstrated skills.",
+      certs_category_certification: "Certifications", certs_category_certification_desc: "Verifiable professional certifications.",
+      certs_category_micro: "Microcredentials", certs_category_micro_desc: "Hands-on credentials based on demonstrated skills, including Microsoft Applied Skills.",
       certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Training and technology knowledge credentials.",
       certs_credentials: "credentials", certs_credentials_1: "credential", certs_badge_alt: "Badge for",
       certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
@@ -147,7 +145,6 @@ window.SITE = {
       exp_lede: "Des missions en ingénierie des données, IA appliquée et développement logiciel, entre la Colombie et la France.",
       proj_eyebrow: "Travaux marquants", proj_title: "Projets",
       proj_lede: "Travaux académiques regroupés par établissement et par cours, avec une attribution, une portée et des documents clairement identifiés. Les travaux réalisés en entreprise figurent uniquement dans Expérience.",
-      projects_count: "travaux sélectionnés", projects_count_1: "travail sélectionné",
       projects_documents: "Documents", projects_team_link: "Dépôts de l'équipe", projects_open_pdf: "Ouvrir le PDF",
       found_eyebrow: "Impact social", found_title: "Fundación Kawsay",
       found_lede: "J'ai cofondé cette fondation colombienne en 2022 et j'assure toujours la gestion de ses données. C'est, sans conteste, le projet dont je suis le plus fier.",
@@ -157,12 +154,12 @@ window.SITE = {
       skills_lede: "Technologies utilisées en production, en recherche, ou les deux — regroupées comme sur mon CV.",
       lang_title: "Langues",
       certs_eyebrow: "Formation continue", certs_title: "Certifications",
-      certs_lede: "21 certifications organisées par niveau et fournisseur : 2 dans Certifications, 5 microcertifications et 14 knowledge badges.",
+      certs_lede: "21 certifications organisées par niveau et fournisseur : 1 certification, 6 microcertifications et 14 knowledge badges.",
       certs_issued: "Délivré", certs_expires: "Expire", certs_credential: "ID de certification", certs_number: "Numéro de certification", certs_verify: "Vérifier la certification", certs_more_skills: "de plus",
       certs_view_all: "Voir tout sur LinkedIn",
       certs_stat_total: "Certifications", certs_stat_certification: "Certifications avancées", certs_stat_micro: "Microcertifications", certs_stat_knowledge: "Knowledge badges",
-      certs_category_certification: "Certifications", certs_category_certification_desc: "Certifications professionnelles et Microsoft Applied Skills.",
-      certs_category_micro: "Microcertifications", certs_category_micro_desc: "Certifications pratiques fondées sur des compétences démontrées.",
+      certs_category_certification: "Certifications", certs_category_certification_desc: "Certifications professionnelles vérifiables.",
+      certs_category_micro: "Microcertifications", certs_category_micro_desc: "Certifications pratiques fondées sur des compétences démontrées, dont Microsoft Applied Skills.",
       certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Certifications de formation et de connaissance technologique.",
       certs_credentials: "certifications", certs_credentials_1: "certification", certs_badge_alt: "Badge de",
       certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
@@ -495,9 +492,6 @@ window.SITE = {
                   "Implémentation de Dataset/DataLoader et de classifieurs par moyenne sous PyTorch ; le fine-tuning de GloVe obtient le meilleur résultat de test."
                 ]
               },
-              documents: [
-                { href: "assets/files/projects/text-classification-pytorch-brief.pdf", label: { es: "Brief técnico", en: "Technical brief", fr: "Synthèse technique" } }
-              ],
               tags: ["Python", "PyTorch", "Scikit-learn", "TF-IDF", "Word2Vec", "GloVe"]
             }
           ]
@@ -591,9 +585,6 @@ window.SITE = {
                 en: "Only executed, error-free notebooks inform this summary; the guided labs are not presented as independent projects.",
                 fr: "Seuls les notebooks exécutés sans erreur alimentent cette synthèse ; les TP encadrés ne sont pas présentés comme projets indépendants."
               },
-              documents: [
-                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
-              ],
               tags: ["PageRank", "Louvain", "Diffusion", "Spectral Embedding", "GNN", "Python"]
             }
           ]
@@ -612,9 +603,6 @@ window.SITE = {
                 en: "Implementation and comparison of a custom SGD routine and Keras; the best recorded configuration reached 95.39% test accuracy.",
                 fr: "Implémentation et comparaison d'un SGD personnalisé et de Keras ; la meilleure configuration enregistrée atteint 95,39 % d'accuracy test."
               },
-              documents: [
-                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
-              ],
               tags: ["Python", "SGD", "Keras", "MNIST"]
             }
           ]
@@ -633,9 +621,6 @@ window.SITE = {
                 en: "Comparison of linear/RBF SVMs, regularization, and learning curves; on LFW, PCA retained 93.4% accuracy while reducing fit time from 307.7 s to 2.48 s.",
                 fr: "Comparaison de SVM linéaires/RBF, régularisation et courbes d'apprentissage ; sur LFW, l'ACP conserve 93,4 % d'accuracy en réduisant l'ajustement de 307,7 s à 2,48 s."
               },
-              documents: [
-                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
-              ],
               tags: ["Scikit-learn", "SVM", "PCA"]
             },
             {
@@ -649,9 +634,6 @@ window.SITE = {
                 en: "A NumPy softmax classifier with 88.42% test accuracy, followed by PCA, autoencoders, and denoising autoencoders in Keras.",
                 fr: "Classifieur softmax en NumPy avec 88,42 % d'accuracy test, suivi d'expériences avec ACP, autoencodeurs et autoencodeurs débruiteurs sous Keras."
               },
-              documents: [
-                { href: "assets/files/projects/telecom/applied-ml-labs/selected-machine-learning-labs-brief.pdf", label: { es: "Brief técnico de laboratorios", en: "Technical lab brief", fr: "Synthèse technique des TP" } }
-              ],
               tags: ["NumPy", "Keras", "Autoencoders", "MNIST"]
             }
           ]
@@ -732,9 +714,6 @@ window.SITE = {
                 en: "The study's value is diagnosing signal limitations; it is not presented as a high-performing production model.",
                 fr: "L'intérêt de l'étude est le diagnostic des limites du signal ; elle n'est pas présentée comme un modèle de production performant."
               },
-              documents: [
-                { href: "assets/files/projects/dauphine/advanced-data-science/loan-default-risk-report.pdf", label: { es: "Informe final", en: "Final report", fr: "Rapport final" } }
-              ],
               tags: ["Scikit-learn", "CatBoost", "Calibration", "Leakage Control", "ROC / PR"]
             }
           ]
@@ -839,9 +818,9 @@ window.SITE = {
       id: "unal",
       institution: "Universidad Nacional de Colombia",
       description: {
-        es: "Proyecto de pregrado en arquitectura de software y desarrollo colaborativo.",
-        en: "Undergraduate work in software architecture and collaborative development.",
-        fr: "Projet de premier cycle en architecture logicielle et développement collaboratif."
+        es: "Proyectos de pregrado en lenguajes, ingeniería y arquitectura de software, con contribuciones y autorías claramente delimitadas.",
+        en: "Undergraduate projects in programming languages, software engineering, and architecture, with contributions and authorship clearly scoped.",
+        fr: "Projets de premier cycle en langages, ingénierie et architecture logicielle, avec des contributions et des attributions clairement délimitées."
       },
       courses: [
         {
@@ -876,6 +855,141 @@ window.SITE = {
                 { href: "https://github.com/orgs/Arquitectura-de-Software-2023i/repositories", label: { es: "Repositorios del equipo", en: "Team repositories", fr: "Dépôts de l'équipe" } }
               ],
               tags: ["TypeScript", "Express", "MongoDB", "JWT", "bcrypt", "Microservices"]
+            }
+          ]
+        },
+        {
+          name: { es: "Lenguajes de Programación", en: "Programming Languages", fr: "Langages de programmation" },
+          items: [
+            {
+              id: "small-basic-python-translator",
+              level: "standard",
+              kind: {
+                es: "Prototipo académico en equipo · con Ángel Peñarredonda y Nicol Guerrero",
+                en: "Academic team prototype · with Ángel Peñarredonda and Nicol Guerrero",
+                fr: "Prototype académique en équipe · avec Ángel Peñarredonda et Nicol Guerrero"
+              },
+              title: {
+                es: "Traductor de Small Basic a Python",
+                en: "Small Basic-to-Python Translator",
+                fr: "Traducteur de Small Basic vers Python"
+              },
+              dateLabel: { es: "May. 2023", en: "May 2023", fr: "Mai 2023" },
+              intro: {
+                es: "Prototipo que traduce un subconjunto de Small Basic a Python mediante una gramática ANTLR y un recorrido del árbol sintáctico implementado en Java.",
+                en: "A prototype that translates a subset of Small Basic into Python through an ANTLR grammar and a Java parse-tree traversal.",
+                fr: "Prototype traduisant un sous-ensemble de Small Basic vers Python grâce à une grammaire ANTLR et au parcours de l’arbre syntaxique en Java."
+              },
+              bullets: {
+                es: [
+                  "Contribuí al desarrollo de la gramática léxica y sintáctica y de la capa de generación de código.",
+                  "El equipo cubrió asignaciones, expresiones, condicionales, bucles, subrutinas, arreglos y operaciones seleccionadas de TextWindow y Stack."
+                ],
+                en: [
+                  "Contributed to the lexical and syntactic grammar and to the code-generation layer.",
+                  "The team covered assignments, expressions, conditionals, loops, subroutines, arrays, and selected TextWindow and Stack operations."
+                ],
+                fr: [
+                  "Contribution à la grammaire lexicale et syntaxique ainsi qu’à la couche de génération de code.",
+                  "L’équipe a couvert les affectations, expressions, conditions, boucles, sous-routines, tableaux et certaines opérations TextWindow et Stack."
+                ]
+              },
+              note: {
+                es: "Prototipo de curso con cobertura parcial: requiere JDK y ANTLR, no incluye pruebas automatizadas ni un build reproducible y no se presenta como listo para producción.",
+                en: "Course prototype with partial coverage: it requires the JDK and ANTLR, has no automated test suite or reproducible build, and is not presented as production-ready.",
+                fr: "Prototype de cours à couverture partielle : il nécessite le JDK et ANTLR, ne dispose ni de tests automatisés ni d’un build reproductible, et n’est pas présenté comme prêt pour la production."
+              },
+              tags: ["Java", "ANTLR 4", "Parsing", "Compilers", "Python"]
+            }
+          ]
+        },
+        {
+          name: { es: "Ingeniería de Software II", en: "Software Engineering II", fr: "Génie logiciel II" },
+          items: [
+            {
+              id: "payphone-supermarket-platform",
+              level: "standard",
+              kind: {
+                es: "Prototipo académico · equipo de 4",
+                en: "Academic prototype · team of 4",
+                fr: "Prototype académique · équipe de 4"
+              },
+              title: {
+                es: "PayPhone: comparación y compra en supermercados",
+                en: "PayPhone: Supermarket Comparison and Shopping",
+                fr: "PayPhone : comparaison et achat en supermarché"
+              },
+              dateLabel: { es: "2022-II", en: "2022-II", fr: "2022-II" },
+              intro: {
+                es: "Aplicación web full-stack para explorar productos por supermercado, administrar cuentas y ventas y completar un flujo de compra.",
+                en: "A full-stack web application for exploring products by supermarket, managing accounts and sales, and completing a purchase flow.",
+                fr: "Application web full-stack permettant d’explorer les produits par supermarché, de gérer les comptes et les ventes et de finaliser un parcours d’achat."
+              },
+              bullets: {
+                es: [
+                  "Contribuí a autenticación y registro, vistas administrativas, navegación, selección de supermercado, ventas e integración del flujo de PayPal.",
+                  "El equipo conectó un frontend React con una API Node/Express y persistencia MySQL/Sequelize; también integró Google OAuth y correo transaccional."
+                ],
+                en: [
+                  "Contributed to authentication and registration, admin views, navigation, supermarket selection, sales, and the PayPal flow.",
+                  "The team connected a React frontend to a Node/Express API and MySQL/Sequelize persistence, with Google OAuth and transactional email integrations."
+                ],
+                fr: [
+                  "Contribution à l’authentification et l’inscription, aux vues d’administration, à la navigation, au choix du supermarché, aux ventes et au parcours PayPal.",
+                  "L’équipe a relié un frontend React à une API Node/Express et à MySQL/Sequelize, avec Google OAuth et l’envoi d’e-mails transactionnels."
+                ]
+              },
+              note: {
+                es: "Trabajo con Nicol Guerrero, Diego Rubiano y Maicol Peña. No se enlaza el código porque el prototipo conserva configuración sensible y no se presenta como listo para producción.",
+                en: "Built with Nicol Guerrero, Diego Rubiano, and Maicol Peña. The code is not linked because the prototype retains sensitive configuration and is not presented as production-ready.",
+                fr: "Réalisé avec Nicol Guerrero, Diego Rubiano et Maicol Peña. Le code n’est pas lié, car le prototype conserve une configuration sensible et n’est pas présenté comme prêt pour la production."
+              },
+              tags: ["React", "Node.js", "Express", "MySQL", "Sequelize", "JWT", "PayPal"]
+            }
+          ]
+        },
+        {
+          name: { es: "Ingeniería de Software I", en: "Software Engineering I", fr: "Génie logiciel I" },
+          items: [
+            {
+              id: "home-health-care-requirements",
+              level: "compact",
+              kind: {
+                es: "Proyecto Scrum en equipo · contribución en requisitos",
+                en: "Team Scrum project · requirements contribution",
+                fr: "Projet Scrum en équipe · contribution aux exigences"
+              },
+              title: {
+                es: "Home Health Care: agenda de atención médica",
+                en: "Home Health Care: Medical Appointment Scheduling",
+                fr: "Home Health Care : gestion des rendez-vous médicaux"
+              },
+              dateLabel: { es: "2021-II · Feb. 2022", en: "2021-II · Feb 2022", fr: "2021-II · Févr. 2022" },
+              intro: {
+                es: "Proyecto de gestión clínica desarrollado por un equipo de cinco personas. Mi aporte verificable se concentró en requisitos y casos de uso del módulo de agendas médicas.",
+                en: "A clinical-management project developed by a five-person team. My verifiable contribution focused on requirements and use cases for the medical scheduling module.",
+                fr: "Projet de gestion clinique réalisé par une équipe de cinq personnes. Ma contribution vérifiable porte sur les exigences et cas d’usage du module de planification médicale."
+              },
+              bullets: {
+                es: [
+                  "Participé en la definición del alcance funcional de creación, cancelación y reprogramación de citas dentro del proceso Scrum.",
+                  "El sistema del equipo incluyó roles, historias clínicas y paneles con Spring Boot, Thymeleaf, JPA y PostgreSQL."
+                ],
+                en: [
+                  "Participated in defining the functional scope for creating, canceling, and rescheduling appointments within the Scrum process.",
+                  "The team system included roles, clinical records, and dashboards built with Spring Boot, Thymeleaf, JPA, and PostgreSQL."
+                ],
+                fr: [
+                  "Participation à la définition du périmètre fonctionnel de création, annulation et reprogrammation des rendez-vous dans le processus Scrum.",
+                  "Le système de l’équipe comprenait rôles, dossiers médicaux et tableaux de bord avec Spring Boot, Thymeleaf, JPA et PostgreSQL."
+                ]
+              },
+              note: {
+                es: "Trabajo con Brayan Aponte, Daniel Echeverri, Juan Sánchez y Maicol Peña. La implementación full-stack se acredita al equipo, no como desarrollo individual.",
+                en: "Built with Brayan Aponte, Daniel Echeverri, Juan Sánchez, and Maicol Peña. Full-stack implementation is credited to the team, not claimed as individual development.",
+                fr: "Réalisé avec Brayan Aponte, Daniel Echeverri, Juan Sánchez et Maicol Peña. L’implémentation full-stack est attribuée à l’équipe, pas revendiquée comme développement individuel."
+              },
+              tags: ["Requirements", "Scrum", "UML", "Spring Boot", "PostgreSQL"]
             }
           ]
         }
@@ -952,8 +1066,8 @@ window.SITE = {
         issuer: "Microsoft",
         icon: "wrench",
         items: [
-          { title: "Microsoft Certified: Azure Databricks Data Engineer Associate", image: "assets/img/certifications/7876D68B7A1A1662.png", date: { y: 2026, m: 8, d: 8 }, expires: { y: 2027, m: 8, d: 9 }, id: "7876D68B7A1A1662", number: "V999C6-2F54E2", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/7876D68B7A1A1662?sharingId=FCD4C3BA1908034B", skills: ["Azure Databricks", "Data Engineering"], more: 0, type: "certification" },
-          { title: "Implement a Real-Time Intelligence solution with Microsoft Fabric", image: "assets/img/certifications/2BA2378B50BBFAD6.png", date: { y: 2026, m: 6 }, id: "2BA2378B50BBFAD6", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/2BA2378B50BBFAD6?sharingId=FCD4C3BA1908034B", skills: ["Microsoft Fabric", "Data Streaming"], more: 3, type: "applied" }
+          { title: "Microsoft Certified: Azure Databricks Data Engineer Associate", image: "assets/img/certifications/7876D68B7A1A1662-associate.png", date: { y: 2026, m: 8, d: 8 }, expires: { y: 2027, m: 8, d: 9 }, id: "7876D68B7A1A1662", number: "V999C6-2F54E2", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/7876D68B7A1A1662?sharingId=FCD4C3BA1908034B", skills: ["Azure Databricks", "Data Engineering"], more: 0, type: "certification" },
+          { title: "Implement a Real-Time Intelligence solution with Microsoft Fabric", image: "assets/img/certifications/2BA2378B50BBFAD6-enhanced.png", date: { y: 2026, m: 6 }, id: "2BA2378B50BBFAD6", url: "https://learn.microsoft.com/api/credentials/share/en-us/ManuelDavidMayaRosero-0838/2BA2378B50BBFAD6?sharingId=FCD4C3BA1908034B", skills: ["Microsoft Fabric", "Data Streaming"], more: 3, type: "applied" }
         ]
       },
       {
