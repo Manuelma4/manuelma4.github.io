@@ -8,6 +8,7 @@
 
   var SITE = window.SITE;
   var LANGS = ["es", "en", "fr"];
+  var STAGGER_MAX = 8; // clamp per-card entrance delay for long grids/lists
   var MONTHS = {
     es: ["ene.", "feb.", "mar.", "abr.", "may.", "jun.", "jul.", "ago.", "sept.", "oct.", "nov.", "dic."],
     en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -173,8 +174,9 @@
     opts = opts || {};
     var wrap = document.getElementById(containerId);
     wrap.innerHTML = "";
-    items.forEach(function (item) {
-      var wrapper = el("div", "tl-item" + (item.ongoing ? " is-current" : ""));
+    items.forEach(function (item, i) {
+      var wrapper = el("div", "tl-item stagger-item" + (item.ongoing ? " is-current" : ""));
+      wrapper.style.setProperty("--i", Math.min(i, STAGGER_MAX));
       var bullets = item.bullets[state.lang].map(function (b) { return "<li>" + b + "</li>"; }).join("");
       var tags = (item.tags || []).map(function (tg) { return '<span class="tag">' + tg + "</span>"; }).join("");
       var placeLine = item.place ? L(item.place) : "";
@@ -196,8 +198,14 @@
     });
   }
 
-  function projectCard(item) {
+  function projectCard(item, i) {
     var level = item.level || "standard";
+    var media = (item.images && item.images.length)
+      ? '<div class="project-card-media">' + item.images.map(function (im) {
+          var cap = L(im.cap);
+          return '<figure><a href="' + attrText(im.src) + '" target="_blank" rel="noopener noreferrer" aria-label="' + attrText(cap) + '"><img src="' + attrText(im.src) + '" alt="' + attrText(cap) + '" loading="lazy"></a><figcaption>' + cap + "</figcaption></figure>";
+        }).join("") + "</div>"
+      : "";
     var stats = (item.stats || []).map(function (s) {
       return '<div class="stat-tile"><b>' + s.num + "</b><span>" + L(s.label) + "</span></div>";
     }).join("");
@@ -216,7 +224,8 @@
     var actions = documents + links;
 
     return (
-      '<article class="project-card project-card-' + level + '">' +
+      '<article class="project-card project-card-' + level + ' stagger-item" style="--i:' + Math.min(i || 0, STAGGER_MAX) + '">' +
+        media +
         '<div class="project-content">' +
           '<div class="project-card-top">' +
             '<span class="project-kicker">' + L(item.kind) + "</span>" +
@@ -265,7 +274,9 @@
       return (
         '<details class="project-institution" data-project-id="' + attrText(group.id) + '" data-c="' + (groupIndex % 3) + '"' + (isOpen ? " open" : "") + '>' +
           '<summary class="project-institution-head">' +
-            '<div class="project-institution-icon">' + icon("cap", 22) + "</div>" +
+            (group.photo
+              ? '<img class="project-institution-photo" src="' + attrText(group.photo) + '" alt="">'
+              : '<div class="project-institution-icon">' + icon("cap", 22) + "</div>") +
             '<div class="project-institution-copy"><div class="project-institution-title">' +
               "<h3>" + group.institution + "</h3>" +
             "</div><p>" + L(group.description) + "</p></div>" +
@@ -282,8 +293,9 @@
     var wrap = document.getElementById("skillsList");
     wrap.innerHTML = "";
     SITE.skills.forEach(function (s, idx) {
-      var card = el("div", "skill-card");
+      var card = el("div", "skill-card stagger-item");
       card.setAttribute("data-c", idx % 5);
+      card.style.setProperty("--i", Math.min(idx, STAGGER_MAX));
       var tags = s.items.map(function (i) { return '<span class="tag">' + i + "</span>"; }).join("");
       card.innerHTML =
         '<div class="skill-card-head"><div class="ic">' + icon(s.icon, 18) + "</div><h4>" + L(s.name) + "</h4></div>" +
@@ -338,7 +350,7 @@
     return count + " " + t(count === 1 ? "certs_credentials_1" : "certs_credentials");
   }
 
-  function certCard(item, issuer) {
+  function certCard(item, issuer, i) {
     var itemType = item.type || "knowledge";
     var tip = t("certs_issued") + " " + fmtDate(item.date);
     if (item.expires) tip += " · " + t("certs_expires") + " " + fmtDate(item.expires);
@@ -362,7 +374,7 @@
       : '<span class="cert-verify is-disabled" title="' + attrText(tip) + '">' + t("certs_verify") + "</span>";
 
     return (
-      '<article class="cert-item">' +
+      '<article class="cert-item stagger-item" style="--i:' + Math.min(i || 0, STAGGER_MAX) + '">' +
         media +
         '<div class="cert-item-content">' +
           '<div class="cert-item-top"><span class="cert-item-issuer">' + issuer + '</span><span class="cert-kind">' + typeLabel(itemType, 1) + "</span></div>" +
@@ -427,7 +439,7 @@
               '<div class="ic">' + icon(provider.icon, 18) + "</div>" +
               '<div><h4>' + provider.issuer + '</h4><span>' + credentialCountLabel(provider.items.length) + "</span></div>" +
             "</div>" +
-            '<div class="cert-items-grid">' + provider.items.map(function (item) { return certCard(item, provider.issuer); }).join("") + "</div>" +
+            '<div class="cert-items-grid">' + provider.items.map(function (item, i) { return certCard(item, provider.issuer, i); }).join("") + "</div>" +
           "</section>"
         );
       }).join("");
@@ -489,14 +501,22 @@
   /* ---------------- Language ---------------- */
   function setLang(lang) {
     if (LANGS.indexOf(lang) === -1) return;
-    state.lang = lang;
-    localStorage.setItem("site-lang", lang);
-    document.querySelectorAll(".lang-switch button").forEach(function (b) {
-      var active = b.getAttribute("data-lang") === lang;
-      b.classList.toggle("is-active", active);
-      b.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-    renderAll();
+    function apply() {
+      state.lang = lang;
+      localStorage.setItem("site-lang", lang);
+      document.querySelectorAll(".lang-switch button").forEach(function (b) {
+        var active = b.getAttribute("data-lang") === lang;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      renderAll();
+    }
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (document.startViewTransition && !reduced) {
+      document.startViewTransition(apply);
+    } else {
+      apply();
+    }
   }
 
   /* ---------------- Nav: scroll spy, mobile menu, back-to-top ---------------- */
@@ -522,10 +542,17 @@
     }, { passive: true });
   }
 
+  function activateStaggerChildren(container) {
+    container.querySelectorAll(".stagger-item:not(.is-visible)").forEach(function (n) {
+      n.classList.add("is-visible");
+    });
+  }
+
   var revealObserver = ("IntersectionObserver" in window) ? new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
+        activateStaggerChildren(entry.target);
         revealObserver.unobserve(entry.target);
       }
     });
@@ -533,10 +560,47 @@
 
   function scanReveal() {
     if (!revealObserver) {
-      document.querySelectorAll(".reveal").forEach(function (n) { n.classList.add("is-visible"); });
+      document.querySelectorAll(".reveal").forEach(function (n) {
+        n.classList.add("is-visible");
+        activateStaggerChildren(n);
+      });
       return;
     }
     document.querySelectorAll(".reveal:not(.is-visible)").forEach(function (n) { revealObserver.observe(n); });
+    // Containers already revealed from a prior scroll just had their children
+    // rebuilt via innerHTML (language switch / a fresh render) — those new
+    // nodes won't re-trigger the observer (it fires once per container), so
+    // activate them directly here.
+    document.querySelectorAll(".reveal.is-visible").forEach(activateStaggerChildren);
+  }
+
+  /* ---------------- Smooth scroll (Lenis, progressively enhanced) ---------------- */
+  var lenis = null;
+  function initSmoothScroll() {
+    if (typeof Lenis === "undefined") return; // CDN blocked/failed — native scroll stays as-is
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+    document.documentElement.style.scrollBehavior = "auto"; // hand off native smooth-scroll to Lenis
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  }
+
+  function initAnchorScroll() {
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var href = a.getAttribute("href");
+      if (!href || href === "#") return;
+      var target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      if (lenis) {
+        lenis.scrollTo(target);
+      } else {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+      if (history.pushState) history.pushState(null, "", href);
+    });
   }
 
   function initMobileNav() {
@@ -564,10 +628,13 @@
     });
 
     document.getElementById("backTop").addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (lenis) lenis.scrollTo(0);
+      else window.scrollTo({ top: 0, behavior: "smooth" });
     });
     initMobileNav();
     initScrollEffects();
+    initSmoothScroll();
+    initAnchorScroll();
     renderAll();
   });
 

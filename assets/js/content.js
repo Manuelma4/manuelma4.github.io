@@ -453,6 +453,7 @@ window.SITE = {
     {
       id: "telecom-paris",
       institution: "Télécom Paris · Institut Polytechnique de Paris",
+      photo: "assets/img/institutions/telecom-paris.jpg",
       description: {
         es: "Proyectos y laboratorios de los itinerarios Data Science y MODS. Se presentan como trabajo académico y se mantienen separados de la experiencia profesional.",
         en: "Projects and labs from the Data Science and MODS tracks. They are presented as academic work and kept separate from professional experience.",
@@ -643,6 +644,7 @@ window.SITE = {
     {
       id: "dauphine-iren",
       institution: "Université Paris Dauphine–PSL · M2 IREN",
+      photo: "assets/img/institutions/dauphine-psl.jpg",
       description: {
         es: "Proyectos de economía digital, regulación, plataformas y ciencia de datos realizados en el doble diploma M2 IREN.",
         en: "Digital economics, regulation, platform, and data-science projects completed in the M2 IREN double-degree track.",
@@ -667,6 +669,10 @@ window.SITE = {
                 { num: "3.62→4.07", label: { es: "Soporte medio", en: "Mean support", fr: "Soutien moyen" } },
                 { num: "1.05→0.82", label: { es: "Dispersión", en: "Dispersion", fr: "Dispersion" } },
                 { num: "12", label: { es: "Papers revisados", en: "Papers reviewed", fr: "Articles étudiés" } }
+              ],
+              images: [
+                { src: "assets/img/projects/dma-trajectories.png", cap: { es: "Evolución del apoyo por actor a lo largo de las rondas", en: "Support-score trajectories by stakeholder across rounds", fr: "Évolution du score de soutien par acteur selon les cycles" } },
+                { src: "assets/img/projects/dma-coalitions.png", cap: { es: "Coaliciones simuladas: oposición, apoyo condicional y apoyo", en: "Simulated coalitions: oppose, conditional, support", fr: "Coalitions simulées : opposition, soutien conditionnel, soutien" } }
               ],
               bullets: {
                 es: [
@@ -708,6 +714,10 @@ window.SITE = {
                 { num: "96,376", label: { es: "Filas · train + test", en: "Rows · train + test", fr: "Lignes · train + test" } },
                 { num: "0.520", label: { es: "ROC-AUC SAFE", en: "SAFE ROC-AUC", fr: "ROC-AUC SAFE" } },
                 { num: "0.099", label: { es: "PR-AUC", en: "PR-AUC", fr: "PR-AUC" } }
+              ],
+              images: [
+                { src: "assets/img/projects/credit-risk-default-by-grade.png", cap: { es: "Tasa de impago por grado de crédito (IC 95%)", en: "Default rate by credit grade (95% CI)", fr: "Taux de défaut par note de crédit (IC 95 %)" } },
+                { src: "assets/img/projects/credit-risk-roc-curve.png", cap: { es: "Curva ROC del mejor clasificador (CatBoost)", en: "ROC curve of the best classifier (CatBoost)", fr: "Courbe ROC du meilleur classifieur (CatBoost)" } }
               ],
               note: {
                 es: "El valor del estudio es diagnosticar las limitaciones de señal; no se presenta como un modelo productivo de alto rendimiento.",
@@ -817,6 +827,7 @@ window.SITE = {
     {
       id: "unal",
       institution: "Universidad Nacional de Colombia",
+      photo: "assets/img/institutions/unal.jpg",
       description: {
         es: "Proyectos de pregrado en lenguajes, ingeniería y arquitectura de software, con contribuciones y autorías claramente delimitadas.",
         en: "Undergraduate projects in programming languages, software engineering, and architecture, with contributions and authorship clearly scoped.",

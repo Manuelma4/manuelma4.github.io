@@ -5,8 +5,8 @@
    no decorative gradients — restrained, document-like, quiet.
    ========================================================================== */
 
-/* ---- Fonts ------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Fonts load via a <link> in index.html <head> now, not @import here —
+   @import is render-blocking and serializes behind this file's own fetch. */
 
 /* ---- Reset --------------------------------------------------------------*/
 *, *::before, *::after { box-sizing: border-box; }
@@ -55,6 +55,7 @@ button { border: none; background: none; cursor: pointer; }
   --radius-m: 12px;
   --radius-l: 16px;
   --container: 1160px;
+  --ease-out-soft: cubic-bezier(.22, 1, .36, 1);
 
   --font-head: 'Sora', system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -83,6 +84,7 @@ strong { color: var(--ink); font-weight: 600; }
 .container { max-width: var(--container); margin-inline: auto; padding-inline: 24px; }
 
 section { padding-block: 72px; position: relative; }
+section[id] { scroll-margin-top: 88px; }
 @media (max-width: 720px) { section { padding-block: 48px; } }
 
 .section-head { max-width: 680px; margin-bottom: 36px; }
@@ -110,6 +112,9 @@ section { padding-block: 72px; position: relative; }
 .btn-ghost { border: 1.5px solid var(--border-strong); color: var(--ink); background: var(--surface); }
 .btn-ghost:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-2px); }
 .btn-sm { padding: 8px 16px; font-size: 13px; }
+.btn:focus-visible, .nav-links a:focus-visible, .lang-switch button:focus-visible, .back-top:focus-visible, .project-links a:focus-visible {
+  outline: 2px solid var(--primary); outline-offset: 2px;
+}
 
 /* ---- Navbar -----------------------------------------------------------*/
 .navbar {
@@ -241,12 +246,12 @@ section { padding-block: 72px; position: relative; }
 .project-institution[data-c="1"] { --project-color: var(--violet); --project-tint: var(--violet-tint); }
 .project-institution[data-c="2"] { --project-color: var(--aqua); --project-tint: var(--aqua-tint); }
 
-.project-institution-head { display: grid; grid-template-columns: 52px minmax(0, 1fr) 20px; gap: 16px; align-items: center; padding: 22px 24px; cursor: pointer; list-style: none; transition: background-color .18s ease; }
+.project-institution-head { display: grid; grid-template-columns: 88px minmax(0, 1fr) 20px; gap: 18px; align-items: center; padding: 22px 24px; cursor: pointer; list-style: none; transition: background-color .18s ease; }
 .project-institution-head::-webkit-details-marker { display: none; }
 .project-institution-head:hover { background: var(--surface-2); }
 .project-institution-head:focus-visible { outline: 3px solid color-mix(in srgb, var(--project-color) 40%, transparent); outline-offset: -3px; }
 .project-institution[open] .project-institution-head { border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--project-tint) 36%, var(--surface)); }
-.project-institution-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 16px; color: var(--project-color); background: var(--project-tint); }
+.project-institution-icon { width: 88px; height: 88px; display: grid; place-items: center; border-radius: 20px; color: var(--project-color); background: var(--project-tint); }
 .project-institution-copy { min-width: 0; }
 .project-institution-title { display: flex; align-items: center; gap: 12px 20px; flex-wrap: wrap; }
 .project-institution-title h3 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 29px); line-height: 1.15; }
@@ -261,7 +266,7 @@ section { padding-block: 72px; position: relative; }
 .project-course-head h4 { font-family: var(--font-head); font-size: 17px; line-height: 1.3; }
 .project-course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 
-.project-card { position: relative; min-width: 0; overflow: hidden; display: flex; border: 1px solid var(--border); border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 10px 34px rgba(16,24,40,.055); transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease; }
+.project-card { position: relative; min-width: 0; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius-l); background: var(--surface); box-shadow: 0 10px 34px rgba(16,24,40,.055); transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease; }
 .project-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--project-color); opacity: .72; }
 .project-card:hover { border-color: var(--border-strong); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
 .project-card-featured { grid-column: 1 / -1; }
@@ -294,13 +299,30 @@ section { padding-block: 72px; position: relative; }
 .project-links a:hover { background: var(--project-color); color: var(--primary-ink); }
 .project-links a svg { width: 14px; height: 14px; flex-shrink: 0; }
 
+/* ---- Project card media: real chart/figure images, styled like .cert-item-media
+   but sized for chart legibility (these PNGs carry axis labels/legends, not
+   square logos) rather than the badge strip's compact 174px height. -------- */
+.project-card-media { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
+.project-card-media figure { margin: 0; display: flex; flex-direction: column; background: #fff; }
+.project-card-media a { display: flex; align-items: center; justify-content: center; height: 240px; padding: 18px; overflow: hidden; cursor: zoom-in; }
+.project-card-featured .project-card-media a { height: 280px; }
+.project-card-media img { width: auto; height: 100%; max-width: 100%; object-fit: contain; object-position: center; display: block; transition: transform .3s ease; }
+.project-card-media a:hover img { transform: scale(1.02); }
+.project-card-media figcaption { padding: 8px 14px 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 11px; text-align: center; line-height: 1.35; }
+@media (max-width: 560px) {
+  .project-card-media a { height: 190px; padding: 12px; }
+}
+
+/* ---- Institution photo (replaces the generic cap-icon glyph when available) */
+.project-institution-photo { width: 88px; height: 88px; border-radius: 20px; object-fit: cover; flex-shrink: 0; }
+
 @media (max-width: 820px) {
   .project-course-grid { grid-template-columns: 1fr; }
   .project-card-featured { grid-column: auto; }
 }
 @media (max-width: 560px) {
-  .project-institution-head { grid-template-columns: 42px minmax(0, 1fr) 18px; gap: 12px; padding: 17px 16px; }
-  .project-institution-icon { width: 42px; height: 42px; border-radius: 12px; }
+  .project-institution-head { grid-template-columns: 60px minmax(0, 1fr) 18px; gap: 12px; padding: 17px 16px; }
+  .project-institution-icon, .project-institution-photo { width: 60px; height: 60px; border-radius: 14px; }
   .project-institution-title { align-items: flex-start; }
   .project-institution-copy > p { font-size: 12.5px; }
   .project-courses { gap: 26px; padding: 22px 16px 24px; }
@@ -315,7 +337,8 @@ section { padding-block: 72px; position: relative; }
 /* ---- Skills ---------------------------------------------------------------*/
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-bottom: 56px; }
 @media (max-width: 800px) { .skills-grid { grid-template-columns: 1fr; } }
-.skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-m); padding: 22px 24px; }
+.skill-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-m); padding: 22px 24px; transition: transform .2s ease, box-shadow .2s ease; }
+.skill-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .skill-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .skill-card-head .ic { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; flex-shrink: 0; }
 .skill-card-head .ic svg { width: 18px; height: 18px; }
@@ -426,6 +449,20 @@ section { padding-block: 72px; position: relative; }
 /* ---- Scroll reveal ---------------------------------------------------------*/
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---- Card entrance stagger — independent of .reveal, both may coexist.
+   .reveal fades up a stable section container (never replaced by innerHTML);
+   .stagger-item cascades the cards inside it (which ARE replaced on every
+   language switch / <details> open — see app.js for why that's intentional). */
+.stagger-item { opacity: 0; }
+.stagger-item.is-visible {
+  animation: cardIn .52s var(--ease-out-soft) both;
+  animation-delay: calc(var(--i, 0) * 55ms);
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ---- Back to top ---------------------------------------------------------------*/
 .back-top { position: fixed; right: 22px; bottom: 22px; width: 46px; height: 46px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); display: grid; place-items: center; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s ease, transform .2s ease; z-index: 60; }
