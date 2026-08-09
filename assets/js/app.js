@@ -1,6 +1,6 @@
 /* ==========================================================================
    Manuel David Maya Rosero — Portfolio app logic.
-   Renders window.SITE content, handles i18n switching, theme, and interactions.
+   Renders window.SITE content, handles i18n switching and interactions.
    No build step, no dependencies — plain ES2017+.
    ========================================================================== */
 (function () {
@@ -50,8 +50,7 @@
 
   /* ---------------- State ---------------- */
   var state = {
-    lang: detectLang(),
-    theme: localStorage.getItem("site-theme") || null
+    lang: detectLang()
   };
 
   function detectLang() {
@@ -343,20 +342,27 @@
     });
   }
 
+  function safe(name, fn) {
+    try { fn(); } catch (e) { console.error("[render:" + name + "]", e); }
+  }
+
   function renderAll() {
-    applyStaticI18n();
-    renderHeroRole();
-    renderHeroMeta();
-    renderHeroStats();
-    renderAbout();
-    renderTimeline("educationList", SITE.education);
-    renderTimeline("experienceList", SITE.experience);
-    renderProjects();
-    renderCoursework();
-    renderSkills();
-    renderCertifications();
-    renderContact();
-    updateActiveNav();
+    // Each step runs in isolation: a stale-cache mismatch or a bad edit in one
+    // section must never blank the rest of the page (or block scanReveal below,
+    // which is what actually makes content visible).
+    safe("i18n", applyStaticI18n);
+    safe("heroRole", renderHeroRole);
+    safe("heroMeta", renderHeroMeta);
+    safe("heroStats", renderHeroStats);
+    safe("about", renderAbout);
+    safe("education", function () { renderTimeline("educationList", SITE.education); });
+    safe("experience", function () { renderTimeline("experienceList", SITE.experience); });
+    safe("projects", renderProjects);
+    safe("coursework", renderCoursework);
+    safe("skills", renderSkills);
+    safe("certifications", renderCertifications);
+    safe("contact", renderContact);
+    safe("activeNav", updateActiveNav);
     scanReveal();
   }
 
@@ -373,21 +379,6 @@
     document.body.style.overflow = "";
   }
 
-  /* ---------------- Theme ---------------- */
-  function applyTheme() {
-    if (state.theme) {
-      document.documentElement.setAttribute("data-theme", state.theme);
-    } else {
-      document.documentElement.removeAttribute("data-theme");
-    }
-  }
-  function toggleTheme() {
-    var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    var current = state.theme || (prefersDark ? "dark" : "light");
-    state.theme = current === "dark" ? "light" : "dark";
-    localStorage.setItem("site-theme", state.theme);
-    applyTheme();
-  }
 
   /* ---------------- Language ---------------- */
   function setLang(lang) {
@@ -457,14 +448,11 @@
 
   /* ---------------- Init ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
-    applyTheme();
-
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
       b.classList.toggle("is-active", b.getAttribute("data-lang") === state.lang);
       b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
     });
 
-    document.getElementById("themeToggle").addEventListener("click", toggleTheme);
     document.getElementById("backTop").addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
