@@ -75,9 +75,15 @@
     if (html !== undefined) e.innerHTML = html;
     return e;
   }
+  function fmtMonthYear(d) {
+    return MONTHS[state.lang][d.m - 1] + " " + d.y;
+  }
   function fmtDate(d) {
     if (!d) return "";
-    return MONTHS[state.lang][d.m - 1] + " " + d.y;
+    if (!d.d) return fmtMonthYear(d);
+    if (state.lang === "es") return d.d + " de " + MONTHS.es[d.m - 1].toLowerCase() + " de " + d.y;
+    if (state.lang === "fr") return d.d + " " + MONTHS.fr[d.m - 1].toLowerCase() + " " + d.y;
+    return MONTHS.en[d.m - 1] + " " + d.d + ", " + d.y;
   }
 
   /* ---------------- i18n: static [data-i18n] nodes ---------------- */
@@ -275,37 +281,48 @@
   function dateRangeLabel(items) {
     var sorted = items.map(function (it) { return it.date; }).sort(function (a, b) { return (a.y * 12 + a.m) - (b.y * 12 + b.m); });
     var first = sorted[0], last = sorted[sorted.length - 1];
-    if (first.y === last.y && first.m === last.m) return fmtDate(first);
-    if (first.y === last.y) return MONTHS[state.lang][first.m - 1] + "–" + fmtDate(last);
-    return fmtDate(first) + " – " + fmtDate(last);
+    if (first.y === last.y && first.m === last.m) return fmtMonthYear(first);
+    if (first.y === last.y) return MONTHS[state.lang][first.m - 1] + "–" + fmtMonthYear(last);
+    return fmtMonthYear(first) + " – " + fmtMonthYear(last);
   }
 
   function typeLabel(type, count) {
-    var key = type === "micro" ? "certs_type_micro" : "certs_type_knowledge";
-    return count === 1 ? t(key + "_1") : t(key);
+    var key = "certs_type_" + type;
+    var requestedKey = count === 1 ? key + "_1" : key;
+    var label = t(requestedKey);
+    return label === requestedKey ? type : label;
   }
 
   function certTag(item) {
     var tip = t("certs_issued") + " " + fmtDate(item.date);
     if (item.expires) tip += " · " + t("certs_expires") + " " + fmtDate(item.expires);
-    return '<span class="tag" title="' + tip.replace(/"/g, "&quot;") + '">' + item.title + "</span>";
+    if (item.id) tip += " · " + t("certs_credential") + ": " + item.id;
+    if (item.number) tip += " · " + t("certs_number") + ": " + item.number;
+    if (!item.url) return '<span class="tag" title="' + tip.replace(/"/g, "&quot;") + '">' + item.title + "</span>";
+    var href = item.url.replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+    var aria = (t("certs_verify") + ": " + item.title).replace(/"/g, "&quot;");
+    return '<a class="tag cert-link" href="' + href + '" target="_blank" rel="noopener noreferrer" title="' + tip.replace(/"/g, "&quot;") + '" aria-label="' + aria + '">' + item.title + "</a>";
   }
 
   function renderCertifications() {
     var c = SITE.certifications;
-    var total = 0, microCount = 0, knowledgeCount = 0;
+    var counts = { knowledge: 0, micro: 0, certification: 0, applied: 0 };
+    var total = 0;
     c.groups.forEach(function (g) {
       g.items.forEach(function (it) {
         total++;
-        if (it.type === "micro") microCount++; else knowledgeCount++;
+        var type = it.type || "knowledge";
+        counts[type] = (counts[type] || 0) + 1;
       });
     });
 
     var statsWrap = document.getElementById("certsStats");
     statsWrap.innerHTML = [
       { num: String(total), label: t("certs_stat_total") },
-      { num: String(microCount), label: t("certs_stat_micro") },
-      { num: String(knowledgeCount), label: t("certs_stat_knowledge") }
+      { num: String(counts.certification), label: t("certs_stat_certification") },
+      { num: String(counts.applied), label: t("certs_stat_applied") },
+      { num: String(counts.micro), label: t("certs_stat_micro") },
+      { num: String(counts.knowledge), label: t("certs_stat_knowledge") }
     ].map(function (s) { return '<div class="stat-tile"><b>' + s.num + "</b><span>" + s.label + "</span></div>"; }).join("");
 
     var wrap = document.getElementById("certsGroups");
@@ -314,21 +331,30 @@
       var card = el("div", "cert-group");
       card.setAttribute("data-c", idx % 5);
 
-      var micro = g.items.filter(function (it) { return it.type === "micro"; });
-      var knowledge = g.items.filter(function (it) { return it.type !== "micro"; });
-      var isMixed = micro.length > 0 && knowledge.length > 0;
+      var typeOrder = ["certification", "applied", "micro", "knowledge"];
+      var groupsByType = {};
+      g.items.forEach(function (it) {
+        var type = it.type || "knowledge";
+        if (!groupsByType[type]) groupsByType[type] = [];
+        groupsByType[type].push(it);
+      });
+      var presentTypes = typeOrder.filter(function (type) { return groupsByType[type] && groupsByType[type].length; });
+      Object.keys(groupsByType).forEach(function (type) {
+        if (presentTypes.indexOf(type) === -1) presentTypes.push(type);
+      });
+      var isMixed = presentTypes.length > 1;
 
       var body;
       if (isMixed) {
-        // e.g. AWS: show each credential type as its own labeled cluster
-        body =
-          '<div class="cert-subgroup"><div class="cert-subgroup-label">' + micro.length + " " + typeLabel("micro", micro.length) + '</div><div class="cert-tags">' + micro.map(certTag).join("") + "</div></div>" +
-          '<div class="cert-subgroup"><div class="cert-subgroup-label">' + knowledge.length + " " + typeLabel("knowledge", knowledge.length) + '</div><div class="cert-tags">' + knowledge.map(certTag).join("") + "</div></div>";
+        body = presentTypes.map(function (type) {
+          var items = groupsByType[type];
+          return '<div class="cert-subgroup"><div class="cert-subgroup-label">' + items.length + " " + typeLabel(type, items.length) + '</div><div class="cert-tags">' + items.map(certTag).join("") + "</div></div>";
+        }).join("");
       } else {
         body = '<div class="cert-tags">' + g.items.map(certTag).join("") + "</div>";
       }
 
-      var soleType = micro.length > 0 ? "micro" : "knowledge";
+      var soleType = presentTypes[0] || "knowledge";
       var metaLine = isMixed
         ? (g.items.length + " · " + dateRangeLabel(g.items))
         : (g.items.length + " " + typeLabel(soleType, g.items.length) + " · " + dateRangeLabel(g.items));

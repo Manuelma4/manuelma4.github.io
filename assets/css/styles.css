@@ -298,6 +298,9 @@ section { padding-block: 96px; position: relative; }
 /* ---- Certifications: compact tag groups, not itemized rows -----------------*/
 .certs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 @media (max-width: 800px) { .certs-grid { grid-template-columns: 1fr; } }
+.certs-stats { grid-template-columns: repeat(5, 1fr); margin-bottom: 44px; }
+@media (max-width: 800px) { .certs-stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .certs-stats { grid-template-columns: 1fr; } }
 .cert-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-m); padding: 20px 22px; }
 .cert-group-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
 .cert-group-head .ic { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; flex-shrink: 0; }
@@ -310,6 +313,9 @@ section { padding-block: 96px; position: relative; }
 .cert-tags { display: flex; flex-wrap: wrap; gap: 7px; }
 .cert-tags .tag { background: var(--surface-2); cursor: default; transition: background-color .15s ease, border-color .15s ease; }
 .cert-tags .tag:hover { background: var(--surface); border-color: var(--border-strong); }
+.cert-tags .cert-link { color: var(--ink); cursor: pointer; text-decoration: none; }
+.cert-tags .cert-link::after { content: "↗"; margin-left: 5px; color: var(--primary); font-size: .85em; }
+.cert-tags .cert-link:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 .cert-group[data-c="0"] .ic { background: var(--primary-tint); color: var(--primary); }
 .cert-group[data-c="1"] .ic { background: var(--accent-tint); color: var(--accent); }
 .cert-group[data-c="2"] .ic { background: var(--aqua-tint); color: var(--aqua); }
