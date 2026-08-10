@@ -259,19 +259,22 @@ window.SITE = {
       ongoing: true,
       bullets: {
         es: [
-          "Especialización en Data Science (DS) y Markets, Organizations, Data, Strategies (MODS) — la vertiente de economía del programa.",
-          "Aprendizaje automático aplicado: clasificación de texto, SVM/PCA y clasificadores y autoencoders para MNIST.",
-          "Formación práctica en aprendizaje sobre grafos (PageRank y Louvain) y economía digital."
+          "Especialización en Data Science (DS) y Markets, Organizations, Data, Strategies (MODS).",
+          "Ciencia de datos: machine learning (SVM/PCA, clasificadores y autoencoders para MNIST), deep learning, minería de texto y de datos, graph learning (PageRank, Louvain), bases de datos y optimización aplicada.",
+          "Economía y datos: econometría aplicada, economía de plataformas, finanzas digitales, microeconomía y organización industrial, con proyectos de recolección y visualización de datos.",
+          "Formación complementaria en desarrollo web, teoría de colas, optimización numérica y propiedad intelectual para ingenieros digitales."
         ],
         en: [
-          "Specialization in Data Science (DS) and Markets, Organizations, Data, Strategies (MODS) — the economics track of the programme.",
-          "Applied machine learning: text classification, SVM/PCA, and classifiers and autoencoders for MNIST.",
-          "Hands-on coursework in graph learning (PageRank and Louvain) and digital economics."
+          "Specialization in Data Science (DS) and Markets, Organizations, Data, Strategies (MODS).",
+          "Data science coursework: machine learning (SVM/PCA, classifiers and autoencoders for MNIST), deep learning, text and data mining, graph learning (PageRank, Louvain), databases, and applied optimization.",
+          "Economics and data: applied econometrics, platform economics, digital finance, microeconomics and industrial organization, with data collection and visualization projects.",
+          "Broader coursework in web development, queueing theory, numerical optimization, and intellectual property for digital engineers."
         ],
         fr: [
-          "Spécialisation Data Science (DS) et Markets, Organizations, Data, Strategies (MODS) — le volet économie du cursus.",
-          "Machine learning appliqué : classification de texte, SVM/ACP, classifieurs et autoencodeurs pour MNIST.",
-          "Formation pratique en apprentissage sur graphes (PageRank et Louvain) et en économie numérique."
+          "Spécialisation Data Science (DS) et Markets, Organizations, Data, Strategies (MODS).",
+          "Cours de data science : machine learning (SVM/ACP, classifieurs et autoencodeurs pour MNIST), deep learning, fouille de texte et de données, graph learning (PageRank, Louvain), bases de données et optimisation appliquée.",
+          "Économie et données : économétrie appliquée, économie des plateformes, finance numérique, microéconomie et organisation industrielle, avec des projets de collecte et de visualisation de données.",
+          "Formation complémentaire en développement web, files d'attente, optimisation numérique et propriété intellectuelle pour ingénieurs du numérique."
         ]
       },
       tags: []
@@ -288,17 +291,23 @@ window.SITE = {
         es: [
           "Doble título M2 IREN especializado en industrias de red y economía digital (competencia, regulación, plataformas digitales).",
           "Investigación (tutorat) sobre simulación social multiagente con LLM, aplicada a la Digital Markets Act de la UE.",
-          "Econometría aplicada, con una propuesta de inferencia causal sobre el programa de bicicletas eléctricas Véligo."
+          "Econometría aplicada, con una propuesta de inferencia causal sobre el programa de bicicletas eléctricas Véligo.",
+          "Cursos de fondo en economía de la propiedad intelectual, economía y gestión de la innovación, economía industrial, gestión estratégica y sistemas de información y organización.",
+          "Especialización en economía digital: plataformas, transformación digital, regulación digital, medios digitales, descarbonización digital, regulación financiera y marketing de la innovación."
         ],
         en: [
           "M2 IREN double degree specializing in network industries and the digital economy (competition, regulation, digital platforms).",
           "Independent research (tutorat) on LLM-based multi-agent social simulation, applied to the EU Digital Markets Act.",
-          "Applied econometrics, including a causal-inference proposal for the Véligo e-bike programme."
+          "Applied econometrics, including a causal-inference proposal for the Véligo e-bike programme.",
+          "Core coursework in intellectual property economics, innovation economics and management, industrial economics, strategic management, and information systems and organization.",
+          "Digital-economy specialization: digital platforms, digital transformation, digital regulation, digital media, digital decarbonization, financial regulation, and innovation marketing."
         ],
         fr: [
           "Double diplôme M2 IREN, spécialisation industries de réseau et économie numérique (concurrence, régulation, plateformes numériques).",
           "Travail de recherche (tutorat) sur la simulation sociale multi-agents par LLM, appliquée au Digital Markets Act de l'UE.",
-          "Économétrie appliquée, avec une proposition d'inférence causale sur le programme de vélos électriques Véligo."
+          "Économétrie appliquée, avec une proposition d'inférence causale sur le programme de vélos électriques Véligo.",
+          "Cours fondamentaux en économie de la propriété intellectuelle, économie et gestion de l'innovation, économie industrielle, management stratégique et systèmes d'information et organisation.",
+          "Spécialisation en économie numérique : plateformes numériques, transformation numérique, régulation numérique, médias numériques, décarbonation numérique, régulation financière et marketing de l'innovation."
         ]
       },
       tags: []
