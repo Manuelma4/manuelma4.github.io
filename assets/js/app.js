@@ -103,7 +103,7 @@
     document.title = "Manuel David Maya Rosero — " + L(SITE.meta.role);
     document.getElementById("brandSub").textContent = L(SITE.meta.role);
     var cvPath = SITE.meta.cvFiles[state.lang] || SITE.meta.cvFiles.en;
-    var cvName = state.lang === "fr" ? "CV_Manuel_David_MAYAROSERO_FR.pdf" : "Manuel_David_MAYA_ROSERO_CV.pdf";
+    var cvName = cvPath.split("/").pop();
     ["heroCvBtn", "contactCvBtn"].forEach(function (id) {
       var link = document.getElementById(id);
       if (!link) return;
