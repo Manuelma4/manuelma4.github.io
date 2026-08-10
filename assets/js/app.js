@@ -535,11 +535,28 @@
   function initScrollEffects() {
     var navbar = document.getElementById("navbar");
     var backTop = document.getElementById("backTop");
+    var heroPhoto = document.querySelector(".hero-photo");
+    var brandMark = document.querySelector(".brand-mark");
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function updateBrandMark() {
+      if (reduceMotion || !heroPhoto || !brandMark) return;
+      var rect = heroPhoto.getBoundingClientRect();
+      var navH = navbar.offsetHeight;
+      var progress = (navH - rect.bottom) / (rect.height * 0.6); // short, snappy fade zone
+      progress = Math.max(0, Math.min(1, progress));
+      brandMark.style.opacity = progress;
+      brandMark.style.transform = "scale(" + (0.8 + 0.2 * progress) + ")";
+    }
+
     window.addEventListener("scroll", function () {
       navbar.classList.toggle("is-scrolled", window.scrollY > 8);
       backTop.classList.toggle("is-visible", window.scrollY > 700);
       updateActiveNav();
+      updateBrandMark();
     }, { passive: true });
+
+    updateBrandMark();
   }
 
   function activateStaggerChildren(container) {

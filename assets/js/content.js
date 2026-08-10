@@ -228,8 +228,8 @@ window.SITE = {
       org: "Universidad Nacional de Colombia",
       place: { es: "Bogotá, D.C., Colombia", en: "Bogotá, D.C., Colombia", fr: "Bogotá, D.C., Colombie" },
       degree: { es: "Ingeniería de Sistemas y Computación", en: "Systems and Computer Engineering", fr: "Ingénierie des systèmes et de l'informatique" },
-      dateLabel: { es: "Mar. 2020 – Sept. 2026", en: "Mar 2020 – Sept 2026", fr: "Mars 2020 – Sept. 2026" },
-      ongoing: true,
+      dateLabel: { es: "Mar. 2020 – Ago. 2024", en: "Mar 2020 – Aug 2024", fr: "Mars 2020 – Août 2024" },
+      ongoing: false,
       bullets: {
         es: [
           "Beca de excelencia académica completa.",
@@ -822,7 +822,7 @@ window.SITE = {
     {
       id: "unal",
       institution: "Universidad Nacional de Colombia",
-      photo: "assets/img/institutions/unal.jpg",
+      photo: "assets/img/institutions/unal.jpg?v=2",
       description: {
         es: "Proyectos de pregrado en lenguajes, ingeniería y arquitectura de software, con contribuciones y autorías claramente delimitadas.",
         en: "Undergraduate projects in programming languages, software engineering, and architecture, with contributions and authorship clearly scoped.",
@@ -1012,7 +1012,7 @@ window.SITE = {
     {
       icon: "code",
       name: { es: "Lenguajes de programación", en: "Programming Languages", fr: "Langages de programmation" },
-      items: ["Python", "SQL", "Java", "JavaScript", "TypeScript", "R"]
+      items: ["Python", "SQL", "Java", "JavaScript", "TypeScript", "C#", "C", "Rust", "R"]
     },
     {
       icon: "database",

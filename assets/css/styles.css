@@ -131,6 +131,7 @@ section[id] { scroll-margin-top: 88px; }
 .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 700; font-size: 15.5px; }
 .brand-mark {
   width: 34px; height: 34px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border);
+  transition: opacity .25s ease, transform .25s ease;
 }
 .brand-text-full { display: block; }
 .brand-text-sub { display: block; font-family: var(--font-body); font-weight: 500; font-size: 11.5px; color: var(--muted); }
