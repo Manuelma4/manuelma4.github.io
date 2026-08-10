@@ -18,7 +18,7 @@ window.SITE = {
     githubUser: "Manuelma4",
     githubUrl: "https://github.com/Manuelma4",
     cvFiles: {
-      es: "assets/files/Manuel_David_MAYA_ROSERO_CV.pdf",
+      es: "assets/files/CV_ManuelDavid_MAYAROSERO_Engineering.pdf",
       en: "assets/files/CV_ManuelDavid_MAYAROSERO_Engineering.pdf",
       fr: "assets/files/CV_Manuel_David_MAYAROSERO_FR.pdf"
     }
