@@ -12,7 +12,7 @@ Estudié Ingeniería de Sistemas y Computación en la Universidad Nacional de Co
 
 Después profundicé en Data Science y MODS Markets, Organizations, Data, Strategies  en Télécom Paris. Elegí además el doble diploma M2 IREN en Université Paris Dauphine–PSL para complementar mi perfil técnico con economía digital, industrias de red, competencia, regulación y estrategia.
 
-Actualmente trabajo como AI Data Engineer Intern en MODUO Ingénierie, donde desarrollo el portal interno de gestión de proyectos (Django, PostgreSQL), diseñé un servicio central de identidad OIDC para seis aplicaciones internas y construí pipelines de datos BIM y asistentes RAG. Termino mis estudios en septiembre de 2026 y busco un puesto de ingeniería de software: backend, plataforma o datos.
+Actualmente trabajo como AI Data Engineer Intern en MODUO Ingénierie, donde desarrollo el portal interno de gestión de proyectos (Django, PostgreSQL), diseñé un servicio central de identidad OIDC para seis aplicaciones internas y construí pipelines de datos BIM y asistentes RAG. Desde octubre de 2026 continuaré en MODUO Ingénierie como AI Software Architect.
 
 ## English
 
@@ -22,7 +22,7 @@ I studied Systems and Computer Engineering at Universidad Nacional de Colombia, 
 
 I then specialized in Data Science and MODS Markets, Organizations, Data, Strategies  at Télécom Paris. I also pursued the M2 IREN double degree at Université Paris Dauphine–PSL to complement my technical background with digital economics, network industries, competition, regulation, and strategy.
 
-I currently work as an AI Data Engineer Intern at MODUO Ingénierie, where I build the internal project-management portal (Django, PostgreSQL), designed a central OIDC identity service for six internal applications, and built BIM data pipelines and RAG assistants. I finish my studies in September 2026 and I am looking for a software engineering role: backend, platform or data.
+I currently work as an AI Data Engineer Intern at MODUO Ingénierie, where I build the internal project-management portal (Django, PostgreSQL), designed a central OIDC identity service for six internal applications, and built BIM data pipelines and RAG assistants. From October 2026, I will continue at MODUO Ingénierie as an AI Software Architect.
 
 ## Français
 
@@ -32,7 +32,7 @@ J'ai étudié ingénierie informatique à l'Universidad Nacional de Colombia, o�
 
 J'ai ensuite approfondi la Data Science et MODS Markets, Organizations, Data, Strategies à Télécom Paris. J'ai également choisi le double diplôme M2 IREN à l'Université Paris Dauphine–PSL afin de compléter mon profil technique par une compréhension de l'économie numérique, des industries de réseau, de la concurrence, de la régulation et de la stratégie.
 
-Je travaille actuellement comme stagiaire ingénieur Data & IA chez MODUO Ingénierie, où je développe le portail interne de gestion de projets (Django, PostgreSQL), j'ai conçu un service d'identité OIDC central pour six applications internes et construit des pipelines de données BIM et des assistants RAG. Je termine mes études en septembre 2026 et je recherche un poste d'ingénieur logiciel : backend, plateforme ou data.
+Je travaille actuellement comme stagiaire ingénieur Data & IA chez MODUO Ingénierie, où je développe le portail interne de gestion de projets (Django, PostgreSQL), j'ai conçu un service d'identité OIDC central pour six applications internes et construit des pipelines de données BIM et des assistants RAG. À partir d’octobre 2026, je poursuivrai mon parcours chez MODUO Ingénierie en tant qu'AI Software Architect.
 
 ## Contact
 

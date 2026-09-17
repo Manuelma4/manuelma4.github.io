@@ -527,7 +527,7 @@ kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fon
 .work-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 12.5px; color: var(--muted); margin-bottom: 10px; }
 .work-num { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--primary); font-weight: 600; }
 .work-kind { padding: 2px 8px; border-radius: var(--radius-s); background: var(--primary-tint); color: var(--primary); font-weight: 600; font-size: 11.5px; }
-.work-kind-personal { background: var(--accent-tint); color: var(--accent); }
+.work-kind-academic { background: var(--accent-tint); color: var(--accent); }
 .work-item h3 { font-size: clamp(20px, 2.2vw, 24px); margin-bottom: 4px; }
 .work-tagline { font-size: 15px; color: var(--ink); margin-bottom: 12px; }
 .work-summary { font-size: 14.5px; margin-bottom: 12px; }
@@ -541,8 +541,8 @@ kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fon
 .dg.is-transposed .dg-canvas { grid-template-columns: repeat(var(--rows), minmax(0, 1fr)); gap: 30px 16px; padding: 18px 12px; }
 .dg-node { position: relative; z-index: 1; grid-column: calc(var(--col) + 1); grid-row: calc(var(--row) + 1); display: flex; flex-direction: column; justify-content: center; gap: 2px; min-height: 58px; padding: 9px 11px; border: 1px solid var(--border-strong); border-radius: var(--radius-m); background: var(--surface); text-align: center; }
 .dg.is-transposed .dg-node { grid-column: calc(var(--row) + 1); grid-row: calc(var(--col) + 1); }
-.dg-label { font-size: 12.5px; font-weight: 600; color: var(--ink); line-height: 1.25; }
-.dg-sub { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10.5px; color: var(--muted); line-height: 1.3; }
+.dg-label { font-size: 12.5px; font-weight: 600; color: var(--ink); line-height: 1.25; overflow-wrap: anywhere; }
+.dg-sub { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10.5px; color: var(--muted); line-height: 1.3; overflow-wrap: anywhere; }
 .dg-node.is-primary { border-color: var(--primary); box-shadow: inset 0 0 0 1px var(--primary); }
 .dg-kind-store { border-radius: 12px / 8px; }
 .dg-kind-external, .dg-kind-source { border-style: dashed; }

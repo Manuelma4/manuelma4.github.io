@@ -26,163 +26,322 @@ window.SITE = {
 
   ui: {
     es: {
-      nav_home: "Inicio", nav_about: "Perfil", nav_work: "Sistemas", nav_education: "Formación", nav_experience: "Experiencia",
-      nav_projects: "Proyectos", nav_skills: "Habilidades", nav_certifications: "Certificaciones", nav_contact: "Contacto",
+      nav_home: "Inicio",
+      nav_about: "Perfil",
+      nav_work: "Sistemas",
+      nav_education: "Formación",
+      nav_experience: "Experiencia",
+      nav_projects: "Proyectos",
+      nav_skills: "Habilidades",
+      nav_certifications: "Certificaciones",
+      nav_contact: "Contacto",
       language_selector: "Seleccionar idioma",
       hero_role_line: "Ingeniero de software — backend, ingeniería de datos e IA aplicada",
       hero_lede: "Construyo software de punta a punta: servicios backend y plataformas internas, los pipelines de datos que los alimentan y funciones de IA cuando de verdad aportan.",
-      hero_status: "Disponible para puestos de ingeniería de software",
-      cta_cv: "Descargar CV", cta_contact: "Contactarme", cta_projects: "Ver proyectos",
-      about_eyebrow: "Perfil", about_title: "Sobre mí",
+      hero_status: "Próximo puesto: AI Software Architect en MODUO · oct. 2026",
+      cta_cv: "Descargar CV",
+      cta_contact: "Contactarme",
+      cta_projects: "Ver proyectos",
+      about_eyebrow: "Perfil",
+      about_title: "Sobre mí",
       about_lede: "Ingeniero de software colombiano en París: backend, ingeniería de datos e IA aplicada, con una segunda mirada desde la economía digital.",
-      work_eyebrow: "Arquitectura", work_title: "Sistemas que he construido",
-      work_lede: "Cinco sistemas que diseñé y construí, cada uno con su arquitectura.",
-      work_kind_professional: "Profesional", work_kind_personal: "Proyecto personal", work_fig: "Fig.",
-      edu_eyebrow: "Formación académica", edu_title: "Formación",
+      work_eyebrow: "Arquitectura",
+      work_title: "Sistemas que he construido",
+      work_lede: "Arquitectura, implementación y entrega de plataformas internas, servicios de identidad, pipelines de datos, asistentes RAG y microservicios.",
+      work_kind_professional: "Profesional",
+      work_fig: "Fig.",
+      edu_eyebrow: "Formación académica",
+      edu_title: "Formación",
       edu_lede: "Un recorrido entre Bogotá y París: Ingeniería de Sistemas y Computación, un programa de ingeniería en Télécom Paris y el doble diploma M2 IREN.",
-      exp_eyebrow: "Trayectoria profesional", exp_title: "Experiencia",
+      exp_eyebrow: "Trayectoria profesional",
+      exp_title: "Experiencia",
       exp_lede: "Roles en desarrollo de software, ingeniería de datos e IA aplicada, en Colombia y Francia.",
-      proj_eyebrow: "Trabajo académico", proj_title: "Proyectos",
+      proj_eyebrow: "Trabajo académico",
+      proj_title: "Proyectos",
       proj_lede: "Trabajo académico agrupado por institución y curso. Filtra por área para ir directo al software.",
-      filter_label: "Filtrar proyectos por área", filter_all: "Todo", filter_software: "Software", filter_ml: "ML y datos", filter_econ: "Economía digital",
+      filter_label: "Filtrar proyectos por área",
+      filter_all: "Todo",
+      filter_software: "Software",
+      filter_ml: "ML y datos",
+      filter_econ: "Economía digital",
       projects_open_pdf: "Abrir PDF",
-      skills_eyebrow: "Caja de herramientas", skills_title: "Habilidades técnicas",
+      skills_eyebrow: "Caja de herramientas",
+      skills_title: "Habilidades técnicas",
       skills_lede: "Las herramientas con las que trabajo, agrupadas según para qué las uso.",
       lang_title: "Idiomas",
-      certs_eyebrow: "Aprendizaje continuo", certs_title: "Certificaciones",
+      certs_eyebrow: "Aprendizaje continuo",
+      certs_title: "Certificaciones",
       certs_lede: "{total} credenciales organizadas por nivel y proveedor: {cert} certificación, {micro} microcertificaciones y {knowledge} knowledge badges.",
-      certs_issued: "Emitido", certs_expires: "Expira", certs_credential: "ID de credencial", certs_number: "Número de certificación", certs_verify: "Verificar credencial", certs_more_skills: "más",
+      certs_issued: "Emitido",
+      certs_expires: "Expira",
+      certs_credential: "ID de credencial",
+      certs_number: "Número de certificación",
+      certs_verify: "Verificar credencial",
+      certs_more_skills: "más",
       certs_view_all: "Ver todas en LinkedIn",
-      certs_stat_total: "Credenciales", certs_stat_certification: "Certificaciones", certs_stat_micro: "Microcertificaciones", certs_stat_knowledge: "Knowledge badges",
-      certs_category_certification: "Certificaciones", certs_category_certification_desc: "Certificaciones profesionales verificables.",
-      certs_category_micro: "Microcertificaciones", certs_category_micro_desc: "Credenciales prácticas basadas en habilidades demostradas, incluidas Microsoft Applied Skills.",
-      certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Credenciales de formación y conocimiento por tecnología.",
-      certs_credentials: "credenciales", certs_credentials_1: "credencial", certs_badge_alt: "Badge de",
-      certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
-      certs_type_micro: "Microcredenciales", certs_type_micro_1: "Microcredencial",
-      certs_type_certification: "Certificaciones profesionales", certs_type_certification_1: "Certificación profesional",
-      certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
-      contact_eyebrow: "Contacto", contact_title: "Hablemos",
+      certs_stat_total: "Credenciales",
+      certs_stat_certification: "Certificaciones",
+      certs_stat_micro: "Microcertificaciones",
+      certs_stat_knowledge: "Knowledge badges",
+      certs_category_certification: "Certificaciones",
+      certs_category_certification_desc: "Certificaciones profesionales verificables.",
+      certs_category_micro: "Microcertificaciones",
+      certs_category_micro_desc: "Credenciales prácticas basadas en habilidades demostradas, incluidas Microsoft Applied Skills.",
+      certs_category_knowledge: "Knowledge Badges",
+      certs_category_knowledge_desc: "Credenciales de formación y conocimiento por tecnología.",
+      certs_credentials: "credenciales",
+      certs_credentials_1: "credencial",
+      certs_badge_alt: "Badge de",
+      certs_type_knowledge: "Knowledge Badges",
+      certs_type_knowledge_1: "Knowledge Badge",
+      certs_type_micro: "Microcredenciales",
+      certs_type_micro_1: "Microcredencial",
+      certs_type_certification: "Certificaciones profesionales",
+      certs_type_certification_1: "Certificación profesional",
+      certs_type_applied: "Microsoft Applied Skills",
+      certs_type_applied_1: "Microsoft Applied Skill",
+      contact_eyebrow: "Contacto",
+      contact_title: "Hablemos",
       contact_lede: "¿Hablamos de software, datos o IA? Escríbeme o descarga mi CV completo.",
-      contact_cta_email: "Escribir un correo", contact_cta_cv: "Descargar CV completo",
-      contact_copy: "Copiar correo", contact_copied: "Copiado",
+      contact_cta_email: "Escribir un correo",
+      contact_cta_cv: "Descargar CV completo",
+      contact_copy: "Copiar correo",
+      contact_copied: "Copiado",
       footer_rights: "Todos los derechos reservados.",
-      footer_source: "Código fuente", footer_note: "HTML, CSS y JavaScript, sin frameworks ni rastreadores.",
+      footer_source: "Código fuente",
+      footer_note: "HTML, CSS y JavaScript, sin frameworks ni rastreadores.",
       scroll_top: "Volver arriba",
-      theme_toggle: "Cambiar entre tema claro y oscuro", menu_toggle: "Abrir menú",
+      theme_toggle: "Cambiar entre tema claro y oscuro",
+      menu_toggle: "Abrir menú",
       skip_link: "Ir al contenido",
-      palette_open: "Abrir la paleta de comandos", palette_hint: "Comandos",
-      palette_placeholder: "Escribe un comando o una sección…", palette_empty: "Sin resultados",
-      palette_group_go: "Ir a", palette_group_actions: "Acciones", palette_group_lang: "Idioma",
-      palette_theme: "Cambiar tema claro / oscuro", palette_copy_email: "Copiar correo electrónico",
-      palette_open_github: "Abrir GitHub", palette_open_linkedin: "Abrir LinkedIn", palette_download_cv: "Descargar CV",
-      palette_nav_hint: "navegar", palette_enter_hint: "abrir", palette_esc_hint: "cerrar"
+      palette_open: "Abrir la paleta de comandos",
+      palette_hint: "Comandos",
+      palette_placeholder: "Escribe un comando o una sección…",
+      palette_empty: "Sin resultados",
+      palette_group_go: "Ir a",
+      palette_group_actions: "Acciones",
+      palette_group_lang: "Idioma",
+      palette_theme: "Cambiar tema claro / oscuro",
+      palette_copy_email: "Copiar correo electrónico",
+      palette_open_github: "Abrir GitHub",
+      palette_open_linkedin: "Abrir LinkedIn",
+      palette_download_cv: "Descargar CV",
+      palette_nav_hint: "navegar",
+      palette_enter_hint: "abrir",
+      palette_esc_hint: "cerrar",
+      work_kind_academic: "Proyecto académico en equipo"
     },
     en: {
-      nav_home: "Home", nav_about: "Profile", nav_work: "Systems", nav_education: "Education", nav_experience: "Experience",
-      nav_projects: "Projects", nav_skills: "Skills", nav_certifications: "Certifications", nav_contact: "Contact",
+      nav_home: "Home",
+      nav_about: "Profile",
+      nav_work: "Systems",
+      nav_education: "Education",
+      nav_experience: "Experience",
+      nav_projects: "Projects",
+      nav_skills: "Skills",
+      nav_certifications: "Certifications",
+      nav_contact: "Contact",
       language_selector: "Select language",
       hero_role_line: "Software engineer — backend, data engineering & applied AI",
       hero_lede: "I build software end to end: backend services and internal platforms, the data pipelines that feed them, and AI features where they genuinely help.",
-      hero_status: "Open to software engineering roles",
-      cta_cv: "Download CV", cta_contact: "Get in touch", cta_projects: "View projects",
-      about_eyebrow: "Profile", about_title: "About me",
+      hero_status: "Next role: AI Software Architect at MODUO · Oct 2026",
+      cta_cv: "Download CV",
+      cta_contact: "Get in touch",
+      cta_projects: "View projects",
+      about_eyebrow: "Profile",
+      about_title: "About me",
       about_lede: "A Colombian software engineer in Paris: backend, data engineering and applied AI, with a second lens from digital economics.",
-      work_eyebrow: "Architecture", work_title: "Systems I've built",
-      work_lede: "Five systems I designed and built, each with its architecture.",
-      work_kind_professional: "Professional", work_kind_personal: "Personal project", work_fig: "Fig.",
-      edu_eyebrow: "Academic background", edu_title: "Education",
+      work_eyebrow: "Architecture",
+      work_title: "Systems I've built",
+      work_lede: "Architecture, implementation and delivery of internal platforms, identity services, data pipelines, RAG assistants and microservices.",
+      work_kind_professional: "Professional",
+      work_fig: "Fig.",
+      edu_eyebrow: "Academic background",
+      edu_title: "Education",
       edu_lede: "A journey between Bogotá and Paris: Systems and Computer Engineering, Télécom Paris's engineering programme, and the M2 IREN double degree.",
-      exp_eyebrow: "Career path", exp_title: "Experience",
+      exp_eyebrow: "Career path",
+      exp_title: "Experience",
       exp_lede: "Roles in software development, data engineering and applied AI, across Colombia and France.",
-      proj_eyebrow: "Academic work", proj_title: "Projects",
+      proj_eyebrow: "Academic work",
+      proj_title: "Projects",
       proj_lede: "Academic work grouped by institution and course. Filter by area to go straight to the software.",
-      filter_label: "Filter projects by area", filter_all: "All", filter_software: "Software", filter_ml: "ML & data", filter_econ: "Digital economics",
+      filter_label: "Filter projects by area",
+      filter_all: "All",
+      filter_software: "Software",
+      filter_ml: "ML & data",
+      filter_econ: "Digital economics",
       projects_open_pdf: "Open PDF",
-      skills_eyebrow: "Toolbox", skills_title: "Technical skills",
+      skills_eyebrow: "Toolbox",
+      skills_title: "Technical skills",
       skills_lede: "The tools I work with, grouped by what I use them for.",
       lang_title: "Languages",
-      certs_eyebrow: "Continuous learning", certs_title: "Certifications",
+      certs_eyebrow: "Continuous learning",
+      certs_title: "Certifications",
       certs_lede: "{total} credentials organized by level and provider: {cert} certification, {micro} microcredentials, and {knowledge} knowledge badges.",
-      certs_issued: "Issued", certs_expires: "Expires", certs_credential: "Credential ID", certs_number: "Certification number", certs_verify: "Verify credential", certs_more_skills: "more",
+      certs_issued: "Issued",
+      certs_expires: "Expires",
+      certs_credential: "Credential ID",
+      certs_number: "Certification number",
+      certs_verify: "Verify credential",
+      certs_more_skills: "more",
       certs_view_all: "View all on LinkedIn",
-      certs_stat_total: "Credentials", certs_stat_certification: "Certifications", certs_stat_micro: "Microcredentials", certs_stat_knowledge: "Knowledge badges",
-      certs_category_certification: "Certifications", certs_category_certification_desc: "Verifiable professional certifications.",
-      certs_category_micro: "Microcredentials", certs_category_micro_desc: "Hands-on credentials based on demonstrated skills, including Microsoft Applied Skills.",
-      certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Training and technology knowledge credentials.",
-      certs_credentials: "credentials", certs_credentials_1: "credential", certs_badge_alt: "Badge for",
-      certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
-      certs_type_micro: "Microcredentials", certs_type_micro_1: "Microcredential",
-      certs_type_certification: "Professional certifications", certs_type_certification_1: "Professional certification",
-      certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
-      contact_eyebrow: "Contact", contact_title: "Let's talk",
+      certs_stat_total: "Credentials",
+      certs_stat_certification: "Certifications",
+      certs_stat_micro: "Microcredentials",
+      certs_stat_knowledge: "Knowledge badges",
+      certs_category_certification: "Certifications",
+      certs_category_certification_desc: "Verifiable professional certifications.",
+      certs_category_micro: "Microcredentials",
+      certs_category_micro_desc: "Hands-on credentials based on demonstrated skills, including Microsoft Applied Skills.",
+      certs_category_knowledge: "Knowledge Badges",
+      certs_category_knowledge_desc: "Training and technology knowledge credentials.",
+      certs_credentials: "credentials",
+      certs_credentials_1: "credential",
+      certs_badge_alt: "Badge for",
+      certs_type_knowledge: "Knowledge Badges",
+      certs_type_knowledge_1: "Knowledge Badge",
+      certs_type_micro: "Microcredentials",
+      certs_type_micro_1: "Microcredential",
+      certs_type_certification: "Professional certifications",
+      certs_type_certification_1: "Professional certification",
+      certs_type_applied: "Microsoft Applied Skills",
+      certs_type_applied_1: "Microsoft Applied Skill",
+      contact_eyebrow: "Contact",
+      contact_title: "Let's talk",
       contact_lede: "Let's talk software, data, or AI. Reach out, or download my full CV.",
-      contact_cta_email: "Send an email", contact_cta_cv: "Download full CV",
-      contact_copy: "Copy email", contact_copied: "Copied",
+      contact_cta_email: "Send an email",
+      contact_cta_cv: "Download full CV",
+      contact_copy: "Copy email",
+      contact_copied: "Copied",
       footer_rights: "All rights reserved.",
-      footer_source: "Source code", footer_note: "HTML, CSS and JavaScript. No frameworks, no trackers.",
+      footer_source: "Source code",
+      footer_note: "HTML, CSS and JavaScript. No frameworks, no trackers.",
       scroll_top: "Back to top",
-      theme_toggle: "Switch between light and dark theme", menu_toggle: "Open menu",
+      theme_toggle: "Switch between light and dark theme",
+      menu_toggle: "Open menu",
       skip_link: "Skip to content",
-      palette_open: "Open the command palette", palette_hint: "Commands",
-      palette_placeholder: "Type a command or a section…", palette_empty: "No results",
-      palette_group_go: "Go to", palette_group_actions: "Actions", palette_group_lang: "Language",
-      palette_theme: "Toggle light / dark theme", palette_copy_email: "Copy email address",
-      palette_open_github: "Open GitHub", palette_open_linkedin: "Open LinkedIn", palette_download_cv: "Download CV",
-      palette_nav_hint: "navigate", palette_enter_hint: "open", palette_esc_hint: "close"
+      palette_open: "Open the command palette",
+      palette_hint: "Commands",
+      palette_placeholder: "Type a command or a section…",
+      palette_empty: "No results",
+      palette_group_go: "Go to",
+      palette_group_actions: "Actions",
+      palette_group_lang: "Language",
+      palette_theme: "Toggle light / dark theme",
+      palette_copy_email: "Copy email address",
+      palette_open_github: "Open GitHub",
+      palette_open_linkedin: "Open LinkedIn",
+      palette_download_cv: "Download CV",
+      palette_nav_hint: "navigate",
+      palette_enter_hint: "open",
+      palette_esc_hint: "close",
+      work_kind_academic: "Academic team project"
     },
     fr: {
-      nav_home: "Accueil", nav_about: "Profil", nav_work: "Systèmes", nav_education: "Formation", nav_experience: "Expérience",
-      nav_projects: "Projets", nav_skills: "Compétences", nav_certifications: "Certifications", nav_contact: "Contact",
+      nav_home: "Accueil",
+      nav_about: "Profil",
+      nav_work: "Systèmes",
+      nav_education: "Formation",
+      nav_experience: "Expérience",
+      nav_projects: "Projets",
+      nav_skills: "Compétences",
+      nav_certifications: "Certifications",
+      nav_contact: "Contact",
       language_selector: "Choisir la langue",
       hero_role_line: "Ingénieur logiciel — backend, data engineering et IA appliquée",
       hero_lede: "Je construis du logiciel de bout en bout : services backend et plateformes internes, pipelines de données qui les alimentent, et fonctionnalités d'IA là où elles sont vraiment utiles.",
-      hero_status: "Ouvert aux postes d'ingénieur logiciel",
-      cta_cv: "Télécharger le CV", cta_contact: "Me contacter", cta_projects: "Voir les projets",
-      about_eyebrow: "Profil", about_title: "À propos",
+      hero_status: "Prochain poste : AI Software Architect chez MODUO · oct. 2026",
+      cta_cv: "Télécharger le CV",
+      cta_contact: "Me contacter",
+      cta_projects: "Voir les projets",
+      about_eyebrow: "Profil",
+      about_title: "À propos",
       about_lede: "Ingénieur logiciel colombien à Paris : backend, data engineering et IA appliquée, avec un second regard venu de l'économie numérique.",
-      work_eyebrow: "Architecture", work_title: "Systèmes que j'ai construits",
-      work_lede: "Cinq systèmes que j'ai conçus et construits, chacun avec son architecture.",
-      work_kind_professional: "Professionnel", work_kind_personal: "Projet personnel", work_fig: "Fig.",
-      edu_eyebrow: "Parcours académique", edu_title: "Formation",
+      work_eyebrow: "Architecture",
+      work_title: "Systèmes que j'ai construits",
+      work_lede: "Architecture, développement et livraison de plateformes internes, de services d'identité, de pipelines de données, d'assistants RAG et de microservices.",
+      work_kind_professional: "Professionnel",
+      work_fig: "Fig.",
+      edu_eyebrow: "Parcours académique",
+      edu_title: "Formation",
       edu_lede: "Un parcours entre Bogotá et Paris : génie informatique, diplôme d'ingénieur, puis double diplôme en économie numérique.",
-      exp_eyebrow: "Parcours professionnel", exp_title: "Expérience",
+      exp_eyebrow: "Parcours professionnel",
+      exp_title: "Expérience",
       exp_lede: "Des missions en développement logiciel, ingénierie des données et IA appliquée, entre la Colombie et la France.",
-      proj_eyebrow: "Travaux académiques", proj_title: "Projets",
+      proj_eyebrow: "Travaux académiques",
+      proj_title: "Projets",
       proj_lede: "Travaux académiques regroupés par établissement et par cours. Filtrez par domaine pour aller droit au logiciel.",
-      filter_label: "Filtrer les projets par domaine", filter_all: "Tout", filter_software: "Logiciel", filter_ml: "ML et données", filter_econ: "Économie numérique",
+      filter_label: "Filtrer les projets par domaine",
+      filter_all: "Tout",
+      filter_software: "Logiciel",
+      filter_ml: "ML et données",
+      filter_econ: "Économie numérique",
       projects_open_pdf: "Ouvrir le PDF",
-      skills_eyebrow: "Boîte à outils", skills_title: "Compétences techniques",
+      skills_eyebrow: "Boîte à outils",
+      skills_title: "Compétences techniques",
       skills_lede: "Les outils avec lesquels je travaille, regroupés par usage.",
       lang_title: "Langues",
-      certs_eyebrow: "Formation continue", certs_title: "Certifications",
+      certs_eyebrow: "Formation continue",
+      certs_title: "Certifications",
       certs_lede: "{total} certifications organisées par niveau et fournisseur : {cert} certification, {micro} microcertifications et {knowledge} knowledge badges.",
-      certs_issued: "Délivré", certs_expires: "Expire", certs_credential: "ID de certification", certs_number: "Numéro de certification", certs_verify: "Vérifier la certification", certs_more_skills: "de plus",
+      certs_issued: "Délivré",
+      certs_expires: "Expire",
+      certs_credential: "ID de certification",
+      certs_number: "Numéro de certification",
+      certs_verify: "Vérifier la certification",
+      certs_more_skills: "de plus",
       certs_view_all: "Voir tout sur LinkedIn",
-      certs_stat_total: "Certifications", certs_stat_certification: "Certifications professionnelles", certs_stat_micro: "Microcertifications", certs_stat_knowledge: "Knowledge badges",
-      certs_category_certification: "Certifications", certs_category_certification_desc: "Certifications professionnelles vérifiables.",
-      certs_category_micro: "Microcertifications", certs_category_micro_desc: "Certifications pratiques fondées sur des compétences démontrées, dont Microsoft Applied Skills.",
-      certs_category_knowledge: "Knowledge Badges", certs_category_knowledge_desc: "Certifications de formation et de connaissance technologique.",
-      certs_credentials: "certifications", certs_credentials_1: "certification", certs_badge_alt: "Badge de",
-      certs_type_knowledge: "Knowledge Badges", certs_type_knowledge_1: "Knowledge Badge",
-      certs_type_micro: "Microcertifications", certs_type_micro_1: "Microcertification",
-      certs_type_certification: "Certifications professionnelles", certs_type_certification_1: "Certification professionnelle",
-      certs_type_applied: "Microsoft Applied Skills", certs_type_applied_1: "Microsoft Applied Skill",
-      contact_eyebrow: "Contact", contact_title: "Discutons",
+      certs_stat_total: "Certifications",
+      certs_stat_certification: "Certifications professionnelles",
+      certs_stat_micro: "Microcertifications",
+      certs_stat_knowledge: "Knowledge badges",
+      certs_category_certification: "Certifications",
+      certs_category_certification_desc: "Certifications professionnelles vérifiables.",
+      certs_category_micro: "Microcertifications",
+      certs_category_micro_desc: "Certifications pratiques fondées sur des compétences démontrées, dont Microsoft Applied Skills.",
+      certs_category_knowledge: "Knowledge Badges",
+      certs_category_knowledge_desc: "Certifications de formation et de connaissance technologique.",
+      certs_credentials: "certifications",
+      certs_credentials_1: "certification",
+      certs_badge_alt: "Badge de",
+      certs_type_knowledge: "Knowledge Badges",
+      certs_type_knowledge_1: "Knowledge Badge",
+      certs_type_micro: "Microcertifications",
+      certs_type_micro_1: "Microcertification",
+      certs_type_certification: "Certifications professionnelles",
+      certs_type_certification_1: "Certification professionnelle",
+      certs_type_applied: "Microsoft Applied Skills",
+      certs_type_applied_1: "Microsoft Applied Skill",
+      contact_eyebrow: "Contact",
+      contact_title: "Discutons",
       contact_lede: "Parlons logiciel, data ou IA. Écrivez-moi ou téléchargez mon CV complet.",
-      contact_cta_email: "Envoyer un e-mail", contact_cta_cv: "Télécharger le CV complet",
-      contact_copy: "Copier l'e-mail", contact_copied: "Copié",
+      contact_cta_email: "Envoyer un e-mail",
+      contact_cta_cv: "Télécharger le CV complet",
+      contact_copy: "Copier l'e-mail",
+      contact_copied: "Copié",
       footer_rights: "Tous droits réservés.",
-      footer_source: "Code source", footer_note: "HTML, CSS et JavaScript. Sans framework ni traceur.",
+      footer_source: "Code source",
+      footer_note: "HTML, CSS et JavaScript. Sans framework ni traceur.",
       scroll_top: "Retour en haut",
-      theme_toggle: "Basculer entre thème clair et sombre", menu_toggle: "Ouvrir le menu",
+      theme_toggle: "Basculer entre thème clair et sombre",
+      menu_toggle: "Ouvrir le menu",
       skip_link: "Aller au contenu",
-      palette_open: "Ouvrir la palette de commandes", palette_hint: "Commandes",
-      palette_placeholder: "Tapez une commande ou une section…", palette_empty: "Aucun résultat",
-      palette_group_go: "Aller à", palette_group_actions: "Actions", palette_group_lang: "Langue",
-      palette_theme: "Basculer thème clair / sombre", palette_copy_email: "Copier l'adresse e-mail",
-      palette_open_github: "Ouvrir GitHub", palette_open_linkedin: "Ouvrir LinkedIn", palette_download_cv: "Télécharger le CV",
-      palette_nav_hint: "naviguer", palette_enter_hint: "ouvrir", palette_esc_hint: "fermer"
+      palette_open: "Ouvrir la palette de commandes",
+      palette_hint: "Commandes",
+      palette_placeholder: "Tapez une commande ou une section…",
+      palette_empty: "Aucun résultat",
+      palette_group_go: "Aller à",
+      palette_group_actions: "Actions",
+      palette_group_lang: "Langue",
+      palette_theme: "Basculer thème clair / sombre",
+      palette_copy_email: "Copier l'adresse e-mail",
+      palette_open_github: "Ouvrir GitHub",
+      palette_open_linkedin: "Ouvrir LinkedIn",
+      palette_download_cv: "Télécharger le CV",
+      palette_nav_hint: "naviguer",
+      palette_enter_hint: "ouvrir",
+      palette_esc_hint: "fermer",
+      work_kind_academic: "Projet académique en équipe"
     }
   },
 
@@ -201,8 +360,8 @@ window.SITE = {
       value: { es: "Español · Inglés C1 · Francés C1", en: "Spanish · English C1 · French C1", fr: "Espagnol · Anglais C1 · Français C1" }
     },
     {
-      label: { es: "Busco", en: "Open to", fr: "Recherche" },
-      value: { es: "Ingeniería de software: backend, datos, IA", en: "Software engineering: backend, data, AI", fr: "Ingénierie logicielle : backend, data, IA" }
+      label: { es: "Próxima etapa · oct. 2026", en: "Next role · Oct 2026", fr: "Prochaine étape · oct. 2026" },
+      value: { es: "AI Software Architect · MODUO Ingénierie", en: "AI Software Architect · MODUO Ingénierie", fr: "AI Software Architect · MODUO Ingénierie" }
     }
   ],
 
@@ -211,34 +370,46 @@ window.SITE = {
       es: [
         "Me gusta hacerme cargo de un sistema de punta a punta: la API, la base de datos que hay detrás, el pipeline que la alimenta y el despliegue que la mantiene en marcha. Estudié Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia para construir una base sólida en infraestructura, desarrollo web, bases de datos y trabajo en equipos ágiles; allí también tuve mis primeros acercamientos a la ciencia de datos y al procesamiento del lenguaje natural.",
         "En Télécom Paris profundicé en Data Science y MODS. Después elegí el doble diploma M2 IREN con Dauphine–PSL para complementar la ingeniería con economía digital, industrias de red, competencia y regulación. En MODUO Ingénierie desarrollo y mantengo el portal interno de gestión de proyectos (Django, PostgreSQL), diseñé y desplegué un servicio central de identidad OIDC para seis aplicaciones internas, y construí pipelines de datos BIM y asistentes RAG.",
-        "Termino mis estudios en septiembre de 2026 y busco un puesto de ingeniería de software —backend, plataforma o datos— en un equipo donde pueda seguir construyendo y operando sistemas reales. A largo plazo quiero crecer hacia el liderazgo técnico, combinando arquitectura, producto y estrategia de datos."
+        "Desde octubre de 2026 continuaré en MODUO Ingénierie como AI Software Architect. Este próximo paso da continuidad a mi experiencia en ingeniería de software, plataformas de datos e IA aplicada, con un enfoque en arquitectura y liderazgo técnico."
       ],
       en: [
         "I like owning a system end to end: the API, the database behind it, the pipeline that feeds it and the deployment that keeps it running. I studied Systems and Computer Engineering at Universidad Nacional de Colombia to build solid foundations in infrastructure, web development, databases, and agile teamwork; it was also where I first explored data science and natural language processing.",
         "At Télécom Paris, I deepened my training in Data Science and MODS. I then chose the M2 IREN double-degree track with Dauphine–PSL to complement engineering with digital economics, network industries, competition, and regulation. At MODUO Ingénierie I build and maintain the internal project-management portal (Django, PostgreSQL), designed and deployed a central OIDC identity service for six internal applications, and built BIM data pipelines and RAG assistants.",
-        "I finish my studies in September 2026 and I'm looking for a software engineering role — backend, platform or data — in a team where I can keep building and running real systems. Longer term, I want to grow into technical leadership, bringing together architecture, product, and data strategy."
+        "From October 2026, I will continue at MODUO Ingénierie as an AI Software Architect. This next step builds on my experience in software engineering, data platforms and applied AI, with a focus on architecture and technical leadership."
       ],
       fr: [
         "J'aime prendre en charge un système de bout en bout : l'API, la base de données derrière, le pipeline qui l'alimente et le déploiement qui le fait tourner. J'ai étudié l'ingénierie des systèmes et de l'informatique à l'Universidad Nacional de Colombia afin d'acquérir des bases solides en infrastructure, développement web, bases de données et travail agile ; j'y ai également découvert la data science et le traitement automatique du langage.",
         "À Télécom Paris, j'ai approfondi la Data Science et le parcours MODS. J'ai ensuite choisi le double diplôme M2 IREN avec Dauphine–PSL afin de compléter l'ingénierie par l'économie numérique, les industries de réseau, la concurrence et la régulation. Chez MODUO Ingénierie, je développe et maintiens le portail interne de gestion de projets (Django, PostgreSQL), j'ai conçu et déployé un service d'identité OIDC central pour six applications internes, et construit des pipelines de données BIM et des assistants RAG.",
-        "Je termine mes études en septembre 2026 et je recherche un poste d'ingénieur logiciel — backend, plateforme ou data — dans une équipe où continuer à construire et exploiter des systèmes réels. À long terme, je souhaite évoluer vers le leadership technique, en réunissant architecture, produit et stratégie data."
+        "À partir d’octobre 2026, je poursuivrai mon parcours chez MODUO Ingénierie en tant qu'AI Software Architect. Cette prochaine étape prolonge mon expérience en ingénierie logicielle, plateformes de données et IA appliquée, avec une orientation vers l'architecture et le leadership technique."
       ]
     },
     highlights: [
       {
         icon: "code",
         title: { es: "Backend y plataformas", en: "Backend & platforms", fr: "Backend et plateformes" },
-        text: { es: "Servicios en Django, FastAPI y Node.js/TypeScript sobre PostgreSQL y MongoDB; SSO con OIDC para seis aplicaciones internas.", en: "Django, FastAPI and Node.js/TypeScript services on PostgreSQL and MongoDB; OIDC single sign-on for six internal apps.", fr: "Services Django, FastAPI et Node.js/TypeScript sur PostgreSQL et MongoDB ; SSO OIDC pour six applications internes." }
+        text: {
+          es: "Servicios en Django, FastAPI y Node.js/TypeScript sobre PostgreSQL y MongoDB; SSO con OIDC para seis aplicaciones internas.",
+          en: "Django, FastAPI and Node.js/TypeScript services on PostgreSQL and MongoDB; OIDC single sign-on for six internal apps.",
+          fr: "Services Django, FastAPI et Node.js/TypeScript sur PostgreSQL et MongoDB ; SSO OIDC pour six applications internes."
+        }
       },
       {
         icon: "database",
         title: { es: "Ingeniería de datos e IA", en: "Data engineering & AI", fr: "Data engineering et IA" },
-        text: { es: "Pipelines de datos, capas bronze/silver/gold, Databricks y asistentes RAG con evaluación por lotes.", en: "Data pipelines, bronze/silver/gold layers, Databricks, and RAG assistants with batch evaluation.", fr: "Pipelines de données, couches bronze/silver/gold, Databricks et assistants RAG avec évaluation par lots." }
+        text: {
+          es: "Pipelines de datos, capas bronze/silver/gold, Databricks y asistentes RAG con evaluación por lotes.",
+          en: "Data pipelines, bronze/silver/gold layers, Databricks, and RAG assistants with batch evaluation.",
+          fr: "Pipelines de données, couches bronze/silver/gold, Databricks et assistants RAG avec évaluation par lots."
+        }
       },
       {
         icon: "layers",
         title: { es: "Ingeniería + economía digital", en: "Engineering + digital economy", fr: "Ingénierie + économie numérique" },
-        text: { es: "Formación técnica combinada con la especialización IREN en industrias de red y regulación digital.", en: "Technical training combined with the IREN specialization in network industries and digital regulation.", fr: "Formation technique combinée à la spécialisation IREN en industries de réseau et régulation numérique." }
+        text: {
+          es: "Formación técnica combinada con la especialización IREN en industrias de red y regulación digital.",
+          en: "Technical training combined with the IREN specialization in network industries and digital regulation.",
+          fr: "Formation technique combinée à la spécialisation IREN en industries de réseau et régulation numérique."
+        }
       }
     ]
   },
@@ -253,44 +424,94 @@ window.SITE = {
     {
       id: "moduo-connect",
       title: "Moduo Connect",
-      tagline: { es: "Un solo inicio de sesión para seis aplicaciones internas", en: "One login for six internal apps", fr: "Une seule connexion pour six applications internes" },
-      org: "MODUO Ingénierie", year: "2026", kind: "professional",
+      tagline: {
+        es: "La plataforma de identidad de la empresa: un solo inicio de sesión para seis aplicaciones",
+        en: "The company's identity platform: one sign-in for six applications",
+        fr: "La plateforme d'identité de l'entreprise : une seule connexion pour six applications"
+      },
+      org: "MODUO Ingénierie",
+      year: "2026",
+      kind: "professional",
       summary: {
-        es: "Diseñé y desplegué un servicio central de identidad sobre Authentik para que seis aplicaciones internas compartan el mismo inicio de sesión mediante OIDC.",
-        en: "I designed and deployed a central identity service on Authentik so that six internal applications share one sign-in over OIDC.",
-        fr: "J'ai conçu et déployé un service d'identité central sur Authentik afin que six applications internes partagent la même connexion via OIDC."
+        es: "Diseñé y desplegué el servicio central de identidad de la empresa sobre Authentik: seis aplicaciones internas delegan la autenticación en un único proveedor OpenID Connect en lugar de mantener cada una su propia tabla de usuarios.",
+        en: "I designed and deployed the company's central identity service on Authentik: six internal applications delegate authentication to a single OpenID Connect provider instead of each keeping its own user table.",
+        fr: "J'ai conçu et déployé le service d'identité central de l'entreprise sur Authentik : six applications internes délèguent l'authentification à un fournisseur OpenID Connect unique au lieu de gérer chacune sa propre table d'utilisateurs."
       },
       points: {
         es: [
-          "Inicio de sesión único (SSO) con OIDC para seis aplicaciones internas.",
-          "Migración de los usuarios existentes conservando sus hashes de contraseña: nadie tuvo que restablecer la suya.",
-          "Aislamiento estricto de sesión: cada aplicación mantiene la suya."
+          "Inicio de sesión único (SSO) con OIDC para seis aplicaciones internas, con aislamiento estricto de sesión: cada aplicación mantiene la suya.",
+          "Migración sin fricción: las cuentas existentes se importaron conservando sus hashes de contraseña, así que nadie tuvo que restablecer la suya.",
+          "Pensado para escalar con la empresa: incorporar una aplicación nueva es una tarea de configuración (un cliente OIDC más), no otra base de usuarios.",
+          "Servicio en contenedores, con entornos de desarrollo y producción separados."
         ],
         en: [
-          "OIDC single sign-on across six internal applications.",
-          "Existing users migrated with their original password hashes, so nobody had to reset a password.",
-          "Strict session isolation: each application keeps its own session."
+          "OIDC single sign-on across six internal applications, with strict session isolation: each application keeps its own session.",
+          "Zero-friction migration: existing accounts were imported with their original password hashes, so nobody had to reset a password.",
+          "Built to scale with the company: onboarding a new application is a configuration task (one more OIDC client), not another user database.",
+          "Containerized service with separate development and production environments."
         ],
         fr: [
-          "Authentification unique (SSO) OIDC pour six applications internes.",
-          "Migration des utilisateurs existants en conservant leurs hachages de mot de passe : personne n'a eu à réinitialiser le sien.",
-          "Isolement strict des sessions : chaque application conserve la sienne."
+          "Authentification unique (SSO) OIDC pour six applications internes, avec un isolement strict des sessions : chaque application conserve la sienne.",
+          "Migration sans friction : les comptes existants ont été importés avec leurs hachages de mot de passe d'origine, personne n'a eu à réinitialiser le sien.",
+          "Conçu pour évoluer avec l'entreprise : intégrer une nouvelle application est une tâche de configuration (un client OIDC de plus), pas une nouvelle base d'utilisateurs.",
+          "Service conteneurisé, avec des environnements de développement et de production séparés."
         ]
       },
-      stack: ["OIDC", "Authentik", "SSO", "Python", "PostgreSQL"],
+      stack: ["OIDC", "OAuth 2.0", "Authentik", "SSO", "Docker", "PostgreSQL", "Python"],
       diagram: {
-        cols: 3, rows: 2,
-        caption: { es: "Seis aplicaciones delegan la autenticación en un único proveedor de identidad.", en: "Six applications delegate authentication to a single identity provider.", fr: "Six applications délèguent l'authentification à un fournisseur d'identité unique." },
+        cols: 3,
+        rows: 2,
+        caption: {
+          es: "Seis aplicaciones delegan la autenticación en un único proveedor de identidad.",
+          en: "Six applications delegate authentication to a single identity provider.",
+          fr: "Six applications délèguent l'authentification à un fournisseur d'identité unique."
+        },
         nodes: [
-          { id: "apps", col: 0, row: 0, kind: "client", stack: 6, label: { es: "6 aplicaciones internas", en: "6 internal apps", fr: "6 applications internes" }, sub: { es: "una sesión por aplicación", en: "one session per app", fr: "une session par application" } },
-          { id: "idp", col: 1, row: 0, kind: "service", primary: true, label: "Moduo Connect", sub: { es: "Authentik · proveedor OIDC", en: "Authentik · OIDC provider", fr: "Authentik · fournisseur OIDC" } },
-          { id: "dir", col: 2, row: 0, kind: "store", label: { es: "Directorio de usuarios", en: "User directory", fr: "Annuaire des utilisateurs" }, sub: "PostgreSQL" },
-          { id: "legacy", col: 2, row: 1, kind: "source", label: { es: "Cuentas existentes", en: "Existing accounts", fr: "Comptes existants" }, sub: { es: "hashes conservados", en: "hashes preserved", fr: "hachages conservés" } }
+          {
+            id: "apps",
+            col: 0,
+            row: 0,
+            kind: "client",
+            stack: 6,
+            label: { es: "6 aplicaciones internas", en: "6 internal apps", fr: "6 applications internes" },
+            sub: { es: "una sesión por aplicación", en: "one session per app", fr: "une session par application" }
+          },
+          {
+            id: "idp",
+            col: 1,
+            row: 0,
+            kind: "service",
+            primary: true,
+            label: "Moduo Connect",
+            sub: { es: "Authentik · proveedor OIDC", en: "Authentik · OIDC provider", fr: "Authentik · fournisseur OIDC" }
+          },
+          {
+            id: "dir",
+            col: 2,
+            row: 0,
+            kind: "store",
+            label: { es: "Directorio de usuarios", en: "User directory", fr: "Annuaire des utilisateurs" },
+            sub: "PostgreSQL"
+          },
+          {
+            id: "legacy",
+            col: 2,
+            row: 1,
+            kind: "source",
+            label: { es: "Cuentas existentes", en: "Existing accounts", fr: "Comptes existants" },
+            sub: { es: "hashes conservados", en: "hashes preserved", fr: "hachages conservés" }
+          }
         ],
         edges: [
           { from: "apps", to: "idp", label: "OIDC" },
           { from: "idp", to: "dir" },
-          { from: "legacy", to: "dir", sides: "tb", dashed: true, label: { es: "migración", en: "migration", fr: "migration" } }
+          {
+            from: "legacy",
+            to: "dir",
+            sides: "tb",
+            dashed: true,
+            label: { es: "migración", en: "migration", fr: "migration" }
+          }
         ]
       }
     },
@@ -298,90 +519,175 @@ window.SITE = {
       id: "moduocopil",
       title: "ModuoCopil",
       tagline: { es: "El portal interno de gestión de proyectos", en: "The internal project-management portal", fr: "Le portail interne de gestion de projets" },
-      org: "MODUO Ingénierie", year: "2026", kind: "professional",
+      org: "MODUO Ingénierie",
+      year: "2026",
+      kind: "professional",
       summary: {
-        es: "Desarrollo y mantengo ModuoCopil, el portal web con el que la empresa gestiona sus proyectos.",
-        en: "I build and maintain ModuoCopil, the web portal the company uses to manage its projects.",
-        fr: "Je développe et maintiens ModuoCopil, le portail web avec lequel l'entreprise gère ses projets."
+        es: "Desarrollo y mantengo ModuoCopil, la aplicación web en producción con la que la empresa gestiona sus proyectos: seguimiento, administración y registro de horas en un solo lugar.",
+        en: "I build and maintain ModuoCopil, the production web application the company runs its projects on: tracking, administration and time logging in one place.",
+        fr: "Je développe et maintiens ModuoCopil, l'application web en production avec laquelle l'entreprise pilote ses projets : suivi, administration et saisie des temps au même endroit."
       },
       points: {
         es: [
-          "Módulos de tableros, administración y registro de horas.",
-          "Backend en Django sobre PostgreSQL; interfaz con Tailwind CSS."
+          "Arquitectura modular en Django: tableros, administración y registro de horas comparten un modelo de datos en PostgreSQL, con responsabilidades separadas para facilitar la evolución del producto.",
+          "Modelo relacional de proyectos, equipos y horas que alimenta los tableros de seguimiento.",
+          "Interfaz renderizada en servidor con Tailwind CSS, mantenida como un único producto de punta a punta: modelo de datos, vistas, permisos y despliegue.",
+          "Entregas versionadas con Git y CI/CD, con entornos de desarrollo y producción separados."
         ],
         en: [
-          "Dashboard, administration and time-tracking modules.",
-          "Django back end on PostgreSQL; Tailwind CSS on the front."
+          "Modular Django architecture: dashboards, administration and time tracking share a PostgreSQL data model, with separate responsibilities to support product evolution.",
+          "Relational model of projects, teams and logged hours that feeds the monitoring dashboards.",
+          "Server-rendered interface with Tailwind CSS, owned end to end as one product: data model, views, permissions and deployment.",
+          "Releases versioned with Git and CI/CD, with separate development and production environments."
         ],
         fr: [
-          "Modules de tableaux de bord, d'administration et de suivi du temps.",
-          "Backend Django sur PostgreSQL ; interface en Tailwind CSS."
+          "Architecture modulaire Django : tableaux de bord, administration et suivi du temps partagent un modèle PostgreSQL, avec des responsabilités séparées pour faciliter l'évolution du produit.",
+          "Modèle relationnel des projets, des équipes et des temps saisis, qui alimente les tableaux de bord de suivi.",
+          "Interface rendue côté serveur avec Tailwind CSS, prise en charge de bout en bout comme un seul produit : modèle de données, vues, permissions et déploiement.",
+          "Livraisons versionnées avec Git et CI/CD, avec des environnements de développement et de production séparés."
         ]
       },
-      stack: ["Django", "Python", "PostgreSQL", "Tailwind CSS"],
+      stack: ["Django", "Python", "PostgreSQL", "Tailwind CSS", "Git", "CI/CD"],
       diagram: {
-        cols: 3, rows: 1,
-        caption: { es: "Una aplicación Django clásica: módulos sobre una sola base de datos.", en: "A classic Django application: modules on top of one database.", fr: "Une application Django classique : des modules au-dessus d'une seule base de données." },
+        cols: 3,
+        rows: 1,
+        caption: { es: "Un monolito modular: módulos independientes sobre un único modelo de datos.", en: "A modular monolith: independent modules on a single data model.", fr: "Un monolithe modulaire : des modules indépendants sur un modèle de données unique." },
         nodes: [
-          { id: "ui", col: 0, row: 0, kind: "client", label: { es: "Navegador", en: "Browser", fr: "Navigateur" }, sub: "Tailwind CSS" },
-          { id: "app", col: 1, row: 0, kind: "service", primary: true, label: "Django", sub: { es: "tableros · admin · horas", en: "dashboards · admin · timelog", fr: "tableaux de bord · admin · temps" } },
+          {
+            id: "ui",
+            col: 0,
+            row: 0,
+            kind: "client",
+            label: { es: "Navegador", en: "Browser", fr: "Navigateur" },
+            sub: "Tailwind CSS"
+          },
+          {
+            id: "app",
+            col: 1,
+            row: 0,
+            kind: "service",
+            primary: true,
+            label: "Django",
+            sub: { es: "tableros · admin · horas", en: "dashboards · admin · timelog", fr: "tableaux de bord · admin · temps" }
+          },
           { id: "db", col: 2, row: 0, kind: "store", label: "PostgreSQL" }
         ],
-        edges: [ { from: "ui", to: "app", label: "HTTPS" }, { from: "app", to: "db" } ]
+        edges: [
+          { from: "ui", to: "app", label: "HTTPS" },
+          { from: "app", to: "db" }
+        ]
       }
     },
     {
-      id: "datasmart-rag",
-      title: { es: "Asistente DataSmart", en: "DataSmart assistant", fr: "Assistant DataSmart" },
-      tagline: { es: "Un chatbot RAG que se puede medir", en: "A RAG chatbot you can measure", fr: "Un chatbot RAG que l'on peut mesurer" },
-      org: "Siigo", year: "2024", kind: "professional",
+      id: "moduo-rag",
+      title: { es: "Asistentes documentales con ChromaDB", en: "Document assistants with ChromaDB", fr: "Assistants documentaires avec ChromaDB" },
+      tagline: { es: "Búsqueda semántica y respuestas con fuentes, con datos aislados por proyecto", en: "Semantic retrieval and sourced answers, with data isolated by project", fr: "Recherche sémantique et réponses sourcées, avec des données isolées par projet" },
+      org: "MODUO Ingénierie",
+      year: "2026",
+      kind: "professional",
       summary: {
-        es: "Un chatbot interno para la plataforma DataSmart: backend en FastAPI, interfaz en React, Azure OpenAI y Azure AI Search, con un evaluador por lotes para saber si las respuestas mejoran.",
-        en: "An internal chatbot for the DataSmart platform: FastAPI back end, React UI, Azure OpenAI and Azure AI Search, plus a batch evaluator to know whether answers are getting better.",
-        fr: "Un chatbot interne pour la plateforme DataSmart : backend FastAPI, interface React, Azure OpenAI et Azure AI Search, avec un évaluateur par lots pour savoir si les réponses s'améliorent."
+        es: "Una plataforma de ingesta documental y recuperación que da a cada proyecto de ingeniería su propio asistente: los documentos se analizan, se trocean y se vectorizan, y las respuestas se generan con modelos servidos dentro de la empresa, siempre con sus fuentes.",
+        en: "A document-ingestion and retrieval platform that gives each engineering project its own assistant: documents are parsed, chunked and embedded, and answers are generated by models served in-house, always with their sources.",
+        fr: "Une plateforme d'ingestion documentaire et de recherche qui donne à chaque projet d'ingénierie son propre assistant : les documents sont analysés, découpés et vectorisés, et les réponses sont générées par des modèles servis en interne, toujours avec leurs sources."
       },
       points: {
         es: [
-          "Pipeline en Databricks que convierte XML y PDF en JSON, enriquece metadatos, trocea con solapamiento, indexa y carga en Blob Storage.",
-          "Evaluador por lotes que puntúa F1, groundedness, relevancia, calidad de las citas y coherencia.",
-          "Persistencia y trazabilidad de las interacciones en MongoDB.",
-          "Integrado en el entorno de QA de DataSmart."
+          "Pipeline documental con Apache Tika, segmentación de documentos, embeddings y recuperación semántica en ChromaDB.",
+          "Aislamiento de la base de conocimiento por proyecto: cada asistente consulta únicamente la documentación que le corresponde.",
+          "Generación con modelos servidos mediante Ollama en la infraestructura de la empresa, con referencias a los documentos utilizados.",
+          "Diseño orientado a servicios y a la escalabilidad: ingesta, búsqueda y generación separadas en contenedores, con autenticación común mediante Moduo Connect."
         ],
         en: [
-          "Databricks pipeline that turns XML and PDF sources into JSON, enriches metadata, chunks with overlap, indexes, and loads to Blob Storage.",
-          "Batch evaluator scoring F1, groundedness, relevance, citation quality and coherence.",
-          "Interaction persistence and traceability in MongoDB.",
-          "Integrated into DataSmart's QA environment."
+          "Document pipeline with Apache Tika, document chunking, embeddings and semantic retrieval in ChromaDB.",
+          "Project-specific knowledge bases: each assistant retrieves only the documentation belonging to its project.",
+          "Answer generation with models served through Ollama on company infrastructure, with references to the source documents.",
+          "Service-oriented design for scalability: separate containerized ingestion, retrieval and generation components, with shared authentication through Moduo Connect."
         ],
         fr: [
-          "Pipeline Databricks qui transforme des sources XML et PDF en JSON, enrichit les métadonnées, découpe avec chevauchement, indexe et charge dans Blob Storage.",
-          "Évaluateur par lots notant le F1, la groundedness, la pertinence, la qualité des citations et la cohérence.",
-          "Persistance et traçabilité des interactions dans MongoDB.",
-          "Intégré à l'environnement de QA de DataSmart."
+          "Pipeline documentaire avec Apache Tika, découpage des documents, embeddings et recherche sémantique dans ChromaDB.",
+          "Bases de connaissances isolées par projet : chaque assistant consulte uniquement la documentation de son projet.",
+          "Génération de réponses avec des modèles servis via Ollama sur l'infrastructure de l'entreprise, avec références aux documents sources.",
+          "Architecture orientée services et conçue pour la montée en charge : ingestion, recherche et génération conteneurisées et séparées, avec authentification commune via Moduo Connect."
         ]
       },
-      stack: ["FastAPI", "React", "Azure OpenAI", "Azure AI Search", "Databricks", "MongoDB", "Blob Storage"],
+      stack: ["Python", "RAG", "ChromaDB", "Ollama", "Apache Tika", "Docker", "OIDC"],
       diagram: {
-        cols: 4, rows: 3,
-        caption: { es: "Arriba, la ingesta; en medio, la ruta de una pregunta; abajo, la evaluación.", en: "Top: ingestion. Middle: the path of a question. Bottom: evaluation.", fr: "En haut, l'ingestion ; au milieu, le trajet d'une question ; en bas, l'évaluation." },
+        cols: 4,
+        rows: 2,
+        caption: {
+          es: "Arriba, la ingesta documental; abajo, la ruta de una pregunta dentro de un proyecto.",
+          en: "Top: document ingestion. Bottom: the path of a question inside one project.",
+          fr: "En haut, l'ingestion documentaire ; en bas, le trajet d'une question au sein d'un projet."
+        },
         nodes: [
-          { id: "src", col: 0, row: 0, kind: "source", label: "XML · PDF", sub: { es: "fuentes", en: "sources", fr: "sources" } },
-          { id: "dbx", col: 1, row: 0, kind: "service", label: "Databricks", sub: { es: "JSON · metadatos · chunks", en: "JSON · metadata · chunks", fr: "JSON · métadonnées · chunks" } },
-          { id: "search", col: 2, row: 0, kind: "store", label: "Azure AI Search", sub: { es: "índice · Blob Storage", en: "index · Blob Storage", fr: "index · Blob Storage" } },
-          { id: "ui", col: 0, row: 1, kind: "client", label: "React", sub: { es: "chat", en: "chat UI", fr: "chat" } },
-          { id: "api", col: 1, row: 1, kind: "service", primary: true, label: "FastAPI", sub: { es: "orquestación RAG", en: "RAG orchestration", fr: "orchestration RAG" } },
-          { id: "llm", col: 3, row: 1, kind: "external", label: "Azure OpenAI" },
-          { id: "eval", col: 0, row: 2, kind: "service", label: { es: "Evaluador por lotes", en: "Batch evaluator", fr: "Évaluateur par lots" }, sub: { es: "F1 · groundedness · citas", en: "F1 · groundedness · citations", fr: "F1 · groundedness · citations" } },
-          { id: "mongo", col: 2, row: 2, kind: "store", label: "MongoDB", sub: { es: "registro de interacciones", en: "interaction log", fr: "journal des interactions" } }
+          {
+            id: "docs",
+            col: 0,
+            row: 0,
+            kind: "source",
+            label: { es: "Documentación BIM", en: "BIM documentation", fr: "Documentation BIM" },
+            sub: { es: "por proyecto", en: "per project", fr: "par projet" }
+          },
+          {
+            id: "tika",
+            col: 1,
+            row: 0,
+            kind: "service",
+            label: "Apache Tika",
+            sub: { es: "extracción · chunks", en: "parsing · chunks", fr: "extraction · chunks" }
+          },
+          {
+            id: "chroma",
+            col: 2,
+            row: 0,
+            kind: "store",
+            label: "ChromaDB",
+            sub: { es: "un índice por proyecto", en: "one index per project", fr: "un index par projet" }
+          },
+          {
+            id: "user",
+            col: 0,
+            row: 1,
+            kind: "client",
+            label: { es: "Equipo del proyecto", en: "Project team", fr: "Équipe projet" },
+            sub: "SSO · Moduo Connect"
+          },
+          {
+            id: "api",
+            col: 1,
+            row: 1,
+            kind: "service",
+            primary: true,
+            label: { es: "Asistente RAG", en: "RAG assistant", fr: "Assistant RAG" },
+            sub: { es: "respuestas con fuentes", en: "sourced answers", fr: "réponses sourcées" }
+          },
+          {
+            id: "llm",
+            col: 3,
+            row: 1,
+            kind: "service",
+            label: "Ollama",
+            sub: { es: "modelos en local", en: "in-house models", fr: "modèles en interne" }
+          }
         ],
         edges: [
-          { from: "src", to: "dbx" },
-          { from: "dbx", to: "search" },
-          { from: "ui", to: "api" },
-          { from: "api", to: "search", sides: "rb", fromPos: 0.3, label: { es: "recupera", en: "retrieve", fr: "recherche" } },
-          { from: "api", to: "llm", fromPos: 0.7, toPos: 0.7, label: { es: "genera", en: "generate", fr: "génère" } },
-          { from: "eval", to: "api", sides: "rb", toPos: 0.3, dashed: true },
-          { from: "api", to: "mongo", sides: "bl", fromPos: 0.7 }
+          { from: "docs", to: "tika" },
+          { from: "tika", to: "chroma", label: "embeddings" },
+          { from: "user", to: "api" },
+          {
+            from: "api",
+            to: "chroma",
+            sides: "rb",
+            fromPos: 0.3,
+            label: { es: "recupera", en: "retrieve", fr: "recherche" }
+          },
+          {
+            from: "api",
+            to: "llm",
+            fromPos: 0.7,
+            toPos: 0.7,
+            label: { es: "genera", en: "generate", fr: "génère" }
+          }
         ]
       }
     },
@@ -389,7 +695,9 @@ window.SITE = {
       id: "bim-pipeline",
       title: { es: "De la maqueta BIM al coste y al carbono", en: "BIM to cost & carbon", fr: "De la maquette BIM au coût et au carbone" },
       tagline: { es: "Un pipeline de datos para análisis de costes e impacto ambiental", en: "A data pipeline for cost and environmental-impact analysis", fr: "Un pipeline de données pour l'analyse des coûts et de l'impact environnemental" },
-      org: "MODUO Ingénierie", year: "2026", kind: "professional",
+      org: "MODUO Ingénierie",
+      year: "2026",
+      kind: "professional",
       summary: {
         es: "Un pipeline que extrae datos de maquetas Revit/IFC, los cruza con precios de proveedores y análisis de ciclo de vida, y automatiza el análisis de costes e impacto ambiental.",
         en: "A pipeline that extracts data from Revit/IFC models, joins it with supplier pricing and life-cycle assessment, and automates cost and environmental-impact analysis.",
@@ -397,87 +705,343 @@ window.SITE = {
       },
       points: {
         es: [
-          "Extracción de Revit/IFC con IfcOpenShell; análisis de ciclo de vida con la API de Vizcab.",
-          "Bases de datos internas organizadas en capas bronze, silver y gold: dato crudo, dato limpio y modelado, dato listo para reporting.",
-          "Asistentes RAG sobre documentación BIM: Apache Tika, Qdrant y modelos servidos con Ollama.",
-          "Herramientas de automatización en Python y VBA para los equipos de ingeniería."
+          "Ingesta automatizada: extracción de maquetas Revit/IFC con IfcOpenShell, precios de proveedores y análisis de ciclo de vida a través de la API de Vizcab.",
+          "Arquitectura medallion sobre PostgreSQL: bronze (dato crudo), silver (dato limpio y modelado) y gold (dato listo para reporting); cada capa se puede reprocesar sin volver a tocar las fuentes.",
+          "Gobierno del dato desde el diseño: convenciones de nombres, control de accesos, trazabilidad, documentación y supervisión de los procesos.",
+          "Convierte el análisis de costes e impacto ambiental en un proceso automatizado y repetible; herramientas de automatización en Python y VBA para los equipos de ingeniería."
         ],
         en: [
-          "Revit/IFC extraction with IfcOpenShell; life-cycle assessment through the Vizcab API.",
-          "Internal databases organised in bronze, silver and gold layers: raw data, cleaned and modelled data, reporting-ready data.",
-          "RAG assistants over BIM documentation: Apache Tika, Qdrant, and models served with Ollama.",
-          "Python and VBA automation tools for the engineering teams."
+          "Automated ingestion: Revit/IFC model extraction with IfcOpenShell, supplier pricing, and life-cycle assessment through the Vizcab API.",
+          "Medallion architecture on PostgreSQL: bronze (raw), silver (cleaned and modelled) and gold (reporting-ready); each layer can be reprocessed without going back to the sources.",
+          "Data governance by design: naming conventions, access control, traceability, documentation and monitoring of the processing jobs.",
+          "Turns cost and environmental-impact analysis into an automated, repeatable process; Python and VBA automation tools for the engineering teams."
         ],
         fr: [
-          "Extraction Revit/IFC avec IfcOpenShell ; analyse de cycle de vie via l'API Vizcab.",
-          "Bases de données internes organisées en couches bronze, silver et gold : donnée brute, donnée nettoyée et modélisée, donnée prête pour le reporting.",
-          "Assistants RAG sur la documentation BIM : Apache Tika, Qdrant et modèles servis avec Ollama.",
-          "Outils d'automatisation en Python et VBA pour les équipes d'ingénierie."
+          "Ingestion automatisée : extraction des maquettes Revit/IFC avec IfcOpenShell, prix fournisseurs et analyse de cycle de vie via l'API Vizcab.",
+          "Architecture médaillon sur PostgreSQL : bronze (donnée brute), silver (donnée nettoyée et modélisée) et gold (donnée prête pour le reporting) ; chaque couche peut être retraitée sans revenir aux sources.",
+          "Gouvernance des données dès la conception : conventions de nommage, contrôle des accès, traçabilité, documentation et supervision des traitements.",
+          "Fait de l'analyse des coûts et de l'impact environnemental un processus automatisé et répétable ; outils d'automatisation en Python et VBA pour les équipes d'ingénierie."
         ]
       },
-      stack: ["Python", "IfcOpenShell", "Vizcab API", "PostgreSQL", "Apache Tika", "Qdrant", "Ollama", "VBA"],
+      stack: ["Python", "SQL", "IfcOpenShell", "Vizcab API", "PostgreSQL", "Medallion Architecture", "Data Modeling", "VBA"],
       diagram: {
-        cols: 4, rows: 2,
+        cols: 4,
+        rows: 2,
         caption: { es: "De las fuentes al reporting, pasando por tres capas de datos.", en: "From sources to reporting through three data layers.", fr: "Des sources au reporting, en passant par trois couches de données." },
         nodes: [
           { id: "ifc", col: 0, row: 0, kind: "source", label: "Revit · IFC", sub: "IfcOpenShell" },
-          { id: "ext", col: 0, row: 1, kind: "external", label: { es: "Precios · Vizcab", en: "Pricing · Vizcab", fr: "Prix · Vizcab" }, sub: { es: "proveedores · ACV", en: "suppliers · LCA", fr: "fournisseurs · ACV" } },
-          { id: "bronze", col: 1, row: 0, kind: "store", label: "Bronze", sub: { es: "crudo", en: "raw", fr: "brut" } },
-          { id: "silver", col: 2, row: 0, kind: "store", primary: true, label: "Silver", sub: { es: "limpio · modelado", en: "cleaned · modelled", fr: "nettoyé · modélisé" } },
-          { id: "gold", col: 3, row: 0, kind: "store", label: "Gold", sub: { es: "reporting", en: "reporting", fr: "reporting" } },
-          { id: "out", col: 3, row: 1, kind: "output", label: { es: "Coste y carbono", en: "Cost & carbon", fr: "Coût et carbone" }, sub: { es: "análisis automático", en: "automated analysis", fr: "analyse automatisée" } }
+          {
+            id: "ext",
+            col: 0,
+            row: 1,
+            kind: "external",
+            label: { es: "Precios · Vizcab", en: "Pricing · Vizcab", fr: "Prix · Vizcab" },
+            sub: { es: "proveedores · ACV", en: "suppliers · LCA", fr: "fournisseurs · ACV" }
+          },
+          {
+            id: "bronze",
+            col: 1,
+            row: 0,
+            kind: "store",
+            label: "Bronze",
+            sub: { es: "crudo", en: "raw", fr: "brut" }
+          },
+          {
+            id: "silver",
+            col: 2,
+            row: 0,
+            kind: "store",
+            primary: true,
+            label: "Silver",
+            sub: { es: "limpio · modelado", en: "cleaned · modelled", fr: "nettoyé · modélisé" }
+          },
+          {
+            id: "gold",
+            col: 3,
+            row: 0,
+            kind: "store",
+            label: "Gold",
+            sub: { es: "reporting", en: "reporting", fr: "reporting" }
+          },
+          {
+            id: "out",
+            col: 3,
+            row: 1,
+            kind: "output",
+            label: { es: "Coste y carbono", en: "Cost & carbon", fr: "Coût et carbone" },
+            sub: { es: "análisis automático", en: "automated analysis", fr: "analyse automatisée" }
+          }
         ],
         edges: [
-          { from: "ifc", to: "bronze" }, { from: "ext", to: "bronze", sides: "rb" }, { from: "bronze", to: "silver" },
-          { from: "silver", to: "gold" }, { from: "gold", to: "out", sides: "bt" }
+          { from: "ifc", to: "bronze" },
+          { from: "ext", to: "bronze", sides: "rb" },
+          { from: "bronze", to: "silver" },
+          { from: "silver", to: "gold" },
+          { from: "gold", to: "out", sides: "bt" }
         ]
       }
     },
     {
-      id: "career-copilot",
-      title: "Career Copilot",
-      tagline: { es: "Entra una oferta de trabajo, sale un CV de una página hecho a medida", en: "Job posting in, tailored one-page CV out", fr: "Une offre d'emploi en entrée, un CV d'une page sur mesure en sortie" },
-      org: { es: "Proyecto personal", en: "Personal project", fr: "Projet personnel" }, year: "2026", kind: "personal",
+      id: "datasmart-rag",
+      title: { es: "DataSmart · Asistente RAG y evaluación", en: "DataSmart · RAG assistant and evaluation", fr: "DataSmart · Assistant RAG et évaluation" },
+      tagline: { es: "Del catálogo de datos a respuestas con fuentes y pruebas reproducibles", en: "From the data catalogue to sourced answers and reproducible tests", fr: "Du catalogue de données aux réponses sourcées et aux tests reproductibles" },
+      org: "Siigo",
+      year: "2024",
+      kind: "professional",
       summary: {
-        es: "Una aplicación local en FastAPI que cruza una oferta con mi perfil, genera el CV y la carta en LaTeX y lleva el seguimiento de cada candidatura.",
-        en: "A local-first FastAPI app that matches a job posting against my profile, generates the CV and cover letter in LaTeX, and tracks every application.",
-        fr: "Une application FastAPI locale qui croise une offre avec mon profil, génère le CV et la lettre en LaTeX et suit chaque candidature."
+        es: "Desarrollé un asistente interno para consultar el catálogo de datos de Databricks: qué contiene cada tabla, para qué sirve y dónde encontrarla. Integré Azure OpenAI y Azure AI Search y trabajé en la evaluación de respuestas con RAG Commander y RAG AI Chat Evaluator.",
+        en: "Developed an internal assistant for exploring the Databricks data catalogue: what each table contains, what it is for and where to find it. Integrated Azure OpenAI and Azure AI Search and worked on answer evaluation with RAG Commander and RAG AI Chat Evaluator.",
+        fr: "Développement d'un assistant interne pour explorer le catalogue de données Databricks : contenu, rôle et emplacement de chaque table. Intégration d'Azure OpenAI et d'Azure AI Search, et travail sur l'évaluation des réponses avec RAG Commander et RAG AI Chat Evaluator."
       },
       points: {
         es: [
-          "Salida estructurada del LLM tipada con Pydantic, más un motor extractivo determinista que funciona sin API key.",
-          "Bucle de ajuste a una página: compila con XeLaTeX, mide el llenado con PyMuPDF y compacta o reequilibra espacios.",
-          "Seguimiento de candidaturas con SQLAlchemy 2.0 y SQLite; exportación a Excel.",
-          "Escapado contra inyección de LaTeX y comprobaciones SSRF al descargar ofertas por URL."
+          "Base de conocimiento preparada en Databricks: transformación de documentación y metadatos a JSON, enriquecimiento de las tablas e indexación en Azure AI Search desde Blob Storage.",
+          "Aplicación de chat adaptada sobre la base open source de Microsoft, con backend Flask, interfaz React/TypeScript, citas a las fuentes e historial de conversaciones con Azure Cosmos DB; prototipo adicional con FastAPI.",
+          "RAG Commander: pruebas por lotes para revisar el comportamiento del asistente ante cambios de prompts y parámetros de recuperación.",
+          "RAG AI Chat Evaluator: adaptación de ai-rag-chat-evaluator al índice de Siigo y preparación de más de 200 pares pregunta-respuesta de referencia; evaluación de groundedness, relevancia, coherencia y latencia, con herramientas de comparación entre ejecuciones.",
+          "Empaquetado en Docker con compilación multi-etapa de frontend y backend para Azure App Service e integración en el entorno QA de DataSmart."
         ],
         en: [
-          "Structured LLM output typed with Pydantic, plus a deterministic extractive engine that works without an API key.",
-          "One-page fitting loop: compile with XeLaTeX, measure page fill with PyMuPDF, then compact content or rebalance spacing.",
-          "Application tracker on SQLAlchemy 2.0 and SQLite; Excel export.",
-          "LaTeX-injection escaping and SSRF checks when fetching postings by URL."
+          "Knowledge base prepared in Databricks: documentation and metadata transformed into JSON, table enrichment, and Azure AI Search indexing from Blob Storage.",
+          "Chat application adapted from Microsoft’s open-source sample, with a Flask backend, React/TypeScript interface, source citations and Azure Cosmos DB conversation history; an additional prototype used FastAPI.",
+          "RAG Commander: batch testing to review assistant behaviour when prompts and retrieval parameters change.",
+          "RAG AI Chat Evaluator: adapted ai-rag-chat-evaluator to Siigo’s index and prepared 200+ ground-truth question-answer pairs; evaluation of groundedness, relevance, coherence and latency, with tools for comparing runs.",
+          "Multi-stage Docker packaging of frontend and backend for Azure App Service, and integration into DataSmart’s QA environment."
         ],
         fr: [
-          "Sortie structurée du LLM typée avec Pydantic, plus un moteur extractif déterministe qui fonctionne sans clé d'API.",
-          "Boucle d'ajustement sur une page : compilation XeLaTeX, mesure du remplissage avec PyMuPDF, puis compactage ou rééquilibrage des espaces.",
-          "Suivi des candidatures avec SQLAlchemy 2.0 et SQLite ; export Excel.",
-          "Échappement contre l'injection LaTeX et contrôles SSRF lors du téléchargement d'offres par URL."
+          "Base de connaissances préparée dans Databricks : transformation de la documentation et des métadonnées en JSON, enrichissement des tables et indexation dans Azure AI Search depuis Blob Storage.",
+          "Application de chat adaptée à partir du projet open source de Microsoft, avec backend Flask, interface React/TypeScript, citations des sources et historique dans Azure Cosmos DB ; un prototype complémentaire utilisait FastAPI.",
+          "RAG Commander : tests par lots pour examiner le comportement de l'assistant lors de changements de prompts et de paramètres de recherche.",
+          "RAG AI Chat Evaluator : adaptation d'ai-rag-chat-evaluator à l'index de Siigo et préparation de plus de 200 paires question-réponse de référence ; évaluation de la groundedness, de la pertinence, de la cohérence et de la latence, avec comparaison des exécutions.",
+          "Conteneurisation Docker avec compilation multi-étapes du frontend et du backend pour Azure App Service, et intégration dans l'environnement QA de DataSmart."
         ]
       },
-      stack: ["Python", "FastAPI", "Pydantic", "SQLAlchemy", "SQLite", "Jinja2", "XeLaTeX", "PyMuPDF"],
+      stack: ["Python", "Flask", "React", "TypeScript", "Azure OpenAI", "Azure AI Search", "Databricks", "Blob Storage", "Azure Cosmos DB", "Docker", "RAG Commander", "RAG AI Chat Evaluator"],
       diagram: {
-        cols: 4, rows: 2,
-        caption: { es: "Dos motores detrás de un mismo esquema; el PDF se recompila hasta caber en una página.", en: "Two engines behind one schema; the PDF is recompiled until it fits one page.", fr: "Deux moteurs derrière un même schéma ; le PDF est recompilé jusqu'à tenir sur une page." },
+        cols: 3,
+        rows: 3,
+        caption: { es: "Catálogo indexado, respuestas con fuentes y un flujo de evaluación por lotes.", en: "Indexed catalogue, sourced answers and a batch evaluation workflow.", fr: "Catalogue indexé, réponses sourcées et évaluation par lots." },
         nodes: [
-          { id: "offer", col: 0, row: 0, kind: "source", label: { es: "Oferta", en: "Job posting", fr: "Offre" }, sub: { es: "texto o URL", en: "text or URL", fr: "texte ou URL" } },
-          { id: "engine", col: 1, row: 0, kind: "service", primary: true, label: { es: "Motor de generación", en: "Generation engine", fr: "Moteur de génération" }, sub: { es: "LLM tipado | extractivo", en: "typed LLM | extractive", fr: "LLM typé | extractif" } },
-          { id: "tex", col: 2, row: 0, kind: "service", label: "Jinja2 → XeLaTeX", sub: { es: "ajuste a una página", en: "one-page fit loop", fr: "ajustement sur une page" } },
-          { id: "pdf", col: 3, row: 0, kind: "output", label: { es: "CV + carta", en: "CV + letter", fr: "CV + lettre" }, sub: "PDF" },
-          { id: "profile", col: 1, row: 1, kind: "store", label: { es: "Perfil", en: "Profile", fr: "Profil" }, sub: { es: "única fuente de hechos", en: "single source of facts", fr: "source unique des faits" } },
-          { id: "tracker", col: 3, row: 1, kind: "store", label: "SQLite", sub: { es: "seguimiento · Excel", en: "tracker · Excel", fr: "suivi · Excel" } }
+          { id: "catalogue", col: 0, row: 0, kind: "source", label: "Databricks", sub: "JSON · Blob Storage" },
+          {
+            id: "search",
+            col: 1,
+            row: 0,
+            kind: "store",
+            label: "Azure AI Search",
+            sub: { es: "catálogo indexado", en: "indexed catalogue", fr: "catalogue indexé" }
+          },
+          {
+            id: "ui",
+            col: 0,
+            row: 1,
+            kind: "client",
+            label: "React · TypeScript",
+            sub: { es: "chat · citas", en: "chat · citations", fr: "chat · citations" }
+          },
+          {
+            id: "api",
+            col: 1,
+            row: 1,
+            kind: "service",
+            label: "Flask",
+            sub: { es: "asistente DataSmart", en: "DataSmart assistant", fr: "assistant DataSmart" },
+            primary: true
+          },
+          { id: "llm", col: 2, row: 1, kind: "external", label: "Azure OpenAI" },
+          {
+            id: "eval",
+            col: 0,
+            row: 2,
+            kind: "service",
+            label: { es: "Evaluación RAG", en: "RAG evaluation", fr: "Évaluation RAG" },
+            sub: "Commander · AI Chat Evaluator"
+          },
+          {
+            id: "history",
+            col: 2,
+            row: 2,
+            kind: "store",
+            label: "Azure Cosmos DB",
+            sub: { es: "historial", en: "chat history", fr: "historique" }
+          }
         ],
         edges: [
-          { from: "offer", to: "engine" }, { from: "profile", to: "engine", sides: "tb" }, { from: "engine", to: "tex" },
-          { from: "tex", to: "pdf" }, { from: "pdf", to: "tracker", sides: "bt" }
+          { from: "catalogue", to: "search" },
+          { from: "search", to: "api", sides: "bt" },
+          { from: "ui", to: "api" },
+          { from: "api", to: "llm" },
+          { from: "eval", to: "api", sides: "rt", dashed: true },
+          { from: "api", to: "history", sides: "br" }
+        ]
+      }
+    },
+    {
+      id: "unal-assistant",
+      title: { es: "Asistente de servicios académicos UNAL", en: "UNAL academic-services assistant", fr: "Assistant des services académiques UNAL" },
+      tagline: { es: "IA aplicada con tecnologías open source y liderazgo técnico", en: "Applied AI with open-source technologies and technical leadership", fr: "IA appliquée, technologies open source et encadrement technique" },
+      org: "DNINFOA · Universidad Nacional de Colombia",
+      year: "2024",
+      kind: "professional",
+      summary: {
+        es: "Como Data Scientist, lideré varios proyectos del área y un equipo de cuatro estudiantes de ingeniería. Apliqué la experiencia adquirida en Siigo al desarrollo de un asistente sobre normativa y servicios académicos, con una arquitectura basada en tecnologías open source.",
+        en: "As a Data Scientist, led several departmental projects and a team of four engineering students. Applied the experience gained at Siigo to an assistant for academic regulations and services, built around open-source technologies.",
+        fr: "En tant que Data Scientist, pilotage de plusieurs projets du service et d'une équipe de quatre étudiants ingénieurs. Mise à profit de l'expérience acquise chez Siigo pour développer un assistant sur la réglementation et les services académiques, fondé sur des technologies open source."
+      },
+      points: {
+        es: [
+          "Base de conocimiento sobre inscripción, pagos, calificaciones y solicitudes estudiantiles, preparada a partir de 22 manuales y directrices del portal académico.",
+          "Pipeline RAG con ingesta, preparación del contexto y generación mediante modelos servidos con Ollama; desarrollo del backend con Node.js/TypeScript y Python.",
+          "Interfaz React para consultar la documentación y presentar referencias, con evaluación iterativa de la calidad de las respuestas.",
+          "Coordinación bajo Scrum: planificación de sprints, distribución de tareas y revisión técnica, hasta entregar un prototipo funcional al personal administrativo."
+        ],
+        en: [
+          "Knowledge base covering enrolment, payments, grades and student requests, prepared from 22 academic-portal manuals and guidelines.",
+          "RAG pipeline with ingestion, context preparation and generation using models served through Ollama; backend development with Node.js/TypeScript and Python.",
+          "React interface for querying documentation and presenting references, with iterative evaluation of answer quality.",
+          "Scrum coordination: sprint planning, task allocation and technical review, through delivery of a working prototype to administrative staff."
+        ],
+        fr: [
+          "Base de connaissances sur les inscriptions, paiements, notes et demandes étudiantes, préparée à partir de 22 manuels et directives du portail académique.",
+          "Pipeline RAG avec ingestion, préparation du contexte et génération via des modèles servis par Ollama ; développement backend en Node.js/TypeScript et Python.",
+          "Interface React pour interroger la documentation et présenter les références, avec évaluation itérative de la qualité des réponses.",
+          "Coordination en Scrum : planification des sprints, répartition des tâches et revue technique, jusqu'à la livraison d'un prototype fonctionnel au personnel administratif."
+        ]
+      },
+      stack: ["Python", "Node.js", "TypeScript", "React", "Ollama", "RAG", "Open Source", "Scrum"],
+      diagram: {
+        cols: 3,
+        rows: 2,
+        caption: {
+          es: "Documentación académica, recuperación de contexto y generación con modelos abiertos.",
+          en: "Academic documentation, context retrieval and generation with open-weight models.",
+          fr: "Documentation académique, recherche de contexte et génération avec des modèles ouverts."
+        },
+        nodes: [
+          {
+            id: "docs",
+            col: 0,
+            row: 0,
+            kind: "source",
+            label: { es: "22 documentos", en: "22 documents", fr: "22 documents" }
+          },
+          {
+            id: "knowledge",
+            col: 1,
+            row: 0,
+            kind: "store",
+            label: { es: "Base de conocimiento", en: "Knowledge base", fr: "Base de connaissances" }
+          },
+          {
+            id: "ui",
+            col: 0,
+            row: 1,
+            kind: "client",
+            label: "React",
+            sub: { es: "chat · referencias", en: "chat · references", fr: "chat · références" }
+          },
+          { id: "api", col: 1, row: 1, kind: "service", label: "API RAG", sub: "Node.js · Python", primary: true },
+          {
+            id: "llm",
+            col: 2,
+            row: 1,
+            kind: "service",
+            label: "Ollama",
+            sub: { es: "modelos abiertos", en: "open-weight models", fr: "modèles ouverts" }
+          }
+        ],
+        edges: [
+          { from: "docs", to: "knowledge" },
+          { from: "knowledge", to: "api", sides: "bt" },
+          { from: "ui", to: "api" },
+          { from: "api", to: "llm" }
+        ]
+      }
+    },
+    {
+      id: "tiendaun",
+      title: "TiendaUN",
+      tagline: { es: "Microservicios, GraphQL y escalabilidad en Kubernetes", en: "Microservices, GraphQL and scalability on Kubernetes", fr: "Microservices, GraphQL et montée en charge avec Kubernetes" },
+      org: "Universidad Nacional de Colombia",
+      year: "2023",
+      kind: "academic",
+      summary: {
+        es: "Plataforma de comercio electrónico desarrollada en equipo con servicios separados por dominio. Desarrollé el microservicio de autenticación y gestión de usuarios y roles, integrado en una arquitectura con API Gateway GraphQL y despliegue en Google Cloud.",
+        en: "Team-built e-commerce platform with domain-oriented services. Developed the authentication and user/role management microservice, integrated into an architecture with a GraphQL API Gateway and deployment on Google Cloud.",
+        fr: "Plateforme e-commerce développée en équipe avec des services séparés par domaine. Développement du microservice d'authentification et de gestion des utilisateurs et rôles, intégré dans une architecture avec API Gateway GraphQL et déploiement sur Google Cloud."
+      },
+      points: {
+        es: [
+          "API REST de registro, inicio de sesión y gestión de usuarios y roles con TypeScript, Express, MongoDB/Mongoose, bcrypt y JWT.",
+          "Integración del equipo mediante un API Gateway GraphQL para conectar la interfaz web con los servicios de usuarios, catálogo y carrito.",
+          "Arquitectura de despliegue con Docker y Kubernetes en Google Kubernetes Engine: réplicas de servicios y balanceo para el escalado horizontal.",
+          "Trabajo sobre interoperabilidad SOAP, seguridad de acceso y pruebas de rendimiento con JMeter para evaluar el comportamiento bajo carga."
+        ],
+        en: [
+          "REST APIs for registration, sign-in and user/role management with TypeScript, Express, MongoDB/Mongoose, bcrypt and JWT.",
+          "Team integration through a GraphQL API Gateway connecting the web interface to user, catalogue and cart services.",
+          "Deployment architecture with Docker and Kubernetes on Google Kubernetes Engine: service replicas and load balancing for horizontal scaling.",
+          "Work on SOAP interoperability, access security and JMeter performance testing to assess behaviour under load."
+        ],
+        fr: [
+          "API REST d'inscription, de connexion et de gestion des utilisateurs et rôles avec TypeScript, Express, MongoDB/Mongoose, bcrypt et JWT.",
+          "Intégration en équipe via une API Gateway GraphQL reliant l'interface web aux services utilisateurs, catalogue et panier.",
+          "Architecture de déploiement avec Docker et Kubernetes sur Google Kubernetes Engine : réplication des services et équilibrage de charge pour la montée en charge horizontale.",
+          "Travail sur l'interopérabilité SOAP, la sécurité des accès et les tests de performance JMeter pour évaluer le comportement sous charge."
+        ]
+      },
+      stack: ["TypeScript", "Node.js", "Express", "GraphQL", "MongoDB", "JWT", "Microservices", "Docker", "Kubernetes", "GKE", "JMeter"],
+      diagram: {
+        cols: 3,
+        rows: 3,
+        caption: {
+          es: "Arquitectura del equipo; mi contribución principal fue el servicio de usuarios y autenticación.",
+          en: "Team architecture; my main contribution was the user and authentication service.",
+          fr: "Architecture de l'équipe ; ma contribution principale était le service utilisateurs et authentification."
+        },
+        nodes: [
+          { id: "web", col: 0, row: 0, kind: "client", label: "Ionic · Angular" },
+          { id: "gateway", col: 1, row: 0, kind: "service", label: "API Gateway", sub: "GraphQL" },
+          {
+            id: "users",
+            col: 0,
+            row: 1,
+            kind: "service",
+            label: { es: "Usuarios · Auth", en: "Users · Auth", fr: "Utilisateurs · Auth" },
+            sub: "Express · JWT",
+            primary: true
+          },
+          {
+            id: "catalogue",
+            col: 1,
+            row: 1,
+            kind: "service",
+            label: { es: "Catálogo", en: "Catalogue", fr: "Catalogue" }
+          },
+          {
+            id: "cart",
+            col: 2,
+            row: 1,
+            kind: "service",
+            label: { es: "Carrito", en: "Cart", fr: "Panier" }
+          },
+          { id: "db", col: 0, row: 2, kind: "store", label: "MongoDB" },
+          {
+            id: "cluster",
+            col: 2,
+            row: 2,
+            kind: "service",
+            label: "Kubernetes · GKE",
+            sub: { es: "réplicas · balanceo", en: "replicas · balancing", fr: "réplicas · répartition" }
+          }
+        ],
+        edges: [
+          { from: "web", to: "gateway" },
+          { from: "gateway", to: "users", sides: "bl" },
+          { from: "gateway", to: "catalogue", sides: "bt" },
+          { from: "gateway", to: "cart", sides: "br" },
+          { from: "users", to: "db", sides: "bt" },
+          { from: "cluster", to: "cart", sides: "tb", dashed: true }
         ]
       }
     }
@@ -579,6 +1143,20 @@ window.SITE = {
 
   experience: [
     {
+      id: "moduo-ai-architect",
+      icon: "briefcase",
+      title: "AI Software Architect",
+      org: "MODUO Ingénierie",
+      dateLabel: { es: "Inicio: octubre de 2026", en: "Starting October 2026", fr: "À partir d’octobre 2026" },
+      ongoing: false,
+      bullets: {
+        es: ["Evolución al puesto de AI Software Architect en MODUO Ingénierie, con inicio en octubre de 2026."],
+        en: ["Moving into the AI Software Architect role at MODUO Ingénierie, starting October 2026."],
+        fr: ["Évolution vers le poste d'AI Software Architect chez MODUO Ingénierie, à partir d’octobre 2026."]
+      },
+      tags: ["Software Architecture", "AI"]
+    },
+    {
       id: "moduo",
       icon: "briefcase",
       title: { es: "AI Data Engineer Intern (antes IT Developer)", en: "AI Data Engineer Intern (previously IT Developer)", fr: "Stagiaire ingénieur Data & IA (auparavant développeur IT)" },
@@ -588,31 +1166,34 @@ window.SITE = {
       ongoing: true,
       bullets: {
         es: [
-          "Diseñé y desplegué Moduo Connect, un servicio central de identidad (OIDC sobre Authentik) que unifica el inicio de sesión de seis aplicaciones internas, con una migración segura que conserva los hashes de contraseña existentes y aislamiento estricto de sesión por aplicación.",
-          "Desarrollé y mantengo ModuoCopil, el portal web interno de gestión de proyectos (Django, PostgreSQL, Tailwind CSS), con módulos de dashboards, administración y seguimiento de horas.",
-          "Diseñé un pipeline de datos BIM que integra extracción Revit/IFC, precios de proveedores y análisis de ciclo de vida para automatizar el análisis de costos e impacto ambiental.",
-          "Organicé las bases de datos internas en capas bronze, silver y gold: datos ingestados sin procesar, datos limpios y modelados, y datos listos para visualización y reporting.",
-          "Desarrollé asistentes basados en RAG para documentación BIM, mejorando la recuperación de conocimiento y la toma de decisiones.",
-          "Construí herramientas de automatización en Python y VBA para optimizar flujos de trabajo de ingeniería."
+          "Asumí el diseño y la implementación de la arquitectura de datos e IA de la empresa: un conjunto de servicios en contenedores —portal de proyectos, proveedor de identidad, ingesta documental, asistentes RAG y pipelines BIM— con inicio de sesión común, aislamiento de datos por proyecto y entornos de desarrollo y producción separados.",
+          "Diseñé y desplegué Moduo Connect, el servicio central de identidad (OIDC sobre Authentik) que unifica el inicio de sesión de seis aplicaciones internas, con una migración que conservó los hashes de contraseña existentes y aislamiento estricto de sesión por aplicación; incorporar una aplicación nueva es ahora una tarea de configuración.",
+          "Desarrollo y mantengo ModuoCopil, el portal web en producción para la gestión de proyectos (Django, PostgreSQL, Tailwind CSS), con una arquitectura modular: tableros, administración y registro de horas.",
+          "Diseñé una plataforma de asistentes RAG por proyecto sobre documentación BIM: ingesta con Apache Tika, chunking y embeddings en ChromaDB, y respuestas con fuentes generadas por modelos servidos internamente con Ollama.",
+          "Diseñé un pipeline de datos BIM que integra extracción Revit/IFC (IfcOpenShell), precios de proveedores y análisis de ciclo de vida (API de Vizcab) para automatizar el análisis de costes e impacto ambiental.",
+          "Estructuré el data warehouse interno en capas bronze, silver y gold, con convenciones de nombres, control de accesos, trazabilidad, documentación y supervisión de los procesos.",
+          "Entregas con Git y CI/CD, y herramientas de automatización en Python y VBA para los equipos de ingeniería."
         ],
         en: [
-          "Designed and deployed Moduo Connect, a centralized OIDC identity service (built on Authentik) unifying single sign-on across six internal applications, including a safe user-migration path that preserves existing password hashes and strict per-app session isolation.",
-          "Built and maintain ModuoCopil, the company's internal project-management web portal (Django, PostgreSQL, Tailwind CSS), including dashboard, admin, and timelog modules.",
-          "Designed a BIM data pipeline integrating Revit/IFC extraction, supplier pricing and lifecycle assessment to automate cost and environmental-impact analysis.",
-          "Organized internal databases into bronze, silver, and gold layers: raw ingested data, cleaned and modeled data, and visualization/reporting-ready data.",
-          "Developed RAG-based assistants for BIM documentation, improving knowledge retrieval and decision-making.",
-          "Built automation tools in Python and VBA to streamline engineering workflows."
+          "Took ownership of the design and implementation of the company's data and AI architecture: a set of containerized services — project portal, identity provider, document ingestion, RAG assistants and BIM pipelines — with shared sign-in, per-project data isolation, and separate development and production environments.",
+          "Designed and deployed Moduo Connect, the central OIDC identity service (built on Authentik) providing single sign-on across six internal applications, with a migration that preserved existing password hashes and strict per-application session isolation; onboarding a new application is now a configuration task.",
+          "Build and maintain ModuoCopil, the production project-management web portal (Django, PostgreSQL, Tailwind CSS), with a modular architecture: dashboards, administration and time tracking.",
+          "Designed a platform of per-project RAG assistants over BIM documentation: ingestion with Apache Tika, chunking and embeddings in ChromaDB, and sourced answers generated by models served in-house with Ollama.",
+          "Designed a BIM data pipeline integrating Revit/IFC extraction (IfcOpenShell), supplier pricing and life-cycle assessment (Vizcab API) to automate cost and environmental-impact analysis.",
+          "Structured the internal data warehouse in bronze, silver and gold layers, with naming conventions, access control, traceability, documentation and monitoring of the processing jobs.",
+          "Releases through Git and CI/CD, plus Python and VBA automation tools for the engineering teams."
         ],
         fr: [
-          "Conception et déploiement de Moduo Connect, un service d'identité centralisé (OIDC via Authentik) unifiant l'authentification de six applications internes, avec une migration sécurisée des utilisateurs préservant les hachages de mots de passe existants et un isolement strict des sessions par application.",
-          "Développement et maintenance de ModuoCopil, le portail web interne de gestion de projets (Django, PostgreSQL, Tailwind CSS), avec des modules de tableaux de bord, d'administration et de suivi du temps.",
-          "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC, les prix fournisseurs et l'analyse de cycle de vie pour automatiser l'analyse des coûts et de l'impact environnemental.",
-          "Organisation des bases de données internes en couches bronze, silver et gold : données brutes ingérées, données nettoyées et modélisées, et données prêtes pour la visualisation et le reporting.",
-          "Développement d'assistants RAG pour la documentation BIM, améliorant la recherche de connaissances et l'aide à la décision.",
-          "Développement d'outils d'automatisation en Python et VBA pour fluidifier les workflows d'ingénierie."
+          "Prise en charge de la conception et de la mise en œuvre de l'architecture data et IA de l'entreprise : un ensemble de services conteneurisés — portail de projets, fournisseur d'identité, ingestion documentaire, assistants RAG et pipelines BIM — avec authentification commune, isolation des données par projet et environnements de développement et de production séparés.",
+          "Conception et déploiement de Moduo Connect, le service d'identité central (OIDC via Authentik) assurant l'authentification unique de six applications internes, avec une migration préservant les hachages de mots de passe existants et un isolement strict des sessions par application ; intégrer une nouvelle application est désormais une tâche de configuration.",
+          "Développement et maintenance de ModuoCopil, le portail web de gestion de projets en production (Django, PostgreSQL, Tailwind CSS), avec une architecture modulaire : tableaux de bord, administration et suivi du temps.",
+          "Conception d'une plateforme d'assistants RAG par projet sur la documentation BIM : ingestion avec Apache Tika, chunking et embeddings dans ChromaDB, et réponses sourcées générées par des modèles servis en interne avec Ollama.",
+          "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC (IfcOpenShell), les prix fournisseurs et l'analyse de cycle de vie (API Vizcab) pour automatiser l'analyse des coûts et de l'impact environnemental.",
+          "Structuration de l'entrepôt de données interne en couches bronze, silver et gold, avec conventions de nommage, contrôle des accès, traçabilité, documentation et supervision des traitements.",
+          "Livraisons via Git et CI/CD, et outils d'automatisation en Python et VBA pour les équipes d'ingénierie."
         ]
       },
-      tags: ["Python", "VBA", "PostgreSQL", "Django", "Tailwind CSS", "Revit", "IFC", "BIM", "RAG", "Ollama", "Qdrant", "Apache Tika", "Vizcab API", "CI/CD", "IFCOpenShell", "Medallion Architecture", "Data Modeling", "OIDC", "Authentik", "SSO"]
+      tags: ["Python", "Django", "PostgreSQL", "Tailwind CSS", "OIDC", "Authentik", "SSO", "Docker", "CI/CD", "RAG", "Ollama", "ChromaDB", "Apache Tika", "BIM", "Revit", "IFC", "IfcOpenShell", "Vizcab API", "Medallion Architecture", "Data Modeling", "VBA"]
     },
     {
       id: "dninfoa",
@@ -624,22 +1205,25 @@ window.SITE = {
       ongoing: false,
       bullets: {
         es: [
-          "Lideré un equipo de 4 estudiantes de ingeniería para diseñar e implementar un chatbot de preguntas y respuestas sobre normativa universitaria.",
-          "Construí un pipeline RAG completo con Ollama y backend en Node.js/TypeScript, con un 'RAG commander' para mejorar la calidad de las respuestas.",
-          "Entregué un prototipo funcional para personal administrativo, reduciendo el tiempo de respuesta y mejorando la eficiencia operativa."
+          "Lideré varios proyectos de Data Science en la DNINFOA y coordiné a cuatro estudiantes de ingeniería, con planificación Scrum, reparto de tareas y revisión técnica.",
+          "Diseñé un asistente sobre normativa y servicios académicos, aplicando la experiencia de Siigo con tecnologías open source: Ollama, Node.js/TypeScript, Python y React.",
+          "Organicé una base de conocimiento a partir de 22 manuales y directrices, con preparación del contexto, recuperación documental y evaluación de respuestas.",
+          "Entregué un prototipo funcional al personal administrativo y coordiné las iteraciones del equipo a partir de sus necesidades."
         ],
         en: [
-          "Led a team of 4 engineering students to design and implement a university-policy Q&A chatbot.",
-          "Built a complete RAG pipeline with Ollama and a Node.js/TypeScript backend, including a 'RAG commander' to improve response quality.",
-          "Delivered a functional prototype for administrative staff, reducing response time and improving operational efficiency."
+          "Led several Data Science projects at DNINFOA and coordinated four engineering students through Scrum planning, task allocation and technical review.",
+          "Designed an assistant for academic regulations and services, applying the experience gained at Siigo with open-source technologies: Ollama, Node.js/TypeScript, Python and React.",
+          "Organized a knowledge base from 22 manuals and guidelines, with context preparation, document retrieval and answer evaluation.",
+          "Delivered a working prototype to administrative staff and coordinated team iterations around their needs."
         ],
         fr: [
-          "Direction d'une équipe de 4 étudiants ingénieurs pour concevoir et développer un chatbot de questions-réponses sur la réglementation universitaire.",
-          "Développement d'un pipeline RAG complet avec Ollama et un backend Node.js/TypeScript, incluant un « RAG commander » pour améliorer la qualité des réponses.",
-          "Livraison d'un prototype fonctionnel pour le personnel administratif, réduisant le temps de réponse et améliorant l'efficacité opérationnelle."
+          "Pilotage de plusieurs projets de Data Science à la DNINFOA et encadrement de quatre étudiants ingénieurs : planification Scrum, répartition des tâches et revue technique.",
+          "Conception d'un assistant sur la réglementation et les services académiques, en appliquant l'expérience de Siigo avec des technologies open source : Ollama, Node.js/TypeScript, Python et React.",
+          "Structuration d'une base de connaissances issue de 22 manuels et directives, avec préparation du contexte, recherche documentaire et évaluation des réponses.",
+          "Livraison d'un prototype fonctionnel au personnel administratif et coordination des itérations de l'équipe selon ses besoins."
         ]
       },
-      tags: ["Ollama", "RAG", "React", "TypeScript", "JavaScript", "Python", "Rust", "SQL", "Scrum"]
+      tags: ["Python", "Node.js", "TypeScript", "React", "Ollama", "RAG", "Open Source", "Technical Leadership", "Scrum"]
     },
     {
       id: "siigo",
@@ -651,25 +1235,25 @@ window.SITE = {
       ongoing: false,
       bullets: {
         es: [
-          "Desarrollé un chatbot RAG interno para DataSmart con backend FastAPI e interfaz React, integrando Azure OpenAI y Azure AI Search.",
-          "Automaticé en Databricks una base de conocimiento a partir de XML y PDF: transformación a JSON, enriquecimiento de metadatos, chunking con solapamiento, indexación y carga en Blob Storage.",
-          "Construí un evaluador RAG por lotes para medir F1, groundedness, relevancia, citación y coherencia de las respuestas.",
-          "Añadí persistencia y trazabilidad de interacciones en MongoDB e integré el prototipo en el entorno QA de DataSmart."
+          "Desarrollé el asistente RAG de DataSmart sobre el catálogo de Databricks, integrando Azure OpenAI y Azure AI Search en una aplicación Flask y React/TypeScript con fuentes citadas.",
+          "Preparé la base de conocimiento con documentación y metadatos de tablas, transformados a JSON e indexados para su recuperación semántica.",
+          "Trabajé en RAG Commander para pruebas por lotes y adapté RAG AI Chat Evaluator al índice de Siigo, con más de 200 pares pregunta-respuesta de referencia y métricas de calidad y latencia.",
+          "Integré historial de conversaciones con Azure Cosmos DB y preparé imágenes Docker multi-etapa para el entorno QA de DataSmart en Azure."
         ],
         en: [
-          "Developed an internal RAG chatbot for DataSmart with a FastAPI backend and React interface, integrating Azure OpenAI and Azure AI Search.",
-          "Automated a Databricks knowledge base from XML and PDF sources: JSON transformation, metadata enrichment, overlapping chunking, indexing, and Blob Storage ingestion.",
-          "Built a batch RAG evaluator covering F1, groundedness, relevance, citation quality, and answer coherence.",
-          "Added MongoDB interaction persistence and traceability, then integrated the prototype into DataSmart's QA environment."
+          "Developed the DataSmart RAG assistant over the Databricks catalogue, integrating Azure OpenAI and Azure AI Search in a Flask and React/TypeScript application with source citations.",
+          "Prepared the knowledge base from documentation and table metadata, transformed into JSON and indexed for semantic retrieval.",
+          "Worked on RAG Commander for batch testing and adapted RAG AI Chat Evaluator to Siigo’s index, with 200+ ground-truth question-answer pairs and quality and latency metrics.",
+          "Integrated Azure Cosmos DB conversation history and prepared multi-stage Docker images for DataSmart’s QA environment on Azure."
         ],
         fr: [
-          "Développement d'un chatbot RAG interne pour DataSmart avec un backend FastAPI et une interface React, intégrant Azure OpenAI et Azure AI Search.",
-          "Automatisation sous Databricks d'une base de connaissances issue de fichiers XML et PDF : transformation JSON, enrichissement des métadonnées, découpage avec chevauchement, indexation et chargement dans Blob Storage.",
-          "Création d'un évaluateur RAG par lots couvrant le F1, la groundedness, la pertinence, la qualité des citations et la cohérence des réponses.",
-          "Ajout de la persistance et de la traçabilité des interactions dans MongoDB, puis intégration du prototype dans l'environnement QA de DataSmart."
+          "Développement de l'assistant RAG DataSmart sur le catalogue Databricks, avec Azure OpenAI et Azure AI Search dans une application Flask et React/TypeScript citant ses sources.",
+          "Préparation de la base de connaissances à partir de documentation et de métadonnées de tables, transformées en JSON et indexées pour la recherche sémantique.",
+          "Travail sur RAG Commander pour les tests par lots et adaptation de RAG AI Chat Evaluator à l'index de Siigo, avec plus de 200 paires question-réponse de référence et des métriques de qualité et de latence.",
+          "Intégration de l'historique des conversations dans Azure Cosmos DB et préparation d'images Docker multi-étapes pour l'environnement QA de DataSmart sur Azure."
         ]
       },
-      tags: ["Azure OpenAI", "Azure AI Search", "Databricks", "FastAPI", "React", "Python", "MongoDB", "Blob Storage", "RAG", "Scrum"]
+      tags: ["Python", "Flask", "FastAPI", "React", "TypeScript", "Azure OpenAI", "Azure AI Search", "Databricks", "Azure Cosmos DB", "Blob Storage", "Docker", "RAG Commander", "RAG AI Chat Evaluator"]
     },
     {
       id: "prig",
@@ -704,14 +1288,8 @@ window.SITE = {
       dateLabel: { es: "Desde mar. 2022", en: "Since Mar 2022", fr: "Depuis mars 2022" },
       ongoing: true,
       bullets: {
-        es: [
-          "A cargo de la gestión de datos de la fundación con Oracle DB, SQL, Excel y Python.",
-          "El proyecto más grande de la fundación, en 2023, se realizó en cooperación con la Alcaldía de Túquerres, beneficiando a más de 200 familias."
-        ],
-        en: [
-          "Responsible for the foundation's data management using Oracle DB, SQL, Excel and Python.",
-          "The foundation's largest project, in 2023, ran in partnership with Túquerres City Hall, benefiting more than 200 families."
-        ],
+        es: ["A cargo de la gestión de datos de la fundación con Oracle DB, SQL, Excel y Python.", "El proyecto más grande de la fundación, en 2023, se realizó en cooperación con la Alcaldía de Túquerres, beneficiando a más de 200 familias."],
+        en: ["Responsible for the foundation's data management using Oracle DB, SQL, Excel and Python.", "The foundation's largest project, in 2023, ran in partnership with Túquerres City Hall, benefiting more than 200 families."],
         fr: [
           "Responsable de la gestion des données de la fondation avec Oracle DB, SQL, Excel et Python.",
           "Le plus grand projet de la fondation, en 2023, a été mené en partenariat avec la mairie de Túquerres, au bénéfice de plus de 200 familles."
@@ -748,9 +1326,18 @@ window.SITE = {
                 fr: "Comparaison reproductible de représentations symboliques, denses et neuronales sur six catégories de 20 Newsgroups."
               },
               stats: [
-                { num: "80.12%", label: { es: "Accuracy test", en: "Test accuracy", fr: "Accuracy test" } },
-                { num: "8,000", label: { es: "Tokens", en: "Tokens", fr: "Tokens" } },
-                { num: "6", label: { es: "Categorías", en: "Categories", fr: "Catégories" } }
+                {
+                  num: "80.12%",
+                  label: { es: "Accuracy test", en: "Test accuracy", fr: "Accuracy test" }
+                },
+                {
+                  num: "8,000",
+                  label: { es: "Tokens", en: "Tokens", fr: "Tokens" }
+                },
+                {
+                  num: "6",
+                  label: { es: "Categorías", en: "Categories", fr: "Catégories" }
+                }
               ],
               bullets: {
                 es: [
@@ -786,9 +1373,18 @@ window.SITE = {
                 fr: "Modèle de Hotelling, demande nested logit et dynamique d'adoption pour explorer la manière dont l'arrivée de la Switch 2 peut reconfigurer un oligopole de plateformes."
               },
               stats: [
-                { num: "200k", label: { es: "Simulaciones", en: "Simulations", fr: "Simulations" } },
-                { num: "40.2→47.5%", label: { es: "Nintendo · escenario", en: "Nintendo · scenario", fr: "Nintendo · scénario" } },
-                { num: "52", label: { es: "Páginas", en: "Pages", fr: "Pages" } }
+                {
+                  num: "200k",
+                  label: { es: "Simulaciones", en: "Simulations", fr: "Simulations" }
+                },
+                {
+                  num: "40.2→47.5%",
+                  label: { es: "Nintendo · escenario", en: "Nintendo · scenario", fr: "Nintendo · scénario" }
+                },
+                {
+                  num: "52",
+                  label: { es: "Páginas", en: "Pages", fr: "Pages" }
+                }
               ],
               bullets: {
                 es: [
@@ -805,7 +1401,10 @@ window.SITE = {
                 ]
               },
               documents: [
-                { href: "assets/files/projects/telecom/applied-economics/switch-2-console-competition.pdf", label: { es: "Informe final", en: "Final report", fr: "Rapport final" } }
+                {
+                  href: "assets/files/projects/telecom/applied-economics/switch-2-console-competition.pdf",
+                  label: { es: "Informe final", en: "Final report", fr: "Rapport final" }
+                }
               ],
               tags: ["Hotelling", "Nested Logit", "Monte Carlo", "Platform Economics", "Python"]
             }
@@ -832,7 +1431,10 @@ window.SITE = {
                 fr: "Analyse documentaire et comparative ; il ne s'agit pas d'une estimation économétrique ou causale."
               },
               documents: [
-                { href: "assets/files/projects/us-protectionism-global-responses.pdf", label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" } }
+                {
+                  href: "assets/files/projects/us-protectionism-global-responses.pdf",
+                  label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" }
+                }
               ],
               tags: ["Digital Economics", "Policy Analysis", "Global Value Chains"]
             }
@@ -854,8 +1456,14 @@ window.SITE = {
                 fr: "Parcours pratique de PageRank et Louvain jusqu'à la diffusion d'étiquettes, aux embeddings spectraux et aux GNN sur des graphes réels et synthétiques."
               },
               stats: [
-                { num: "89.88%", label: { es: "Difusión · texto", en: "Diffusion · text", fr: "Diffusion · texte" } },
-                { num: "82.95%", label: { es: "GNN · WikiVitals", en: "GNN · WikiVitals", fr: "GNN · WikiVitals" } }
+                {
+                  num: "89.88%",
+                  label: { es: "Difusión · texto", en: "Diffusion · text", fr: "Diffusion · texte" }
+                },
+                {
+                  num: "82.95%",
+                  label: { es: "GNN · WikiVitals", en: "GNN · WikiVitals", fr: "GNN · WikiVitals" }
+                }
               ],
               note: {
                 es: "Se incluyen únicamente los notebooks ejecutados y sin errores; no se publican como proyectos independientes.",
@@ -946,9 +1554,18 @@ window.SITE = {
                 fr: "Architecture compatible AG2/AutoGen pour explorer la délibération réglementaire avec cinq parties prenantes, un modérateur, quatre tours et une analyse de sensibilité Monte Carlo."
               },
               stats: [
-                { num: "3.62→4.07", label: { es: "Soporte medio", en: "Mean support", fr: "Soutien moyen" } },
-                { num: "1.05→0.82", label: { es: "Dispersión", en: "Dispersion", fr: "Dispersion" } },
-                { num: "12", label: { es: "Papers revisados", en: "Papers reviewed", fr: "Articles étudiés" } }
+                {
+                  num: "3.62→4.07",
+                  label: { es: "Soporte medio", en: "Mean support", fr: "Soutien moyen" }
+                },
+                {
+                  num: "1.05→0.82",
+                  label: { es: "Dispersión", en: "Dispersion", fr: "Dispersion" }
+                },
+                {
+                  num: "12",
+                  label: { es: "Papers revisados", en: "Papers reviewed", fr: "Articles étudiés" }
+                }
               ],
               bullets: {
                 es: [
@@ -965,12 +1582,14 @@ window.SITE = {
                 ]
               },
               documents: [
-                { href: "assets/files/projects/dauphine/llm-social-simulation/dma-multi-agent-simulation-report.pdf", label: { es: "Informe de simulación", en: "Simulation report", fr: "Rapport de simulation" } },
-                { href: "assets/files/projects/dauphine/llm-social-simulation/llm-social-simulation-literature-review.pdf", label: { es: "Revisión de literatura", en: "Literature review", fr: "Revue de littérature" } }
-              ],
-              images: [
-                { src: "assets/img/projects/dma-trajectories.png", cap: { es: "Trayectorias de apoyo por stakeholder a lo largo de las rondas.", en: "Support trajectories per stakeholder across rounds.", fr: "Trajectoires de soutien par partie prenante au fil des tours." } },
-                { src: "assets/img/projects/dma-coalitions.png", cap: { es: "Coaliciones al final de la deliberación.", en: "Coalitions at the end of the deliberation.", fr: "Coalitions à la fin de la délibération." } }
+                {
+                  href: "assets/files/projects/dauphine/llm-social-simulation/dma-multi-agent-simulation-report.pdf",
+                  label: { es: "Informe de simulación", en: "Simulation report", fr: "Rapport de simulation" }
+                },
+                {
+                  href: "assets/files/projects/dauphine/llm-social-simulation/llm-social-simulation-literature-review.pdf",
+                  label: { es: "Revisión de literatura", en: "Literature review", fr: "Revue de littérature" }
+                }
               ],
               tags: ["Python", "AG2 / AutoGen", "LLM", "Multi-Agent Systems", "Monte Carlo", "DMA"]
             }
@@ -992,19 +1611,24 @@ window.SITE = {
                 fr: "Évaluation transparente d'un problème à faible signal prédictif, centrée sur la prévention des fuites, la calibration des probabilités et la comparaison à la prévalence de base."
               },
               stats: [
-                { num: "96,376", label: { es: "Filas · train + test", en: "Rows · train + test", fr: "Lignes · train + test" } },
-                { num: "0.520", label: { es: "ROC-AUC SAFE", en: "SAFE ROC-AUC", fr: "ROC-AUC SAFE" } },
-                { num: "0.099", label: { es: "PR-AUC", en: "PR-AUC", fr: "PR-AUC" } }
+                {
+                  num: "96,376",
+                  label: { es: "Filas · train + test", en: "Rows · train + test", fr: "Lignes · train + test" }
+                },
+                {
+                  num: "0.520",
+                  label: { es: "ROC-AUC SAFE", en: "SAFE ROC-AUC", fr: "ROC-AUC SAFE" }
+                },
+                {
+                  num: "0.099",
+                  label: { es: "PR-AUC", en: "PR-AUC", fr: "PR-AUC" }
+                }
               ],
               note: {
                 es: "El valor del estudio es diagnosticar las limitaciones de señal; no se presenta como un modelo productivo de alto rendimiento.",
                 en: "The study's value is diagnosing signal limitations; it is not presented as a high-performing production model.",
                 fr: "L'intérêt de l'étude est le diagnostic des limites du signal ; elle n'est pas présentée comme un modèle de production performant."
               },
-              images: [
-                { src: "assets/img/projects/credit-risk-roc-curve.png", cap: { es: "Curva ROC del modelo SAFE frente al azar.", en: "ROC curve of the SAFE model against chance.", fr: "Courbe ROC du modèle SAFE face au hasard." } },
-                { src: "assets/img/projects/credit-risk-default-by-grade.png", cap: { es: "Tasa de impago por calificación crediticia.", en: "Default rate by credit grade.", fr: "Taux de défaut par note de crédit." } }
-              ],
               tags: ["Scikit-learn", "CatBoost", "Calibration", "Leakage Control", "ROC / PR"]
             }
           ]
@@ -1030,7 +1654,10 @@ window.SITE = {
                 fr: "Analyse stratégique qualitative ; elle ne contient pas de métriques d'impact originales."
               },
               documents: [
-                { href: "assets/files/projects/dauphine/information-systems/vinted-agentic-ai-platform-strategy.pdf", label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" } }
+                {
+                  href: "assets/files/projects/dauphine/information-systems/vinted-agentic-ai-platform-strategy.pdf",
+                  label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" }
+                }
               ],
               tags: ["Platform Strategy", "Agentic AI", "EU Regulation", "Governance"]
             }
@@ -1057,7 +1684,10 @@ window.SITE = {
                 fr: "Les indicateurs sont descriptifs et issus de sources externes ; ce ne sont pas des estimations originales."
               },
               documents: [
-                { href: "assets/files/projects/dauphine/institutions-regulation/electronic-communications-regulation-europe.pdf", label: { es: "Estudio comparativo", en: "Comparative study", fr: "Étude comparative" } }
+                {
+                  href: "assets/files/projects/dauphine/institutions-regulation/electronic-communications-regulation-europe.pdf",
+                  label: { es: "Estudio comparativo", en: "Comparative study", fr: "Étude comparative" }
+                }
               ],
               tags: ["Telecom Regulation", "OECD", "Comparative Analysis", "EU"]
             }
@@ -1079,7 +1709,10 @@ window.SITE = {
                 fr: "Comparaison documentaire selon le cadre Lundvall–Nelson : modèle danois concentré et spécialisé face à un système suisse plus diversifié."
               },
               documents: [
-                { href: "assets/files/projects/dauphine/innovation-systems/biotech-innovation-denmark-switzerland.pdf", label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" } }
+                {
+                  href: "assets/files/projects/dauphine/innovation-systems/biotech-innovation-denmark-switzerland.pdf",
+                  label: { es: "Informe coautor", en: "Co-authored report", fr: "Rapport coécrit" }
+                }
               ],
               tags: ["Innovation Systems", "Biotechnology", "Comparative Analysis"]
             }
@@ -1101,7 +1734,10 @@ window.SITE = {
                 fr: "Protocole individuel avec différences de différences, effets fixes, event study et placebos. Il définit les données et la stratégie, mais ne contient pas encore d'estimations ni de résultats."
               },
               documents: [
-                { href: "assets/files/projects/veligo-causal-research-proposal.pdf", label: { es: "Propuesta", en: "Proposal", fr: "Proposition" } }
+                {
+                  href: "assets/files/projects/veligo-causal-research-proposal.pdf",
+                  label: { es: "Propuesta", en: "Proposal", fr: "Proposition" }
+                }
               ],
               tags: ["Difference-in-Differences", "Event Study", "Causal Inference"]
             }
@@ -1130,28 +1766,34 @@ window.SITE = {
               title: { es: "TiendaUN: comercio electrónico basado en microservicios", en: "TiendaUN: Microservices-Based E-commerce", fr: "TiendaUN : e-commerce fondé sur des microservices" },
               dateLabel: { es: "2023", en: "2023", fr: "2023" },
               intro: {
-                es: "Prototipo colaborativo con servicios separados por dominio. Mi contribución verificable fue el microservicio de autenticación y gestión de usuarios/roles.",
-                en: "A collaborative prototype with domain-oriented services. My verifiable contribution was the authentication and user/role management microservice.",
-                fr: "Prototype collaboratif composé de services par domaine. Ma contribution vérifiable porte sur le microservice d'authentification et de gestion des utilisateurs/rôles."
+                es: "Plataforma de comercio electrónico desarrollada en equipo con servicios separados por dominio. Desarrollé el microservicio de autenticación y gestión de usuarios y roles, integrado en una arquitectura con API Gateway GraphQL y despliegue en Google Cloud.",
+                en: "Team-built e-commerce platform with domain-oriented services. Developed the authentication and user/role management microservice, integrated into an architecture with a GraphQL API Gateway and deployment on Google Cloud.",
+                fr: "Plateforme e-commerce développée en équipe avec des services séparés par domaine. Développement du microservice d'authentification et de gestion des utilisateurs et rôles, intégré dans une architecture avec API Gateway GraphQL et déploiement sur Google Cloud."
               },
               bullets: {
                 es: [
-                  "Desarrollé API REST de registro, inicio/cierre de sesión y CRUD de usuarios y roles con TypeScript, Express, MongoDB/Mongoose, bcrypt y JWT.",
-                  "El ecosistema del equipo integró una aplicación Ionic/Angular mediante GraphQL y servicios de catálogo, carrito y ayuda; esas partes se acreditan al equipo, no como trabajo individual."
+                  "API REST de registro, inicio de sesión y gestión de usuarios y roles con TypeScript, Express, MongoDB/Mongoose, bcrypt y JWT.",
+                  "Integración del equipo mediante un API Gateway GraphQL para conectar la interfaz web con los servicios de usuarios, catálogo y carrito.",
+                  "Arquitectura de despliegue con Docker y Kubernetes en Google Kubernetes Engine: réplicas de servicios y balanceo para el escalado horizontal."
                 ],
                 en: [
-                  "Built REST APIs for registration, sign-in/sign-out, and user/role CRUD with TypeScript, Express, MongoDB/Mongoose, bcrypt, and JWT.",
-                  "The team ecosystem connected an Ionic/Angular app through GraphQL with catalog, cart, and support services; those components are credited to the team, not claimed as individual work."
+                  "REST APIs for registration, sign-in and user/role management with TypeScript, Express, MongoDB/Mongoose, bcrypt and JWT.",
+                  "Team integration through a GraphQL API Gateway connecting the web interface to user, catalogue and cart services.",
+                  "Deployment architecture with Docker and Kubernetes on Google Kubernetes Engine: service replicas and load balancing for horizontal scaling."
                 ],
                 fr: [
-                  "Développement d'API REST pour l'inscription, la connexion/déconnexion et le CRUD des utilisateurs/rôles avec TypeScript, Express, MongoDB/Mongoose, bcrypt et JWT.",
-                  "L'écosystème de l'équipe reliait une application Ionic/Angular via GraphQL à des services de catalogue, panier et assistance ; ces composants sont attribués à l'équipe, pas revendiqués comme travail individuel."
+                  "API REST d'inscription, de connexion et de gestion des utilisateurs et rôles avec TypeScript, Express, MongoDB/Mongoose, bcrypt et JWT.",
+                  "Intégration en équipe via une API Gateway GraphQL reliant l'interface web aux services utilisateurs, catalogue et panier.",
+                  "Architecture de déploiement avec Docker et Kubernetes sur Google Kubernetes Engine : réplication des services et équilibrage de charge pour la montée en charge horizontale."
                 ]
               },
               links: [
-                { href: "https://github.com/orgs/Arquitectura-de-Software-2023i/repositories", label: { es: "Repositorios del equipo", en: "Team repositories", fr: "Dépôts de l'équipe" } }
+                {
+                  href: "https://github.com/orgs/Arquitectura-de-Software-2023i/repositories",
+                  label: { es: "Repositorios del equipo", en: "Team repositories", fr: "Dépôts de l'équipe" }
+                }
               ],
-              tags: ["TypeScript", "Express", "MongoDB", "JWT", "bcrypt", "Microservices"]
+              tags: ["TypeScript", "Node.js", "Express", "GraphQL", "MongoDB", "JWT", "Microservices", "Docker", "Kubernetes", "GKE", "JMeter"]
             }
           ]
         },
@@ -1162,16 +1804,8 @@ window.SITE = {
               id: "small-basic-python-translator",
               area: "software",
               level: "standard",
-              kind: {
-                es: "Prototipo académico en equipo · con Ángel Peñarredonda y Nicol Guerrero",
-                en: "Academic team prototype · with Ángel Peñarredonda and Nicol Guerrero",
-                fr: "Prototype académique en équipe · avec Ángel Peñarredonda et Nicol Guerrero"
-              },
-              title: {
-                es: "Traductor de Small Basic a Python",
-                en: "Small Basic-to-Python Translator",
-                fr: "Traducteur de Small Basic vers Python"
-              },
+              kind: { es: "Prototipo académico en equipo · con Ángel Peñarredonda y Nicol Guerrero", en: "Academic team prototype · with Ángel Peñarredonda and Nicol Guerrero", fr: "Prototype académique en équipe · avec Ángel Peñarredonda et Nicol Guerrero" },
+              title: { es: "Traductor de Small Basic a Python", en: "Small Basic-to-Python Translator", fr: "Traducteur de Small Basic vers Python" },
               dateLabel: { es: "May. 2023", en: "May 2023", fr: "Mai 2023" },
               intro: {
                 es: "Prototipo que traduce un subconjunto de Small Basic a Python mediante una gramática ANTLR y un recorrido del árbol sintáctico implementado en Java.",
@@ -1183,10 +1817,7 @@ window.SITE = {
                   "Contribuí al desarrollo de la gramática léxica y sintáctica y de la capa de generación de código.",
                   "El equipo cubrió asignaciones, expresiones, condicionales, bucles, subrutinas, arreglos y operaciones seleccionadas de TextWindow y Stack."
                 ],
-                en: [
-                  "Contributed to the lexical and syntactic grammar and to the code-generation layer.",
-                  "The team covered assignments, expressions, conditionals, loops, subroutines, arrays, and selected TextWindow and Stack operations."
-                ],
+                en: ["Contributed to the lexical and syntactic grammar and to the code-generation layer.", "The team covered assignments, expressions, conditionals, loops, subroutines, arrays, and selected TextWindow and Stack operations."],
                 fr: [
                   "Contribution à la grammaire lexicale et syntaxique ainsi qu’à la couche de génération de code.",
                   "L’équipe a couvert les affectations, expressions, conditions, boucles, sous-routines, tableaux et certaines opérations TextWindow et Stack."
@@ -1208,16 +1839,8 @@ window.SITE = {
               id: "payphone-supermarket-platform",
               area: "software",
               level: "standard",
-              kind: {
-                es: "Prototipo académico · equipo de 4",
-                en: "Academic prototype · team of 4",
-                fr: "Prototype académique · équipe de 4"
-              },
-              title: {
-                es: "PayPhone: comparación y compra en supermercados",
-                en: "PayPhone: Supermarket Comparison and Shopping",
-                fr: "PayPhone : comparaison et achat en supermarché"
-              },
+              kind: { es: "Prototipo académico · equipo de 4", en: "Academic prototype · team of 4", fr: "Prototype académique · équipe de 4" },
+              title: { es: "PayPhone: comparación y compra en supermercados", en: "PayPhone: Supermarket Comparison and Shopping", fr: "PayPhone : comparaison et achat en supermarché" },
               dateLabel: { es: "2022-II", en: "2022-II", fr: "2022-II" },
               intro: {
                 es: "Aplicación web full-stack para explorar productos por supermercado, administrar cuentas y ventas y completar un flujo de compra.",
@@ -1254,16 +1877,8 @@ window.SITE = {
               id: "home-health-care-requirements",
               area: "software",
               level: "compact",
-              kind: {
-                es: "Proyecto Scrum en equipo · contribución en requisitos",
-                en: "Team Scrum project · requirements contribution",
-                fr: "Projet Scrum en équipe · contribution aux exigences"
-              },
-              title: {
-                es: "Home Health Care: agenda de atención médica",
-                en: "Home Health Care: Medical Appointment Scheduling",
-                fr: "Home Health Care : gestion des rendez-vous médicaux"
-              },
+              kind: { es: "Proyecto Scrum en equipo · contribución en requisitos", en: "Team Scrum project · requirements contribution", fr: "Projet Scrum en équipe · contribution aux exigences" },
+              title: { es: "Home Health Care: agenda de atención médica", en: "Home Health Care: Medical Appointment Scheduling", fr: "Home Health Care : gestion des rendez-vous médicaux" },
               dateLabel: { es: "2021-II · Feb. 2022", en: "2021-II · Feb 2022", fr: "2021-II · Févr. 2022" },
               intro: {
                 es: "Proyecto de gestión clínica desarrollado por un equipo de cinco personas. Mi aporte verificable se concentró en requisitos y casos de uso del módulo de agendas médicas.",
@@ -1306,7 +1921,7 @@ window.SITE = {
     {
       icon: "server",
       name: { es: "Backend, web y APIs", en: "Backend, Web & APIs", fr: "Backend, web et API" },
-      items: ["Django", "FastAPI", "Node.js", "Express", "Spring Boot", "React", "Tailwind CSS", "REST", "GraphQL", "gRPC", "SOAP", "API Gateway", "OIDC / SSO", "JWT", "LDAP", "HTTP/HTTPS"]
+      items: ["Django", "FastAPI", "Flask", "Node.js", "Express", "Spring Boot", "React", "Tailwind CSS", "REST", "GraphQL", "gRPC", "SOAP", "API Gateway", "OIDC / SSO", "JWT", "LDAP", "HTTP/HTTPS"]
     },
     {
       icon: "layers",
@@ -1316,12 +1931,12 @@ window.SITE = {
     {
       icon: "brain",
       name: { es: "IA y machine learning", en: "AI & Machine Learning", fr: "IA et machine learning" },
-      items: ["RAG", "Azure OpenAI Service", "Azure AI Search", "Ollama", "Qdrant", "PyTorch", "TensorFlow", "Scikit-learn"]
+      items: ["RAG", "Azure OpenAI Service", "Azure AI Search", "Ollama", "ChromaDB", "RAG Evaluation", "Qdrant", "PyTorch", "TensorFlow", "Scikit-learn"]
     },
     {
       icon: "database",
       name: { es: "Bases de datos", en: "Databases", fr: "Bases de données" },
-      items: ["PostgreSQL", "MySQL", "Oracle DB", "MongoDB"]
+      items: ["PostgreSQL", "MySQL", "Oracle DB", "MongoDB", "Azure Cosmos DB"]
     },
     {
       icon: "cloud",
@@ -1341,7 +1956,7 @@ window.SITE = {
     {
       icon: "users",
       name: { es: "Prácticas de ingeniería", en: "Engineering Practices", fr: "Pratiques d'ingénierie" },
-      items: ["Software Architecture", "Design Patterns", "Automated Testing", "Observability", "Scalability", "Technical Documentation", "Scrum", "Jira"]
+      items: ["Software Architecture", "Microservices", "Distributed Systems", "Design Patterns", "Automated Testing", "Observability", "Scalability", "Technical Documentation", "Scrum", "Jira"]
     }
   ],
 
