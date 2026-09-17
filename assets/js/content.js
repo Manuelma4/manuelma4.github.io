@@ -8,7 +8,7 @@ window.SITE = {
   meta: {
     name: "Manuel David Maya Rosero",
     initials: "MM",
-    role: { es: "Ingeniero de Software de Datos e IA", en: "Data & AI Software Engineer", fr: "Ingénieur logiciel Data & IA" },
+    role: { es: "Ingeniero de Software · Datos e IA", en: "Software Engineer · Data & AI", fr: "Ingénieur logiciel · Data & IA" },
     email: "manueldmaya@gmail.com",
     phoneDisplay: "+33 7 67 30 41 69",
     phoneHref: "+33767304169",
@@ -26,32 +26,31 @@ window.SITE = {
 
   ui: {
     es: {
-      nav_home: "Inicio", nav_about: "Perfil", nav_education: "Formación", nav_experience: "Experiencia",
+      nav_home: "Inicio", nav_about: "Perfil", nav_work: "Sistemas", nav_education: "Formación", nav_experience: "Experiencia",
       nav_projects: "Proyectos", nav_skills: "Habilidades", nav_certifications: "Certificaciones", nav_contact: "Contacto",
       language_selector: "Seleccionar idioma",
-      hero_role_line: "Ingeniero de Software de Datos e IA",
-      hero_lede: "Construyo todo el ciclo de los datos: desde la infraestructura y el software que los hacen posibles hasta los productos de IA y las decisiones que ayudan a construir.",
+      hero_role_line: "Ingeniero de software — backend, ingeniería de datos e IA aplicada",
+      hero_lede: "Construyo software de punta a punta: servicios backend y plataformas internas, los pipelines de datos que los alimentan y funciones de IA cuando de verdad aportan.",
+      hero_status: "Disponible para puestos de ingeniería de software",
       cta_cv: "Descargar CV", cta_contact: "Contactarme", cta_projects: "Ver proyectos",
-      hero_card_kicker: "Perfil resumido",
-      label_present: "Actualidad", label_since: "Desde",
       about_eyebrow: "Perfil", about_title: "Sobre mí",
-      about_lede: "Ingeniero colombiano entre el software, los datos, la IA aplicada y la economía digital.",
+      about_lede: "Ingeniero de software colombiano en París: backend, ingeniería de datos e IA aplicada, con una segunda mirada desde la economía digital.",
+      work_eyebrow: "Arquitectura", work_title: "Sistemas que he construido",
+      work_lede: "Cinco sistemas que diseñé y construí, cada uno con su arquitectura.",
+      work_kind_professional: "Profesional", work_kind_personal: "Proyecto personal", work_fig: "Fig.",
       edu_eyebrow: "Formación académica", edu_title: "Formación",
       edu_lede: "Un recorrido entre Bogotá y París: Ingeniería de Sistemas y Computación, un programa de ingeniería en Télécom Paris y el doble diploma M2 IREN.",
       exp_eyebrow: "Trayectoria profesional", exp_title: "Experiencia",
-      exp_lede: "Roles en ingeniería de datos, IA aplicada y desarrollo de software, en Colombia y Francia.",
-      proj_eyebrow: "Trabajo destacado", proj_title: "Proyectos",
-      proj_lede: "Proyectos académicos agrupados por institución y curso, con autoría, alcance y documentos claramente identificados. El trabajo realizado para empresas aparece únicamente en Experiencia.",
-      projects_documents: "Documentos", projects_team_link: "Repositorios del equipo", projects_open_pdf: "Abrir PDF",
-      found_eyebrow: "Impacto social", found_title: "Fundación Kawsay",
-      found_lede: "Cofundé esta fundación colombiana en 2022 y sigo a cargo de su gestión de datos. Es, sin duda, el proyecto del que más orgulloso estoy.",
-      found_pillars_title: "Líneas de trabajo",
-      found_gallery_title: "En el territorio",
+      exp_lede: "Roles en desarrollo de software, ingeniería de datos e IA aplicada, en Colombia y Francia.",
+      proj_eyebrow: "Trabajo académico", proj_title: "Proyectos",
+      proj_lede: "Trabajo académico agrupado por institución y curso. Filtra por área para ir directo al software.",
+      filter_label: "Filtrar proyectos por área", filter_all: "Todo", filter_software: "Software", filter_ml: "ML y datos", filter_econ: "Economía digital",
+      projects_open_pdf: "Abrir PDF",
       skills_eyebrow: "Caja de herramientas", skills_title: "Habilidades técnicas",
-      skills_lede: "Tecnologías usadas en producción, en investigación o en ambas, agrupadas tal como aparecen en mi CV.",
+      skills_lede: "Las herramientas con las que trabajo, agrupadas según para qué las uso.",
       lang_title: "Idiomas",
       certs_eyebrow: "Aprendizaje continuo", certs_title: "Certificaciones",
-      certs_lede: "21 credenciales organizadas por nivel y proveedor: 1 certificación, 6 microcertificaciones y 14 knowledge badges.",
+      certs_lede: "{total} credenciales organizadas por nivel y proveedor: {cert} certificación, {micro} microcertificaciones y {knowledge} knowledge badges.",
       certs_issued: "Emitido", certs_expires: "Expira", certs_credential: "ID de credencial", certs_number: "Número de certificación", certs_verify: "Verificar credencial", certs_more_skills: "más",
       certs_view_all: "Ver todas en LinkedIn",
       certs_stat_total: "Credenciales", certs_stat_certification: "Certificaciones", certs_stat_micro: "Microcertificaciones", certs_stat_knowledge: "Knowledge badges",
@@ -66,42 +65,45 @@ window.SITE = {
       contact_eyebrow: "Contacto", contact_title: "Hablemos",
       contact_lede: "¿Hablamos de software, datos o IA? Escríbeme o descarga mi CV completo.",
       contact_cta_email: "Escribir un correo", contact_cta_cv: "Descargar CV completo",
+      contact_copy: "Copiar correo", contact_copied: "Copiado",
       footer_rights: "Todos los derechos reservados.",
-      footer_source: "Código fuente",
+      footer_source: "Código fuente", footer_note: "HTML, CSS y JavaScript, sin frameworks ni rastreadores.",
       scroll_top: "Volver arriba",
-      view_project: "Ver detalle",
-      current_role: "Rol actual",
-      stat_roles: "Roles profesionales", stat_langs: "Idiomas hablados", stat_countries: "Países: Colombia · Francia", stat_found: "Cofundador de Fundación Kawsay",
-      theme_toggle: "Cambiar tema claro/oscuro", lang_toggle: "Cambiar idioma", menu_toggle: "Abrir menú",
-      skip_link: "Ir al contenido"
+      theme_toggle: "Cambiar entre tema claro y oscuro", menu_toggle: "Abrir menú",
+      skip_link: "Ir al contenido",
+      palette_open: "Abrir la paleta de comandos", palette_hint: "Comandos",
+      palette_placeholder: "Escribe un comando o una sección…", palette_empty: "Sin resultados",
+      palette_group_go: "Ir a", palette_group_actions: "Acciones", palette_group_lang: "Idioma",
+      palette_theme: "Cambiar tema claro / oscuro", palette_copy_email: "Copiar correo electrónico",
+      palette_open_github: "Abrir GitHub", palette_open_linkedin: "Abrir LinkedIn", palette_download_cv: "Descargar CV",
+      palette_nav_hint: "navegar", palette_enter_hint: "abrir", palette_esc_hint: "cerrar"
     },
     en: {
-      nav_home: "Home", nav_about: "Profile", nav_education: "Education", nav_experience: "Experience",
+      nav_home: "Home", nav_about: "Profile", nav_work: "Systems", nav_education: "Education", nav_experience: "Experience",
       nav_projects: "Projects", nav_skills: "Skills", nav_certifications: "Certifications", nav_contact: "Contact",
       language_selector: "Select language",
-      hero_role_line: "Data & AI Software Engineer",
-      hero_lede: "I build the full data lifecycle: from the infrastructure and software that make data possible to the AI products and decisions it helps shape.",
+      hero_role_line: "Software engineer — backend, data engineering & applied AI",
+      hero_lede: "I build software end to end: backend services and internal platforms, the data pipelines that feed them, and AI features where they genuinely help.",
+      hero_status: "Open to software engineering roles",
       cta_cv: "Download CV", cta_contact: "Get in touch", cta_projects: "View projects",
-      hero_card_kicker: "Quick profile",
-      label_present: "Present", label_since: "Since",
       about_eyebrow: "Profile", about_title: "About me",
-      about_lede: "A Colombian engineer working across software, data, applied AI, and the digital economy.",
+      about_lede: "A Colombian software engineer in Paris: backend, data engineering and applied AI, with a second lens from digital economics.",
+      work_eyebrow: "Architecture", work_title: "Systems I've built",
+      work_lede: "Five systems I designed and built, each with its architecture.",
+      work_kind_professional: "Professional", work_kind_personal: "Personal project", work_fig: "Fig.",
       edu_eyebrow: "Academic background", edu_title: "Education",
       edu_lede: "A journey between Bogotá and Paris: Systems and Computer Engineering, Télécom Paris's engineering programme, and the M2 IREN double degree.",
       exp_eyebrow: "Career path", exp_title: "Experience",
-      exp_lede: "Roles in data engineering, applied AI and software development, across Colombia and France.",
-      proj_eyebrow: "Featured work", proj_title: "Projects",
-      proj_lede: "Academic work grouped by institution and course, with authorship, scope, and supporting documents clearly identified. Work completed for employers appears only under Experience.",
-      projects_documents: "Documents", projects_team_link: "Team repositories", projects_open_pdf: "Open PDF",
-      found_eyebrow: "Social impact", found_title: "Fundación Kawsay",
-      found_lede: "I co-founded this Colombian foundation in 2022 and still lead its data management. It's, without a doubt, the project I'm proudest of.",
-      found_pillars_title: "Programme areas",
-      found_gallery_title: "On the ground",
+      exp_lede: "Roles in software development, data engineering and applied AI, across Colombia and France.",
+      proj_eyebrow: "Academic work", proj_title: "Projects",
+      proj_lede: "Academic work grouped by institution and course. Filter by area to go straight to the software.",
+      filter_label: "Filter projects by area", filter_all: "All", filter_software: "Software", filter_ml: "ML & data", filter_econ: "Digital economics",
+      projects_open_pdf: "Open PDF",
       skills_eyebrow: "Toolbox", skills_title: "Technical skills",
-      skills_lede: "Technologies used in production, in research, or both — grouped just as they appear on my CV.",
+      skills_lede: "The tools I work with, grouped by what I use them for.",
       lang_title: "Languages",
       certs_eyebrow: "Continuous learning", certs_title: "Certifications",
-      certs_lede: "21 credentials organized by level and provider: 1 certification, 6 microcredentials, and 14 knowledge badges.",
+      certs_lede: "{total} credentials organized by level and provider: {cert} certification, {micro} microcredentials, and {knowledge} knowledge badges.",
       certs_issued: "Issued", certs_expires: "Expires", certs_credential: "Credential ID", certs_number: "Certification number", certs_verify: "Verify credential", certs_more_skills: "more",
       certs_view_all: "View all on LinkedIn",
       certs_stat_total: "Credentials", certs_stat_certification: "Certifications", certs_stat_micro: "Microcredentials", certs_stat_knowledge: "Knowledge badges",
@@ -116,42 +118,45 @@ window.SITE = {
       contact_eyebrow: "Contact", contact_title: "Let's talk",
       contact_lede: "Let's talk software, data, or AI. Reach out, or download my full CV.",
       contact_cta_email: "Send an email", contact_cta_cv: "Download full CV",
+      contact_copy: "Copy email", contact_copied: "Copied",
       footer_rights: "All rights reserved.",
-      footer_source: "Source code",
+      footer_source: "Source code", footer_note: "HTML, CSS and JavaScript. No frameworks, no trackers.",
       scroll_top: "Back to top",
-      view_project: "View details",
-      current_role: "Current role",
-      stat_roles: "Professional roles", stat_langs: "Languages spoken", stat_countries: "Countries: Colombia · France", stat_found: "Co-founded Fundación Kawsay",
-      theme_toggle: "Toggle light/dark theme", lang_toggle: "Change language", menu_toggle: "Open menu",
-      skip_link: "Skip to content"
+      theme_toggle: "Switch between light and dark theme", menu_toggle: "Open menu",
+      skip_link: "Skip to content",
+      palette_open: "Open the command palette", palette_hint: "Commands",
+      palette_placeholder: "Type a command or a section…", palette_empty: "No results",
+      palette_group_go: "Go to", palette_group_actions: "Actions", palette_group_lang: "Language",
+      palette_theme: "Toggle light / dark theme", palette_copy_email: "Copy email address",
+      palette_open_github: "Open GitHub", palette_open_linkedin: "Open LinkedIn", palette_download_cv: "Download CV",
+      palette_nav_hint: "navigate", palette_enter_hint: "open", palette_esc_hint: "close"
     },
     fr: {
-      nav_home: "Accueil", nav_about: "Profil", nav_education: "Formation", nav_experience: "Expérience",
+      nav_home: "Accueil", nav_about: "Profil", nav_work: "Systèmes", nav_education: "Formation", nav_experience: "Expérience",
       nav_projects: "Projets", nav_skills: "Compétences", nav_certifications: "Certifications", nav_contact: "Contact",
       language_selector: "Choisir la langue",
-      hero_role_line: "Ingénieur logiciel Data & IA",
-      hero_lede: "Je construis tout le cycle de vie des données: De l'infrastructure et du logiciel qui les rendent possibles jusqu'aux produits d'IA et aux décisions qu'elles contribuent à éclairer.",
+      hero_role_line: "Ingénieur logiciel — backend, data engineering et IA appliquée",
+      hero_lede: "Je construis du logiciel de bout en bout : services backend et plateformes internes, pipelines de données qui les alimentent, et fonctionnalités d'IA là où elles sont vraiment utiles.",
+      hero_status: "Ouvert aux postes d'ingénieur logiciel",
       cta_cv: "Télécharger le CV", cta_contact: "Me contacter", cta_projects: "Voir les projets",
-      hero_card_kicker: "Profil rapide",
-      label_present: "Aujourd'hui", label_since: "Depuis",
       about_eyebrow: "Profil", about_title: "À propos",
-      about_lede: "Un ingénieur colombien à la croisée du logiciel, de la data, de l'IA appliquée et de l'économie numérique.",
+      about_lede: "Ingénieur logiciel colombien à Paris : backend, data engineering et IA appliquée, avec un second regard venu de l'économie numérique.",
+      work_eyebrow: "Architecture", work_title: "Systèmes que j'ai construits",
+      work_lede: "Cinq systèmes que j'ai conçus et construits, chacun avec son architecture.",
+      work_kind_professional: "Professionnel", work_kind_personal: "Projet personnel", work_fig: "Fig.",
       edu_eyebrow: "Parcours académique", edu_title: "Formation",
       edu_lede: "Un parcours entre Bogotá et Paris : génie informatique, diplôme d'ingénieur, puis double diplôme en économie numérique.",
       exp_eyebrow: "Parcours professionnel", exp_title: "Expérience",
-      exp_lede: "Des missions en ingénierie des données, IA appliquée et développement logiciel, entre la Colombie et la France.",
-      proj_eyebrow: "Travaux marquants", proj_title: "Projets",
-      proj_lede: "Travaux académiques regroupés par établissement et par cours, avec une attribution, une portée et des documents clairement identifiés. Les travaux réalisés en entreprise figurent uniquement dans Expérience.",
-      projects_documents: "Documents", projects_team_link: "Dépôts de l'équipe", projects_open_pdf: "Ouvrir le PDF",
-      found_eyebrow: "Impact social", found_title: "Fundación Kawsay",
-      found_lede: "J'ai cofondé cette fondation colombienne en 2022 et j'assure toujours la gestion de ses données. C'est, sans conteste, le projet dont je suis le plus fier.",
-      found_pillars_title: "Domaines d'action",
-      found_gallery_title: "Sur le terrain",
+      exp_lede: "Des missions en développement logiciel, ingénierie des données et IA appliquée, entre la Colombie et la France.",
+      proj_eyebrow: "Travaux académiques", proj_title: "Projets",
+      proj_lede: "Travaux académiques regroupés par établissement et par cours. Filtrez par domaine pour aller droit au logiciel.",
+      filter_label: "Filtrer les projets par domaine", filter_all: "Tout", filter_software: "Logiciel", filter_ml: "ML et données", filter_econ: "Économie numérique",
+      projects_open_pdf: "Ouvrir le PDF",
       skills_eyebrow: "Boîte à outils", skills_title: "Compétences techniques",
-      skills_lede: "Technologies utilisées en production, en recherche, ou les deux — regroupées comme sur mon CV.",
+      skills_lede: "Les outils avec lesquels je travaille, regroupés par usage.",
       lang_title: "Langues",
       certs_eyebrow: "Formation continue", certs_title: "Certifications",
-      certs_lede: "21 certifications organisées par niveau et fournisseur : 1 certification, 6 microcertifications et 14 knowledge badges.",
+      certs_lede: "{total} certifications organisées par niveau et fournisseur : {cert} certification, {micro} microcertifications et {knowledge} knowledge badges.",
       certs_issued: "Délivré", certs_expires: "Expire", certs_credential: "ID de certification", certs_number: "Numéro de certification", certs_verify: "Vérifier la certification", certs_more_skills: "de plus",
       certs_view_all: "Voir tout sur LinkedIn",
       certs_stat_total: "Certifications", certs_stat_certification: "Certifications professionnelles", certs_stat_micro: "Microcertifications", certs_stat_knowledge: "Knowledge badges",
@@ -166,60 +171,318 @@ window.SITE = {
       contact_eyebrow: "Contact", contact_title: "Discutons",
       contact_lede: "Parlons logiciel, data ou IA. Écrivez-moi ou téléchargez mon CV complet.",
       contact_cta_email: "Envoyer un e-mail", contact_cta_cv: "Télécharger le CV complet",
+      contact_copy: "Copier l'e-mail", contact_copied: "Copié",
       footer_rights: "Tous droits réservés.",
-      footer_source: "Code source",
+      footer_source: "Code source", footer_note: "HTML, CSS et JavaScript. Sans framework ni traceur.",
       scroll_top: "Retour en haut",
-      view_project: "Voir le détail",
-      current_role: "Poste actuel",
-      stat_roles: "Expériences professionnelles", stat_langs: "Langues parlées", stat_countries: "Pays : Colombie · France", stat_found: "Cofondateur de la Fundación Kawsay",
-      theme_toggle: "Changer de thème clair/sombre", lang_toggle: "Changer de langue", menu_toggle: "Ouvrir le menu",
-      skip_link: "Aller au contenu"
+      theme_toggle: "Basculer entre thème clair et sombre", menu_toggle: "Ouvrir le menu",
+      skip_link: "Aller au contenu",
+      palette_open: "Ouvrir la palette de commandes", palette_hint: "Commandes",
+      palette_placeholder: "Tapez une commande ou une section…", palette_empty: "Aucun résultat",
+      palette_group_go: "Aller à", palette_group_actions: "Actions", palette_group_lang: "Langue",
+      palette_theme: "Basculer thème clair / sombre", palette_copy_email: "Copier l'adresse e-mail",
+      palette_open_github: "Ouvrir GitHub", palette_open_linkedin: "Ouvrir LinkedIn", palette_download_cv: "Télécharger le CV",
+      palette_nav_hint: "naviguer", palette_enter_hint: "ouvrir", palette_esc_hint: "fermer"
     }
   },
 
-  heroStats: [
-    { num: "5", label: { es: "Roles profesionales", en: "Professional roles", fr: "Expériences professionnelles" } },
-    { num: "21", label: { es: "Credenciales activas", en: "Active credentials", fr: "Certifications actives" } },
-    { num: "3", label: { es: "Universidad Nacional · Télécom Paris · Paris-Dauphine", en: "Universidad Nacional · Télécom Paris · Paris-Dauphine", fr: "Universidad Nacional · Télécom Paris · Paris-Dauphine" } },
-    { num: "3", label: { es: "Idiomas: ES · EN · FR", en: "Languages: ES · EN · FR", fr: "Langues : ES · EN · FR" } }
+  /* Short facts shown in the hero instead of vanity counters. */
+  heroFacts: [
+    {
+      label: { es: "Ahora", en: "Now", fr: "Actuellement" },
+      value: { es: "AI Data Engineer Intern · MODUO Ingénierie", en: "AI Data Engineer Intern · MODUO Ingénierie", fr: "Stagiaire ingénieur Data & IA · MODUO Ingénierie" }
+    },
+    {
+      label: { es: "Formación", en: "Studies", fr: "Formation" },
+      value: { es: "Télécom Paris + M2 IREN Dauphine–PSL · 2026", en: "Télécom Paris + M2 IREN Dauphine–PSL · 2026", fr: "Télécom Paris + M2 IREN Dauphine–PSL · 2026" }
+    },
+    {
+      label: { es: "Idiomas", en: "Languages", fr: "Langues" },
+      value: { es: "Español · Inglés C1 · Francés C1", en: "Spanish · English C1 · French C1", fr: "Espagnol · Anglais C1 · Français C1" }
+    },
+    {
+      label: { es: "Busco", en: "Open to", fr: "Recherche" },
+      value: { es: "Ingeniería de software: backend, datos, IA", en: "Software engineering: backend, data, AI", fr: "Ingénierie logicielle : backend, data, IA" }
+    }
   ],
 
   about: {
     paragraphs: {
       es: [
-        "Construyo todo el ciclo de los datos: cómo se capturan, organizan, transforman y convierten en productos y decisiones útiles. Estudié Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia para construir una base sólida en infraestructura, desarrollo web, bases de datos y trabajo en equipos ágiles; allí también tuve mis primeros acercamientos a la ciencia de datos y al procesamiento del lenguaje natural.",
-        "En Télécom Paris profundicé en Data Science y MODS. Después elegí el doble diploma M2 IREN con Université Paris Dauphine–PSL para complementar la ingeniería con economía digital, industrias de red, competencia y regulación. Actualmente trabajo como AI Data Engineer Intern, conectando software, datos e IA en soluciones aplicadas.",
-        "Mi objetivo a largo plazo es evolucionar hacia el liderazgo de datos y, con el tiempo, asumir un rol de Head of Data que combine arquitectura, producto, gobernanza y estrategia."
+        "Me gusta hacerme cargo de un sistema de punta a punta: la API, la base de datos que hay detrás, el pipeline que la alimenta y el despliegue que la mantiene en marcha. Estudié Ingeniería de Sistemas y Computación en la Universidad Nacional de Colombia para construir una base sólida en infraestructura, desarrollo web, bases de datos y trabajo en equipos ágiles; allí también tuve mis primeros acercamientos a la ciencia de datos y al procesamiento del lenguaje natural.",
+        "En Télécom Paris profundicé en Data Science y MODS. Después elegí el doble diploma M2 IREN con Dauphine–PSL para complementar la ingeniería con economía digital, industrias de red, competencia y regulación. En MODUO Ingénierie desarrollo y mantengo el portal interno de gestión de proyectos (Django, PostgreSQL), diseñé y desplegué un servicio central de identidad OIDC para seis aplicaciones internas, y construí pipelines de datos BIM y asistentes RAG.",
+        "Termino mis estudios en septiembre de 2026 y busco un puesto de ingeniería de software —backend, plataforma o datos— en un equipo donde pueda seguir construyendo y operando sistemas reales. A largo plazo quiero crecer hacia el liderazgo técnico, combinando arquitectura, producto y estrategia de datos."
       ],
       en: [
-        "I build the full data lifecycle: how data is captured, organized, transformed, and turned into useful products and decisions. I studied Systems and Computer Engineering at Universidad Nacional de Colombia to build solid foundations in infrastructure, web development, databases, and agile teamwork; it was also where I first explored data science and natural language processing.",
-        "At Télécom Paris, I deepened my training in Data Science and MODS. I then chose the M2 IREN double-degree track with Université Paris Dauphine–PSL to complement engineering with digital economics, network industries, competition, and regulation. I currently work as an AI Data Engineer Intern, connecting software, data, and AI in applied solutions.",
-        "My long-term goal is to grow into data leadership and, over time, take on a Head of Data role that brings together architecture, product, governance, and strategy."
+        "I like owning a system end to end: the API, the database behind it, the pipeline that feeds it and the deployment that keeps it running. I studied Systems and Computer Engineering at Universidad Nacional de Colombia to build solid foundations in infrastructure, web development, databases, and agile teamwork; it was also where I first explored data science and natural language processing.",
+        "At Télécom Paris, I deepened my training in Data Science and MODS. I then chose the M2 IREN double-degree track with Dauphine–PSL to complement engineering with digital economics, network industries, competition, and regulation. At MODUO Ingénierie I build and maintain the internal project-management portal (Django, PostgreSQL), designed and deployed a central OIDC identity service for six internal applications, and built BIM data pipelines and RAG assistants.",
+        "I finish my studies in September 2026 and I'm looking for a software engineering role — backend, platform or data — in a team where I can keep building and running real systems. Longer term, I want to grow into technical leadership, bringing together architecture, product, and data strategy."
       ],
       fr: [
-        "Je construis tout le cycle de vie des données : leur collecte, leur organisation, leur transformation et leur conversion en produits et décisions utiles. J'ai étudié l'ingénierie des systèmes et de l'informatique à l'Universidad Nacional de Colombia afin d'acquérir des bases solides en infrastructure, développement web, bases de données et travail agile ; j'y ai également découvert la data science et le traitement automatique du langage.",
-        "À Télécom Paris, j'ai approfondi la Data Science et le parcours MODS. J'ai ensuite choisi le double diplôme M2 IREN avec l'Université Paris Dauphine–PSL afin de compléter l'ingénierie par l'économie numérique, les industries de réseau, la concurrence et la régulation. Je travaille aujourd'hui comme stagiaire ingénieur Data & IA, au croisement du logiciel, de la data et de l'IA.",
-        "À long terme, je souhaite évoluer vers le leadership data puis assumer un rôle de Head of Data réunissant architecture, produit, gouvernance et stratégie."
+        "J'aime prendre en charge un système de bout en bout : l'API, la base de données derrière, le pipeline qui l'alimente et le déploiement qui le fait tourner. J'ai étudié l'ingénierie des systèmes et de l'informatique à l'Universidad Nacional de Colombia afin d'acquérir des bases solides en infrastructure, développement web, bases de données et travail agile ; j'y ai également découvert la data science et le traitement automatique du langage.",
+        "À Télécom Paris, j'ai approfondi la Data Science et le parcours MODS. J'ai ensuite choisi le double diplôme M2 IREN avec Dauphine–PSL afin de compléter l'ingénierie par l'économie numérique, les industries de réseau, la concurrence et la régulation. Chez MODUO Ingénierie, je développe et maintiens le portail interne de gestion de projets (Django, PostgreSQL), j'ai conçu et déployé un service d'identité OIDC central pour six applications internes, et construit des pipelines de données BIM et des assistants RAG.",
+        "Je termine mes études en septembre 2026 et je recherche un poste d'ingénieur logiciel — backend, plateforme ou data — dans une équipe où continuer à construire et exploiter des systèmes réels. À long terme, je souhaite évoluer vers le leadership technique, en réunissant architecture, produit et stratégie data."
       ]
     },
     highlights: [
       {
+        icon: "code",
+        title: { es: "Backend y plataformas", en: "Backend & platforms", fr: "Backend et plateformes" },
+        text: { es: "Servicios en Django, FastAPI y Node.js/TypeScript sobre PostgreSQL y MongoDB; SSO con OIDC para seis aplicaciones internas.", en: "Django, FastAPI and Node.js/TypeScript services on PostgreSQL and MongoDB; OIDC single sign-on for six internal apps.", fr: "Services Django, FastAPI et Node.js/TypeScript sur PostgreSQL et MongoDB ; SSO OIDC pour six applications internes." }
+      },
+      {
+        icon: "database",
+        title: { es: "Ingeniería de datos e IA", en: "Data engineering & AI", fr: "Data engineering et IA" },
+        text: { es: "Pipelines de datos, capas bronze/silver/gold, Databricks y asistentes RAG con evaluación por lotes.", en: "Data pipelines, bronze/silver/gold layers, Databricks, and RAG assistants with batch evaluation.", fr: "Pipelines de données, couches bronze/silver/gold, Databricks et assistants RAG avec évaluation par lots." }
+      },
+      {
         icon: "layers",
         title: { es: "Ingeniería + economía digital", en: "Engineering + digital economy", fr: "Ingénierie + économie numérique" },
         text: { es: "Formación técnica combinada con la especialización IREN en industrias de red y regulación digital.", en: "Technical training combined with the IREN specialization in network industries and digital regulation.", fr: "Formation technique combinée à la spécialisation IREN en industries de réseau et régulation numérique." }
-      },
-      {
-        icon: "rocket",
-        title: { es: "Ciclo completo de datos", en: "Full data lifecycle", fr: "Cycle de vie complet des données" },
-        text: { es: "Infraestructura, backends, pipelines, analítica e IA entendidos como partes de un mismo producto.", en: "Infrastructure, backends, pipelines, analytics, and AI understood as parts of one product.", fr: "Infrastructure, backends, pipelines, analytique et IA pensés comme les composantes d'un même produit." }
-      },
-      {
-        icon: "award",
-        title: { es: "Credenciales multi-nube", en: "Multi-cloud credentials", fr: "Certifications multi-cloud" },
-        text: { es: "21 credenciales activas en Databricks, AWS, Google Cloud y Microsoft.", en: "21 active credentials across Databricks, AWS, Google Cloud and Microsoft.", fr: "21 certifications actives chez Databricks, AWS, Google Cloud et Microsoft." }
       }
     ]
   },
+
+  /* ------------------------------------------------------------------------
+     Systems — case studies with an architecture diagram each.
+     Diagram: nodes sit on a (col,row) grid; edges connect node ids.
+     edge.sides = "<from side><to side>" using l/r/t/b (default "rl");
+     fromPos/toPos (0..1) slide the port along that side.
+     ------------------------------------------------------------------------ */
+  work: [
+    {
+      id: "moduo-connect",
+      title: "Moduo Connect",
+      tagline: { es: "Un solo inicio de sesión para seis aplicaciones internas", en: "One login for six internal apps", fr: "Une seule connexion pour six applications internes" },
+      org: "MODUO Ingénierie", year: "2026", kind: "professional",
+      summary: {
+        es: "Diseñé y desplegué un servicio central de identidad sobre Authentik para que seis aplicaciones internas compartan el mismo inicio de sesión mediante OIDC.",
+        en: "I designed and deployed a central identity service on Authentik so that six internal applications share one sign-in over OIDC.",
+        fr: "J'ai conçu et déployé un service d'identité central sur Authentik afin que six applications internes partagent la même connexion via OIDC."
+      },
+      points: {
+        es: [
+          "Inicio de sesión único (SSO) con OIDC para seis aplicaciones internas.",
+          "Migración de los usuarios existentes conservando sus hashes de contraseña: nadie tuvo que restablecer la suya.",
+          "Aislamiento estricto de sesión: cada aplicación mantiene la suya."
+        ],
+        en: [
+          "OIDC single sign-on across six internal applications.",
+          "Existing users migrated with their original password hashes, so nobody had to reset a password.",
+          "Strict session isolation: each application keeps its own session."
+        ],
+        fr: [
+          "Authentification unique (SSO) OIDC pour six applications internes.",
+          "Migration des utilisateurs existants en conservant leurs hachages de mot de passe : personne n'a eu à réinitialiser le sien.",
+          "Isolement strict des sessions : chaque application conserve la sienne."
+        ]
+      },
+      stack: ["OIDC", "Authentik", "SSO", "Python", "PostgreSQL"],
+      diagram: {
+        cols: 3, rows: 2,
+        caption: { es: "Seis aplicaciones delegan la autenticación en un único proveedor de identidad.", en: "Six applications delegate authentication to a single identity provider.", fr: "Six applications délèguent l'authentification à un fournisseur d'identité unique." },
+        nodes: [
+          { id: "apps", col: 0, row: 0, kind: "client", stack: 6, label: { es: "6 aplicaciones internas", en: "6 internal apps", fr: "6 applications internes" }, sub: { es: "una sesión por aplicación", en: "one session per app", fr: "une session par application" } },
+          { id: "idp", col: 1, row: 0, kind: "service", primary: true, label: "Moduo Connect", sub: { es: "Authentik · proveedor OIDC", en: "Authentik · OIDC provider", fr: "Authentik · fournisseur OIDC" } },
+          { id: "dir", col: 2, row: 0, kind: "store", label: { es: "Directorio de usuarios", en: "User directory", fr: "Annuaire des utilisateurs" }, sub: "PostgreSQL" },
+          { id: "legacy", col: 2, row: 1, kind: "source", label: { es: "Cuentas existentes", en: "Existing accounts", fr: "Comptes existants" }, sub: { es: "hashes conservados", en: "hashes preserved", fr: "hachages conservés" } }
+        ],
+        edges: [
+          { from: "apps", to: "idp", label: "OIDC" },
+          { from: "idp", to: "dir" },
+          { from: "legacy", to: "dir", sides: "tb", dashed: true, label: { es: "migración", en: "migration", fr: "migration" } }
+        ]
+      }
+    },
+    {
+      id: "moduocopil",
+      title: "ModuoCopil",
+      tagline: { es: "El portal interno de gestión de proyectos", en: "The internal project-management portal", fr: "Le portail interne de gestion de projets" },
+      org: "MODUO Ingénierie", year: "2026", kind: "professional",
+      summary: {
+        es: "Desarrollo y mantengo ModuoCopil, el portal web con el que la empresa gestiona sus proyectos.",
+        en: "I build and maintain ModuoCopil, the web portal the company uses to manage its projects.",
+        fr: "Je développe et maintiens ModuoCopil, le portail web avec lequel l'entreprise gère ses projets."
+      },
+      points: {
+        es: [
+          "Módulos de tableros, administración y registro de horas.",
+          "Backend en Django sobre PostgreSQL; interfaz con Tailwind CSS."
+        ],
+        en: [
+          "Dashboard, administration and time-tracking modules.",
+          "Django back end on PostgreSQL; Tailwind CSS on the front."
+        ],
+        fr: [
+          "Modules de tableaux de bord, d'administration et de suivi du temps.",
+          "Backend Django sur PostgreSQL ; interface en Tailwind CSS."
+        ]
+      },
+      stack: ["Django", "Python", "PostgreSQL", "Tailwind CSS"],
+      diagram: {
+        cols: 3, rows: 1,
+        caption: { es: "Una aplicación Django clásica: módulos sobre una sola base de datos.", en: "A classic Django application: modules on top of one database.", fr: "Une application Django classique : des modules au-dessus d'une seule base de données." },
+        nodes: [
+          { id: "ui", col: 0, row: 0, kind: "client", label: { es: "Navegador", en: "Browser", fr: "Navigateur" }, sub: "Tailwind CSS" },
+          { id: "app", col: 1, row: 0, kind: "service", primary: true, label: "Django", sub: { es: "tableros · admin · horas", en: "dashboards · admin · timelog", fr: "tableaux de bord · admin · temps" } },
+          { id: "db", col: 2, row: 0, kind: "store", label: "PostgreSQL" }
+        ],
+        edges: [ { from: "ui", to: "app", label: "HTTPS" }, { from: "app", to: "db" } ]
+      }
+    },
+    {
+      id: "datasmart-rag",
+      title: { es: "Asistente DataSmart", en: "DataSmart assistant", fr: "Assistant DataSmart" },
+      tagline: { es: "Un chatbot RAG que se puede medir", en: "A RAG chatbot you can measure", fr: "Un chatbot RAG que l'on peut mesurer" },
+      org: "Siigo", year: "2024", kind: "professional",
+      summary: {
+        es: "Un chatbot interno para la plataforma DataSmart: backend en FastAPI, interfaz en React, Azure OpenAI y Azure AI Search, con un evaluador por lotes para saber si las respuestas mejoran.",
+        en: "An internal chatbot for the DataSmart platform: FastAPI back end, React UI, Azure OpenAI and Azure AI Search, plus a batch evaluator to know whether answers are getting better.",
+        fr: "Un chatbot interne pour la plateforme DataSmart : backend FastAPI, interface React, Azure OpenAI et Azure AI Search, avec un évaluateur par lots pour savoir si les réponses s'améliorent."
+      },
+      points: {
+        es: [
+          "Pipeline en Databricks que convierte XML y PDF en JSON, enriquece metadatos, trocea con solapamiento, indexa y carga en Blob Storage.",
+          "Evaluador por lotes que puntúa F1, groundedness, relevancia, calidad de las citas y coherencia.",
+          "Persistencia y trazabilidad de las interacciones en MongoDB.",
+          "Integrado en el entorno de QA de DataSmart."
+        ],
+        en: [
+          "Databricks pipeline that turns XML and PDF sources into JSON, enriches metadata, chunks with overlap, indexes, and loads to Blob Storage.",
+          "Batch evaluator scoring F1, groundedness, relevance, citation quality and coherence.",
+          "Interaction persistence and traceability in MongoDB.",
+          "Integrated into DataSmart's QA environment."
+        ],
+        fr: [
+          "Pipeline Databricks qui transforme des sources XML et PDF en JSON, enrichit les métadonnées, découpe avec chevauchement, indexe et charge dans Blob Storage.",
+          "Évaluateur par lots notant le F1, la groundedness, la pertinence, la qualité des citations et la cohérence.",
+          "Persistance et traçabilité des interactions dans MongoDB.",
+          "Intégré à l'environnement de QA de DataSmart."
+        ]
+      },
+      stack: ["FastAPI", "React", "Azure OpenAI", "Azure AI Search", "Databricks", "MongoDB", "Blob Storage"],
+      diagram: {
+        cols: 4, rows: 3,
+        caption: { es: "Arriba, la ingesta; en medio, la ruta de una pregunta; abajo, la evaluación.", en: "Top: ingestion. Middle: the path of a question. Bottom: evaluation.", fr: "En haut, l'ingestion ; au milieu, le trajet d'une question ; en bas, l'évaluation." },
+        nodes: [
+          { id: "src", col: 0, row: 0, kind: "source", label: "XML · PDF", sub: { es: "fuentes", en: "sources", fr: "sources" } },
+          { id: "dbx", col: 1, row: 0, kind: "service", label: "Databricks", sub: { es: "JSON · metadatos · chunks", en: "JSON · metadata · chunks", fr: "JSON · métadonnées · chunks" } },
+          { id: "search", col: 2, row: 0, kind: "store", label: "Azure AI Search", sub: { es: "índice · Blob Storage", en: "index · Blob Storage", fr: "index · Blob Storage" } },
+          { id: "ui", col: 0, row: 1, kind: "client", label: "React", sub: { es: "chat", en: "chat UI", fr: "chat" } },
+          { id: "api", col: 1, row: 1, kind: "service", primary: true, label: "FastAPI", sub: { es: "orquestación RAG", en: "RAG orchestration", fr: "orchestration RAG" } },
+          { id: "llm", col: 3, row: 1, kind: "external", label: "Azure OpenAI" },
+          { id: "eval", col: 0, row: 2, kind: "service", label: { es: "Evaluador por lotes", en: "Batch evaluator", fr: "Évaluateur par lots" }, sub: { es: "F1 · groundedness · citas", en: "F1 · groundedness · citations", fr: "F1 · groundedness · citations" } },
+          { id: "mongo", col: 2, row: 2, kind: "store", label: "MongoDB", sub: { es: "registro de interacciones", en: "interaction log", fr: "journal des interactions" } }
+        ],
+        edges: [
+          { from: "src", to: "dbx" },
+          { from: "dbx", to: "search" },
+          { from: "ui", to: "api" },
+          { from: "api", to: "search", sides: "rb", fromPos: 0.3, label: { es: "recupera", en: "retrieve", fr: "recherche" } },
+          { from: "api", to: "llm", fromPos: 0.7, toPos: 0.7, label: { es: "genera", en: "generate", fr: "génère" } },
+          { from: "eval", to: "api", sides: "rb", toPos: 0.3, dashed: true },
+          { from: "api", to: "mongo", sides: "bl", fromPos: 0.7 }
+        ]
+      }
+    },
+    {
+      id: "bim-pipeline",
+      title: { es: "De la maqueta BIM al coste y al carbono", en: "BIM to cost & carbon", fr: "De la maquette BIM au coût et au carbone" },
+      tagline: { es: "Un pipeline de datos para análisis de costes e impacto ambiental", en: "A data pipeline for cost and environmental-impact analysis", fr: "Un pipeline de données pour l'analyse des coûts et de l'impact environnemental" },
+      org: "MODUO Ingénierie", year: "2026", kind: "professional",
+      summary: {
+        es: "Un pipeline que extrae datos de maquetas Revit/IFC, los cruza con precios de proveedores y análisis de ciclo de vida, y automatiza el análisis de costes e impacto ambiental.",
+        en: "A pipeline that extracts data from Revit/IFC models, joins it with supplier pricing and life-cycle assessment, and automates cost and environmental-impact analysis.",
+        fr: "Un pipeline qui extrait les données des maquettes Revit/IFC, les croise avec les prix fournisseurs et l'analyse de cycle de vie, et automatise l'analyse des coûts et de l'impact environnemental."
+      },
+      points: {
+        es: [
+          "Extracción de Revit/IFC con IfcOpenShell; análisis de ciclo de vida con la API de Vizcab.",
+          "Bases de datos internas organizadas en capas bronze, silver y gold: dato crudo, dato limpio y modelado, dato listo para reporting.",
+          "Asistentes RAG sobre documentación BIM: Apache Tika, Qdrant y modelos servidos con Ollama.",
+          "Herramientas de automatización en Python y VBA para los equipos de ingeniería."
+        ],
+        en: [
+          "Revit/IFC extraction with IfcOpenShell; life-cycle assessment through the Vizcab API.",
+          "Internal databases organised in bronze, silver and gold layers: raw data, cleaned and modelled data, reporting-ready data.",
+          "RAG assistants over BIM documentation: Apache Tika, Qdrant, and models served with Ollama.",
+          "Python and VBA automation tools for the engineering teams."
+        ],
+        fr: [
+          "Extraction Revit/IFC avec IfcOpenShell ; analyse de cycle de vie via l'API Vizcab.",
+          "Bases de données internes organisées en couches bronze, silver et gold : donnée brute, donnée nettoyée et modélisée, donnée prête pour le reporting.",
+          "Assistants RAG sur la documentation BIM : Apache Tika, Qdrant et modèles servis avec Ollama.",
+          "Outils d'automatisation en Python et VBA pour les équipes d'ingénierie."
+        ]
+      },
+      stack: ["Python", "IfcOpenShell", "Vizcab API", "PostgreSQL", "Apache Tika", "Qdrant", "Ollama", "VBA"],
+      diagram: {
+        cols: 4, rows: 2,
+        caption: { es: "De las fuentes al reporting, pasando por tres capas de datos.", en: "From sources to reporting through three data layers.", fr: "Des sources au reporting, en passant par trois couches de données." },
+        nodes: [
+          { id: "ifc", col: 0, row: 0, kind: "source", label: "Revit · IFC", sub: "IfcOpenShell" },
+          { id: "ext", col: 0, row: 1, kind: "external", label: { es: "Precios · Vizcab", en: "Pricing · Vizcab", fr: "Prix · Vizcab" }, sub: { es: "proveedores · ACV", en: "suppliers · LCA", fr: "fournisseurs · ACV" } },
+          { id: "bronze", col: 1, row: 0, kind: "store", label: "Bronze", sub: { es: "crudo", en: "raw", fr: "brut" } },
+          { id: "silver", col: 2, row: 0, kind: "store", primary: true, label: "Silver", sub: { es: "limpio · modelado", en: "cleaned · modelled", fr: "nettoyé · modélisé" } },
+          { id: "gold", col: 3, row: 0, kind: "store", label: "Gold", sub: { es: "reporting", en: "reporting", fr: "reporting" } },
+          { id: "out", col: 3, row: 1, kind: "output", label: { es: "Coste y carbono", en: "Cost & carbon", fr: "Coût et carbone" }, sub: { es: "análisis automático", en: "automated analysis", fr: "analyse automatisée" } }
+        ],
+        edges: [
+          { from: "ifc", to: "bronze" }, { from: "ext", to: "bronze", sides: "rb" }, { from: "bronze", to: "silver" },
+          { from: "silver", to: "gold" }, { from: "gold", to: "out", sides: "bt" }
+        ]
+      }
+    },
+    {
+      id: "career-copilot",
+      title: "Career Copilot",
+      tagline: { es: "Entra una oferta de trabajo, sale un CV de una página hecho a medida", en: "Job posting in, tailored one-page CV out", fr: "Une offre d'emploi en entrée, un CV d'une page sur mesure en sortie" },
+      org: { es: "Proyecto personal", en: "Personal project", fr: "Projet personnel" }, year: "2026", kind: "personal",
+      summary: {
+        es: "Una aplicación local en FastAPI que cruza una oferta con mi perfil, genera el CV y la carta en LaTeX y lleva el seguimiento de cada candidatura.",
+        en: "A local-first FastAPI app that matches a job posting against my profile, generates the CV and cover letter in LaTeX, and tracks every application.",
+        fr: "Une application FastAPI locale qui croise une offre avec mon profil, génère le CV et la lettre en LaTeX et suit chaque candidature."
+      },
+      points: {
+        es: [
+          "Salida estructurada del LLM tipada con Pydantic, más un motor extractivo determinista que funciona sin API key.",
+          "Bucle de ajuste a una página: compila con XeLaTeX, mide el llenado con PyMuPDF y compacta o reequilibra espacios.",
+          "Seguimiento de candidaturas con SQLAlchemy 2.0 y SQLite; exportación a Excel.",
+          "Escapado contra inyección de LaTeX y comprobaciones SSRF al descargar ofertas por URL."
+        ],
+        en: [
+          "Structured LLM output typed with Pydantic, plus a deterministic extractive engine that works without an API key.",
+          "One-page fitting loop: compile with XeLaTeX, measure page fill with PyMuPDF, then compact content or rebalance spacing.",
+          "Application tracker on SQLAlchemy 2.0 and SQLite; Excel export.",
+          "LaTeX-injection escaping and SSRF checks when fetching postings by URL."
+        ],
+        fr: [
+          "Sortie structurée du LLM typée avec Pydantic, plus un moteur extractif déterministe qui fonctionne sans clé d'API.",
+          "Boucle d'ajustement sur une page : compilation XeLaTeX, mesure du remplissage avec PyMuPDF, puis compactage ou rééquilibrage des espaces.",
+          "Suivi des candidatures avec SQLAlchemy 2.0 et SQLite ; export Excel.",
+          "Échappement contre l'injection LaTeX et contrôles SSRF lors du téléchargement d'offres par URL."
+        ]
+      },
+      stack: ["Python", "FastAPI", "Pydantic", "SQLAlchemy", "SQLite", "Jinja2", "XeLaTeX", "PyMuPDF"],
+      diagram: {
+        cols: 4, rows: 2,
+        caption: { es: "Dos motores detrás de un mismo esquema; el PDF se recompila hasta caber en una página.", en: "Two engines behind one schema; the PDF is recompiled until it fits one page.", fr: "Deux moteurs derrière un même schéma ; le PDF est recompilé jusqu'à tenir sur une page." },
+        nodes: [
+          { id: "offer", col: 0, row: 0, kind: "source", label: { es: "Oferta", en: "Job posting", fr: "Offre" }, sub: { es: "texto o URL", en: "text or URL", fr: "texte ou URL" } },
+          { id: "engine", col: 1, row: 0, kind: "service", primary: true, label: { es: "Motor de generación", en: "Generation engine", fr: "Moteur de génération" }, sub: { es: "LLM tipado | extractivo", en: "typed LLM | extractive", fr: "LLM typé | extractif" } },
+          { id: "tex", col: 2, row: 0, kind: "service", label: "Jinja2 → XeLaTeX", sub: { es: "ajuste a una página", en: "one-page fit loop", fr: "ajustement sur une page" } },
+          { id: "pdf", col: 3, row: 0, kind: "output", label: { es: "CV + carta", en: "CV + letter", fr: "CV + lettre" }, sub: "PDF" },
+          { id: "profile", col: 1, row: 1, kind: "store", label: { es: "Perfil", en: "Profile", fr: "Profil" }, sub: { es: "única fuente de hechos", en: "single source of facts", fr: "source unique des faits" } },
+          { id: "tracker", col: 3, row: 1, kind: "store", label: "SQLite", sub: { es: "seguimiento · Excel", en: "tracker · Excel", fr: "suivi · Excel" } }
+        ],
+        edges: [
+          { from: "offer", to: "engine" }, { from: "profile", to: "engine", sides: "tb" }, { from: "engine", to: "tex" },
+          { from: "tex", to: "pdf" }, { from: "pdf", to: "tracker", sides: "bt" }
+        ]
+      }
+    }
+  ],
+
 
   education: [
     {
@@ -227,7 +490,7 @@ window.SITE = {
       icon: "cap",
       org: "Universidad Nacional de Colombia",
       place: { es: "Bogotá, D.C., Colombia", en: "Bogotá, D.C., Colombia", fr: "Bogotá, D.C., Colombie" },
-      degree: { es: "Ingeniería de Sistemas y Computación", en: "Systems and Computer Engineering", fr: "Ingénierie des systèmes et de l'informatique" },
+      degree: { es: "Ingeniería de Sistemas y Computación", en: "Systems and Computer Engineering", fr: "Génie informatique" },
       dateLabel: { es: "Mar. 2020 – Ago. 2024", en: "Mar 2020 – Aug 2024", fr: "Mars 2020 – Août 2024" },
       ongoing: false,
       bullets: {
@@ -282,7 +545,7 @@ window.SITE = {
     {
       id: "iren",
       icon: "cap",
-      org: "Université Paris Dauphine–PSL · Télécom Paris",
+      org: "Dauphine–PSL",
       place: { es: "París, Francia", en: "Paris, France", fr: "Paris, France" },
       degree: { es: "Doble título M2 IREN", en: "M2 IREN Double Degree", fr: "Double diplôme M2 IREN" },
       dateLabel: { es: "Sept. 2025 – Sept. 2026", en: "Sept 2025 – Sept 2026", fr: "Sept. 2025 – Sept. 2026" },
@@ -325,31 +588,28 @@ window.SITE = {
       ongoing: true,
       bullets: {
         es: [
-          "Progresé de IT Developer a AI Data Engineer Intern dentro del mismo equipo de ingeniería.",
-          "Construí herramientas de automatización en Python y VBA para optimizar flujos de trabajo de ingeniería.",
-          "Diseñé un pipeline de datos BIM que integra extracción Revit/IFC, precios de proveedores y análisis de ciclo de vida para automatizar el análisis de costos e impacto ambiental.",
-          "Desarrollé asistentes basados en RAG para documentación BIM, mejorando la recuperación de conocimiento y la toma de decisiones.",
-          "Organicé las bases de datos internas en capas bronze, silver y gold: datos ingestados sin procesar, datos limpios y modelados, y datos listos para visualización y reporting.",
+          "Diseñé y desplegué Moduo Connect, un servicio central de identidad (OIDC sobre Authentik) que unifica el inicio de sesión de seis aplicaciones internas, con una migración segura que conserva los hashes de contraseña existentes y aislamiento estricto de sesión por aplicación.",
           "Desarrollé y mantengo ModuoCopil, el portal web interno de gestión de proyectos (Django, PostgreSQL, Tailwind CSS), con módulos de dashboards, administración y seguimiento de horas.",
-          "Diseñé y desplegué Moduo Connect, un servicio central de identidad (OIDC sobre Authentik) que unifica el inicio de sesión de seis aplicaciones internas, con una migración segura que conserva los hashes de contraseña existentes y aislamiento estricto de sesión por aplicación."
+          "Diseñé un pipeline de datos BIM que integra extracción Revit/IFC, precios de proveedores y análisis de ciclo de vida para automatizar el análisis de costos e impacto ambiental.",
+          "Organicé las bases de datos internas en capas bronze, silver y gold: datos ingestados sin procesar, datos limpios y modelados, y datos listos para visualización y reporting.",
+          "Desarrollé asistentes basados en RAG para documentación BIM, mejorando la recuperación de conocimiento y la toma de decisiones.",
+          "Construí herramientas de automatización en Python y VBA para optimizar flujos de trabajo de ingeniería."
         ],
         en: [
-          "Progressed from IT Developer to AI Data Engineer Intern within the same engineering team.",
-          "Built automation tools in Python and VBA to streamline engineering workflows.",
-          "Designed a BIM data pipeline integrating Revit/IFC extraction, supplier pricing and lifecycle assessment to automate cost and environmental-impact analysis.",
-          "Developed RAG-based assistants for BIM documentation, improving knowledge retrieval and decision-making.",
-          "Organized internal databases into bronze, silver, and gold layers: raw ingested data, cleaned and modeled data, and visualization/reporting-ready data.",
+          "Designed and deployed Moduo Connect, a centralized OIDC identity service (built on Authentik) unifying single sign-on across six internal applications, including a safe user-migration path that preserves existing password hashes and strict per-app session isolation.",
           "Built and maintain ModuoCopil, the company's internal project-management web portal (Django, PostgreSQL, Tailwind CSS), including dashboard, admin, and timelog modules.",
-          "Designed and deployed Moduo Connect, a centralized OIDC identity service (built on Authentik) unifying single sign-on across six internal applications, including a safe user-migration path that preserves existing password hashes and strict per-app session isolation."
+          "Designed a BIM data pipeline integrating Revit/IFC extraction, supplier pricing and lifecycle assessment to automate cost and environmental-impact analysis.",
+          "Organized internal databases into bronze, silver, and gold layers: raw ingested data, cleaned and modeled data, and visualization/reporting-ready data.",
+          "Developed RAG-based assistants for BIM documentation, improving knowledge retrieval and decision-making.",
+          "Built automation tools in Python and VBA to streamline engineering workflows."
         ],
         fr: [
-          "Évolution d'un poste de développeur IT vers un stage d'ingénieur Data & IA au sein de la même équipe d'ingénierie.",
-          "Développement d'outils d'automatisation en Python et VBA pour fluidifier les workflows d'ingénierie.",
-          "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC, les prix fournisseurs et l'analyse de cycle de vie pour automatiser l'analyse des coûts et de l'impact environnemental.",
-          "Développement d'assistants RAG pour la documentation BIM, améliorant la recherche de connaissances et l'aide à la décision.",
-          "Organisation des bases de données internes en couches bronze, silver et gold : données brutes ingérées, données nettoyées et modélisées, et données prêtes pour la visualisation et le reporting.",
+          "Conception et déploiement de Moduo Connect, un service d'identité centralisé (OIDC via Authentik) unifiant l'authentification de six applications internes, avec une migration sécurisée des utilisateurs préservant les hachages de mots de passe existants et un isolement strict des sessions par application.",
           "Développement et maintenance de ModuoCopil, le portail web interne de gestion de projets (Django, PostgreSQL, Tailwind CSS), avec des modules de tableaux de bord, d'administration et de suivi du temps.",
-          "Conception et déploiement de Moduo Connect, un service d'identité centralisé (OIDC via Authentik) unifiant l'authentification de six applications internes, avec une migration sécurisée des utilisateurs préservant les hachages de mots de passe existants et un isolement strict des sessions par application."
+          "Conception d'un pipeline de données BIM intégrant l'extraction Revit/IFC, les prix fournisseurs et l'analyse de cycle de vie pour automatiser l'analyse des coûts et de l'impact environnemental.",
+          "Organisation des bases de données internes en couches bronze, silver et gold : données brutes ingérées, données nettoyées et modélisées, et données prêtes pour la visualisation et le reporting.",
+          "Développement d'assistants RAG pour la documentation BIM, améliorant la recherche de connaissances et l'aide à la décision.",
+          "Développement d'outils d'automatisation en Python et VBA pour fluidifier les workflows d'ingénierie."
         ]
       },
       tags: ["Python", "VBA", "PostgreSQL", "Django", "Tailwind CSS", "Revit", "IFC", "BIM", "RAG", "Ollama", "Qdrant", "Apache Tika", "Vizcab API", "CI/CD", "IFCOpenShell", "Medallion Architecture", "Data Modeling", "OIDC", "Authentik", "SSO"]
@@ -464,7 +724,7 @@ window.SITE = {
   projectCatalog: [
     {
       id: "telecom-paris",
-      institution: "Télécom Paris · Institut Polytechnique de Paris",
+      institution: "Télécom Paris",
       photo: "assets/img/institutions/telecom-paris.jpg",
       description: {
         es: "Proyectos y laboratorios de los itinerarios Data Science y MODS. Se presentan como trabajo académico y se mantienen separados de la experiencia profesional.",
@@ -477,6 +737,7 @@ window.SITE = {
           items: [
             {
               id: "text-classification-pytorch",
+              area: "ml",
               level: "featured",
               kind: { es: "Proyecto individual", en: "Individual project", fr: "Projet individuel" },
               title: { es: "Clasificación de texto: de TF-IDF a PyTorch", en: "Text Classification: From TF-IDF to PyTorch", fr: "Classification de texte : de TF-IDF à PyTorch" },
@@ -514,6 +775,7 @@ window.SITE = {
           items: [
             {
               id: "switch-2-competition",
+              area: "econ",
               level: "featured",
               kind: { es: "Proyecto individual · Modelo estilizado", en: "Individual project · Stylized model", fr: "Projet individuel · Modèle stylisé" },
               title: { es: "Switch 2 y competencia en el mercado de consolas", en: "Switch 2 and Competition in the Console Market", fr: "Switch 2 et concurrence sur le marché des consoles" },
@@ -554,6 +816,7 @@ window.SITE = {
           items: [
             {
               id: "us-protectionism",
+              area: "econ",
               level: "standard",
               kind: { es: "Proyecto en equipo · con Iba Demesy", en: "Team project · with Iba Demesy", fr: "Projet en équipe · avec Iba Demesy" },
               title: { es: "Proteccionismo estadounidense: impactos y respuestas globales", en: "U.S. Protectionism: Impacts and Global Responses", fr: "Protectionnisme américain : impacts et réponses mondiales" },
@@ -580,6 +843,7 @@ window.SITE = {
           items: [
             {
               id: "graph-learning-labs",
+              area: "ml",
               level: "standard",
               kind: { es: "Serie de laboratorios guiados", en: "Guided lab series", fr: "Série de TP encadrés" },
               title: { es: "Ranking, difusión, embeddings y redes neuronales sobre grafos", en: "Ranking, Diffusion, Embeddings, and Graph Neural Networks", fr: "Ranking, diffusion, embeddings et réseaux de neurones sur graphes" },
@@ -607,6 +871,7 @@ window.SITE = {
           items: [
             {
               id: "mnist-sgd-optimization",
+              area: "ml",
               level: "compact",
               kind: { es: "Laboratorio individual", en: "Individual lab", fr: "TP individuel" },
               title: { es: "Descenso de gradiente estocástico sobre MNIST", en: "Stochastic Gradient Descent on MNIST", fr: "Descente de gradient stochastique sur MNIST" },
@@ -625,6 +890,7 @@ window.SITE = {
           items: [
             {
               id: "svm-pca",
+              area: "ml",
               level: "compact",
               kind: { es: "Laboratorio individual", en: "Individual lab", fr: "TP individuel" },
               title: { es: "SVM: kernels, sobreajuste y PCA", en: "SVMs: Kernels, Overfitting, and PCA", fr: "SVM : noyaux, surapprentissage et ACP" },
@@ -638,6 +904,7 @@ window.SITE = {
             },
             {
               id: "mnist-autoencoders",
+              area: "ml",
               level: "compact",
               kind: { es: "Laboratorio individual", en: "Individual lab", fr: "TP individuel" },
               title: { es: "MNIST: clasificador lineal y autoencoders", en: "MNIST: Linear Classifier and Autoencoders", fr: "MNIST : classifieur linéaire et autoencodeurs" },
@@ -655,7 +922,7 @@ window.SITE = {
     },
     {
       id: "dauphine-iren",
-      institution: "Université Paris Dauphine–PSL · M2 IREN",
+      institution: "Dauphine–PSL",
       photo: "assets/img/institutions/dauphine-psl.jpg",
       description: {
         es: "Proyectos de economía digital, regulación, plataformas y ciencia de datos realizados en el doble diploma M2 IREN.",
@@ -668,6 +935,7 @@ window.SITE = {
           items: [
             {
               id: "dma-multi-agent-simulation",
+              area: "ml",
               level: "featured",
               kind: { es: "Proyecto individual · Simulación heurística", en: "Individual project · Heuristic simulation", fr: "Projet individuel · Simulation heuristique" },
               title: { es: "Simulación multiagente del Digital Markets Act", en: "Multi-Agent Simulation of the Digital Markets Act", fr: "Simulation multi-agents du Digital Markets Act" },
@@ -700,6 +968,10 @@ window.SITE = {
                 { href: "assets/files/projects/dauphine/llm-social-simulation/dma-multi-agent-simulation-report.pdf", label: { es: "Informe de simulación", en: "Simulation report", fr: "Rapport de simulation" } },
                 { href: "assets/files/projects/dauphine/llm-social-simulation/llm-social-simulation-literature-review.pdf", label: { es: "Revisión de literatura", en: "Literature review", fr: "Revue de littérature" } }
               ],
+              images: [
+                { src: "assets/img/projects/dma-trajectories.png", cap: { es: "Trayectorias de apoyo por stakeholder a lo largo de las rondas.", en: "Support trajectories per stakeholder across rounds.", fr: "Trajectoires de soutien par partie prenante au fil des tours." } },
+                { src: "assets/img/projects/dma-coalitions.png", cap: { es: "Coaliciones al final de la deliberación.", en: "Coalitions at the end of the deliberation.", fr: "Coalitions à la fin de la délibération." } }
+              ],
               tags: ["Python", "AG2 / AutoGen", "LLM", "Multi-Agent Systems", "Monte Carlo", "DMA"]
             }
           ]
@@ -709,6 +981,7 @@ window.SITE = {
           items: [
             {
               id: "loan-default-risk",
+              area: "ml",
               level: "featured",
               kind: { es: "Proyecto individual · Diagnóstico reproducible", en: "Individual project · Reproducible diagnosis", fr: "Projet individuel · Diagnostic reproductible" },
               title: { es: "Riesgo de impago: señal, leakage y calibración", en: "Loan Default Risk: Signal, Leakage, and Calibration", fr: "Risque de défaut : signal, fuite de données et calibration" },
@@ -728,6 +1001,10 @@ window.SITE = {
                 en: "The study's value is diagnosing signal limitations; it is not presented as a high-performing production model.",
                 fr: "L'intérêt de l'étude est le diagnostic des limites du signal ; elle n'est pas présentée comme un modèle de production performant."
               },
+              images: [
+                { src: "assets/img/projects/credit-risk-roc-curve.png", cap: { es: "Curva ROC del modelo SAFE frente al azar.", en: "ROC curve of the SAFE model against chance.", fr: "Courbe ROC du modèle SAFE face au hasard." } },
+                { src: "assets/img/projects/credit-risk-default-by-grade.png", cap: { es: "Tasa de impago por calificación crediticia.", en: "Default rate by credit grade.", fr: "Taux de défaut par note de crédit." } }
+              ],
               tags: ["Scikit-learn", "CatBoost", "Calibration", "Leakage Control", "ROC / PR"]
             }
           ]
@@ -737,6 +1014,7 @@ window.SITE = {
           items: [
             {
               id: "vinted-agentic-ai",
+              area: "econ",
               level: "standard",
               kind: { es: "Proyecto en equipo · con Perla Aouad", en: "Team project · with Perla Aouad", fr: "Projet en équipe · avec Perla Aouad" },
               title: { es: "Vinted 2030: IA agéntica, confianza y gobernanza", en: "Vinted 2030: Agentic AI, Trust, and Governance", fr: "Vinted 2030 : IA agentique, confiance et gouvernance" },
@@ -763,6 +1041,7 @@ window.SITE = {
           items: [
             {
               id: "telecom-regulation-europe",
+              area: "econ",
               level: "standard",
               kind: { es: "Proyecto en equipo · con Perla Aouad", en: "Team project · with Perla Aouad", fr: "Projet en équipe · avec Perla Aouad" },
               title: { es: "Regulación de comunicaciones electrónicas en Europa", en: "Electronic Communications Regulation in Europe", fr: "Régulation des communications électroniques en Europe" },
@@ -789,6 +1068,7 @@ window.SITE = {
           items: [
             {
               id: "biotech-innovation-systems",
+              area: "econ",
               level: "compact",
               kind: { es: "Proyecto en equipo · con Perla Aouad", en: "Team project · with Perla Aouad", fr: "Projet en équipe · avec Perla Aouad" },
               title: { es: "Biotecnología: sistemas de innovación de Dinamarca y Suiza", en: "Biotech Innovation Systems: Denmark and Switzerland", fr: "Biotechnologie : systèmes d'innovation du Danemark et de la Suisse" },
@@ -810,6 +1090,7 @@ window.SITE = {
           items: [
             {
               id: "veligo-research-proposal",
+              area: "econ",
               level: "compact",
               kind: { es: "Propuesta de investigación · No ejecutada", en: "Research proposal · Not executed", fr: "Proposition de recherche · Non exécutée" },
               title: { es: "Evaluación causal propuesta para el programa Véligo", en: "Proposed Causal Evaluation of the Véligo Programme", fr: "Proposition d'évaluation causale du programme Véligo" },
@@ -843,6 +1124,7 @@ window.SITE = {
           items: [
             {
               id: "tiendaun-microservices",
+              area: "software",
               level: "featured",
               kind: { es: "Proyecto académico en equipo", en: "Academic team project", fr: "Projet académique en équipe" },
               title: { es: "TiendaUN: comercio electrónico basado en microservicios", en: "TiendaUN: Microservices-Based E-commerce", fr: "TiendaUN : e-commerce fondé sur des microservices" },
@@ -878,6 +1160,7 @@ window.SITE = {
           items: [
             {
               id: "small-basic-python-translator",
+              area: "software",
               level: "standard",
               kind: {
                 es: "Prototipo académico en equipo · con Ángel Peñarredonda y Nicol Guerrero",
@@ -923,6 +1206,7 @@ window.SITE = {
           items: [
             {
               id: "payphone-supermarket-platform",
+              area: "software",
               level: "standard",
               kind: {
                 es: "Prototipo académico · equipo de 4",
@@ -968,6 +1252,7 @@ window.SITE = {
           items: [
             {
               id: "home-health-care-requirements",
+              area: "software",
               level: "compact",
               kind: {
                 es: "Proyecto Scrum en equipo · contribución en requisitos",
@@ -1014,29 +1299,49 @@ window.SITE = {
 
   skills: [
     {
-      icon: "cloud",
-      name: { es: "Nube y plataformas", en: "Cloud & Platforms", fr: "Cloud et plateformes" },
-      items: ["Microsoft Azure", "Google Cloud", "AWS", "Databricks", "Azure AI", "Azure OpenAI Service", "AWS S3", "Cloud Run", "Cloud Storage", "Google Kubernetes Engine", "Azure AI Search", "Blob Storage"]
-    },
-    {
       icon: "code",
       name: { es: "Lenguajes de programación", en: "Programming Languages", fr: "Langages de programmation" },
-      items: ["Python", "SQL", "Java", "JavaScript", "TypeScript", "C#", "C", "Rust", "R"]
+      items: ["Python", "TypeScript", "JavaScript", "SQL", "Java", "Go", "Scala", "C#", "C", "C++", "Rust", "R"]
+    },
+    {
+      icon: "server",
+      name: { es: "Backend, web y APIs", en: "Backend, Web & APIs", fr: "Backend, web et API" },
+      items: ["Django", "FastAPI", "Node.js", "Express", "Spring Boot", "React", "Tailwind CSS", "REST", "GraphQL", "gRPC", "SOAP", "API Gateway", "OIDC / SSO", "JWT", "LDAP", "HTTP/HTTPS"]
+    },
+    {
+      icon: "layers",
+      name: { es: "Ingeniería de datos", en: "Data Engineering", fr: "Data engineering" },
+      items: ["Databricks Lakehouse", "Delta Lake", "Lakeflow", "Databricks Workflows", "PySpark", "Spark Streaming", "Apache Kafka", "RabbitMQ", "Hue", "ETL", "Medallion Architecture", "Pandas", "NumPy"]
+    },
+    {
+      icon: "brain",
+      name: { es: "IA y machine learning", en: "AI & Machine Learning", fr: "IA et machine learning" },
+      items: ["RAG", "Azure OpenAI Service", "Azure AI Search", "Ollama", "Qdrant", "PyTorch", "TensorFlow", "Scikit-learn"]
     },
     {
       icon: "database",
       name: { es: "Bases de datos", en: "Databases", fr: "Bases de données" },
-      items: ["OracleDB", "MySQL", "PostgreSQL", "MongoDB"]
+      items: ["PostgreSQL", "MySQL", "Oracle DB", "MongoDB"]
     },
     {
-      icon: "layers",
-      name: { es: "Frameworks, librerías y protocolos", en: "Frameworks, Libraries & Protocols", fr: "Frameworks, bibliothèques et protocoles" },
-      items: ["Databricks Lakehouse", "Delta Lake", "Lakeflow", "PySpark", "ETL", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "PyTorch", "RAG", "Ollama", "Qdrant", "FastAPI", "Django", "Node.js", "Spring Boot", "GraphQL", "REST", "SOAP", "API Gateway", "HTTP/HTTPS", "LDAP", "JWT"]
+      icon: "cloud",
+      name: { es: "Nube y plataformas", en: "Cloud & Platforms", fr: "Cloud et plateformes" },
+      items: ["Microsoft Azure", "Google Cloud", "AWS", "Databricks", "Azure AI", "AWS S3", "Blob Storage", "Cloud Run", "Cloud Storage", "Google Kubernetes Engine"]
     },
     {
       icon: "wrench",
       name: { es: "DevOps y herramientas", en: "DevOps & Tools", fr: "DevOps et outils" },
-      items: ["Docker", "Kubernetes", "CI/CD", "Apache Tika", "Selenium", "JMeter", "Git", "Scrum", "Databricks Workflows"]
+      items: ["Docker", "Kubernetes", "CI/CD", "Git", "Linux", "Virtualization", "Apache Tika", "Selenium", "JMeter", "Fuzzing"]
+    },
+    {
+      icon: "chart",
+      name: { es: "BI y visualización", en: "BI & Visualization", fr: "BI et visualisation" },
+      items: ["Power BI", "Tableau", "Azure Synapse Analytics"]
+    },
+    {
+      icon: "users",
+      name: { es: "Prácticas de ingeniería", en: "Engineering Practices", fr: "Pratiques d'ingénierie" },
+      items: ["Software Architecture", "Design Patterns", "Automated Testing", "Observability", "Scalability", "Technical Documentation", "Scrum", "Jira"]
     }
   ],
 
@@ -1074,6 +1379,9 @@ window.SITE = {
         icon: "layers",
         items: [
           { title: "AWS Knowledge: Events and Workflows", image: "assets/img/certifications/2164b5fb-3039-4144-b774-44e15b46616d.png", date: { y: 2026, m: 6, d: 2 }, id: "2164b5fb-3039-4144-b774-44e15b46616d", url: "https://www.credly.com/badges/2164b5fb-3039-4144-b774-44e15b46616d/public_url", skills: ["Amazon Web Services (AWS)", "Amazon Simple Notification Service (SNS)"], more: 5, type: "knowledge" },
+          { title: "AWS Data Streaming Demonstrated", date: { y: 2026, m: 8 }, expires: { y: 2027, m: 8 }, id: "aaee56f9-279f-4536-bf48-f86186a41f00", url: "https://www.credly.com/badges/aaee56f9-279f-4536-bf48-f86186a41f00/public_url", skills: ["Data Streaming", "Data Analytics"], more: 5, type: "micro" },
+          { title: "AWS Application Networking Demonstrated", date: { y: 2026, m: 8 }, expires: { y: 2027, m: 8 }, id: "7de83ced-bc4d-4d0a-9914-9a5c1d5d2619", url: "https://www.credly.com/badges/7de83ced-bc4d-4d0a-9914-9a5c1d5d2619/public_url", skills: ["Application Deployment", "Application Planning"], more: 8, type: "micro" },
+          { title: "AWS Data Lakehouse Demonstrated", date: { y: 2026, m: 8 }, expires: { y: 2027, m: 8 }, id: "9714fc7c-2b08-47fa-b6f6-01a1240f5526", url: "https://www.credly.com/badges/9714fc7c-2b08-47fa-b6f6-01a1240f5526/public_url", skills: ["Amazon Web Services (AWS)", "Business Simulation"], more: 4, type: "micro" },
           { title: "AWS Serverless Demonstrated", image: "assets/img/certifications/0ff238fc-3873-49c0-8f63-84d0fc849289.png", date: { y: 2026, m: 6, d: 2 }, expires: { y: 2027, m: 6, d: 2 }, id: "0ff238fc-3873-49c0-8f63-84d0fc849289", url: "https://www.credly.com/badges/0ff238fc-3873-49c0-8f63-84d0fc849289/public_url", skills: ["Serverless Architecture", "Amazon Web Services (AWS)"], more: 10, type: "micro" }
         ]
       },
