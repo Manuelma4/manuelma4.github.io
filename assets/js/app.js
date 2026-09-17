@@ -2,7 +2,7 @@
    Manuel David Maya Rosero — Portfolio app logic.
    Renders window.SITE content, handles i18n, theme, the project filter,
    architecture diagrams and the command palette.
-   No build step, no dependencies — plain ES2017+.
+   Static ES2017+ with local Lucide SVGs and optional Motion Mini enhancement.
    ========================================================================== */
 (function () {
   "use strict";
@@ -16,41 +16,16 @@
     fr: ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."]
   };
 
-  /* ---------------- Icons (stroke-based, 24x24) ---------------- */
-  var ICONS = {
-    mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/>',
-    phone: '<path d="M6.6 10.8a15.7 15.7 0 0 0 6.6 6.6l2.2-2.2a1.5 1.5 0 0 1 1.5-.37c1 .3 2.1.47 3.2.47a1.5 1.5 0 0 1 1.5 1.5V20a1.5 1.5 0 0 1-1.5 1.5C11.9 21.5 2.5 12.1 2.5 3.5A1.5 1.5 0 0 1 4 2h3.2a1.5 1.5 0 0 1 1.5 1.5c0 1.1.17 2.2.47 3.2a1.5 1.5 0 0 1-.37 1.5L6.6 10.8Z"/>',
-    pin: '<path d="M12 21s7-6.4 7-11.5a7 7 0 1 0-14 0C5 14.6 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>',
-    download: '<path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M4 19.5h16"/>',
-    arrowRight: '<path d="M4 12h15"/><path d="m13 6 6 6-6 6"/>',
-    external: '<path d="M9 5H5.5A1.5 1.5 0 0 0 4 6.5v12A1.5 1.5 0 0 0 5.5 20h12a1.5 1.5 0 0 0 1.5-1.5V15"/><path d="M14 4h6v6"/><path d="M20 4 11 13"/>',
-    info: '<circle cx="12" cy="12" r="9"/><path d="M12 10.5V17"/><circle cx="12" cy="7.5" r=".7" fill="currentColor" stroke="none"/>',
-    cap: '<path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.4 2.7 3 6 3s6-1.6 6-3v-5.5"/><path d="M22 8v6.5"/>',
-    briefcase: '<rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/>',
-    heart: '<path d="M12 20.2S3.5 15 3.5 8.9A4.9 4.9 0 0 1 12 5.7a4.9 4.9 0 0 1 8.5 3.2c0 6.1-8.5 11.3-8.5 11.3Z"/>',
-    award: '<circle cx="12" cy="8.5" r="5.5"/><path d="m8.3 13.2-1.4 7.3 5.1-2.6 5.1 2.6-1.4-7.3"/>',
-    layers: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>',
-    code: '<path d="m9 8-4.5 4L9 16"/><path d="m15 8 4.5 4L15 16"/>',
-    server: '<rect x="3.5" y="4" width="17" height="6.5" rx="1.5"/><rect x="3.5" y="13.5" width="17" height="6.5" rx="1.5"/><path d="M7 7.25h.01M7 16.75h.01M11 7.25h6M11 16.75h6"/>',
-    database: '<ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5V12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V5.5"/><path d="M4.5 12v6.5c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V12"/>',
-    wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.4 4.9L3.5 17l3.5 3.5 5.8-5.8a4 4 0 0 0 4.9-5.4l-2.8 2.8-2.5-2.5 2.8-2.8Z"/>',
-    cloud: '<path d="M7 18h10.5a3.8 3.8 0 0 0 .6-7.5 5.5 5.5 0 0 0-10.7-1.7A4.3 4.3 0 0 0 7 18Z"/>',
-    chart: '<path d="M4 4v16h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/>',
-    users: '<circle cx="9" cy="8.5" r="3.2"/><path d="M3 19.5c0-3.2 2.7-5.5 6-5.5s6 2.3 6 5.5"/><path d="M16 5.6a3.2 3.2 0 0 1 0 5.8M18 14.4c1.8.8 3 2.6 3 5.1"/>',
-    brain: '<path d="M9 4.5A2.5 2.5 0 0 0 6.5 7v.3A3 3 0 0 0 5 12a3 3 0 0 0 1.5 4.7V17a2.5 2.5 0 0 0 5 0V6.5A2 2 0 0 0 9 4.5Z"/><path d="M15 4.5A2.5 2.5 0 0 1 17.5 7v.3A3 3 0 0 1 19 12a3 3 0 0 1-1.5 4.7V17a2.5 2.5 0 0 1-5 0V6.5a2 2 0 0 1 2.5-2Z"/>',
-    doc: '<path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v4h4"/><path d="M9.5 13h5M9.5 16.5h5"/>',
-    copy: '<rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/>',
-    check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
-    sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
-    moon: '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>',
-    search: '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/>',
-    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/>',
+  /* Lucide 1.47.0: only the icons used by this site, in a local SVG sprite.
+     Brand marks remain separate because they are not part of Lucide's set. */
+  var BRAND_ICONS = {
     linkedin: '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8.2" r="0.4" fill="currentColor"/><path d="M8 11v6.2"/><path d="M12.2 17.2V13a2 2 0 0 1 4 0v4.2M12.2 17.2v-6"/>',
     github: '<path d="M12 2.5a9.5 9.5 0 0 0-3 18.5c.5.1.65-.2.65-.47v-1.9c-2.6.57-3.15-1.13-3.15-1.13-.43-1.08-1.04-1.37-1.04-1.37-.86-.58.07-.57.07-.57.94.07 1.44.97 1.44.97.84 1.43 2.2 1.02 2.75.78.08-.6.33-1.02.6-1.26-2.08-.24-4.27-1.04-4.27-4.62 0-1.02.37-1.86.96-2.51-.1-.24-.42-1.2.1-2.5 0 0 .8-.25 2.6.96a9 9 0 0 1 4.74 0c1.8-1.21 2.6-.96 2.6-.96.52 1.3.2 2.26.1 2.5.6.65.96 1.49.96 2.51 0 3.59-2.2 4.38-4.29 4.61.34.3.64.87.64 1.76v2.6c0 .27.15.58.65.47A9.5 9.5 0 0 0 12 2.5Z"/>'
   };
   function icon(name, size) {
     size = size || 18;
-    return '<svg viewBox="0 0 24 24" width="' + size + '" height="' + size + '" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' + (ICONS[name] || "") + "</svg>";
+    var body = BRAND_ICONS[name] || '<use href="assets/img/icons/lucide-1.47.0.svg#' + name + '"></use>';
+    return '<svg class="icon" viewBox="0 0 24 24" width="' + size + '" height="' + size + '" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' + body + '</svg>';
   }
 
   /* ---------------- Storage / URL helpers (never throw) ---------------- */
@@ -686,9 +661,7 @@
   }
 
   function renderAll() {
-    // Each step runs in isolation: a bad edit in one section must never blank
-    // the rest of the page (or block scanReveal below, which is what makes
-    // content visible).
+    // Rendering is independent of optional motion; content is visible by default.
     safe("i18n", applyStaticI18n);
     safe("hero", renderHero);
     safe("about", renderAbout);
@@ -917,35 +890,61 @@
     onFrame();
   }
 
-  function activateStaggerChildren(container) {
-    container.querySelectorAll(".stagger-item:not(.is-visible)").forEach(function (n) {
-      n.classList.add("is-visible");
-    });
+  /* Motion Mini is optional: no stylesheet ever hides these elements.
+     Observe individual cards, not long section containers. Rebuilds disconnect
+     detached nodes, and temporary animations are cancelled before re-rendering. */
+  var entranceSelector = ".hero-card, .section-head, .about-text, .about-highlight, .stagger-item, .contact-card";
+  var entranceSeen = new WeakSet();
+  var entranceAnimations = new Map();
+  var motionPreference = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+
+  function finishEntrances() {
+    entranceAnimations.forEach(function (animation) { animation.cancel(); });
+    entranceAnimations.clear();
+  }
+
+  function enterCard(element) {
+    if (entranceSeen.has(element)) return;
+    entranceSeen.add(element);
+    if (reducedMotion() || !window.PortfolioMotion || !Element.prototype.animate) return;
+    try {
+      var animation = window.PortfolioMotion.animate(element, {
+        opacity: [0, 1], transform: ["translateY(8px)", "translateY(0px)"]
+      }, { duration: 0.24, ease: [0.22, 1, 0.36, 1] });
+      entranceAnimations.set(element, animation);
+      animation.then(function () {
+        // Release the transform so hover styles and SVG measurements stay native.
+        animation.cancel();
+        entranceAnimations.delete(element);
+      });
+    } catch (e) { /* Missing/unsupported animation never blocks the content. */ }
   }
 
   var revealObserver = ("IntersectionObserver" in window) ? new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        activateStaggerChildren(entry.target);
-        revealObserver.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      enterCard(entry.target);
+      revealObserver.unobserve(entry.target);
     });
-  }, { threshold: 0.04, rootMargin: "0px 0px -40px 0px" }) : null;
+  }, { threshold: 0, rootMargin: "0px 0px -20px 0px" }) : null;
 
   function scanReveal() {
-    if (!revealObserver || reducedMotion()) {
-      document.querySelectorAll(".reveal").forEach(function (n) {
-        n.classList.add("is-visible");
-        activateStaggerChildren(n);
-      });
-      return;
-    }
-    document.querySelectorAll(".reveal:not(.is-visible)").forEach(function (n) { revealObserver.observe(n); });
-    // Containers already revealed just had their children rebuilt via innerHTML
-    // (language switch, filter) — the observer fires once per container, so
-    // activate the new nodes directly.
-    document.querySelectorAll(".reveal.is-visible").forEach(activateStaggerChildren);
+    finishEntrances();
+    if (revealObserver) revealObserver.disconnect();
+    document.querySelectorAll(entranceSelector).forEach(function (element) {
+      if (entranceSeen.has(element)) return;
+      if (reducedMotion() || !revealObserver || !window.PortfolioMotion) {
+        entranceSeen.add(element);
+        return;
+      }
+      revealObserver.observe(element);
+    });
+  }
+
+  if (motionPreference) {
+    var onMotionChange = function () { scanReveal(); };
+    if (motionPreference.addEventListener) motionPreference.addEventListener("change", onMotionChange);
+    else if (motionPreference.addListener) motionPreference.addListener(onMotionChange);
   }
 
   function scrollToTarget(hash) {
