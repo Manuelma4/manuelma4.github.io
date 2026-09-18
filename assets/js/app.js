@@ -262,6 +262,66 @@
     );
   }
 
+  /* Inline rich text for the app mock: **bold**, [n] citation chips and
+     {{r:W}} redaction bars (W px) so no real project data is shown. */
+  function richText(field) {
+    return attrText(L(field))
+      .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+      .replace(/\[(\d+)\]/g, '<span class="app-cite">$1</span>')
+      .replace(/\{\{r:(\d+)\}\}/g, '<span class="app-redact" style="width:$1px" aria-hidden="true"></span>');
+  }
+
+  function appPreviewHtml(p) {
+    var side = (p.sidebar || []).map(function (sec) {
+      var items = (sec.items || []).map(function (it) {
+        return '<div class="app-side-item' + (it.active ? " is-active" : "") + '"><b>' + attrText(L(it.title)) + "</b>" +
+          (it.meta ? "<span>" + attrText(L(it.meta)) + "</span>" : "") + "</div>";
+      }).join("");
+      return '<div class="app-side-head">' + attrText(L(sec.head)) + "</div>" +
+        (items || (sec.empty ? '<div class="app-side-empty">' + attrText(L(sec.empty)) + "</div>" : ""));
+    }).join("");
+    var answer = (p.answer || []).map(function (part) {
+      if (part.bullets) return "<ul>" + part.bullets.map(function (b) { return "<li>" + richText(b) + "</li>"; }).join("") + "</ul>";
+      return "<p>" + richText(part.text) + "</p>";
+    }).join("");
+    var docs = (p.sources || []).map(function (d, i) {
+      return '<div class="app-doc"><span class="app-doc-ic">' + icon(d.icon || "fileText", 12) + "</span>" +
+        "<div><b>" + (i + 1) + " " + attrText(L(d.name)) + "</b><span>" + attrText(L(d.path)) + "</span></div></div>";
+    }).join("");
+    return (
+      '<figure class="app-figure">' +
+        '<div class="app-preview" role="img" aria-label="' + attrText(L(p.caption)) + '">' +
+          '<aside class="app-side">' +
+            '<div class="app-brand"><span class="app-brand-mark">' + icon("sparkles", 14) + "</span><span><b>" + attrText(L(p.brand)) + "</b><span>" + attrText(L(p.brandSub)) + "</span></span></div>" +
+            '<div class="app-btn">' + icon("messageSquare", 12) + attrText(L(p.newChat)) + "</div>" +
+            '<div class="app-search">' + icon("search", 12) + attrText(L(p.search)) + "</div>" +
+            '<div class="app-side-list">' + side + "</div>" +
+            '<div class="app-side-user"><span class="app-avatar">' + attrText(p.user.initials) + "</span><span><b>" + attrText(L(p.user.name)) + "</b><span>" + attrText(L(p.user.sub)) + "</span></span></div>" +
+          "</aside>" +
+          '<div class="app-main">' +
+            '<div class="app-main-head"><span>' + attrText(L(p.title)) + "</span><span class=\"app-main-tools\">" + icon("sun", 13) + icon("menu", 13) + "</span></div>" +
+            '<div class="app-thread">' +
+              '<div class="app-q"><small>' + attrText(p.user.initials) + " · " + attrText(L(p.youLabel)) + "</small><b>" + attrText(L(p.question)) + "</b></div>" +
+              '<div class="app-a"><small>' + attrText(L(p.brandShort || p.brand)) + "</small>" + answer + "</div>" +
+            "</div>" +
+            '<div class="app-compose"><div class="app-compose-input">' + attrText(L(p.placeholder)) + "</div>" +
+              '<div class="app-compose-row">' + icon("copy", 13) +
+                '<span class="app-chip">' + icon("fileText", 11) + attrText(L(p.projectChip)) + "</span>" +
+                '<span class="app-chip">' + icon("cpu", 11) + attrText(L(p.modelChip)) + "</span>" +
+                '<span class="app-send">' + icon("arrowUp", 13) + "</span>" +
+              "</div></div>" +
+            '<div class="app-foot"><span>' + attrText(L(p.footLeft)) + "</span><span>" + attrText(L(p.footRight)) + "</span></div>" +
+          "</div>" +
+          '<aside class="app-docs">' +
+            '<div class="app-docs-head"><small>' + attrText(L(p.docsLabel)) + "</small><b>" + attrText(L(p.sourcesLabel)) + " <i>" + (p.sources || []).length + "</i></b></div>" +
+            docs +
+          "</aside>" +
+        "</div>" +
+        "<figcaption>" + attrText(L(p.caption)) + "</figcaption>" +
+      "</figure>"
+    );
+  }
+
   function qualitiesHtml(list) {
     if (!list || !list.length) return "";
     return '<ul class="work-qualities">' + list.map(function (q) {
@@ -280,6 +340,7 @@
       var stack = (w.stack || []).map(function (s) { return '<span class="tag">' + s + "</span>"; }).join("");
       var num = (i + 1 < 10 ? "0" : "") + (i + 1);
       var preview = (w.preview && w.preview.type === "chat") ? chatPreviewHtml(w.preview) : "";
+      var appMock = (w.preview && w.preview.type === "app") ? appPreviewHtml(w.preview) : "";
       var qualities = qualitiesHtml(w.qualities);
       return (
         '<article class="work-item stagger-item" id="work-' + attrText(w.id) + '" style="--i:' + Math.min(i, STAGGER_MAX) + '">' +
@@ -300,7 +361,7 @@
               (stack ? '<div><div class="work-side-title">' + t("work_stack") + '</div><div class="tl-tags work-stack">' + stack + "</div></div>" : "") +
             "</aside>" +
           "</div>" +
-          '<div class="work-figure">' + diagramHtml(w.diagram, i + 1) + "</div>" +
+          '<div class="work-figure">' + appMock + diagramHtml(w.diagram, i + 1) + "</div>" +
         "</article>"
       );
     }).join("");
@@ -594,7 +655,7 @@
 
       var isOpen = filtering
         ? true
-        : (hasRendered && !wrap.dataset.filtered ? openGroups.indexOf(group.id) !== -1 : groupIndex === 0);
+        : (hasRendered && !wrap.dataset.filtered ? openGroups.indexOf(group.id) !== -1 : false);
 
       return (
         '<details class="project-institution" data-project-id="' + attrText(group.id) + '" data-c="' + (groupIndex % 3) + '"' + (isOpen ? " open" : "") + '>' +
@@ -764,9 +825,7 @@
       var categoryCount = providers.reduce(function (sum, provider) { return sum + provider.items.length; }, 0);
       var section = el("details", "cert-type-section cert-type-" + category);
       section.dataset.certCategory = category;
-      section.open = hasRendered
-        ? openCategories.indexOf(category) !== -1
-        : category === "certification";
+      section.open = hasRendered && openCategories.indexOf(category) !== -1;
       var providersHtml = providers.map(function (provider) {
         return (
           '<section class="cert-provider" data-c="' + (provider.colorIndex % 5) + '">' +
