@@ -1,10 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- Monogram M drawn as a connected path with node dots: a nod to the architecture diagrams. -->
-  <rect width="64" height="64" rx="16" fill="#116b67"/>
-  <path d="M15 47V19l17 18 17-18v28" fill="none" stroke="#ffffff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <g fill="#7edbd0" stroke="#116b67" stroke-width="1.5">
-    <circle cx="15" cy="19" r="4.4"/>
-    <circle cx="49" cy="19" r="4.4"/>
-    <circle cx="32" cy="37" r="4.4"/>
+  <!-- Futuristic monogram M: chamfered tech badge, gradient fill, angular strokes, circuit-style nodes. -->
+  <defs>
+    <linearGradient id="bg" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b2f2d"/>
+      <stop offset="0.55" stop-color="#12726c"/>
+      <stop offset="1" stop-color="#28d6c4"/>
+    </linearGradient>
+  </defs>
+  <path d="M16 2H48L62 16V48L48 62H16L2 48V16Z" fill="url(#bg)" stroke="#7ef4e6" stroke-width="1.6" stroke-opacity="0.85"/>
+  <path d="M16 47V19L32 36L48 19V47" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <g fill="#5eead4" stroke="#0b2f2d" stroke-width="1.2">
+    <rect x="12" y="15" width="8" height="8" transform="rotate(45 16 19)"/>
+    <rect x="44" y="15" width="8" height="8" transform="rotate(45 48 19)"/>
+    <rect x="28" y="32" width="8" height="8" transform="rotate(45 32 36)"/>
   </g>
 </svg>
