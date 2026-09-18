@@ -119,6 +119,8 @@ window.SITE = {
       contact_cta_cv: "Descargar CV completo",
       contact_copy: "Copiar correo",
       contact_copied: "Copiado",
+      contact_label_email: "Correo",
+      contact_label_phone: "Teléfono",
       footer_rights: "Todos los derechos reservados.",
       footer_source: "Código fuente",
       footer_note: "HTML, CSS y JavaScript, sin frameworks ni rastreadores.",
@@ -237,6 +239,8 @@ window.SITE = {
       contact_cta_cv: "Download full CV",
       contact_copy: "Copy email",
       contact_copied: "Copied",
+      contact_label_email: "Email",
+      contact_label_phone: "Phone",
       footer_rights: "All rights reserved.",
       footer_source: "Source code",
       footer_note: "HTML, CSS and JavaScript. No frameworks, no trackers.",
@@ -355,6 +359,8 @@ window.SITE = {
       contact_cta_cv: "Télécharger le CV complet",
       contact_copy: "Copier l'e-mail",
       contact_copied: "Copié",
+      contact_label_email: "E-mail",
+      contact_label_phone: "Téléphone",
       footer_rights: "Tous droits réservés.",
       footer_source: "Code source",
       footer_note: "HTML, CSS et JavaScript. Sans framework ni traceur.",
@@ -1031,66 +1037,10 @@ window.SITE = {
 
   education: [
     {
-      id: "unal",
-      icon: "cap",
-      org: "Universidad Nacional de Colombia",
-      place: { es: "Bogotá, D.C., Colombia", en: "Bogotá, D.C., Colombia", fr: "Bogotá, D.C., Colombie" },
-      degree: { es: "Ingeniería de Sistemas y Computación", en: "Systems and Computer Engineering", fr: "Génie informatique" },
-      dateLabel: { es: "Mar. 2020 – Ago. 2024", en: "Mar 2020 – Aug 2024", fr: "Mars 2020 – Août 2024" },
-      ongoing: false,
-      bullets: {
-        es: [
-          "Beca de excelencia académica completa.",
-          "Base en algoritmos, infraestructura, desarrollo web, ingeniería de software, bases de datos y trabajo en equipos ágiles.",
-          "Primeros proyectos de ciencia de datos y procesamiento del lenguaje natural, en paralelo con roles de investigación y desarrollo en DNINFOA y OPE-PRIG."
-        ],
-        en: [
-          "Full academic-excellence scholarship.",
-          "Foundations in algorithms, infrastructure, web development, software engineering, databases, and agile teamwork.",
-          "First data-science and natural-language-processing projects, alongside research and development roles at DNINFOA and OPE-PRIG."
-        ],
-        fr: [
-          "Bourse d'excellence académique complète.",
-          "Bases en algorithmique, infrastructure, développement web, génie logiciel, bases de données et travail agile.",
-          "Premiers projets en data science et traitement automatique du langage, parallèlement à des missions de recherche et développement chez DNINFOA et OPE-PRIG."
-        ]
-      },
-      tags: []
-    },
-    {
-      id: "telecom",
-      icon: "cap",
-      org: "Télécom Paris",
-      place: { es: "París, Francia", en: "Paris, France", fr: "Paris, France" },
-      degree: { es: "Programa de Ingeniería — Data Science & MODS", en: "Engineering programme — Data Science & MODS", fr: "Diplôme d'ingénieur — Data Science & MODS" },
-      dateLabel: { es: "Sept. 2024 – Sept. 2026", en: "Sept 2024 – Sept 2026", fr: "Sept. 2024 – Sept. 2026" },
-      ongoing: true,
-      bullets: {
-        es: [
-          "Especialización en Data Science (DS) y Markets, Organizations, Data, Strategies (MODS).",
-          "Ciencia de datos: machine learning (SVM/PCA, clasificadores y autoencoders para MNIST), deep learning, minería de texto y de datos, graph learning (PageRank, Louvain), bases de datos y optimización aplicada.",
-          "Economía y datos: econometría aplicada, economía de plataformas, finanzas digitales, microeconomía y organización industrial, con proyectos de recolección y visualización de datos.",
-          "Formación complementaria en desarrollo web, teoría de colas, optimización numérica y propiedad intelectual para ingenieros digitales."
-        ],
-        en: [
-          "Specialization in Data Science (DS) and Markets, Organizations, Data, Strategies (MODS).",
-          "Data science coursework: machine learning (SVM/PCA, classifiers and autoencoders for MNIST), deep learning, text and data mining, graph learning (PageRank, Louvain), databases, and applied optimization.",
-          "Economics and data: applied econometrics, platform economics, digital finance, microeconomics and industrial organization, with data collection and visualization projects.",
-          "Broader coursework in web development, queueing theory, numerical optimization, and intellectual property for digital engineers."
-        ],
-        fr: [
-          "Spécialisation Data Science (DS) et Markets, Organizations, Data, Strategies (MODS).",
-          "Cours de data science : machine learning (SVM/ACP, classifieurs et autoencodeurs pour MNIST), deep learning, fouille de texte et de données, graph learning (PageRank, Louvain), bases de données et optimisation appliquée.",
-          "Économie et données : économétrie appliquée, économie des plateformes, finance numérique, microéconomie et organisation industrielle, avec des projets de collecte et de visualisation de données.",
-          "Formation complémentaire en développement web, files d'attente, optimisation numérique et propriété intellectuelle pour ingénieurs du numérique."
-        ]
-      },
-      tags: []
-    },
-    {
       id: "iren",
       icon: "cap",
       org: "Dauphine–PSL",
+      logo: "assets/img/logos/dauphine-psl.webp",
       place: { es: "París, Francia", en: "Paris, France", fr: "Paris, France" },
       degree: { es: "Doble título M2 IREN", en: "M2 IREN Double Degree", fr: "Double diplôme M2 IREN" },
       dateLabel: { es: "Sept. 2025 – Sept. 2026", en: "Sept 2025 – Sept 2026", fr: "Sept. 2025 – Sept. 2026" },
@@ -1119,6 +1069,65 @@ window.SITE = {
         ]
       },
       tags: []
+    },
+    {
+      id: "telecom",
+      icon: "cap",
+      org: "Télécom Paris",
+      logo: "assets/img/logos/telecom-paris.webp",
+      place: { es: "París, Francia", en: "Paris, France", fr: "Paris, France" },
+      degree: { es: "Programa de Ingeniería — Data Science & MODS", en: "MSc in Engineering — Data Science & MODS", fr: "Diplôme d'ingénieur — Data Science & MODS" },
+      dateLabel: { es: "Sept. 2024 – Sept. 2026", en: "Sept 2024 – Sept 2026", fr: "Sept. 2024 – Sept. 2026" },
+      ongoing: true,
+      bullets: {
+        es: [
+          "Especialización en Data Science (DS) y Markets, Organizations, Data, Strategies (MODS).",
+          "Ciencia de datos: machine learning (SVM/PCA, clasificadores y autoencoders para MNIST), deep learning, minería de texto y de datos, graph learning (PageRank, Louvain), bases de datos y optimización aplicada.",
+          "Economía y datos: econometría aplicada, economía de plataformas, finanzas digitales, microeconomía y organización industrial, con proyectos de recolección y visualización de datos.",
+          "Formación complementaria en desarrollo web, teoría de colas, optimización numérica y propiedad intelectual para ingenieros digitales."
+        ],
+        en: [
+          "Specialization in Data Science (DS) and Markets, Organizations, Data, Strategies (MODS).",
+          "Data science coursework: machine learning (SVM/PCA, classifiers and autoencoders for MNIST), deep learning, text and data mining, graph learning (PageRank, Louvain), databases, and applied optimization.",
+          "Economics and data: applied econometrics, platform economics, digital finance, microeconomics and industrial organization, with data collection and visualization projects.",
+          "Broader coursework in web development, queueing theory, numerical optimization, and intellectual property for digital engineers."
+        ],
+        fr: [
+          "Spécialisation Data Science (DS) et Markets, Organizations, Data, Strategies (MODS).",
+          "Cours de data science : machine learning (SVM/ACP, classifieurs et autoencodeurs pour MNIST), deep learning, fouille de texte et de données, graph learning (PageRank, Louvain), bases de données et optimisation appliquée.",
+          "Économie et données : économétrie appliquée, économie des plateformes, finance numérique, microéconomie et organisation industrielle, avec des projets de collecte et de visualisation de données.",
+          "Formation complémentaire en développement web, files d'attente, optimisation numérique et propriété intellectuelle pour ingénieurs du numérique."
+        ]
+      },
+      tags: []
+    },
+    {
+      id: "unal",
+      icon: "cap",
+      org: "Universidad Nacional de Colombia",
+      logo: "assets/img/logos/unal.jpg",
+      place: { es: "Bogotá, D.C., Colombia", en: "Bogotá, D.C., Colombia", fr: "Bogotá, D.C., Colombie" },
+      degree: { es: "Ingeniería de Sistemas y Computación", en: "Systems and Computer Engineering", fr: "Génie informatique" },
+      dateLabel: { es: "Mar. 2020 – Ago. 2024", en: "Mar 2020 – Aug 2024", fr: "Mars 2020 – Août 2024" },
+      ongoing: false,
+      bullets: {
+        es: [
+          "Beca de excelencia académica completa.",
+          "Base en algoritmos, infraestructura, desarrollo web, ingeniería de software, bases de datos y trabajo en equipos ágiles.",
+          "Primeros proyectos de ciencia de datos y procesamiento del lenguaje natural, en paralelo con roles de investigación y desarrollo en DNINFOA y OPE-PRIG."
+        ],
+        en: [
+          "Full academic-excellence scholarship.",
+          "Foundations in algorithms, infrastructure, web development, software engineering, databases, and agile teamwork.",
+          "First data-science and natural-language-processing projects, alongside research and development roles at DNINFOA and OPE-PRIG."
+        ],
+        fr: [
+          "Bourse d'excellence académique complète.",
+          "Bases en algorithmique, infrastructure, développement web, génie logiciel, bases de données et travail agile.",
+          "Premiers projets en data science et traitement automatique du langage, parallèlement à des missions de recherche et développement chez DNINFOA et OPE-PRIG."
+        ]
+      },
+      tags: []
     }
   ],
 
@@ -1128,6 +1137,7 @@ window.SITE = {
       icon: "briefcase",
       title: "AI Software Architect",
       org: "MODUO Ingénierie",
+      logo: "assets/img/logos/moduo.webp",
       place: { es: "Francia", en: "France", fr: "France" },
       dateLabel: { es: "Desde sept. 2026", en: "Since Sept 2026", fr: "Depuis sept. 2026" },
       ongoing: true,
@@ -1161,6 +1171,7 @@ window.SITE = {
       icon: "briefcase",
       title: { es: "AI Data Engineer Intern (antes IT Developer)", en: "AI Data Engineer Intern (previously IT Developer)", fr: "Stagiaire ingénieur Data & IA (auparavant développeur IT)" },
       org: "MODUO Ingénierie",
+      logo: "assets/img/logos/moduo.webp",
       place: { es: "Francia", en: "France", fr: "France" },
       dateLabel: { es: "Feb. 2026 – Sept. 2026", en: "Feb 2026 – Sept 2026", fr: "Févr. 2026 – Sept. 2026" },
       ongoing: false,
@@ -1200,6 +1211,7 @@ window.SITE = {
       icon: "briefcase",
       title: { es: "Científico de Datos", en: "Data Scientist", fr: "Data Scientist" },
       org: "DNINFOA · Universidad Nacional de Colombia",
+      logo: "assets/img/logos/dninfoa.png",
       place: { es: "Bogotá, Colombia", en: "Bogotá, Colombia", fr: "Bogotá, Colombie" },
       dateLabel: { es: "May. – Nov. 2024", en: "May – Nov 2024", fr: "Mai – Nov. 2024" },
       ongoing: false,
@@ -1230,6 +1242,7 @@ window.SITE = {
       icon: "briefcase",
       title: { es: "Practicante de Análisis de Datos", en: "Data Analyst Intern", fr: "Stagiaire Data Analyst" },
       org: "Siigo S.A.S. · Data Engineering Team",
+      logo: "assets/img/logos/siigo.png",
       place: { es: "Bogotá, Colombia", en: "Bogotá, Colombia", fr: "Bogotá, Colombie" },
       dateLabel: { es: "Feb. – Jul. 2024", en: "Feb – Jul 2024", fr: "Févr. – Juil. 2024" },
       ongoing: false,
@@ -1260,6 +1273,8 @@ window.SITE = {
       icon: "briefcase",
       title: { es: "Gestor de Datos", en: "Data Manager", fr: "Data Manager" },
       org: "OPE – PRIG · Universidad Nacional de Colombia",
+      logo: "assets/img/logos/prig.png",
+      logoBg: "dark",
       place: { es: "Bogotá, Colombia", en: "Bogotá, Colombia", fr: "Bogotá, Colombie" },
       dateLabel: { es: "Sept. 2023 – Ene. 2024", en: "Sept 2023 – Jan 2024", fr: "Sept. 2023 – Janv. 2024" },
       ongoing: false,

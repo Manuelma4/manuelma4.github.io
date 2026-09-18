@@ -458,7 +458,8 @@
         '<div class="tl-dot">' + icon(item.icon || "briefcase", 17) + "</div>" +
         '<div class="tl-card">' +
           '<div class="tl-top">' +
-            '<div><h3 class="tl-title">' + (item.title ? L(item.title) : L(item.degree)) + "</h3>" +
+            (item.logo ? '<img class="tl-logo' + (item.logoBg === "dark" ? " is-dark" : "") + '" src="' + attrText(item.logo) + '" alt="" width="44" height="44" loading="lazy" decoding="async" onerror="this.remove()">' : "") +
+            '<div class="tl-head-copy"><h3 class="tl-title">' + (item.title ? L(item.title) : L(item.degree)) + "</h3>" +
             '<div class="tl-org">' + L(item.org) + "</div></div>" +
             '<div class="tl-date">' + (item.ongoing ? '<span class="tl-live" aria-hidden="true"></span>' : "") + L(item.dateLabel) + "</div>" +
           "</div>" +
@@ -768,17 +769,30 @@
     var wrap = document.getElementById("contactLinks");
     wrap.innerHTML = "";
     [
-      { icon: "mail", text: SITE.meta.email, href: "mailto:" + SITE.meta.email },
-      { icon: "phone", text: SITE.meta.phoneDisplay, href: "tel:" + SITE.meta.phoneHref },
-      { icon: "linkedin", text: "linkedin.com/in/" + SITE.meta.linkedinUser, href: SITE.meta.linkedinUrl },
-      { icon: "github", text: "github.com/" + SITE.meta.githubUser, href: SITE.meta.githubUrl }
+      { icon: "mail", label: t("contact_label_email"), text: SITE.meta.email, href: "mailto:" + SITE.meta.email },
+      { icon: "phone", label: t("contact_label_phone"), text: SITE.meta.phoneDisplay, href: "tel:" + SITE.meta.phoneHref },
+      { icon: "linkedin", label: "LinkedIn", text: "linkedin.com/in/" + SITE.meta.linkedinUser, href: SITE.meta.linkedinUrl },
+      { icon: "github", label: "GitHub", text: "github.com/" + SITE.meta.githubUser, href: SITE.meta.githubUrl }
     ].forEach(function (it) {
-      var a = el("a", null);
+      var a = el("a", "contact-tile");
       a.href = it.href;
       if (it.href.indexOf("http") === 0) { a.target = "_blank"; a.rel = "noopener"; }
-      a.innerHTML = icon(it.icon, 16) + "<span>" + it.text + "</span>";
+      a.innerHTML =
+        '<span class="contact-tile-ic">' + icon(it.icon, 18) + "</span>" +
+        '<span class="contact-tile-body"><span class="contact-tile-label">' + it.label + '</span><span class="contact-tile-value">' + it.text + "</span></span>" +
+        '<span class="contact-tile-arrow">' + icon(it.href.indexOf("http") === 0 ? "external" : "arrowRight", 15) + "</span>";
       wrap.appendChild(a);
     });
+    var meta = document.getElementById("contactMeta");
+    if (meta) {
+      var langs = (SITE.languages || []).map(function (lg) {
+        var level = L(lg.level);
+        return L(lg.name) + (/^c\d$/i.test(level) ? " " + level : "");
+      }).join(" · ");
+      meta.innerHTML =
+        "<span>" + icon("pin", 14) + L(SITE.meta.location) + "</span>" +
+        "<span>" + icon("globe", 14) + langs + "</span>";
+    }
     var copyBtn = document.getElementById("copyEmailBtn");
     if (copyBtn) copyBtn.innerHTML = icon("copy", 16) + "<span>" + t("contact_copy") + "</span>";
   }

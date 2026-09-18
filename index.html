@@ -9,6 +9,10 @@
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f4f7f9">
 <link rel="icon" type="image/svg+xml" href="assets/img/icons/favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
+<link rel="mask-icon" href="assets/img/icons/mask-icon.svg" color="#116b67">
+<link rel="manifest" href="site.webmanifest">
 <link rel="canonical" href="https://manuelma4.github.io/">
 <link rel="alternate" hreflang="en" href="https://manuelma4.github.io/?lang=en">
 <link rel="alternate" hreflang="es" href="https://manuelma4.github.io/?lang=es">
@@ -20,14 +24,17 @@
 <meta property="og:title" content="Manuel David Maya Rosero — Software Engineer · Data & AI">
 <meta property="og:description" content="Backend services, internal platforms, data pipelines and applied AI. Portfolio in English, Spanish and French.">
 <meta property="og:url" content="https://manuelma4.github.io/">
-<meta property="og:image" content="https://manuelma4.github.io/assets/img/profile-manuel.jpg">
+<meta property="og:image" content="https://manuelma4.github.io/assets/img/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Manuel David Maya Rosero — Software Engineer: Data Engineering, Backend, AI">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_CO">
 <meta property="og:locale:alternate" content="fr_FR">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Manuel David Maya Rosero — Software Engineer · Data & AI">
 <meta name="twitter:description" content="Backend services, internal platforms, data pipelines and applied AI.">
-<meta name="twitter:image" content="https://manuelma4.github.io/assets/img/profile-manuel.jpg">
+<meta name="twitter:image" content="https://manuelma4.github.io/assets/img/social-card.png">
 
 <script type="application/ld+json">
 {
@@ -63,6 +70,8 @@
     theme = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
   document.documentElement.setAttribute("data-theme", theme);
+  var tc = document.querySelector("meta[name=theme-color]");
+  if (tc) tc.setAttribute("content", theme === "dark" ? "#0e171e" : "#f4f7f9");
   document.documentElement.classList.add("js");
 })();
 </script>
@@ -70,7 +79,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=19">
+<link rel="stylesheet" href="assets/css/styles.css?v=21">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
@@ -256,6 +265,15 @@
   <section id="contact">
     <div class="container">
       <div class="contact-card reveal">
+        <svg class="contact-graph" viewBox="0 0 560 420" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.5" aria-hidden="true" focusable="false">
+          <path d="M60 60 L200 130 L340 80 L440 170 M200 130 L260 270 L380 310 L440 170 M260 270 L140 390 L280 510 M380 310 L460 440 M140 390 L20 440"/>
+          <g fill="#7ef4e6" stroke="none" opacity=".8">
+            <circle cx="60" cy="60" r="5"/><circle cx="200" cy="130" r="6"/><circle cx="340" cy="80" r="5"/><circle cx="440" cy="170" r="6"/>
+            <circle cx="260" cy="270" r="7"/><circle cx="380" cy="310" r="5"/><circle cx="140" cy="390" r="6"/><circle cx="460" cy="440" r="5"/><circle cx="20" cy="440" r="4"/>
+          </g>
+        </svg>
+        <div class="contact-copy">
+        <div class="section-eyebrow contact-eyebrow" data-i18n="contact_eyebrow">Contact</div>
         <h2 data-i18n="contact_title">Let's talk</h2>
         <p data-i18n="contact_lede"></p>
         <div class="contact-actions">
@@ -268,6 +286,8 @@
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><use href="assets/img/icons/lucide-1.47.0.svg#download"></use></svg>
             <span data-i18n="contact_cta_cv">Download full CV</span>
           </a>
+        </div>
+        <div class="contact-meta" id="contactMeta"></div>
         </div>
         <div class="contact-links" id="contactLinks"></div>
       </div>
@@ -306,8 +326,8 @@
   </div>
 </div>
 
-<script src="assets/js/content.js?v=23" defer></script>
+<script src="assets/js/content.js?v=26" defer></script>
 <script src="assets/vendor/motion-mini-13.4.0.min.js" defer></script>
-<script src="assets/js/app.js?v=19" defer></script>
+<script src="assets/js/app.js?v=21" defer></script>
 </body>
 </html>

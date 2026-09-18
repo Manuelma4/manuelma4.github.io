@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Safari pinned-tab icon: single-colour silhouette of the monogram (colour comes from the link tag). -->
+  <path d="M12 52V12L32 33L52 12V52" fill="none" stroke="#000000" stroke-width="9" stroke-linecap="butt" stroke-linejoin="miter"/>
+  <g fill="#000000">
+    <rect x="6.5" y="6.5" width="11" height="11" transform="rotate(45 12 12)"/>
+    <rect x="46.5" y="6.5" width="11" height="11" transform="rotate(45 52 12)"/>
+    <rect x="26.5" y="27.5" width="11" height="11" transform="rotate(45 32 33)"/>
+  </g>
+</svg>
