@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="32" fill="#3f7f82"/>
-  <text x="32" y="41" font-family="Sora, system-ui, sans-serif" font-weight="800" font-size="23" fill="#ffffff" text-anchor="middle">MM</text>
+  <!-- Monogram M drawn as a connected path with node dots: a nod to the architecture diagrams. -->
+  <rect width="64" height="64" rx="16" fill="#116b67"/>
+  <path d="M15 47V19l17 18 17-18v28" fill="none" stroke="#ffffff" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#7edbd0" stroke="#116b67" stroke-width="1.5">
+    <circle cx="15" cy="19" r="4.4"/>
+    <circle cx="49" cy="19" r="4.4"/>
+    <circle cx="32" cy="37" r="4.4"/>
+  </g>
 </svg>
