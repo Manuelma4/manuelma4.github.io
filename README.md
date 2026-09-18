@@ -12,7 +12,7 @@ Estudié Ingeniería de Sistemas y Computación en la Universidad Nacional de Co
 
 Después profundicé en Data Science y MODS Markets, Organizations, Data, Strategies  en Télécom Paris. Elegí además el doble diploma M2 IREN en Université Paris Dauphine–PSL para complementar mi perfil técnico con economía digital, industrias de red, competencia, regulación y estrategia.
 
-Actualmente trabajo como AI Data Engineer Intern en MODUO Ingénierie, donde desarrollo el portal interno de gestión de proyectos (Django, PostgreSQL), diseñé un servicio central de identidad OIDC para seis aplicaciones internas y construí pipelines de datos BIM y asistentes RAG. Desde octubre de 2026 continuaré en MODUO Ingénierie como AI Software Architect.
+Desde septiembre de 2026 soy AI Software Architect en MODUO Ingénierie, donde me ocupo de la arquitectura de las aplicaciones internas y de la plataforma de datos e IA: monolitos modulares y microservicios según el caso, contratos GraphQL y REST, escalado de bases de datos, CI/CD y observabilidad. Llegué a la empresa como AI Data Engineer Intern: desarrollé el portal interno de gestión de proyectos (Django, PostgreSQL), diseñé un servicio central de identidad OIDC para seis aplicaciones internas y construí pipelines de datos BIM y asistentes RAG.
 
 ## English
 
@@ -22,7 +22,7 @@ I studied Systems and Computer Engineering at Universidad Nacional de Colombia, 
 
 I then specialized in Data Science and MODS Markets, Organizations, Data, Strategies  at Télécom Paris. I also pursued the M2 IREN double degree at Université Paris Dauphine–PSL to complement my technical background with digital economics, network industries, competition, regulation, and strategy.
 
-I currently work as an AI Data Engineer Intern at MODUO Ingénierie, where I build the internal project-management portal (Django, PostgreSQL), designed a central OIDC identity service for six internal applications, and built BIM data pipelines and RAG assistants. From October 2026, I will continue at MODUO Ingénierie as an AI Software Architect.
+Since September 2026 I am the AI Software Architect at MODUO Ingénierie, where I own the architecture of the internal applications and of the data and AI platform: modular monoliths and microservices as each case requires, GraphQL and REST contracts, database scaling, CI/CD and observability. I joined the company as an AI Data Engineer Intern: I built the internal project-management portal (Django, PostgreSQL), designed a central OIDC identity service for six internal applications, and built BIM data pipelines and RAG assistants.
 
 ## Français
 
@@ -32,7 +32,7 @@ J'ai étudié ingénierie informatique à l'Universidad Nacional de Colombia, o�
 
 J'ai ensuite approfondi la Data Science et MODS Markets, Organizations, Data, Strategies à Télécom Paris. J'ai également choisi le double diplôme M2 IREN à l'Université Paris Dauphine–PSL afin de compléter mon profil technique par une compréhension de l'économie numérique, des industries de réseau, de la concurrence, de la régulation et de la stratégie.
 
-Je travaille actuellement comme stagiaire ingénieur Data & IA chez MODUO Ingénierie, où je développe le portail interne de gestion de projets (Django, PostgreSQL), j'ai conçu un service d'identité OIDC central pour six applications internes et construit des pipelines de données BIM et des assistants RAG. À partir d’octobre 2026, je poursuivrai mon parcours chez MODUO Ingénierie en tant qu'AI Software Architect.
+Depuis septembre 2026, je suis AI Software Architect chez MODUO Ingénierie, où je suis responsable de l'architecture des applications internes et de la plateforme data et IA : monolithes modulaires et microservices selon les cas, contrats GraphQL et REST, montée en charge des bases de données, CI/CD et observabilité. J'ai rejoint l'entreprise comme stagiaire ingénieur Data & IA : j'ai développé le portail interne de gestion de projets (Django, PostgreSQL), conçu un service d'identité OIDC central pour six applications internes et construit des pipelines de données BIM et des assistants RAG.
 
 ## Contact
 

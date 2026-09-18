@@ -1,7 +1,7 @@
 /* ==========================================================================
    Manuel David Maya Rosero — Portfolio app logic.
    Renders window.SITE content, handles i18n, theme, the project filter,
-   architecture diagrams and the command palette.
+   architecture case studies and the command palette.
    Static ES2017+ with local Lucide SVGs and optional Motion Mini enhancement.
    ========================================================================== */
 (function () {
@@ -163,36 +163,113 @@
     });
   }
 
-  /* ---- Systems: case studies with an architecture diagram ---- */
+  /* ---- Architecture case studies: applications with an architecture diagram ---- */
+  /* Node kinds map to a Lucide icon; `tech` chips are coloured by language. */
+  var NODE_ICONS = {
+    client: "monitor", service: "server", store: "database", source: "fileText", external: "cloud",
+    output: "chart", gateway: "network", queue: "arrowLeftRight", llm: "brain", worker: "cpu",
+    proxy: "shield", ops: "activity", cluster: "container", cache: "zap", storage: "hardDrive", ci: "gitBranch",
+    app: "layoutDashboard", people: "users", check: "listChecks"
+  };
+  var TECH_TONE = {
+    Python: "primary", TypeScript: "violet", JavaScript: "violet", Java: "accent", Go: "aqua",
+    "C#": "rose", Kotlin: "rose", Scala: "rose", Rust: "accent", SQL: "muted", VBA: "muted"
+  };
+  var QUALITY_ICONS = {
+    scalability: "zap", availability: "shield", operability: "activity", maintainability: "wrench",
+    security: "lock", observability: "gauge", reproducibility: "refresh", testability: "listChecks"
+  };
+
+  function techChip(name) {
+    return '<span class="dg-tech dg-tone-' + (TECH_TONE[name] || "muted") + '"><i aria-hidden="true"></i>' + attrText(name) + "</span>";
+  }
+
   function diagramHtml(d, figNumber) {
+    var techs = [];
+    var groups = (d.groups || []).map(function (g) {
+      return (
+        '<div class="dg-group dg-tone-' + attrText(g.tone || "neutral") + '" style="--col:' + g.col + ";--row:" + g.row +
+          ";--cs:" + (g.colSpan || 1) + ";--rs:" + (g.rowSpan || 1) + '">' +
+          '<span class="dg-group-label">' + (g.icon ? icon(g.icon, 11) : "") + "<span>" + L(g.label) + "</span></span>" +
+        "</div>"
+      );
+    }).join("");
     var nodes = d.nodes.map(function (n) {
-      var cls = "dg-node dg-kind-" + (n.kind || "service") + (n.primary ? " is-primary" : "");
-      var stack = "";
-      if (n.stack) {
-        var cells = "";
-        for (var i = 0; i < n.stack; i++) cells += "<i></i>";
-        stack = '<span class="dg-stack" aria-hidden="true">' + cells + "</span>";
-      }
+      var kind = n.kind || "service";
+      var cls = "dg-node dg-kind-" + kind + (n.primary ? " is-primary" : "") + (n.replicas ? " has-replicas" : "");
+      if (n.tech && techs.indexOf(n.tech) === -1) techs.push(n.tech);
       return (
         '<div class="' + cls + '" data-node="' + attrText(n.id) + '" style="--col:' + n.col + ";--row:" + n.row + '">' +
-          stack +
+          (n.replicas ? '<span class="dg-replicas" title="' + attrText(n.replicas + " " + t("work_replicas")) + '">×' + n.replicas + "</span>" : "") +
+          '<span class="dg-ic">' + icon(n.icon || NODE_ICONS[kind] || "server", 14) + "</span>" +
           '<span class="dg-label">' + L(n.label) + "</span>" +
           (n.sub ? '<span class="dg-sub">' + L(n.sub) + "</span>" : "") +
+          (n.tech ? techChip(n.tech) : "") +
         "</div>"
       );
     }).join("");
     var labels = d.edges.map(function (e, i) {
-      return e.label ? '<span class="dg-edge-label" data-edge="' + i + '">' + L(e.label) + "</span>" : "";
+      return e.label ? '<span class="dg-edge-label' + (e.kind ? " is-" + attrText(e.kind) : "") + '" data-edge="' + i + '">' + L(e.label) + "</span>" : "";
     }).join("");
+    var head = (d.style || techs.length)
+      ? '<div class="dg-head">' +
+          (d.style ? '<span class="dg-style">' + icon(d.styleIcon || "layers", 13) + "<span>" + L(d.style) + "</span></span>" : "") +
+          (techs.length ? '<span class="dg-techs">' + techs.map(techChip).join("") + "</span>" : "") +
+        "</div>"
+      : "";
+    var pipeline = (d.pipeline && d.pipeline.length)
+      ? '<div class="dg-pipeline"><span class="dg-pipeline-title">' + icon("gitBranch", 13) + t("work_cicd") + "</span><ol>" +
+          d.pipeline.map(function (p) {
+            return "<li><b>" + L(p.label) + "</b>" + (p.sub ? "<span>" + L(p.sub) + "</span>" : "") + "</li>";
+          }).join("") +
+        "</ol></div>"
+      : "";
     return (
       '<figure class="dg" data-cols="' + d.cols + '" data-rows="' + d.rows + '">' +
+        head +
         '<div class="dg-canvas" style="--cols:' + d.cols + ";--rows:" + d.rows + '">' +
+          groups +
           '<svg class="dg-wires" aria-hidden="true" focusable="false"></svg>' +
           nodes + labels +
         "</div>" +
+        pipeline +
         '<figcaption><span class="dg-fig">' + t("work_fig") + " " + figNumber + "</span> " + L(d.caption) + "</figcaption>" +
       "</figure>"
     );
+  }
+
+  /* Product mock shown next to the copy: a small conversation with cited sources. */
+  function chatPreviewHtml(p) {
+    var msgs = (p.messages || []).map(function (m) {
+      var cites = (m.sources || []).map(function (s) {
+        return '<span class="chat-cite">' + icon("fileText", 11) + "<span>" + L(s) + "</span></span>";
+      }).join("");
+      return (
+        '<div class="chat-msg chat-' + attrText(m.role || "assistant") + '"><div class="chat-bubble">' + L(m.text) +
+          (cites ? '<div class="chat-cites">' + cites + "</div>" : "") +
+        "</div></div>"
+      );
+    }).join("");
+    return (
+      '<div class="chat-preview" role="img" aria-label="' + attrText(t("work_preview_aria")) + '">' +
+        '<div class="chat-head"><span class="chat-avatar">' + icon("sparkles", 13) + "</span>" +
+          '<span class="chat-title">' + L(p.title) + "</span>" +
+          (p.scope ? '<span class="chat-scope">' + icon("lock", 10) + "<span>" + L(p.scope) + "</span></span>" : "") +
+        "</div>" +
+        '<div class="chat-body">' + msgs + "</div>" +
+        '<div class="chat-input"><span>' + L(p.placeholder) + "</span>" + icon("send", 14) + "</div>" +
+      "</div>"
+    );
+  }
+
+  function qualitiesHtml(list) {
+    if (!list || !list.length) return "";
+    return '<ul class="work-qualities">' + list.map(function (q) {
+      return (
+        '<li><span class="wq-key">' + icon(QUALITY_ICONS[q.key] || "check", 13) + "<span>" + t("quality_" + q.key) + "</span></span>" +
+        '<span class="wq-text">' + L(q.text) + "</span></li>"
+      );
+    }).join("") + "</ul>";
   }
 
   function renderWork() {
@@ -202,16 +279,26 @@
       var points = (w.points && w.points[state.lang] ? w.points[state.lang] : []).map(function (p) { return "<li>" + p + "</li>"; }).join("");
       var stack = (w.stack || []).map(function (s) { return '<span class="tag">' + s + "</span>"; }).join("");
       var num = (i + 1 < 10 ? "0" : "") + (i + 1);
+      var preview = (w.preview && w.preview.type === "chat") ? chatPreviewHtml(w.preview) : "";
+      var qualities = qualitiesHtml(w.qualities);
       return (
         '<article class="work-item stagger-item" id="work-' + attrText(w.id) + '" style="--i:' + Math.min(i, STAGGER_MAX) + '">' +
-          '<div class="work-copy">' +
+          '<header class="work-head">' +
             '<div class="work-meta"><span class="work-num">' + num + "</span><span>" + L(w.org) + "</span><span>" + w.year + "</span>" +
               '<span class="work-kind work-kind-' + attrText(w.kind) + '">' + t("work_kind_" + w.kind) + "</span></div>" +
             "<h3>" + L(w.title) + "</h3>" +
             '<p class="work-tagline">' + L(w.tagline) + "</p>" +
-            '<p class="work-summary">' + L(w.summary) + "</p>" +
-            (points ? '<ul class="work-points">' + points + "</ul>" : "") +
-            (stack ? '<div class="tl-tags work-stack">' + stack + "</div>" : "") +
+          "</header>" +
+          '<div class="work-body">' +
+            '<div class="work-copy">' +
+              '<p class="work-summary">' + L(w.summary) + "</p>" +
+              (points ? '<ul class="work-points">' + points + "</ul>" : "") +
+            "</div>" +
+            '<aside class="work-side">' +
+              preview +
+              (qualities ? '<div><div class="work-side-title">' + t("work_qualities") + "</div>" + qualities + "</div>" : "") +
+              (stack ? '<div><div class="work-side-title">' + t("work_stack") + '</div><div class="tl-tags work-stack">' + stack + "</div></div>" : "") +
+            "</aside>" +
           "</div>" +
           '<div class="work-figure">' + diagramHtml(w.diagram, i + 1) + "</div>" +
         "</article>"
@@ -243,6 +330,43 @@
     return { x: rect.left + rect.width * pos, y: rect.bottom };
   }
 
+  /* True when a label box centred on (x, y) would overlap a node. */
+  function labelHitsNode(p, rects) {
+    var hw = 34, hh = 11;
+    for (var id in rects) {
+      var r = rects[id];
+      if (p.x + hw > r.left + 2 && p.x - hw < r.right - 2 && p.y + hh > r.top + 2 && p.y - hh < r.bottom - 2) return true;
+    }
+    return false;
+  }
+
+  function arrowMarker(id, style) {
+    return (
+      '<marker id="' + id + '" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">' +
+        '<path d="M1 1.5 8.5 5 1 8.5" fill="none" stroke="currentColor"' + (style ? ' style="' + style + '"' : "") +
+        ' stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>'
+    );
+  }
+
+  /* Resolved grid tracks of a canvas, so an edge can pass through a cell
+     (integer col/row = track centre, half values = the gap after it). */
+  function gridTracks(canvas) {
+    var cs = getComputedStyle(canvas);
+    function px(v) { return parseFloat(v) || 0; }
+    var cols = cs.gridTemplateColumns.split(" ").map(px);
+    var rows = cs.gridTemplateRows.split(" ").map(px);
+    var gx = px(cs.columnGap), gy = px(cs.rowGap);
+    var ox = px(cs.borderLeftWidth) + px(cs.paddingLeft), oy = px(cs.borderTopWidth) + px(cs.paddingTop);
+    function pos(tracks, gap, offset, i) {
+      var k = Math.floor(i), start = offset;
+      for (var j = 0; j < k; j++) start += (tracks[j] || 0) + gap;
+      if (i < 0) return offset / 2;
+      if (i === k) return start + (tracks[k] || 0) / 2;
+      return start + (tracks[k] || 0) + gap / 2;
+    }
+    return { x: function (c) { return pos(cols, gx, ox, c); }, y: function (r) { return pos(rows, gy, oy, r); } };
+  }
+
   function routeDiagram(fig) {
     if (!fig) return;
     var article = fig.closest(".work-item");
@@ -251,6 +375,7 @@
     if (!spec) return;
 
     if (!fig.dataset.uid) fig.dataset.uid = String(Math.random()).slice(2, 8);
+    var uid = fig.dataset.uid;
     var canvas = fig.querySelector(".dg-canvas");
     var svg = fig.querySelector(".dg-wires");
     // Narrow containers flip the grid: columns become rows, so flows read top-down.
@@ -271,6 +396,7 @@
     }
 
     var paths = "";
+    var tracks = gridTracks(canvas);
     spec.edges.forEach(function (e, idx) {
       var a = rects[e.from], b = rects[e.to];
       if (!a || !b) return;
@@ -281,7 +407,26 @@
       var p2 = portPoint(b, s2, e.toPos == null ? 0.5 : e.toPos);
       var h1 = s1 === "l" || s1 === "r", h2 = s2 === "l" || s2 === "r";
       var pts;
-      if (h1 && h2) {
+      if (e.via && e.via.length) {
+        // Explicit waypoints: orthogonal hops through the listed cells.
+        pts = [p1];
+        var horiz = h1;
+        e.via.forEach(function (v) {
+          var vc = narrow ? { col: v.row, row: v.col } : v;
+          var w = { x: tracks.x(vc.col), y: tracks.y(vc.row) };
+          var last = pts[pts.length - 1];
+          if (horiz) { if (Math.abs(w.x - last.x) > 1.5) pts.push({ x: w.x, y: last.y }); }
+          else if (Math.abs(w.y - last.y) > 1.5) pts.push({ x: last.x, y: w.y });
+          var prev = pts[pts.length - 1];
+          if (Math.abs(prev.x - w.x) > 1.5 || Math.abs(prev.y - w.y) > 1.5) pts.push(w);
+          var q = pts[pts.length - 2];
+          horiz = Math.abs(pts[pts.length - 1].y - q.y) < 1.5;
+        });
+        var tail = pts[pts.length - 1];
+        if (h2) { if (Math.abs(tail.y - p2.y) > 1.5) pts.push({ x: tail.x, y: p2.y }); }
+        else if (Math.abs(tail.x - p2.x) > 1.5) pts.push({ x: p2.x, y: tail.y });
+        pts.push(p2);
+      } else if (h1 && h2) {
         if (Math.abs(p1.y - p2.y) < 1.5) pts = [p1, p2];
         else { var mx = (p1.x + p2.x) / 2; pts = [p1, { x: mx, y: p1.y }, { x: mx, y: p2.y }, p2]; }
       } else if (!h1 && !h2) {
@@ -293,24 +438,34 @@
         pts = [p1, { x: p1.x, y: p2.y }, p2];
       }
       var dAttr = pts.map(function (p, k) { return (k ? "L" : "M") + p.x.toFixed(1) + " " + p.y.toFixed(1); }).join(" ");
-      paths += '<path class="dg-wire' + (e.dashed ? " is-dashed" : "") + '" d="' + dAttr + '" marker-end="url(#dg-arrow-' + fig.dataset.uid + ')"/>';
+      var cls = "dg-wire" + (e.dashed ? " is-dashed" : "") + (e.kind ? " is-" + e.kind : "");
+      var marker = "dg-arrow-" + uid + (e.kind === "async" ? "-async" : "");
+      paths += '<path class="' + cls + '" d="' + dAttr + '" marker-end="url(#' + marker + ')"/>';
 
       if (e.label) {
-        // label sits on the longest segment
-        var best = 0, bx = 0, by = 0;
+        // The label goes on the longest segment whose midpoint is clear of every
+        // node; `labelSeg` pins it to a given segment instead.
+        var segs = [];
         for (var k = 1; k < pts.length; k++) {
-          var len = Math.abs(pts[k].x - pts[k - 1].x) + Math.abs(pts[k].y - pts[k - 1].y);
-          if (len > best) { best = len; bx = (pts[k].x + pts[k - 1].x) / 2; by = (pts[k].y + pts[k - 1].y) / 2; }
+          segs.push({
+            len: Math.abs(pts[k].x - pts[k - 1].x) + Math.abs(pts[k].y - pts[k - 1].y),
+            x: (pts[k].x + pts[k - 1].x) / 2, y: (pts[k].y + pts[k - 1].y) / 2
+          });
+        }
+        var pick = (e.labelSeg != null && segs[e.labelSeg]) ? segs[e.labelSeg] : null;
+        if (!pick) {
+          var ordered = segs.slice().sort(function (p, q) { return q.len - p.len; });
+          for (var s = 0; s < ordered.length && !pick; s++) if (!labelHitsNode(ordered[s], rects)) pick = ordered[s];
+          if (!pick) pick = ordered[0];
         }
         var lab = canvas.querySelector('.dg-edge-label[data-edge="' + idx + '"]');
-        if (lab) { lab.style.left = bx.toFixed(1) + "px"; lab.style.top = by.toFixed(1) + "px"; }
+        if (lab && pick) { lab.style.left = pick.x.toFixed(1) + "px"; lab.style.top = pick.y.toFixed(1) + "px"; }
       }
     });
 
     svg.setAttribute("viewBox", "0 0 " + base.width.toFixed(1) + " " + base.height.toFixed(1));
     svg.innerHTML =
-      '<defs><marker id="dg-arrow-' + fig.dataset.uid + '" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">' +
-      '<path d="M1 1.5 8.5 5 1 8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>' +
+      "<defs>" + arrowMarker("dg-arrow-" + uid, "") + arrowMarker("dg-arrow-" + uid + "-async", "stroke: var(--accent)") + "</defs>" +
       paths;
   }
 
