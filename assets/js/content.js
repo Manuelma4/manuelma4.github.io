@@ -52,7 +52,6 @@ window.SITE = {
       work_fig: "Fig.",
       work_cicd: "CI/CD",
       work_replicas: "réplicas",
-      work_preview_aria: "Vista previa del asistente: una pregunta y una respuesta con sus fuentes",
       work_qualities: "Atributos de calidad",
       work_stack: "Stack",
       quality_scalability: "Escalabilidad",
@@ -171,7 +170,6 @@ window.SITE = {
       work_fig: "Fig.",
       work_cicd: "CI/CD",
       work_replicas: "replicas",
-      work_preview_aria: "Assistant preview: a question and an answer with its sources",
       work_qualities: "Quality attributes",
       work_stack: "Stack",
       quality_scalability: "Scalability",
@@ -290,7 +288,6 @@ window.SITE = {
       work_fig: "Fig.",
       work_cicd: "CI/CD",
       work_replicas: "réplicas",
-      work_preview_aria: "Aperçu de l'assistant : une question et une réponse avec ses sources",
       work_qualities: "Attributs de qualité",
       work_stack: "Stack",
       quality_scalability: "Scalabilité",
@@ -508,73 +505,6 @@ window.SITE = {
         { key: "operability", text: { es: "Trazas por petición, métricas de latencia y calidad, evaluación en CI y entornos dev/prod idénticos.", en: "Per-request traces, latency and quality metrics, evaluation in CI and identical dev/prod environments.", fr: "Traces par requête, métriques de latence et de qualité, évaluation en CI et environnements dev/prod identiques." } },
         { key: "maintainability", text: { es: "Contratos explícitos (esquema GraphQL, REST tipado), un servicio por responsabilidad y pruebas de contrato entre ellos.", en: "Explicit contracts (GraphQL schema, typed REST), one service per responsibility and contract tests between them.", fr: "Contrats explicites (schéma GraphQL, REST typé), un service par responsabilité et tests de contrat entre eux." } }
       ],
-      preview: {
-        type: "app",
-        brand: "MODUO Chat",
-        brandShort: "MODUO",
-        brandSub: { es: "Tu espacio de reflexión", en: "Your thinking space", fr: "Votre espace de réflexion" },
-        newChat: { es: "Nueva conversación", en: "New conversation", fr: "Nouvelle conversation" },
-        search: { es: "Buscar", en: "Search", fr: "Rechercher" },
-        sidebar: [
-          { head: { es: "Perfiles", en: "Profiles", fr: "Profils" }, empty: { es: "Ningún perfil por ahora.", en: "No profile yet.", fr: "Aucun profil pour l'instant." } },
-          {
-            head: { es: "Conversaciones", en: "Conversations", fr: "Conversations" },
-            items: [
-              { title: { es: "Importe total de las obras…", en: "Total cost of the works…", fr: "Montant total des travaux…" }, meta: { es: "1 pregunta", en: "1 question", fr: "1 question" } },
-              { title: { es: "¿Cuál es el presupuesto previsto…", en: "What is the forecast budget…", fr: "Quel est le budget prévisionnel…" }, meta: { es: "1 pregunta", en: "1 question", fr: "1 question" } },
-              { title: { es: "Normativa incendio del lote 2…", en: "Fire regulations for lot 2…", fr: "Réglementation incendie du lot 2…" }, meta: { es: "2 preguntas · Chat general", en: "2 questions · General chat", fr: "2 questions · Chat général" } }
-            ]
-          },
-          {
-            head: { es: "Hoy", en: "Today", fr: "Aujourd'hui" },
-            items: [
-              { title: { es: "Dame la información del proyecto", en: "Give me the project information", fr: "Donnez-moi l'information du projet" }, meta: { es: "Respuesta en curso", en: "Answer in progress", fr: "Réponse en cours" }, active: true }
-            ]
-          }
-        ],
-        user: { initials: "MR", name: "Manuel David Maya Rosero", sub: { es: "Mi cuenta", en: "My account", fr: "Mon compte" } },
-        youLabel: { es: "Tú", en: "You", fr: "Vous" },
-        title: { es: "Dame la información del proyecto", en: "Give me the project information", fr: "Donnez-moi l'information du projet" },
-        question: { es: "Dame la información del proyecto", en: "Give me the project information", fr: "Donnez-moi l'information du projet" },
-        answer: [
-          {
-            text: {
-              es: "El proyecto se refiere al sitio **{{r:74}}** situado en **{{r:58}}**, en la periferia de una metrópoli [2] [6] [7]. Se trata de una operación compleja en curso desde {{r:26}}, para la que se emitió en 2026 una solicitud de misión en fase de **factibilidad** con el fin de estudiar la transformación del sitio existente [6] [8].",
-              en: "The project concerns the **{{r:74}}** site located in **{{r:58}}**, on the outskirts of a metropolitan area [2] [6] [7]. It is a complex operation running since {{r:26}}, for which a mission request in the **feasibility** phase was issued in 2026 to study the transformation of the existing site [6] [8].",
-              fr: "Le projet concerne le site **{{r:74}}** situé à **{{r:58}}**, en périphérie d'une métropole [2] [6] [7]. Il s'agit d'une opération complexe évoluant depuis {{r:26}}, pour laquelle une demande de mission en phase de **faisabilité** a été émise en 2026 afin d'étudier la transformation du site existant [6] [8]."
-            }
-          },
-          { text: { es: "Estas son las informaciones detalladas extraídas de los documentos:", en: "Here is the detailed information extracted from the documents:", fr: "Voici les informations détaillées extraites des documents :" } },
-          { text: { es: "**Características del sitio (datos de la solicitud de 2026):**", en: "**Site characteristics (data from the 2026 request):**", fr: "**Caractéristiques du site (données de la demande 2026) :**" } },
-          {
-            bullets: [
-              { es: "**Superficie del terreno:** {{r:44}} m² [2]", en: "**Plot area:** {{r:44}} m² [2]", fr: "**Superficie terrain :** {{r:44}} m² [2]" },
-              { es: "**Superficie del edificio:** {{r:44}} m², incluida una zona de venta (clasificación ERP tipo M) y {{r:12}} niveles [2] [3]", en: "**Building area:** {{r:44}} m², including a retail area (ERP type M classification) and {{r:12}} levels [2] [3]", fr: "**Surface bâtiment :** {{r:44}} m², comprenant un espace de vente (classement ERP type M) et {{r:12}} niveaux [2] [3]" },
-              { es: "**Uso previsto:** {{r:96}} [4] [6]", en: "**Intended use:** {{r:96}} [4] [6]", fr: "**Usage prévu :** {{r:96}} [4] [6]" }
-            ]
-          }
-        ],
-        placeholder: { es: "Haz una pregunta sobre los documentos del expediente…", en: "Ask a question about the case documents…", fr: "Posez une question sur les documents du dossier…" },
-        projectChip: "PROJET-2026-014_FAISABILITE",
-        modelChip: "Qwen3.6 · on-prem",
-        footLeft: { es: "PROJET-2026-014 · Respuestas basadas en tus documentos.", en: "PROJET-2026-014 · Answers grounded in your documents.", fr: "PROJET-2026-014 · Réponses fondées sur vos documents." },
-        footRight: { es: "Intro para enviar · Mayús + Intro para una línea", en: "Enter to send · Shift + Enter for a new line", fr: "Entrée pour envoyer · Maj + Entrée pour une ligne" },
-        docsLabel: { es: "Documentación", en: "Documentation", fr: "Documentation" },
-        sourcesLabel: { es: "Fuentes", en: "Sources", fr: "Sources" },
-        sources: [
-          { name: "CERFA – Demande de PC.pdf", path: "PROJET-2026-014 / 01_DATA" },
-          { name: "Plan de masse – existant.pdf", path: "PROJET-2026-014 / 01_DATA" },
-          { name: "Notice de sécurité.pdf", path: "PROJET-2026-014 / 02_FAISABILITE" },
-          { name: "Demande client.docx", path: "PROJET-2026-014 / 02_FAISABILITE" },
-          { name: "Preuve de dépôt.pdf", path: "PROJET-2026-014 / 01_DATA" },
-          { name: "TR – Transmission client.eml", path: "PROJET-2026-014 / 00_MISSION", icon: "mail" }
-        ],
-        caption: {
-          es: "La interfaz de MODUO Chat: conversaciones por expediente, respuestas con citas numeradas y el panel de fuentes con los documentos utilizados. Los datos del proyecto están ocultos.",
-          en: "The MODUO Chat interface: conversations per case file, answers with numbered citations and the sources panel listing the documents used. Project data is redacted.",
-          fr: "L'interface de MODUO Chat : conversations par dossier, réponses avec citations numérotées et le panneau des sources listant les documents utilisés. Les données du projet sont masquées."
-        }
-      },
       diagram: {
         cols: 5,
         rows: 3,
@@ -1002,43 +932,43 @@ window.SITE = {
     {
       id: "tiendaun",
       title: "TiendaUN",
-      tagline: { es: "Microservicios políglotas detrás de un proxy inverso y un gateway GraphQL, una base de datos por servicio y un chatbot con cola de mensajes", en: "Polyglot microservices behind a reverse proxy and a GraphQL gateway, one database per service and a chatbot with a message queue", fr: "Microservices polyglottes derrière un proxy inverse et une gateway GraphQL, une base de données par service et un chatbot avec file de messages" },
+      tagline: { es: "Microservicios políglotas detrás de un proxy inverso y un gateway GraphQL, una base de datos por servicio e interoperabilidad SOAP con otra aplicación", en: "Polyglot microservices behind a reverse proxy and a GraphQL gateway, one database per service and SOAP interoperability with another application", fr: "Microservices polyglottes derrière un proxy inverse et une gateway GraphQL, une base de données par service et interopérabilité SOAP avec une autre application" },
       org: "Universidad Nacional de Colombia",
       year: "2023",
       kind: "academic",
       summary: {
-        es: "Plataforma de comercio electrónico desarrollada en equipo con servicios separados por dominio, cada uno en su propio lenguaje y con su propia base de datos, más un chatbot de atención al cliente conectado por una cola de mensajes. Desarrollé el microservicio de autenticación y gestión de usuarios y roles, integrado en una arquitectura con proxy inverso, API Gateway GraphQL y despliegue en Google Kubernetes Engine.",
-        en: "Team-built e-commerce platform with domain-oriented services, each in its own language and with its own database, plus a customer-support chatbot connected through a message queue. Developed the authentication and user/role management microservice, integrated into an architecture with a reverse proxy, a GraphQL API Gateway and deployment on Google Kubernetes Engine.",
-        fr: "Plateforme e-commerce développée en équipe avec des services séparés par domaine, chacun dans son langage et avec sa propre base de données, plus un chatbot de support client relié par une file de messages. Développement du microservice d'authentification et de gestion des utilisateurs et rôles, intégré dans une architecture avec proxy inverse, API Gateway GraphQL et déploiement sur Google Kubernetes Engine."
+        es: "Plataforma de comercio electrónico desarrollada en equipo con servicios separados por dominio, cada uno en su propio lenguaje y con su propia base de datos. Desarrollé el microservicio de autenticación y gestión de usuarios y roles, integrado en una arquitectura con proxy inverso, API Gateway GraphQL y despliegue en Google Kubernetes Engine, e interoperable con la aplicación de otro equipo mediante una exposición SOAP.",
+        en: "Team-built e-commerce platform with domain-oriented services, each in its own language and with its own database. Developed the authentication and user/role management microservice, integrated into an architecture with a reverse proxy, a GraphQL API Gateway and deployment on Google Kubernetes Engine, and interoperable with another team's application through a SOAP exposure.",
+        fr: "Plateforme e-commerce développée en équipe avec des services séparés par domaine, chacun dans son langage et avec sa propre base de données. Développement du microservice d'authentification et de gestion des utilisateurs et rôles, intégré dans une architecture avec proxy inverse, API Gateway GraphQL et déploiement sur Google Kubernetes Engine, et interopérable avec l'application d'une autre équipe via une exposition SOAP."
       },
       points: {
         es: [
           "API REST de registro, inicio de sesión y gestión de usuarios y roles con TypeScript, Express, MongoDB/Mongoose, bcrypt y JWT, con autenticación de cuentas institucionales contra un directorio LDAP.",
-          "Arquitectura políglota: usuarios (TypeScript), catálogo (Java, SOAP), carrito (Python) y pedidos (Go), cada uno con su propia base de datos y un contrato explícito (REST, SOAP, gRPC) unificado por un API Gateway GraphQL detrás de un proxy inverso.",
-          "Chatbot de atención al cliente en FastAPI: las conversaciones se publican en una cola de mensajes y un consumidor las persiste en MongoDB Atlas; generación con Azure OpenAI y búsqueda con Cognitive Search.",
+          "Arquitectura políglota: usuarios (TypeScript), carrito (Python), pedidos (Go) y catálogo (Java), cada uno con su propia base de datos y un contrato explícito (REST, gRPC) unificado por un API Gateway GraphQL detrás de un proxy inverso.",
+          "Interoperabilidad con la aplicación de otro equipo: un contenedor adaptador expone el catálogo como servicio SOAP (WSDL) a través del ingress y traduce cada operación a llamadas REST internas, de modo que la aplicación asociada consume el contrato sin conocer nuestros servicios.",
           "Despliegue con Docker y Kubernetes en Google Kubernetes Engine: réplicas por servicio, ingress con balanceo de carga, autoescalado y despliegues progresivos.",
           "Pruebas de rendimiento con JMeter sobre el gateway para evaluar el comportamiento bajo carga y dimensionar las réplicas."
         ],
         en: [
           "REST APIs for registration, sign-in and user/role management with TypeScript, Express, MongoDB/Mongoose, bcrypt and JWT, with institutional accounts authenticated against an LDAP directory.",
-          "Polyglot architecture: users (TypeScript), catalogue (Java, SOAP), cart (Python) and orders (Go), each with its own database and an explicit contract (REST, SOAP, gRPC) unified by a GraphQL API Gateway behind a reverse proxy.",
-          "Customer-support chatbot in FastAPI: conversations are published to a message queue and a consumer persists them in MongoDB Atlas; generation with Azure OpenAI and retrieval with Cognitive Search.",
+          "Polyglot architecture: users (TypeScript), cart (Python), orders (Go) and catalogue (Java), each with its own database and an explicit contract (REST, gRPC) unified by a GraphQL API Gateway behind a reverse proxy.",
+          "Interoperability with another team's application: an adapter container exposes the catalogue as a SOAP service (WSDL) through the ingress and translates each operation into internal REST calls, so the partner application consumes the contract without knowing our services.",
           "Deployment with Docker and Kubernetes on Google Kubernetes Engine: replicas per service, ingress load balancing, autoscaling and rolling deployments.",
           "JMeter performance testing against the gateway to assess behaviour under load and size the replicas."
         ],
         fr: [
           "API REST d'inscription, de connexion et de gestion des utilisateurs et rôles avec TypeScript, Express, MongoDB/Mongoose, bcrypt et JWT, avec authentification des comptes institutionnels sur un annuaire LDAP.",
-          "Architecture polyglotte : utilisateurs (TypeScript), catalogue (Java, SOAP), panier (Python) et commandes (Go), chacun avec sa propre base de données et un contrat explicite (REST, SOAP, gRPC) unifié par une API Gateway GraphQL derrière un proxy inverse.",
-          "Chatbot de support client en FastAPI : les conversations sont publiées dans une file de messages et un consommateur les persiste dans MongoDB Atlas ; génération avec Azure OpenAI et recherche avec Cognitive Search.",
+          "Architecture polyglotte : utilisateurs (TypeScript), panier (Python), commandes (Go) et catalogue (Java), chacun avec sa propre base de données et un contrat explicite (REST, gRPC) unifié par une API Gateway GraphQL derrière un proxy inverse.",
+          "Interopérabilité avec l'application d'une autre équipe : un conteneur adaptateur expose le catalogue comme service SOAP (WSDL) via l'ingress et traduit chaque opération en appels REST internes, de sorte que l'application partenaire consomme le contrat sans connaître nos services.",
           "Déploiement avec Docker et Kubernetes sur Google Kubernetes Engine : réplicas par service, ingress avec équilibrage de charge, autoscaling et déploiements progressifs.",
           "Tests de performance JMeter sur la gateway pour évaluer le comportement sous charge et dimensionner les réplicas."
         ]
       },
-      stack: ["TypeScript", "Node.js", "Express", "GraphQL", "MongoDB", "JWT", "LDAP", "Java", "SOAP", "Python", "FastAPI", "Go", "gRPC", "RabbitMQ", "MongoDB Atlas", "Azure OpenAI", "Nginx", "Docker", "Kubernetes", "GKE", "JMeter"],
+      stack: ["TypeScript", "Node.js", "Express", "GraphQL", "MongoDB", "JWT", "LDAP", "Java", "Python", "Go", "gRPC", "SOAP", "WSDL", "Nginx", "Docker", "Kubernetes", "GKE", "JMeter"],
       qualities: [
-        { key: "scalability", text: { es: "Réplicas por servicio con balanceo en Kubernetes; cada servicio escala y despliega por separado, con su propia base de datos; la cola desacopla el chatbot de la escritura.", en: "Replicas per service with Kubernetes load balancing; each service scales and deploys on its own, with its own database; the queue decouples the chatbot from writes.", fr: "Réplicas par service avec équilibrage Kubernetes ; chaque service évolue et se déploie séparément, avec sa propre base de données ; la file découple le chatbot des écritures." } },
-        { key: "maintainability", text: { es: "Un dominio por servicio y por equipo, contratos explícitos (GraphQL, REST, SOAP, gRPC) y libertad de lenguaje detrás del gateway.", en: "One domain per service and per team, explicit contracts (GraphQL, REST, SOAP, gRPC) and language freedom behind the gateway.", fr: "Un domaine par service et par équipe, contrats explicites (GraphQL, REST, SOAP, gRPC) et liberté de langage derrière la gateway." } },
-        { key: "availability", text: { es: "Despliegues progresivos y réplicas: un servicio caído no tumba el resto de la plataforma; la cola conserva los mensajes del chatbot.", en: "Rolling deployments and replicas: one failing service does not take the platform down; the queue keeps the chatbot's messages.", fr: "Déploiements progressifs et réplicas : un service en panne n'entraîne pas la plateforme ; la file conserve les messages du chatbot." } },
+        { key: "scalability", text: { es: "Réplicas por servicio con balanceo en Kubernetes; cada servicio escala y despliega por separado, con su propia base de datos.", en: "Replicas per service with Kubernetes load balancing; each service scales and deploys on its own, with its own database.", fr: "Réplicas par service avec équilibrage Kubernetes ; chaque service évolue et se déploie séparément, avec sa propre base de données." } },
+        { key: "maintainability", text: { es: "Un dominio por servicio y por equipo, contratos explícitos (GraphQL, REST, gRPC) y un adaptador SOAP que aísla el contrato externo del interno.", en: "One domain per service and per team, explicit contracts (GraphQL, REST, gRPC) and a SOAP adapter that isolates the external contract from the internal one.", fr: "Un domaine par service et par équipe, contrats explicites (GraphQL, REST, gRPC) et un adaptateur SOAP qui isole le contrat externe du contrat interne." } },
+        { key: "availability", text: { es: "Despliegues progresivos y réplicas: un servicio caído no tumba el resto de la plataforma.", en: "Rolling deployments and replicas: one failing service does not take the rest of the platform down.", fr: "Déploiements progressifs et réplicas : un service en panne n'entraîne pas le reste de la plateforme." } },
         { key: "testability", text: { es: "Pruebas de carga con JMeter sobre el gateway para dimensionar réplicas y detectar cuellos de botella.", en: "JMeter load tests against the gateway to size replicas and find bottlenecks.", fr: "Tests de charge JMeter sur la gateway pour dimensionner les réplicas et repérer les goulots d'étranglement." } },
         { key: "security", text: { es: "Proxy inverso con TLS, autenticación centralizada con JWT y LDAP, contraseñas con bcrypt y roles verificados en cada servicio.", en: "Reverse proxy with TLS, centralised JWT and LDAP authentication, bcrypt password hashing and roles checked in every service.", fr: "Proxy inverse avec TLS, authentification centralisée par JWT et LDAP, mots de passe hachés avec bcrypt et rôles vérifiés dans chaque service." } }
       ],
@@ -1048,9 +978,9 @@ window.SITE = {
         style: { es: "Microservicios políglotas · Kubernetes", en: "Polyglot microservices · Kubernetes", fr: "Microservices polyglottes · Kubernetes" },
         styleIcon: "container",
         caption: {
-          es: "Arquitectura del equipo: proxy inverso y gateway GraphQL delante de cinco servicios en cuatro lenguajes, cada uno con su base de datos, y un chatbot desacoplado por una cola; mi contribución principal fue el servicio de usuarios y autenticación.",
-          en: "Team architecture: a reverse proxy and a GraphQL gateway in front of five services in four languages, each with its own database, and a chatbot decoupled through a queue; my main contribution was the user and authentication service.",
-          fr: "Architecture de l'équipe : proxy inverse et gateway GraphQL devant cinq services en quatre langages, chacun avec sa base de données, et un chatbot découplé par une file ; ma contribution principale était le service utilisateurs et authentification."
+          es: "Arquitectura del equipo: proxy inverso y gateway GraphQL delante de cuatro servicios en cuatro lenguajes, cada uno con su base de datos, y un adaptador SOAP para interoperar con la aplicación de otro equipo; mi contribución principal fue el servicio de usuarios y autenticación.",
+          en: "Team architecture: a reverse proxy and a GraphQL gateway in front of four services in four languages, each with its own database, and a SOAP adapter to interoperate with another team's application; my main contribution was the user and authentication service.",
+          fr: "Architecture de l'équipe : proxy inverse et gateway GraphQL devant quatre services en quatre langages, chacun avec sa base de données, et un adaptateur SOAP pour interopérer avec l'application d'une autre équipe ; ma contribution principale était le service utilisateurs et authentification."
         },
         groups: [
           { col: 0, row: 1, colSpan: 5, rowSpan: 3, tone: "primary", icon: "container", label: { es: "Kubernetes · GKE · ingress · autoescalado", en: "Kubernetes · GKE · ingress · autoscaling", fr: "Kubernetes · GKE · ingress · autoscaling" } },
@@ -1062,36 +992,32 @@ window.SITE = {
           { id: "ldap", col: 3, row: 0, kind: "external", icon: "keyRound", label: "LDAP", sub: { es: "cuentas institucionales", en: "institutional accounts", fr: "comptes institutionnels" } },
           { id: "jmeter", col: 5, row: 0, kind: "check", label: "JMeter", sub: { es: "pruebas de carga", en: "load tests", fr: "tests de charge" } },
           { id: "gateway", col: 2, row: 1, kind: "gateway", replicas: 2, tech: "TypeScript", label: "API Gateway", sub: { es: "GraphQL · un esquema", en: "GraphQL · one schema", fr: "GraphQL · un schéma" } },
-          { id: "ai", col: 5, row: 1, kind: "external", icon: "brain", label: "Azure OpenAI", sub: "Cognitive Search" },
+          { id: "partner", col: 5, row: 1, kind: "external", icon: "users", label: { es: "Aplicación asociada", en: "Partner application", fr: "Application partenaire" }, sub: { es: "otro equipo · cliente SOAP", en: "other team · SOAP client", fr: "autre équipe · client SOAP" } },
           { id: "users", col: 0, row: 2, kind: "service", primary: true, replicas: 2, tech: "TypeScript", label: { es: "Usuarios · Auth", en: "Users · Auth", fr: "Utilisateurs · Auth" }, sub: "REST · JWT · bcrypt" },
-          { id: "catalogue", col: 1, row: 2, kind: "service", replicas: 2, tech: "Java", label: { es: "Catálogo", en: "Catalogue", fr: "Catalogue" }, sub: "SOAP · WSDL" },
-          { id: "cart", col: 2, row: 2, kind: "service", replicas: 2, tech: "Python", label: { es: "Carrito", en: "Cart", fr: "Panier" }, sub: "REST" },
-          { id: "orders", col: 3, row: 2, kind: "service", replicas: 2, tech: "Go", label: { es: "Pedidos", en: "Orders", fr: "Commandes" }, sub: "gRPC · REST" },
-          { id: "chatbot", col: 4, row: 2, kind: "service", replicas: 2, tech: "Python", label: "Chatbot", sub: "FastAPI · REST" },
+          { id: "cart", col: 1, row: 2, kind: "service", replicas: 2, tech: "Python", label: { es: "Carrito", en: "Cart", fr: "Panier" }, sub: "REST" },
+          { id: "orders", col: 2, row: 2, kind: "service", replicas: 2, tech: "Go", label: { es: "Pedidos", en: "Orders", fr: "Commandes" }, sub: "gRPC · REST" },
+          { id: "catalogue", col: 3, row: 2, kind: "service", replicas: 2, tech: "Java", label: { es: "Catálogo", en: "Catalogue", fr: "Catalogue" }, sub: "REST" },
+          { id: "soap", col: 4, row: 2, kind: "service", icon: "arrowLeftRight", tech: "Java", label: { es: "Interfaz SOAP", en: "SOAP interface", fr: "Interface SOAP" }, sub: { es: "adaptador · WSDL", en: "adapter · WSDL", fr: "adaptateur · WSDL" } },
           { id: "mongo", col: 0, row: 3, kind: "store", label: "MongoDB", sub: { es: "usuarios · roles", en: "users · roles", fr: "utilisateurs · rôles" } },
-          { id: "pg", col: 1, row: 3, kind: "store", label: "PostgreSQL", sub: { es: "productos", en: "products", fr: "produits" } },
-          { id: "redis", col: 2, row: 3, kind: "cache", label: "Redis", sub: { es: "carritos · sesiones", en: "carts · sessions", fr: "paniers · sessions" } },
-          { id: "mysql", col: 3, row: 3, kind: "store", label: "MySQL", sub: { es: "pedidos · pagos", en: "orders · payments", fr: "commandes · paiements" } },
-          { id: "mq", col: 4, row: 3, kind: "queue", label: { es: "Cola de mensajes", en: "Message queue", fr: "File de messages" }, sub: "RabbitMQ" },
-          { id: "chatdb", col: 5, row: 3, kind: "store", label: "MongoDB Atlas", sub: { es: "conversaciones", en: "conversations", fr: "conversations" } }
+          { id: "redis", col: 1, row: 3, kind: "cache", label: "Redis", sub: { es: "carritos · sesiones", en: "carts · sessions", fr: "paniers · sessions" } },
+          { id: "mysql", col: 2, row: 3, kind: "store", label: "MySQL", sub: { es: "pedidos · pagos", en: "orders · payments", fr: "commandes · paiements" } },
+          { id: "pg", col: 3, row: 3, kind: "store", label: "PostgreSQL", sub: { es: "productos", en: "products", fr: "produits" } }
         ],
         edges: [
           { from: "web", to: "proxy", label: "HTTPS" },
           { from: "proxy", to: "gateway", label: "GraphQL" },
           { from: "jmeter", to: "gateway", sides: "lr", toPos: 0.3, dashed: true, label: { es: "carga", en: "load", fr: "charge" } },
           { from: "gateway", to: "users", sides: "bt", fromPos: 0.1, toPos: 0.7, label: "REST" },
-          { from: "gateway", to: "catalogue", sides: "bt", fromPos: 0.3, label: "SOAP" },
-          { from: "gateway", to: "cart", sides: "bt", label: "REST" },
-          { from: "gateway", to: "orders", sides: "bt", fromPos: 0.7, label: "gRPC" },
-          { from: "gateway", to: "chatbot", sides: "bt", fromPos: 0.9, label: "REST" },
+          { from: "gateway", to: "cart", sides: "bt", fromPos: 0.3, label: "REST" },
+          { from: "gateway", to: "orders", sides: "bt", label: "gRPC" },
+          { from: "gateway", to: "catalogue", sides: "bt", fromPos: 0.7, label: "REST" },
           { from: "ldap", to: "users", sides: "bt", toPos: 0.3, dashed: true, via: [{ col: -0.5, row: 0.5 }], label: "LDAP" },
           { from: "users", to: "mongo", sides: "bt" },
-          { from: "catalogue", to: "pg", sides: "bt" },
           { from: "cart", to: "redis", sides: "bt" },
           { from: "orders", to: "mysql", sides: "bt" },
-          { from: "chatbot", to: "mq", sides: "bt", kind: "async", label: { es: "publica", en: "publish", fr: "publie" } },
-          { from: "mq", to: "chatdb", kind: "async", label: { es: "consume", en: "consume", fr: "consomme" } },
-          { from: "chatbot", to: "ai", sides: "rt", label: { es: "completions · búsqueda", en: "completions · search", fr: "completions · recherche" } }
+          { from: "catalogue", to: "pg", sides: "bt" },
+          { from: "partner", to: "soap", sides: "bl", label: "SOAP · WSDL" },
+          { from: "soap", to: "catalogue", sides: "lr", label: "REST" }
         ],
         pipeline: [
           { label: "Git", sub: { es: "un repositorio por servicio", en: "one repo per service", fr: "un dépôt par service" } },

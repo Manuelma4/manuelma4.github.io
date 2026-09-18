@@ -712,22 +712,6 @@ kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fon
 .dg-pipeline li + li { margin-left: 12px; }
 .dg-pipeline li + li::before { content: ""; position: absolute; left: -12px; top: 50%; width: 6px; height: 6px; border-top: 1.5px solid var(--border-strong); border-right: 1.5px solid var(--border-strong); transform: translateY(-50%) rotate(45deg); }
 
-/* Chat preview mock */
-.chat-preview { border: 1px solid var(--border-strong); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow-lg); overflow: hidden; font-size: 12.5px; }
-.chat-head { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-bottom: 1px solid var(--border); background: var(--surface-2); }
-.chat-avatar { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 8px; background: var(--primary); color: var(--primary-ink); flex-shrink: 0; }
-.chat-title { font-family: var(--font-head); font-weight: 600; font-size: 13px; color: var(--ink); }
-.chat-scope { margin-left: auto; display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; color: var(--ink-2); white-space: nowrap; }
-.chat-body { display: grid; gap: 10px; padding: 14px 12px; background: var(--page); }
-.chat-msg { display: flex; }
-.chat-user { justify-content: flex-end; }
-.chat-bubble { max-width: 88%; padding: 8px 11px; border-radius: 12px; line-height: 1.5; color: var(--ink); background: var(--surface); border: 1px solid var(--border); }
-.chat-user .chat-bubble { background: var(--primary); color: var(--primary-ink); border-color: var(--primary); border-bottom-right-radius: 4px; }
-.chat-assistant .chat-bubble { border-bottom-left-radius: 4px; }
-.chat-cites { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
-.chat-cite { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; border-radius: 999px; background: var(--primary-tint); color: var(--primary); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 10px; }
-.chat-input { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0 12px 12px; padding: 8px 12px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); color: var(--muted); font-size: 12px; }
-.chat-input svg { color: var(--primary); flex-shrink: 0; }
 
 /* Narrow (transposed) diagrams: group labels run vertically along the left edge,
    clear of the edge labels that now cross the top borders. */
@@ -735,62 +719,3 @@ kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fon
 .dg.is-transposed .dg-group-label { top: 12px; left: -10px; bottom: auto; max-width: none; max-height: calc(100% - 24px); padding: 7px 1px; writing-mode: vertical-rl; transform: rotate(180deg); }
 .dg.is-transposed .dg-group-label > span { max-height: 100%; }
 .dg.is-transposed .dg-node { padding-left: 12px; }
-
-/* ---- App mock: three-pane product window (sidebar · thread · sources) ------*/
-.app-figure { margin: 14px 0 18px; }
-.app-figure figcaption { margin-top: 10px; font-size: 12.5px; color: var(--muted); }
-.app-preview { display: grid; grid-template-columns: 196px minmax(0, 1fr) 236px; height: 500px; overflow: hidden; border: 1px solid var(--border-strong); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow-lg); font-size: 11.5px; color: var(--ink-2); text-align: left; }
-.app-preview svg { flex-shrink: 0; }
-.app-side { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 12px; border-right: 1px solid var(--border); background: var(--surface-2); }
-.app-brand { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; min-width: 0; }
-.app-brand > span:last-child { min-width: 0; }
-.app-brand-mark { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--primary); color: var(--primary-ink); flex-shrink: 0; }
-.app-brand b { display: block; font-family: var(--font-head); font-size: 12.5px; color: var(--ink); white-space: nowrap; }
-.app-brand span span { display: block; font-size: 10px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-btn { display: flex; align-items: center; gap: 6px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font-weight: 600; font-size: 11px; }
-.app-search { display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--muted); }
-.app-side-head { margin: 6px 0 0; font-size: 9.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.app-side-empty { padding: 2px 4px; font-size: 10.5px; color: var(--muted); }
-.app-side-item { padding: 5px 8px; border-radius: 6px; line-height: 1.3; min-width: 0; }
-.app-side-item b { display: block; font-weight: 500; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-side-item span { font-size: 10px; color: var(--muted); }
-.app-side-item.is-active { background: var(--primary-tint); }
-.app-side-user { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); min-width: 0; }
-.app-side-user > span:last-child { min-width: 0; }
-.app-side-user b { display: block; font-size: 11px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-side-user span span { font-size: 10px; color: var(--muted); }
-.app-avatar { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--border-strong); background: var(--surface); font-size: 9.5px; font-weight: 700; color: var(--primary); flex-shrink: 0; }
-.app-main { display: flex; flex-direction: column; min-width: 0; background: var(--surface); }
-.app-main-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--ink); }
-.app-main-tools { display: inline-flex; gap: 10px; color: var(--muted); }
-.app-thread { flex: 1; min-height: 0; overflow: hidden; display: grid; gap: 12px; align-content: start; padding: 14px 18px 0; -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent); mask-image: linear-gradient(to bottom, #000 82%, transparent); }
-.app-q { justify-self: end; max-width: 80%; padding: 10px 14px; border-radius: 12px; background: var(--surface-2); }
-.app-q small { display: block; margin-bottom: 4px; font-size: 10px; color: var(--muted); }
-.app-q b { font-size: 13px; font-weight: 500; color: var(--ink); }
-.app-a { font-size: 12px; line-height: 1.6; color: var(--ink-2); }
-.app-a small { display: block; margin-bottom: 6px; font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.app-a p { margin-bottom: 8px; color: var(--ink-2); }
-.app-a ul { display: grid; gap: 4px; padding-left: 14px; list-style: disc; }
-.app-a b { color: var(--ink); font-weight: 600; }
-.app-cite { display: inline-block; margin: 0 1px; padding: 0 5px; border-radius: 4px; background: var(--primary-tint); color: var(--primary); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 9.5px; line-height: 1.6; vertical-align: 1px; }
-.app-redact { display: inline-block; height: 10px; margin: 0 2px; border-radius: 3px; background: var(--border-strong); vertical-align: middle; }
-.app-compose { margin: 8px 16px 6px; padding: 10px 12px; border: 1px solid var(--border-strong); border-radius: 12px; }
-.app-compose-input { margin-bottom: 10px; font-size: 12px; color: var(--muted); }
-.app-compose-row { display: flex; align-items: center; gap: 8px; min-width: 0; color: var(--muted); }
-.app-chip { display: inline-flex; align-items: center; gap: 5px; max-width: 46%; padding: 4px 8px; border-radius: 8px; border: 1px solid var(--border); font-size: 10.5px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-chip span { overflow: hidden; text-overflow: ellipsis; }
-.app-send { display: grid; place-items: center; width: 26px; height: 26px; margin-left: auto; border-radius: 7px; background: var(--primary); color: var(--primary-ink); flex-shrink: 0; }
-.app-foot { display: flex; justify-content: space-between; gap: 10px; padding: 0 16px 10px; font-size: 9.5px; color: var(--muted); }
-.app-foot span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-docs { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 12px; border-left: 1px solid var(--border); background: var(--page); overflow: hidden; }
-.app-docs-head { margin-bottom: 2px; }
-.app-docs-head small { display: block; font-size: 9.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
-.app-docs-head b { font-family: var(--font-head); font-size: 14px; color: var(--ink); }
-.app-docs-head i { font-style: normal; font-size: 11px; color: var(--muted); margin-left: 4px; }
-.app-doc { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); }
-.app-doc-ic { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 6px; background: var(--surface-2); color: var(--primary); }
-.app-doc b { display: block; font-size: 11px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-doc span { display: block; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 9px; line-height: 1.4; color: var(--muted); overflow-wrap: anywhere; }
-@media (max-width: 1000px) { .app-preview { grid-template-columns: minmax(0, 1fr) 220px; } .app-side { display: none; } }
-@media (max-width: 640px) { .app-preview { grid-template-columns: 1fr; height: auto; } .app-docs { display: none; } .app-thread { max-height: 320px; } }
-.app-side-list { display: flex; flex-direction: column; gap: 8px; flex: 1; min-height: 0; overflow: hidden; }
